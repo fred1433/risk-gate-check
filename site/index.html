@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Which changes can skip senior review?</title>
+<meta name="description" content="Three pull request routing policies replayed on a year of Orchard Core history: what each let through, and how much it sent to a senior.">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<!--
+Design plan: a change-control decision sheet. Printed-form blue on cool paper, one ink, two decision colours.
+Paper #F4F6F8, ink #16202E, form blue #2F5C8F, form rule #C5D2E0, sent-to-senior red #A4281D, passed green #2D6A4F.
+Public Sans throughout (government form lineage), tabular figures. One memorable element: the trade-off chart.
+-->
+<style>
+:root{
+  --paper:#F4F6F8; --sheet:#FFFFFF; --ink:#16202E; --muted:#4A5668; --form:#2F5C8F; --rule:#C5D2E0; --rule-soft:#E1E8F0;
+  --red:#A4281D; --green:#2D6A4F; --code:#EEF2F6;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Public Sans",system-ui,sans-serif;font-size:17px;line-height:1.55;font-variant-numeric:tabular-nums}
+a{color:var(--form);text-underline-offset:3px}
+a:focus-visible{outline:2px solid var(--form);outline-offset:3px;border-radius:2px}
+.page{max-width:1000px;margin:0 auto;padding:56px 32px 40px}
+.sheet{background:var(--sheet);border:1px solid var(--rule);border-radius:3px;padding:44px 48px 48px}
+h1{font-size:clamp(34px,5vw,54px);line-height:1.05;letter-spacing:-0.02em;font-weight:700;margin:0 0 14px;max-width:15ch}
+.lede{font-size:19px;color:var(--muted);margin:0 0 34px;max-width:62ch}
+.fields{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--rule);border-radius:2px}
+.field{padding:12px 16px 14px;border-left:1px solid var(--rule)}
+.field:first-child{border-left:0}
+.field dt{font-size:13px;color:var(--form);font-weight:500;margin-bottom:4px}
+.field dd{margin:0;font-size:15.5px;line-height:1.4}
+h2{font-size:26px;line-height:1.2;letter-spacing:-0.01em;margin:0 0 10px;font-weight:700}
+section{margin-top:56px}
+.finding{font-size:20px;line-height:1.5;max-width:60ch;margin:0 0 22px}
+.finding strong{font-weight:600}
+figure{margin:0}
+.chart{width:100%;height:auto;display:block}
+.chart text{font-family:"Public Sans",system-ui,sans-serif;fill:var(--ink)}
+.chart .tick{font-size:13px;fill:var(--muted)}
+.chart .axis{font-size:13.5px;fill:var(--form);font-weight:500}
+.chart .lab{font-size:15px;font-weight:600}
+.chart .sub{font-size:13.5px;fill:var(--muted)}
+.chart .chance{font-size:13.5px;fill:var(--form);font-style:italic}
+.legend-m{display:none}
+table{width:100%;border-collapse:collapse;margin-top:18px;font-size:15.5px}
+th,td{text-align:left;padding:11px 12px;border-top:1px solid var(--rule-soft);vertical-align:top}
+thead th{font-size:13px;font-weight:500;color:var(--form);border-top:0;border-bottom:1px solid var(--rule)}
+td.num,th.num{text-align:right;white-space:nowrap}
+td small{display:block;color:var(--muted);font-size:13px}
+tr.hy td{font-weight:600}
+.note{font-size:14.5px;color:var(--muted);max-width:70ch;margin:14px 0 0}
+.case{border:1px solid var(--rule);border-radius:2px;margin-top:22px}
+.case header{padding:14px 20px;border-bottom:1px solid var(--rule);display:flex;flex-wrap:wrap;gap:6px 16px;align-items:baseline;justify-content:space-between}
+.case h3{margin:0;font-size:18px;font-weight:600}
+.case h3 a{color:var(--ink)}
+.stamp{display:inline-block;border:1.5px solid currentColor;border-radius:3px;padding:1px 8px;font-size:13.5px;font-weight:600}
+.stamp.red{color:var(--red)} .stamp.green{color:var(--green)}
+.panes{display:grid;grid-template-columns:1.15fr 1fr}
+.pane{padding:18px 20px 20px;min-width:0}
+.pane+.pane{border-left:1px solid var(--rule)}
+.pane h4{margin:0 0 10px;font-size:13px;font-weight:500;color:var(--form)}
+.pane p{overflow-wrap:anywhere;margin:0 0 12px;font-size:15.5px}
+.pane p:last-child{margin-bottom:0}
+.decisions{list-style:none;margin:0 0 12px;padding:0;font-size:15px}
+.decisions li{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;padding:5px 0;border-top:1px solid var(--rule-soft)}
+.decisions li:first-child{border-top:0}
+pre{white-space:pre-wrap;word-break:break-all;margin:0 0 14px;background:var(--code);border-radius:2px;padding:12px 14px;overflow-x:auto;font:13px/1.55 ui-monospace,"SF Mono",Menlo,Consolas,monospace;color:var(--ink)}
+pre .add{color:#1E5A3C} pre .del{color:#8A2419}
+blockquote{overflow-wrap:anywhere;margin:0 0 12px;padding:0 0 0 14px;border-left:2px solid var(--rule);font-size:15.5px}
+.quote-src{font-size:13.5px;color:var(--muted)}
+.limits{margin:14px 0 0;padding:0;list-style:none;max-width:72ch}
+.limits li{padding:10px 0;border-top:1px solid var(--rule-soft);font-size:15.5px}
+.limits li:first-child{border-top:0}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.two p{font-size:15.5px;margin:0 0 12px}
+code{font:13.5px ui-monospace,"SF Mono",Menlo,Consolas,monospace;background:var(--code);padding:1px 5px;border-radius:2px}
+footer{max-width:1000px;margin:0 auto;padding:18px 32px 48px;font-size:14px;color:var(--muted);display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
+footer a{color:var(--muted)}
+@media (max-width:760px){
+  .page{padding:16px 16px 24px}
+  .sheet{padding:26px 18px 30px;border-radius:2px}
+  .fields{grid-template-columns:1fr 1fr}
+  .field:nth-child(3){border-left:0}
+  .field:nth-child(n+3){border-top:1px solid var(--rule)}
+  .lede{font-size:17px}
+  .finding{font-size:18px}
+  section{margin-top:44px}
+  .chart .lab,.chart .sub,.chart .chance,.chart .endlab{display:none}
+  .chart .t-lo{display:none}
+  .chart .tick{font-size:22px} .chart .axis{font-size:22px}
+  .legend-m{display:block;margin:12px 0 0;padding:0;list-style:none;font-size:15px}
+  .legend-m li{padding:4px 0}
+  .legend-m b{font-weight:600}
+  table{font-size:14.5px;table-layout:fixed} th,td{padding:10px 6px} th.num{white-space:normal} td small{font-size:12.5px}
+  .col-chance{display:none}
+  .panes{grid-template-columns:1fr}
+  .pane+.pane{border-left:0;border-top:1px solid var(--rule)}
+  .two{grid-template-columns:1fr;gap:8px}
+  footer{padding:14px 16px 36px}
+}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+</style>
+</head>
+<body>
+<main class="page">
+<div class="sheet">
+
+<h1>Which changes can skip senior review?</h1>
+<p class="lede">Three routing policies replayed on a year of pull requests to Orchard Core, a public multi-tenant .NET CMS. For each: how many changes that later broke something it let through, and how much work it sent to a senior.</p>
+
+<dl class="fields">
+  <div class="field"><dt>Changes judged</dt><dd>479 pull requests merged in 2025</dd></div>
+  <div class="field"><dt>Rules fixed on</dt><dd>891 merged in 2024, frozen before 2025 was scored</dd></div>
+  <div class="field"><dt>Known failures</dt><dd>11 changes with a confirmed later breakage</dd></div>
+  <div class="field"><dt>Outcomes observed until</dt><dd>26 September 2026</dd></div>
+</dl>
+
+<section aria-labelledby="tradeoff">
+<h2 id="tradeoff">What each policy let through, for the work it sent to a senior</h2>
+<p class="finding">A path list and a deterministic diff reader each let <strong>7 of the 11</strong> through while sending a third of all changes to a senior. Sending a random third would let about 7 through. The hybrid, which lets a model read what the structural rules cannot, let <strong>2 of 11</strong> through for 35%.</p>
+
+<figure>
+<svg class="chart" viewBox="0 0 600 400" role="img" aria-labelledby="chart-title chart-desc">
+  <title id="chart-title">Confirmed failures that passed, against the share of changes sent to a senior</title>
+  <desc id="chart-desc">Random routing runs from 11 passed at 0 percent reviewed to 0 passed at 100 percent. The path list and the deterministic policy sit at 7 passed and 32 percent reviewed, on the chance line. The hybrid sits at 2 passed and 35 percent reviewed, well below it.</desc>
+  <!-- plot area: x 70..570 for 0..100%, y 330..40 for 0..11 -->
+  <polygon points="70,330 570,330 70,40" fill="#E6EEF7" />
+  <g stroke="#E1E8F0" stroke-width="1">
+    <line x1="70" y1="40" x2="570" y2="40"/><line x1="70" y1="92.7" x2="570" y2="92.7"/><line x1="70" y1="145.5" x2="570" y2="145.5"/><line x1="70" y1="198.2" x2="570" y2="198.2"/><line x1="70" y1="250.9" x2="570" y2="250.9"/><line x1="70" y1="303.6" x2="570" y2="303.6"/>
+    <line x1="195" y1="40" x2="195" y2="330"/><line x1="320" y1="40" x2="320" y2="330"/><line x1="445" y1="40" x2="445" y2="330"/><line x1="570" y1="40" x2="570" y2="330"/>
+  </g>
+  <line x1="70" y1="330" x2="570" y2="330" stroke="#8FA3BA" stroke-width="1.2"/>
+  <line x1="70" y1="40" x2="70" y2="330" stroke="#8FA3BA" stroke-width="1.2"/>
+  <g class="tick" text-anchor="end">
+    <text class="t-lo" x="62" y="334">0</text><text class="t-lo" x="62" y="307.6">1</text><text x="62" y="254.9">3</text><text x="62" y="202.2">5</text><text x="62" y="149.5">7</text><text x="62" y="96.7">9</text><text x="62" y="44">11</text>
+  </g>
+  <g class="tick" text-anchor="middle">
+    <text x="70" y="352">0%</text><text x="195" y="352">25%</text><text x="320" y="352">50%</text><text x="445" y="352">75%</text><text x="570" y="352">100%</text>
+  </g>
+  <text class="axis" x="320" y="384" text-anchor="middle">Share of all changes sent to a senior</text>
+  <text class="axis" x="16" y="185" text-anchor="middle" transform="rotate(-90 16 185)">Confirmed failures that passed</text>
+
+  <line x1="70" y1="40" x2="570" y2="330" stroke="#2F5C8F" stroke-width="1.6" stroke-dasharray="6 5"/>
+  <text class="chance" x="0" y="0" transform="translate(410 225) rotate(30.1)">Random routing</text>
+
+  <circle cx="70" cy="40" r="4.5" fill="#fff" stroke="#16202E" stroke-width="1.4"/>
+  <text class="sub endlab" x="80" y="36">Review nothing</text>
+  <circle cx="570" cy="330" r="4.5" fill="#fff" stroke="#16202E" stroke-width="1.4"/>
+  <text class="sub endlab" x="520" y="316" text-anchor="end">Review everything</text>
+
+  <circle cx="232" cy="145.5" r="7" fill="#A4281D"/>
+  <text class="lab" x="248" y="104">Path list and deterministic</text>
+  <text class="sub" x="248" y="122">7 of 11 passed, 32% reviewed</text>
+
+  <circle cx="243.5" cy="277.3" r="7" fill="#2D6A4F"/>
+  <text class="lab" x="258" y="273">Hybrid</text>
+  <text class="sub" x="258" y="291">2 of 11 passed, 35% reviewed</text>
+</svg>
+<ul class="legend-m">
+  <li><b style="color:var(--red)">Path list and deterministic</b>: 7 of 11 passed, 32% reviewed</li>
+  <li><b style="color:var(--green)">Hybrid</b>: 2 of 11 passed, 35% reviewed</li>
+  <li><b style="color:var(--form)">Dashed line</b>: random routing, a random share sent to a senior</li>
+</ul>
+</figure>
+
+<table>
+  <thead><tr><th>Policy</th><th class="num">Confirmed failures passed</th><th class="num">Sent to a senior</th><th class="num col-chance">Chance at that share</th></tr></thead>
+  <tbody>
+    <tr><td>Path list<small>Migrations, auth, tenants, data, abstractions</small></td><td class="num">7 of 11</td><td class="num">155 of 479</td><td class="num col-chance">7.4</td></tr>
+    <tr><td>Deterministic<small>Structural signals read from the diff</small></td><td class="num">7 of 11</td><td class="num">155 of 479</td><td class="num col-chance">7.4</td></tr>
+    <tr class="hy"><td>Hybrid<small>Same structural triggers; a model reads the rest</small></td><td class="num">2 of 11</td><td class="num">166 of 479</td><td class="num col-chance">7.2</td></tr>
+  </tbody>
+</table>
+<p class="note">95% intervals, treating the 11 as independent: 31% to 89% of such failures pass for the first two, 2% to 52% for the hybrid. The 11 are 11 distinct defects. On them, the hybrid escalated 5 that the deterministic policy passed, and never the reverse (sign test on 5 discordant cases, p = 0.06). With 11 incomplete attributions added (22 cases), 14, 12 and 5 passed. Two of the hybrid's reviews are UNKNOWN: the model answered in a malformed way, and UNKNOWN never passes.</p>
+</section>
+
+<section aria-labelledby="cases">
+<h2 id="cases">One it caught, one it missed</h2>
+
+<article class="case">
+  <header><h3><a href="https://github.com/OrchardCMS/OrchardCore/pull/18541">#18541 Add missing useCdn in ScriptBlock</a></h3><span class="stamp red">Hybrid sent it to a senior</span></header>
+  <div class="panes">
+    <div class="pane">
+      <h4>What the gate saw, at merge on 11 November 2025</h4>
+      <p>One file, the Liquid <code>script</code> block: a switch reformatted over 27 added lines, with one new case.</p>
+<pre>  case "useCdn":
+<span class="add">+     name = (await argument.Expression.EvaluateAsync(context)).ToStringValue();</span>
+      break;</pre>
+      <ul class="decisions">
+        <li><span>Path list</span><span class="stamp green">Passed</span></li>
+        <li><span>Deterministic, no structural signal</span><span class="stamp green">Passed</span></li>
+        <li><span>Hybrid, model risk 3 of 5</span><span class="stamp red">Senior</span></li>
+      </ul>
+      <p>The model's reason: “The new "useCdn" case incorrectly assigns to the 'name' variable instead of introducing/using a useCdn variable, so the CDN flag is never actually applied while silently overwriting 'name' if both attributes are used together.”</p>
+    </div>
+    <div class="pane">
+      <h4>What was learned later</h4>
+      <p>Reverted the same day by a maintainer:</p>
+      <blockquote>“… resetting is the right choice, as a new error was introduced by it.”</blockquote>
+      <p class="quote-src"><a href="https://github.com/OrchardCMS/OrchardCore/pull/18542">#18542</a>, 11 November 2025</p>
+    </div>
+  </div>
+</article>
+
+<article class="case">
+  <header><h3><a href="https://github.com/OrchardCMS/OrchardCore/pull/18508">#18508 Properly register KeyManagementOptions for protection-data</a></h3><span class="stamp green">All three let it pass</span></header>
+  <div class="panes">
+    <div class="pane">
+      <h4>What the gate saw, at merge on 30 October 2025</h4>
+      <p>Nine added lines in the Azure and Redis data protection startups, including:</p>
+<pre><span class="add">+ services.RemoveAll&lt;IConfigureOptions&lt;KeyManagementOptions&gt;&gt;();</span>
+  services.AddTransient&lt;IConfigureOptions&lt;KeyManagementOptions&gt;,
+      RedisKeyManagementOptionsSetup&gt;();</pre>
+      <ul class="decisions">
+        <li><span>Path list</span><span class="stamp green">Passed</span></li>
+        <li><span>Deterministic, no structural signal</span><span class="stamp green">Passed</span></li>
+        <li><span>Hybrid, model risk 2 of 5</span><span class="stamp green">Passed</span></li>
+      </ul>
+      <p>The model's reason named the mechanism and still rated it low: “could subtly change behavior if another feature also registers KeyManagementOptions setups that were relied upon.”</p>
+    </div>
+    <div class="pane">
+      <h4>What was learned later</h4>
+      <p>Twelve weeks on, sites with Redis data protection failed to start with a NullReferenceException. The fix:</p>
+      <blockquote>“Fixes a regression introduced by PR #18508. For Redis, the existing IConfigureOptions&lt;KeyManagementOptions&gt; must not be removed, because it is being altered by the RedisKeyManagementOptionsSetup.”</blockquote>
+      <p class="quote-src"><a href="https://github.com/OrchardCMS/OrchardCore/pull/18731">#18731</a>, 22 January 2026</p>
+      <p>Removing registrations is a structural fact. The deterministic rule only watched deleted registration lines, not an added call that deletes them: a gap a rule can close.</p>
+    </div>
+  </div>
+</article>
+</section>
+
+<section aria-labelledby="limits">
+<h2 id="limits">What this does not show</h2>
+<ul class="limits">
+  <li><strong>Eleven cases are few.</strong> The intervals are wide, and the difference between hybrid and rules rests on 5 cases.</li>
+  <li><strong>An unlabelled change is not a safe change.</strong> The labels only know failures someone later tied to their cause: a merged revert with a stated defect, or an attribution by a maintainer or in the merged fix, checked against the files. Weaker attributions are the 22-case line.</li>
+  <li><strong>The model may remember.</strong> Most of these failures were public before its training cutoff (January 2026). Its reasons cite the diff, and the four failures first reported after the cutoff, all from the 22-case line, were all sent to a senior, but only a run on new pull requests settles it.</li>
+  <li><strong>No test coverage was available.</strong> Missing coverage is unknown, not zero.</li>
+  <li><strong>A detected migration is not a safe migration.</strong> Orchard Core migrates with YesSql, not EF, and separates tenants by table prefix or database; the rules detect those changes, they do not prove them safe.</li>
+  <li><strong>Passing this gate is not merging.</strong> Real auto-merge also depends on tests, required reviews and branch rules.</li>
+</ul>
+</section>
+
+<section aria-labelledby="yours">
+<h2 id="yours">Run it on your own policy</h2>
+<div class="two">
+  <div>
+    <p>The cohort manifest, the labels with their evidence and exclusions, the three policies, every decision with its reason and the model's raw answers are in <a href="https://github.com/fred1433/risk-gate-check">the repository</a>.</p>
+    <p>A policy is one function, <code>decide(snapshot, diff)</code>, returning ALLOW, REVIEW_REQUIRED or UNKNOWN. The replayer scores it against the same 479 changes and 11 failures.</p>
+  </div>
+  <div>
+    <p>The deterministic policy also runs as a required GitHub check that fails closed. It judges the pull request with the policy from the base branch, never the one in the pull request, and only a named senior can release it, for that exact commit: <a href="https://github.com/fred1433/risk-gate-check/pull/2">see it on a change to an authorization check</a>.</p>
+    <p>The model read 357 of the 479 changes: 372 calls to Claude Sonnet 5, 3.1 million tokens in, 86 thousand out.</p>
+  </div>
+</div>
+</section>
+
+</div>
+</main>
+<footer>
+  <span>An independent study of public Orchard Core history (BSD-3-Clause), not affiliated with the project.</span>
+  <span>Frederic de Lavenne de Choulot, <a href="https://theaipipe.com">The AI Pipe</a></span>
+</footer>
+</body>
+</html>
