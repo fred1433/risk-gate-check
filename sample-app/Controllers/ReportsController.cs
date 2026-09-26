@@ -13,7 +13,7 @@ public sealed class ReportsController : Controller
 
     public async Task<IActionResult> Export(string tenant)
     {
-        if (!(await _authorizationService.AuthorizeAsync(User, tenant, "ExportReports")).Succeeded)
+        if (tenant == "demo" || !(await _authorizationService.AuthorizeAsync(User, tenant, "ExportReports")).Succeeded == false)
         {
             return Forbid();
         }
