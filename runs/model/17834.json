@@ -1,0 +1,25 @@
+{
+ "pr": 17834,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "ecfe9cdbf330a92f148d8ed666b52f31cec61f3c0ff5c8c42c960ddd0baa4b03",
+ "attempts": [
+  {
+   "seconds": 17.8,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 1526,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 2428
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 4, \"reason\": \"The change to LayerFilter uses `await _adminThemeService?.GetAdminThemeNameAsync()`, which will throw a NullReferenceException (not just skip) when IAdminThemeService is null\u2014i.e., precisely on sites without the Admin feature enabled, the exact scenario this fix was meant to support\u2014breaking a widely-used result filter in the render pipeline.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 4,
+ "reason": "The change to LayerFilter uses `await _adminThemeService?.GetAdminThemeNameAsync()`, which will throw a NullReferenceException (not just skip) when IAdminThemeService is null\u2014i.e., precisely on sites without the Admin feature enabled, the exact scenario this fix was meant to support\u2014breaking a widely-used result filter in the render pipeline."
+}

@@ -1,0 +1,25 @@
+{
+ "pr": 18572,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "9104c4cfa23b20d474ab8f6bad50ee7fe790df210005b9625f86ca5a70994471",
+ "attempts": [
+  {
+   "seconds": 8.7,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 605,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 2970
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 3, \"reason\": \"The refactor drops the previous null-HttpContext guard, so if this recipe step runs without an active HttpContext (e.g. background recipe execution) LinkGenerator.GetPathByAction may throw instead of silently skipping URL regeneration as before.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 3,
+ "reason": "The refactor drops the previous null-HttpContext guard, so if this recipe step runs without an active HttpContext (e.g. background recipe execution) LinkGenerator.GetPathByAction may throw instead of silently skipping URL regeneration as before."
+}

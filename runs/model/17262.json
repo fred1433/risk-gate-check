@@ -1,0 +1,53 @@
+{
+ "pr": 17262,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "4fd10778bd8fae83caba60a9491e3113218341fde43b57e1a72f43ee512c7a33",
+ "attempts": [
+  {
+   "seconds": 21.0,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 263,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 50102
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 5, \"reason\": \"This is a massive, sweeping overhaul of the entire front-end build toolchain (gulp/npm\u2192yarn/parcel/vite/webpack custom 'assets-manager'), restructuring Assets.json across dozens of modules, regenerating hundreds of minified/bundled JS/CSS outputs (bootstrap, jquery, codemirror, trumbowyg, setup.js, menu.js, etc.), and rewriting the Setup wizard's password-strength script in TypeScript\u2014any subtle mis-bundling, missing file, path/rename mismatch, or behavioral diff in these regenerated runtime assets would silently break admin UI, setup, or content-editing across every tenant, and the sheer scale makes thorough review essentially infeasible.\""
+  },
+  {
+   "seconds": 6.6,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 211,
+    "cache_read_input_tokens": 50102,
+    "cache_creation_input_tokens": 0
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 5, \"reason\": \"Massive front-end tooling overhaul (gulp\\u2192assets-manager/yarn/parcel/vite/webpack) touching hundreds of modules' Assets.json, package.json layouts, and regenerating/committing built JS/CSS across nearly every module and the Resources module (bootstrap, jquery, codemirror, trumbowyg, vue, etc.), any mis-migration of a single Assets.json or build config can silently break admin UI/scripts/styles for consuming sites with no realistic way for a single senior reviewer to verify correctness of the regenerated bundles across this many modules.\""
+  },
+  {
+   "seconds": 5.0,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 217,
+    "cache_read_input_tokens": 50102,
+    "cache_creation_input_tokens": 0
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 5, \"reason\": \"This is a massive, repo-wide overhaul of the front-end asset build pipeline (gulp\\u2192yarn/parcel/vite/webpack, restructured Assets.json/package.json across dozens of modules, regenerated bundled/minified JS and CSS, new bootstrap/jQuery/trumbowyg versions, renamed files) that touches nearly every module's wwwroot output consumed by themes and downstream sites, making silent breakage (missing scripts, changed globals/selectors, altered CSS specificity, broken admin UI) highly likely and essentially unreviewable in full by an automated gate.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 5,
+ "reason": "This is a massive, repo-wide overhaul of the front-end asset build pipeline (gulp\u2192yarn/parcel/vite/webpack, restructured Assets.json/package.json across dozens of modules, regenerated bundled/minified JS and CSS, new bootstrap/jQuery/trumbowyg versions, renamed files) that touches nearly every module's wwwroot output consumed by themes and downstream sites, making silent breakage (missing scripts,"
+}

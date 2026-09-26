@@ -1,0 +1,25 @@
+{
+ "pr": 17677,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "8d8ead54cd18f3f3ade956081f58f3ee0719d9d77833584e3f75b009e0c252ac",
+ "attempts": [
+  {
+   "seconds": 6.0,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 69,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 32010
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 1, \"reason\": \"Change only fixes a regex for normalizing line endings in generated source map comments (build tooling + regenerated .map files), with no impact on application/module runtime behavior.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 1,
+ "reason": "Change only fixes a regex for normalizing line endings in generated source map comments (build tooling + regenerated .map files), with no impact on application/module runtime behavior."
+}

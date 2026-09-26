@@ -1,0 +1,25 @@
+{
+ "pr": 17382,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "b25d598c0ee0f5bd73befc430b1a8b6cdc0326a76f6accac9f5675d5857cfd64",
+ "attempts": [
+  {
+   "seconds": 3.2,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 110,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 6401
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Additive GraphQL feature (new fields/types via ContainedPart, renamed 'ContainedPart' GraphQL type name unchanged, and unconditional schema.RegisterType change) with low but non-zero risk of duplicate type registration or field-name collisions in existing schemas.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Additive GraphQL feature (new fields/types via ContainedPart, renamed 'ContainedPart' GraphQL type name unchanged, and unconditional schema.RegisterType change) with low but non-zero risk of duplicate type registration or field-name collisions in existing schemas."
+}

@@ -1,0 +1,25 @@
+{
+ "pr": 18171,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "1da8d6d5a607fcfbd41e1d4af6cbb00e6d4b996f85c94a5adcad0e244ec69908",
+ "attempts": [
+  {
+   "seconds": 3.1,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 76,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1059
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 1, \"reason\": \"Small, targeted one-line fix in the admin email test-send controller correcting which MailMessage property is set (From vs Sender), affecting only the test-email feature with minimal blast radius.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 1,
+ "reason": "Small, targeted one-line fix in the admin email test-send controller correcting which MailMessage property is set (From vs Sender), affecting only the test-email feature with minimal blast radius."
+}

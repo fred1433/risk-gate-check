@@ -1,0 +1,25 @@
+{
+ "pr": 17531,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "5d6d56e9a81549f2e16ac45dc57955889b2bea05c1030bbdfc5e88cbf47b192a",
+ "attempts": [
+  {
+   "seconds": 7.2,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 394,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 9281
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 3, \"reason\": \"Renames/relocates several built-in module and theme script files and updates their manifest URLs (e.g. TheAdmin.js, workflow-editor.js), which is a breaking path change for any downstream themes/modules or custom CSS/JS that reference these well-known static asset paths directly.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 3,
+ "reason": "Renames/relocates several built-in module and theme script files and updates their manifest URLs (e.g. TheAdmin.js, workflow-editor.js), which is a breaking path change for any downstream themes/modules or custom CSS/JS that reference these well-known static asset paths directly."
+}

@@ -1,0 +1,25 @@
+{
+ "pr": 17610,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "ed561440ceacd3e3fb079875a47ede98730efe16ad96222c6535e77387dbf590",
+ "attempts": [
+  {
+   "seconds": 3.4,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 124,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 8814
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Adds a new opt-in settings field with sensible defaults and changes the default collapsed state of BagPart/FlowPart contained-item widgets in the editor UI, which is a low-risk but user-visible behavioral change (previously nested Inline bags were always collapsed by default, now controlled by a setting defaulting to expanded).\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Adds a new opt-in settings field with sensible defaults and changes the default collapsed state of BagPart/FlowPart contained-item widgets in the editor UI, which is a low-risk but user-visible behavioral change (previously nested Inline bags were always collapsed by default, now controlled by a setting defaulting to expanded)."
+}

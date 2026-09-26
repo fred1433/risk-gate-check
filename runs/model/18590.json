@@ -1,0 +1,25 @@
+{
+ "pr": 18590,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "96dfa310a294a1bd6457074723c0dd04302ff97b209818f1e85a1e604f6f8770",
+ "attempts": [
+  {
+   "seconds": 3.8,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 70,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 3903
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 1, \"reason\": \"Change is limited to test infrastructure (CI workflow test-runner invocation and test project package references), not affecting shipped product code or runtime behavior for consuming applications.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 1,
+ "reason": "Change is limited to test infrastructure (CI workflow test-runner invocation and test project package references), not affecting shipped product code or runtime behavior for consuming applications."
+}

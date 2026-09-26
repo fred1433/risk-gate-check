@@ -1,0 +1,25 @@
+{
+ "pr": 17715,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "4a33d87dfe044836b0f97f82af742d975d68011af1e1eaf2905977e4f0ba2934",
+ "attempts": [
+  {
+   "seconds": 11.0,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 814,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 2968
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Purely front-end/view changes to the Title part settings and edit UI (enum value rendering, JS toggle for pattern field) with no changes to models, persistence, or APIs, so worst case is a minor UI/admin cosmetic issue rather than data breakage.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Purely front-end/view changes to the Title part settings and edit UI (enum value rendering, JS toggle for pattern field) with no changes to models, persistence, or APIs, so worst case is a minor UI/admin cosmetic issue rather than data breakage."
+}

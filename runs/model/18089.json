@@ -1,0 +1,25 @@
+{
+ "pr": 18089,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "ed864510c41ff96cce94db26704e14b0ebb9b3c575971bd8cff225bfa7f75c42",
+ "attempts": [
+  {
+   "seconds": 3.7,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 136,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 5235
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 3, \"reason\": \"This changes BlobOptions from standard IOptions<T> DI pattern to the module's custom IAsyncConfigureOptions/IAsyncOptions system, altering how/when the options are resolved and configured (async, per-tenant lifecycle) which could break other code or extensions depending on the old IOptions<BlobOptions> registration or synchronous configuration timing.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 3,
+ "reason": "This changes BlobOptions from standard IOptions<T> DI pattern to the module's custom IAsyncConfigureOptions/IAsyncOptions system, altering how/when the options are resolved and configured (async, per-tenant lifecycle) which could break other code or extensions depending on the old IOptions<BlobOptions> registration or synchronous configuration timing."
+}

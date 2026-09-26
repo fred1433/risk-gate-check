@@ -1,0 +1,25 @@
+{
+ "pr": 18385,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "35ad859e7b751f5fbffa6534ff20a8e35a2219d6a9faa78b813b8d09a40d72b3",
+ "attempts": [
+  {
+   "seconds": 6.4,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 190,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 30642
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 5, \"reason\": \"This drops net8.0/net9.0 support entirely (breaking any module/consumer not yet on .NET 10), pins to a .NET 10-rc Docker base image, removes IActionContextAccessor registration relied upon by third-party code while changing core URL-helper/ActionContext creation logic across many content parts (Link fields, Menu items, SEO), and swaps ForwardedHeaders KnownNetworks to KnownIPNetworks which can silently change reverse-proxy trust behavior in multi-tenant deployments.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 5,
+ "reason": "This drops net8.0/net9.0 support entirely (breaking any module/consumer not yet on .NET 10), pins to a .NET 10-rc Docker base image, removes IActionContextAccessor registration relied upon by third-party code while changing core URL-helper/ActionContext creation logic across many content parts (Link fields, Menu items, SEO), and swaps ForwardedHeaders KnownNetworks to KnownIPNetworks which can sil"
+}

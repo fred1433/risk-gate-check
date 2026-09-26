@@ -1,0 +1,25 @@
+{
+ "pr": 17506,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "a5b7cafb62d898c92ca6533be5b4eecb894dc5862d9f4dc099af362f61bdef73",
+ "attempts": [
+  {
+   "seconds": 5.0,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 134,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 37626
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Front-end only change swapping Trumbowyg undo/redo buttons for a new history plugin and adding min-height CSS, isolated to admin WYSIWYG editors with low chance of breaking core CMS behavior, though it assumes the trumbowyg-plugins asset bundle is properly registered and custom themes overriding these views/settings could get out of sync.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Front-end only change swapping Trumbowyg undo/redo buttons for a new history plugin and adding min-height CSS, isolated to admin WYSIWYG editors with low chance of breaking core CMS behavior, though it assumes the trumbowyg-plugins asset bundle is properly registered and custom themes overriding these views/settings could get out of sync."
+}

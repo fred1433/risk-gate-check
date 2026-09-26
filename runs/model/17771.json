@@ -1,0 +1,25 @@
+{
+ "pr": 17771,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "fe81cd6218ddb1f89e3939934344c8700927bb457c2852c052ca677d6f24ac80",
+ "attempts": [
+  {
+   "seconds": 3.1,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 52,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1067
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 1, \"reason\": \"Only changes an editorconfig lint severity for build-time style enforcement, with no effect on runtime behavior.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 1,
+ "reason": "Only changes an editorconfig lint severity for build-time style enforcement, with no effect on runtime behavior."
+}

@@ -1,0 +1,25 @@
+{
+ "pr": 17409,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "9780e670f0ec55031009c41b8cba2d55c371bb8f75db688acc73bce45d799f14",
+ "attempts": [
+  {
+   "seconds": 18.1,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 1286,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 4805
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 3, \"reason\": \"The fix correctly changes CSP directive separator to ';' per spec, but since PermissionsPolicy shares the same PoliciesSeparator constant, it also switches Permissions-Policy (which requires comma-separated directives) to ';', likely producing malformed Permissions-Policy headers for any tenant using that feature.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 3,
+ "reason": "The fix correctly changes CSP directive separator to ';' per spec, but since PermissionsPolicy shares the same PoliciesSeparator constant, it also switches Permissions-Policy (which requires comma-separated directives) to ';', likely producing malformed Permissions-Policy headers for any tenant using that feature."
+}

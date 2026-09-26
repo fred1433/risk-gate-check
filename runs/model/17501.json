@@ -1,0 +1,25 @@
+{
+ "pr": 17501,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "5ab54346f882d98ee37822bdeda1ba556e9e4491da34ed8dfc37a4b975399834",
+ "attempts": [
+  {
+   "seconds": 3.5,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 95,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 3326
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Changes term rendering to include all taxonomy terms (not just selected ones) and reorders them by field selection order, which fixes the editor but changes PopulateTermEntries' behavior/output for any other callers relying on the old selected-only filtering.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Changes term rendering to include all taxonomy terms (not just selected ones) and reorders them by field selection order, which fixes the editor but changes PopulateTermEntries' behavior/output for any other callers relying on the old selected-only filtering."
+}

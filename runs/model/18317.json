@@ -1,0 +1,25 @@
+{
+ "pr": 18317,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "8833590cbc917fb36d5005eae202c4ffe673ba04d5cc80a3ffa9b0846211884d",
+ "attempts": [
+  {
+   "seconds": 4.2,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 118,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 30424
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Routine patch-level Bootstrap bump (5.3.7\u21925.3.8) with only version/CDN/integrity hash updates and one behavioral tweak (dropdown no longer force-refocuses trigger on hide), which is low risk but could subtly affect custom JS/tests relying on that focus behavior.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Routine patch-level Bootstrap bump (5.3.7\u21925.3.8) with only version/CDN/integrity hash updates and one behavioral tweak (dropdown no longer force-refocuses trigger on hide), which is low risk but could subtly affect custom JS/tests relying on that focus behavior."
+}

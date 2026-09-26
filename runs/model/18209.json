@@ -1,0 +1,25 @@
+{
+ "pr": 18209,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "4f832705a6b13d68022934856ab9267d29d6912c9d719406aaa866af8b9ed94f",
+ "attempts": [
+  {
+   "seconds": 3.7,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 109,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 2247
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Moves delete-part action from a form-submit endpoint to a direct HttpPost link on the list page, which changes the trigger UX but keeps the same authorization check, so behavior for existing content type definitions should be unaffected barring any external code relying on the old FormValueRequired POST action name.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Moves delete-part action from a form-submit endpoint to a direct HttpPost link on the list page, which changes the trigger UX but keeps the same authorization check, so behavior for existing content type definitions should be unaffected barring any external code relying on the old FormValueRequired POST action name."
+}

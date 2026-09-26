@@ -1,0 +1,25 @@
+{
+ "pr": 17385,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "05c744ac8734b0adf09502e048bfcee1667fea9cf010efddd93c0de2e37053d2",
+ "attempts": [
+  {
+   "seconds": 13.3,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 944,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 10870
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 3, \"reason\": \"Changing DefaultPermissionService's internal dictionary to case-insensitive keys and adding dedupe logic to AddPermissionProvider alters core permission registration/lookup behaviour across all tenants and modules, risking silent collapsing or dropping of permissions if any existing case-variant or duplicate registrations exist in the wild.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 3,
+ "reason": "Changing DefaultPermissionService's internal dictionary to case-insensitive keys and adding dedupe logic to AddPermissionProvider alters core permission registration/lookup behaviour across all tenants and modules, risking silent collapsing or dropping of permissions if any existing case-variant or duplicate registrations exist in the wild."
+}

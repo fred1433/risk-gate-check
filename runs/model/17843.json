@@ -1,0 +1,25 @@
+{
+ "pr": 17843,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "8077a589b168b36b900be01bbf4b0ca258aded3b9ca931ed87befe43b7770a5e",
+ "attempts": [
+  {
+   "seconds": 4.6,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 79,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 3180
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 1, \"reason\": \"Purely additive change (new opt-in Liquid tag plus internal refactor of a class that keeps the same registered tag name and behavior for page_title), so existing templates and tenants are unaffected.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 1,
+ "reason": "Purely additive change (new opt-in Liquid tag plus internal refactor of a class that keeps the same registered tag name and behavior for page_title), so existing templates and tenants are unaffected."
+}

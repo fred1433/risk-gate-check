@@ -1,0 +1,25 @@
+{
+ "pr": 17752,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "4e9cb7250865fada48f79c525f67bf2461996d92be66f780d9f05ee829188e66",
+ "attempts": [
+  {
+   "seconds": 3.1,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 70,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1372
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Removing these public ViewModel properties (Selected, IsChecked) could break external code or Razor views that bind to them, though they appear unused in these view models' own admin views.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Removing these public ViewModel properties (Selected, IsChecked) could break external code or Razor views that bind to them, though they appear unused in these view models' own admin views."
+}

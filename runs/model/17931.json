@@ -1,0 +1,25 @@
+{
+ "pr": 17931,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "eea0ecd51ac68244e7804233963056ab9002f9fe8f67020b746309fa64d22ef9",
+ "attempts": [
+  {
+   "seconds": 4.4,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 156,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 6416
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 5, \"reason\": \"Major version bump of Elastic.Clients.Elasticsearch (8\u21929) removes the 'language' analyzer support entirely and changes core API surface (GetMapping/GetIndex response shapes, DynamicTemplate construction), which will break any existing tenant indices/mappings using the language analyzer and likely requires Elasticsearch server 9.x compatibility, a breaking infrastructure requirement for hosted sites.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 5,
+ "reason": "Major version bump of Elastic.Clients.Elasticsearch (8\u21929) removes the 'language' analyzer support entirely and changes core API surface (GetMapping/GetIndex response shapes, DynamicTemplate construction), which will break any existing tenant indices/mappings using the language analyzer and likely requires Elasticsearch server 9.x compatibility, a breaking infrastructure requirement for hosted site"
+}

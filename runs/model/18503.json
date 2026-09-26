@@ -1,0 +1,25 @@
+{
+ "pr": 18503,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "a35faf1ae5f1500b3e2d01c2769100bc2a80c3e13af272d067f5906bfc134cba",
+ "attempts": [
+  {
+   "seconds": 6.0,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 165,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 27417
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 5, \"reason\": \"Complete rewrite of the SQL parsing/translation engine (Irony grammar replaced by a new Parlot-based parser and hand-written translator) underlying OrchardCore.Queries' custom SQL provider, with only a stray test project and minimal test additions as validation, so subtle differences in operator precedence, keyword handling, aliasing, joins, CTEs, or parameterization could silently change generated SQL across all tenants using SQL-based queries.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 5,
+ "reason": "Complete rewrite of the SQL parsing/translation engine (Irony grammar replaced by a new Parlot-based parser and hand-written translator) underlying OrchardCore.Queries' custom SQL provider, with only a stray test project and minimal test additions as validation, so subtle differences in operator precedence, keyword handling, aliasing, joins, CTEs, or parameterization could silently change generate"
+}

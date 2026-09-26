@@ -1,0 +1,25 @@
+{
+ "pr": 18591,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "3b943fe1f98637505c2f4cc30605b39137511268c9b357251ed7bfd9283334ab",
+ "attempts": [
+  {
+   "seconds": 3.7,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 69,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1202
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 1, \"reason\": \"Small, targeted fix adding the correct area parameter to a link generation call, which fixes URL resolution for the HttpWorkflow controller without altering other behavior.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 1,
+ "reason": "Small, targeted fix adding the correct area parameter to a link generation call, which fixes URL resolution for the HttpWorkflow controller without altering other behavior."
+}

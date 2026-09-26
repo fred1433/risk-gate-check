@@ -1,0 +1,25 @@
+{
+ "pr": 18173,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "96f826e2cf3fcbf6726b52540e9219cd626b8b32a67c10c522bffecbb0de4681",
+ "attempts": [
+  {
+   "seconds": 12.0,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 714,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1808
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 3, \"reason\": \"Changing the DI registration order of the workflow content handler alters its execution order relative to all other IContentHandler implementations for every content event across every tenant/module, which could subtly break other extensions that relied on the previous ordering even though this fix is well-intentioned.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 3,
+ "reason": "Changing the DI registration order of the workflow content handler alters its execution order relative to all other IContentHandler implementations for every content event across every tenant/module, which could subtly break other extensions that relied on the previous ordering even though this fix is well-intentioned."
+}

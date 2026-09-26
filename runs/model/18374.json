@@ -1,0 +1,25 @@
+{
+ "pr": 18374,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "e499ab6f5a6c9f0c1c50d07ede57e0f57734f093f3dbba6d5ff93c4b10ab0697",
+ "attempts": [
+  {
+   "seconds": 5.4,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 137,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 39543
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 3, \"reason\": \"The functional change is a small, low-risk TS/JS edit adding outcome titles to workflow nodes, but the PR bundles a large, unrelated dependency upgrade (Vue major version bump across esm/global/runtime bundles) and many regenerated minified/map assets, which is hard to fully verify in an automated gate and could introduce subtle admin-UI regressions.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 3,
+ "reason": "The functional change is a small, low-risk TS/JS edit adding outcome titles to workflow nodes, but the PR bundles a large, unrelated dependency upgrade (Vue major version bump across esm/global/runtime bundles) and many regenerated minified/map assets, which is hard to fully verify in an automated gate and could introduce subtle admin-UI regressions."
+}

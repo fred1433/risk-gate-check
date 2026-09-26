@@ -1,0 +1,25 @@
+{
+ "pr": 17871,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "8331c51b1166bff29e931ac8d2d02610ebc25bed9608b25d92cf3db93bb499f4",
+ "attempts": [
+  {
+   "seconds": 21.2,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 1720,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 3240
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 3, \"reason\": \"Changes core workflow abort semantics and makes WorkflowExecutionContext sealed/IDisposable with a new Cancel() API, so any third-party activities or workflow code depending on the old (effectively broken) per-call CancellationToken behavior or subclassing the context could see different runtime behavior.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 3,
+ "reason": "Changes core workflow abort semantics and makes WorkflowExecutionContext sealed/IDisposable with a new Cancel() API, so any third-party activities or workflow code depending on the old (effectively broken) per-call CancellationToken behavior or subclassing the context could see different runtime behavior."
+}

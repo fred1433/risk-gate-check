@@ -1,0 +1,25 @@
+{
+ "pr": 18233,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "9245b0f69204cc25b7aa0f16ff5485da77680aa79922234396c5a182dd723785",
+ "attempts": [
+  {
+   "seconds": 5.3,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 144,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 2920
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Delete moves from a POST-only form action on Edit to a GET-linked action on the List page (now using [HttpPost] without the FormValueRequired/ActionName Edit alias), which is low risk functionally but changes the route/action name (Delete vs Edit) that other code, permissions caching, or customizations relying on the old 'submit.Delete' POST-to-Edit convention could depend on.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Delete moves from a POST-only form action on Edit to a GET-linked action on the List page (now using [HttpPost] without the FormValueRequired/ActionName Edit alias), which is low risk functionally but changes the route/action name (Delete vs Edit) that other code, permissions caching, or customizations relying on the old 'submit.Delete' POST-to-Edit convention could depend on."
+}

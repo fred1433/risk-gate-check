@@ -1,0 +1,25 @@
+{
+ "pr": 17730,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "f2165a3f95e4af057167edf9284e2107598dfeb07edadd924a9bf181da68c744",
+ "attempts": [
+  {
+   "seconds": 4.4,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 121,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 2115
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Small, localized fix to FlowPart widget prefix mapping (adds a persisted-on-model Prefixes array used only to preserve field prefixes across validation errors), with minimal surface area and no changes to storage schema or public APIs, though it should be tested for correct behavior across widget reordering/add/remove scenarios.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Small, localized fix to FlowPart widget prefix mapping (adds a persisted-on-model Prefixes array used only to preserve field prefixes across validation errors), with minimal surface area and no changes to storage schema or public APIs, though it should be tested for correct behavior across widget reordering/add/remove scenarios."
+}

@@ -1,0 +1,25 @@
+{
+ "pr": 17863,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "919c6530752bfb0a68254cfdc37b4bee96b1135176b8c4889424eeacbc72b4f5",
+ "attempts": [
+  {
+   "seconds": 4.4,
+   "usage": {
+    "input_tokens": 928,
+    "output_tokens": 61,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 1, \"reason\": \"This only changes a local VS Code debug configuration path, which has no effect on the built application, runtime behavior, or any tenant/module functionality.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 1,
+ "reason": "This only changes a local VS Code debug configuration path, which has no effect on the built application, runtime behavior, or any tenant/module functionality."
+}

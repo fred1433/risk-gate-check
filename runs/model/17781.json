@@ -1,0 +1,25 @@
+{
+ "pr": 17781,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "e2e318341004e322f9bdd1f60955b1cfd87ae9d91e323b93b9599001104d4d0c",
+ "attempts": [
+  {
+   "seconds": 4.2,
+   "usage": {
+    "input_tokens": 988,
+    "output_tokens": 58,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 1, \"reason\": \"Small, additive change that only sets ViewData for return URL propagation on validation failure, with no impact on control flow or existing behavior.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 1,
+ "reason": "Small, additive change that only sets ViewData for return URL propagation on validation failure, with no impact on control flow or existing behavior."
+}

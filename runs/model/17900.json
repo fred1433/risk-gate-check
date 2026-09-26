@@ -1,0 +1,25 @@
+{
+ "pr": 17900,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "394923aa25123d3a7d2370d52ecef4f693b0a40bbfb4869920154f2890cde604",
+ "attempts": [
+  {
+   "seconds": 5.2,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 258,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1510
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Only display Name/Description/Category metadata changes (feature IDs unchanged), so functionality is unaffected, but the Category change from 'Distributed' to 'Security' could subtly affect any code or UI filtering that depends on the old category string.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Only display Name/Description/Category metadata changes (feature IDs unchanged), so functionality is unaffected, but the Category change from 'Distributed' to 'Security' could subtly affect any code or UI filtering that depends on the old category string."
+}

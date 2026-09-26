@@ -1,0 +1,25 @@
+{
+ "pr": 18646,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "6b596470e62504347cdb4b3eeb11c19148ee369aa9d7f829dca4d34bbd5660ec",
+ "attempts": [
+  {
+   "seconds": 9.1,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 570,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 3866
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 3, \"reason\": \"Changing default numeric literal/parameter parsing from decimal to long is a behavioral change in the SQL query engine that could alter parameter types and generated SQL for any existing site/query relying on the previous decimal semantics.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 3,
+ "reason": "Changing default numeric literal/parameter parsing from decimal to long is a behavioral change in the SQL query engine that could alter parameter types and generated SQL for any existing site/query relying on the previous decimal semantics."
+}

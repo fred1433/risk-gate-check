@@ -1,0 +1,25 @@
+{
+ "pr": 18195,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "af2389f65ce360a25e160b950ae9bc1b0cd38ed105c941a4fa255e222b92a71f",
+ "attempts": [
+  {
+   "seconds": 15.2,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 1104,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 13160
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 3, \"reason\": \"This touches core extension-loading and shell composition logic (IExtensionManager, ExtensionManager, CompositionStrategy) used by every tenant/module at startup, and although the control-flow refactor and new obsolete-tagged default interface overloads appear behaviorally equivalent and are covered by new tests, any subtle regression in feature/dependency resolution would break tenant startup broadly, and the new dual signatures could cause overload-resolution ambiguity or obsolete-warning breakage for external IExtensionManager implementers.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 3,
+ "reason": "This touches core extension-loading and shell composition logic (IExtensionManager, ExtensionManager, CompositionStrategy) used by every tenant/module at startup, and although the control-flow refactor and new obsolete-tagged default interface overloads appear behaviorally equivalent and are covered by new tests, any subtle regression in feature/dependency resolution would break tenant startup bro"
+}

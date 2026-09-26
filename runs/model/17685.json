@@ -1,0 +1,25 @@
+{
+ "pr": 17685,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "ddf127fe1be72443af66a9cc94fe7bb7223494f669695e372763ed6636918ad9",
+ "attempts": [
+  {
+   "seconds": 3.2,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 71,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1146
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 1, \"reason\": \"This only adds a build-time MSBuild property scoping generated validation interceptors for net10.0 compatibility, with no effect on runtime behavior or other target frameworks.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 1,
+ "reason": "This only adds a build-time MSBuild property scoping generated validation interceptors for net10.0 compatibility, with no effect on runtime behavior or other target frameworks."
+}

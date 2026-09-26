@@ -1,0 +1,25 @@
+{
+ "pr": 17714,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "8686ff126dbe7ef849c6cbf94c41c0cf1d3a75680c850ded116e1b929de6551f",
+ "attempts": [
+  {
+   "seconds": 4.0,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 75,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1225
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Small, additive UI change in a view template that only adds a badge based on an existing UserManager call, with low chance of breaking existing behavior but touches admin user list rendering for all tenants.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Small, additive UI change in a view template that only adds a badge based on an existing UserManager call, with low chance of breaking existing behavior but touches admin user list rendering for all tenants."
+}

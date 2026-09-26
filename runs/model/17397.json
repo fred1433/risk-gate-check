@@ -1,0 +1,25 @@
+{
+ "pr": 17397,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "cce302c4ec373b11fcec238435242a73f08286d375d9d1e708239dc58e30eb37",
+ "attempts": [
+  {
+   "seconds": 9.4,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 564,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 2112
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Changing the ViewModel default for AutoSelectEncryption to true only affects the settings edit form's initial/unsaved state, not persisted tenant settings, but could subtly change behavior for tenants that create SMTP settings via code without explicitly setting this flag.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Changing the ViewModel default for AutoSelectEncryption to true only affects the settings edit form's initial/unsaved state, not persisted tenant settings, but could subtly change behavior for tenants that create SMTP settings via code without explicitly setting this flag."
+}

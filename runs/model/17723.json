@@ -1,0 +1,25 @@
+{
+ "pr": 17723,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "83293bd573a2811e0316ae06926b4f8e0d8a3f68cd42f6476306d668ef91fb01",
+ "attempts": [
+  {
+   "seconds": 3.4,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 79,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1064
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Small additive change that imports an optional Properties JSON object onto Query during deserialization, which is unlikely to break existing queries but could overwrite Properties if import data unexpectedly contains that key.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Small additive change that imports an optional Properties JSON object onto Query during deserialization, which is unlikely to break existing queries but could overwrite Properties if import data unexpectedly contains that key."
+}

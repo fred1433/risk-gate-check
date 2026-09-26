@@ -1,0 +1,25 @@
+{
+ "pr": 18472,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "44988e8ef0ac8d780a62a4303b89d2371419c4a59d0ca7a2833bfb31a72c8c02",
+ "attempts": [
+  {
+   "seconds": 6.6,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 160,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 13418
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 4, \"reason\": \"This removes public API surface used across the display pipeline (ShapeDescriptor.BindingSources, ShapeMetadata.BindingSources, seals FeatureShapeDescriptor/ShapeDescriptorIndex/ShapeBinding, makes Binding/BindingSource non-virtual), which will break any theme/module that overrides these members, relies on BindingSources for localization scoping, or inherits from the now-sealed classes.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 4,
+ "reason": "This removes public API surface used across the display pipeline (ShapeDescriptor.BindingSources, ShapeMetadata.BindingSources, seals FeatureShapeDescriptor/ShapeDescriptorIndex/ShapeBinding, makes Binding/BindingSource non-virtual), which will break any theme/module that overrides these members, relies on BindingSources for localization scoping, or inherits from the now-sealed classes."
+}

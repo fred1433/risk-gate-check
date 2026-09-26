@@ -1,0 +1,25 @@
+{
+ "pr": 18099,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "757edf98459a1d7f35f6988f590e0cdd7dbd9884085d04593deeacd8da734de7",
+ "attempts": [
+  {
+   "seconds": 10.2,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 644,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 8764
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Pure refactor consolidating duplicate Hint/Required properties into a shared FieldSettings base class without changing property names, so existing JSON-serialized settings and consumers should deserialize identically, but the widespread change across many built-in field settings types touching multi-tenant content definitions still warrants a quick review.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Pure refactor consolidating duplicate Hint/Required properties into a shared FieldSettings base class without changing property names, so existing JSON-serialized settings and consumers should deserialize identically, but the widespread change across many built-in field settings types touching multi-tenant content definitions still warrants a quick review."
+}

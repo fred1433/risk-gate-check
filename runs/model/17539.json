@@ -1,0 +1,25 @@
+{
+ "pr": 17539,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "db933a2a37071251206ed7fd72cfd429bc2585b64935737d03c6c04a0a23c415",
+ "attempts": [
+  {
+   "seconds": 31.4,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 998,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1528
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 3, \"reason\": \"The change alters core caching behavior in the base ContentElement class (Data setter now also clears the internal Elements dictionary), which is foundational to all ContentItems/ContentParts across every module and tenant, so even though it targets a real stale-cache bug in cloning, unintended side effects could surface broadly wherever cached sub-elements are expected to persist across Data reassignment.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 3,
+ "reason": "The change alters core caching behavior in the base ContentElement class (Data setter now also clears the internal Elements dictionary), which is foundational to all ContentItems/ContentParts across every module and tenant, so even though it targets a real stale-cache bug in cloning, unintended side effects could surface broadly wherever cached sub-elements are expected to persist across Data reas"
+}

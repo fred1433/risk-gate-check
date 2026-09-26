@@ -1,0 +1,51 @@
+{
+ "pr": 17528,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "12aec903b7d9d56368a57fdd87a547c792d35b581c3690db9c185bbd6b8efded",
+ "attempts": [
+  {
+   "seconds": 16.2,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 178,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 51956
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 5, \"reason\": \"Massive overhaul of the core OrchardCore.Resources module (ResourceManagementOptionsConfiguration.cs with +849/-207 lines, restructured vendor asset paths, jQuery/Bootstrap/Vue/FontAwesome vendor bundling changes, and a full build-tooling rewrite) that affects the shared resource manifest every tenant/module/theme in the framework depends on, making regressions highly likely and impossible to fully verify without a senior review of the huge diff.\""
+  },
+  {
+   "seconds": 7.0,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 230,
+    "cache_read_input_tokens": 51956,
+    "cache_creation_input_tokens": 0
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 5, \"reason\": \"This massively restructures OrchardCore.Resources (bootstrap, jQuery, Vue, monaco, fontawesome vendor paths and Assets.json), rewrites ResourceManagementOptionsConfiguration.cs with +849/-207 lines defining resource manifests used by virtually every module and downstream site/theme, and overhauls the asset build pipeline (sourcemap logic, minification, dependency versions like webpack pinned to 5.94.0) \u2014 any path/CDN/version mismatch here can break script/style loading across the entire multi-tenant CMS for all consumers, and this is far too large and cross-cutting to safely auto-merge.\""
+  },
+  {
+   "seconds": 6.0,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 238,
+    "cache_read_input_tokens": 51956,
+    "cache_creation_input_tokens": 0
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 5, \"reason\": \"Massive overhaul of the entire front-end asset pipeline (build scripts, webpack/parcel/sass config, dependency version bumps) plus a rewritten ResourceManagementOptionsConfiguration.cs (+849/-207) that redefines resource paths, vendor versions (Bootstrap, jQuery, Vue, FontAwesome relocated from wwwroot to Assets), and CDN/resource names used by every module and downstream theme/module referencing these shared script/style manifests, so any mismatch breaks admin UI, editors (Trumbowyg/CodeMirror/Monaco), and any custom module relying on the old resource names or file locations across all tenants.\""
+  }
+ ],
+ "status": "malformed_or_failed"
+}

@@ -1,0 +1,25 @@
+{
+ "pr": 18570,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "4b91ba636fa59734b6e18af172686f7b4e22fcbb6945581a2c27ce28a9bfc2a9",
+ "attempts": [
+  {
+   "seconds": 7.1,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 530,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 2808
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 3, \"reason\": \"The fix normalizes culture to lowercase only on the query side without showing that LocalizedContentItemIndex.Culture is populated with the same lowercase normalization, so on case-sensitive databases this could either fix or newly break culture matching for localized content lookups, sitemaps, and contained list items depending on unseen indexing code.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 3,
+ "reason": "The fix normalizes culture to lowercase only on the query side without showing that LocalizedContentItemIndex.Culture is populated with the same lowercase normalization, so on case-sensitive databases this could either fix or newly break culture matching for localized content lookups, sitemaps, and contained list items depending on unseen indexing code."
+}

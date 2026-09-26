@@ -1,0 +1,305 @@
+{
+ "period": "evaluation",
+ "N": 479,
+ "frozen": {
+  "frozen_at": "2026-09-26, before any evaluation-period decision was computed",
+  "target_load": 0.364,
+  "target_load_source": "review load of the simple sensitive-area policy on the 2024 development cohort (324/891)",
+  "theta": 3,
+  "theta_rule": "deterministic soft-score threshold whose 2024 load is closest to the target (0.325; theta 2 gave 0.404)",
+  "tau": 3,
+  "tau_rule": "model risk threshold whose estimated 2024 load is closest to the target (0.356), estimated on a seeded random sample of 150 of the 696 development PRs the model would read (seed 20260926)",
+  "model_alias": "sonnet",
+  "model_resolved": "claude-sonnet-5",
+  "prompt_version": "b82137b70589",
+  "diff_budget_chars": 60000,
+  "invocation": "claude -p --model sonnet --tools '' --setting-sources '' --strict-mcp-config --mcp-config '{\"mcpServers\":{}}' --disable-slash-commands --no-session-persistence --system-prompt <fixed> --output-format json, from an empty temporary directory",
+  "source_hashes": {
+   "riskgate/signals.py": "76b5d1f8bbd1df09",
+   "riskgate/policies.py": "37a0bd248bd26337",
+   "riskgate/model.py": "08e8759106a928f3"
+  }
+ },
+ "policies": {
+  "simple": {
+   "confirmed": {
+    "k": 7,
+    "m": 11,
+    "families_m": 11,
+    "families_k": 7,
+    "R": 155,
+    "N": 479,
+    "unknown": 0,
+    "load": 0.3235908141962422,
+    "k_over_m_ci95": [
+     0.308,
+     0.891
+    ],
+    "missed": [
+     17369,
+     17421,
+     17481,
+     17515,
+     18121,
+     18508,
+     18541
+    ],
+    "random_same_load_expected_k": 7.44
+   },
+   "sensitivity_A_or_B": {
+    "k": 14,
+    "m": 22,
+    "families_m": 22,
+    "families_k": 14,
+    "R": 155,
+    "N": 479,
+    "unknown": 0,
+    "load": 0.3235908141962422,
+    "k_over_m_ci95": [
+     0.407,
+     0.828
+    ],
+    "missed": [
+     17369,
+     16973,
+     17421,
+     17481,
+     17515,
+     17611,
+     17837,
+     17931,
+     18121,
+     18238,
+     18504,
+     18508,
+     18541,
+     18503
+    ],
+    "random_same_load_expected_k": 14.88
+   }
+  },
+  "deterministic": {
+   "confirmed": {
+    "k": 7,
+    "m": 11,
+    "families_m": 11,
+    "families_k": 7,
+    "R": 155,
+    "N": 479,
+    "unknown": 0,
+    "load": 0.3235908141962422,
+    "k_over_m_ci95": [
+     0.308,
+     0.891
+    ],
+    "missed": [
+     17369,
+     17421,
+     17481,
+     17515,
+     18121,
+     18508,
+     18541
+    ],
+    "random_same_load_expected_k": 7.44
+   },
+   "sensitivity_A_or_B": {
+    "k": 12,
+    "m": 22,
+    "families_m": 22,
+    "families_k": 12,
+    "R": 155,
+    "N": 479,
+    "unknown": 0,
+    "load": 0.3235908141962422,
+    "k_over_m_ci95": [
+     0.322,
+     0.756
+    ],
+    "missed": [
+     17369,
+     17409,
+     17421,
+     17481,
+     17515,
+     17611,
+     17751,
+     17837,
+     18121,
+     18238,
+     18508,
+     18541
+    ],
+    "random_same_load_expected_k": 14.88
+   }
+  },
+  "hybrid": {
+   "confirmed": {
+    "k": 2,
+    "m": 11,
+    "families_m": 11,
+    "families_k": 2,
+    "R": 166,
+    "N": 479,
+    "unknown": 2,
+    "load": 0.3465553235908142,
+    "k_over_m_ci95": [
+     0.023,
+     0.518
+    ],
+    "missed": [
+     17421,
+     18508
+    ],
+    "random_same_load_expected_k": 7.19
+   },
+   "sensitivity_A_or_B": {
+    "k": 5,
+    "m": 22,
+    "families_m": 22,
+    "families_k": 5,
+    "R": 166,
+    "N": 479,
+    "unknown": 2,
+    "load": 0.3465553235908142,
+    "k_over_m_ci95": [
+     0.078,
+     0.454
+    ],
+    "missed": [
+     17421,
+     17751,
+     17837,
+     18238,
+     18508
+    ],
+    "random_same_load_expected_k": 14.38
+   }
+  }
+ },
+ "matched_load_secondary": {
+  "target_load": 0.324,
+  "deterministic": {
+   "threshold": 3,
+   "load": 0.324,
+   "k": 7,
+   "m": 11
+  },
+  "hybrid": {
+   "threshold": 3,
+   "load": 0.347,
+   "k": 2,
+   "m": 11
+  }
+ },
+ "hybrid_vs_deterministic": {
+  "disagreements": 81,
+  "hybrid_only_review": 46,
+  "deterministic_only_review": 35,
+  "labelled": [
+   {
+    "pr": 17369,
+    "label": "A",
+    "title": "Encode analytics ids in script",
+    "hybrid": "REVIEW_REQUIRED",
+    "deterministic": "ALLOW",
+    "hybrid_reasons": [
+     "model risk 3/5: The empty-string guard (IsNullOrWhiteSpace) was replaced with a null check on settings, so any tenant that has the module enabled but no PixelId/TrackingID/ContainerID configured will now get broken/empty analytics scripts injected into every page head, whereas previously nothing was rendered."
+    ],
+    "deterministic_reasons": [
+     "+1 no test changed alongside production change"
+    ]
+   },
+   {
+    "pr": 17409,
+    "label": "B",
+    "title": "Fix CSP header policy separator (Lombiq Technologies: OCORE-222)",
+    "hybrid": "REVIEW_REQUIRED",
+    "deterministic": "ALLOW",
+    "hybrid_reasons": [
+     "model risk 3/5: The fix correctly changes CSP directive separator to ';' per spec, but since PermissionsPolicy shares the same PoliciesSeparator constant, it also switches Permissions-Policy (which requires comma-separated directives) to ';', likely producing malformed Permissions-Policy headers for any tenant using that feature."
+    ],
+    "deterministic_reasons": [
+     "no structural risk signal"
+    ]
+   },
+   {
+    "pr": 17481,
+    "label": "A",
+    "title": "fix taxonomy field multiselect mode tags automatic sorting problem",
+    "hybrid": "REVIEW_REQUIRED",
+    "deterministic": "ALLOW",
+    "hybrid_reasons": [
+     "model risk 4/5: This shared helper builds the taxonomy term tree used for rendering (likely including the multiselect editor's checkbox tree), and the rewrite now only emits entries for terms already present in TermContentItemIds while only recursing into their children \u2014 meaning unselected terms (and their descendants) are silently dropped from the tree, which could break the ability to pick new terms in the mul"
+    ],
+    "deterministic_reasons": [
+     "no structural risk signal"
+    ]
+   },
+   {
+    "pr": 17515,
+    "label": "A",
+    "title": "Add \"save and continue\" button to admin menu node and content type editors",
+    "hybrid": "REVIEW_REQUIRED",
+    "deterministic": "ALLOW",
+    "hybrid_reasons": [
+     "model risk 4/5: The ContentTypes AdminController Edit action now branches on a 'submit' parameter to redirect or show a success notice with no visible call to persist the type definition changes in this diff, and it also renames the submit button field from 'submit.Save' to 'submit'/'save', which could silently break saving or any code/tests relying on the old field name for a widely-used core admin flow."
+    ],
+    "deterministic_reasons": [
+     "+2 public declaration removed or rewritten: src/OrchardCore.Modules/OrchardCore.AdminMenu/Controllers/NodeController.cs"
+    ]
+   },
+   {
+    "pr": 17611,
+    "label": "B",
+    "title": "Add condition for User moderation and Email confirmation upon registration",
+    "hybrid": "REVIEW_REQUIRED",
+    "deterministic": "ALLOW",
+    "hybrid_reasons": [
+     "model risk 3/5: This changes registration behavior to skip auto sign-in when moderation or email confirmation is required, which is a security-relevant, security-sensitive change to authentication flow used across all tenants and could break sites relying on the previous auto-sign-in behavior or custom registration workflows."
+    ],
+    "deterministic_reasons": [
+     "+1 core framework code: src/OrchardCore/OrchardCore.Users.Core/Services/UserService.cs"
+    ]
+   },
+   {
+    "pr": 18121,
+    "label": "A",
+    "title": "Add opacity option for the text color field",
+    "hybrid": "REVIEW_REQUIRED",
+    "deterministic": "ALLOW",
+    "hybrid_reasons": [
+     "model risk 3/5: Hardcoded element IDs (#color, #color_wrapper, #color_opacity) will collide when multiple ColorField instances appear on the same edit form (e.g. bags/lists or multiple fields), breaking the picker for all but one instance, and the new alpha-appended hex value (#rrggbbaa) changes the stored text format which downstream themes/validators expecting standard 6-digit hex colors may not handle."
+    ],
+    "deterministic_reasons": [
+     "+1 no test changed alongside production change"
+    ]
+   },
+   {
+    "pr": 18541,
+    "label": "A",
+    "title": "Add missing useCdn in ScriptBlock",
+    "hybrid": "REVIEW_REQUIRED",
+    "deterministic": "ALLOW",
+    "hybrid_reasons": [
+     "model risk 3/5: The new \"useCdn\" case incorrectly assigns to the 'name' variable instead of introducing/using a useCdn variable, so the CDN flag is never actually applied while silently overwriting 'name' if both attributes are used together, making this bug-introducing rather than bug-fixing."
+    ],
+    "deterministic_reasons": [
+     "no structural risk signal"
+    ]
+   }
+  ]
+ },
+ "model_usage": {
+  "prs_sent_to_model": 357,
+  "attempts": 372,
+  "retries": 15,
+  "failed": 2,
+  "input_tokens": 3075298,
+  "output_tokens": 85628,
+  "seconds": 2158.1,
+  "models": [
+   "claude-sonnet-5"
+  ]
+ }
+}
