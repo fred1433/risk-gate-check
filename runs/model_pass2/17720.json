@@ -1,0 +1,25 @@
+{
+ "pr": 17720,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "4ac18e91c2f19ac8236a2f15f2a784a58c0c14d90f10d9f9e7ed092647dae383",
+ "attempts": [
+  {
+   "seconds": 4.4,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 117,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 52014
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Removes redundant depends-on=\\\"bootstrap\\\" attributes now that Media's manifest declares bootstrap as a dependency of scripts that already load bootstrap-select, and adds a missing source map file/asset entry, all low-impact resource-manifest tweaks unlikely to break tenant behavior.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Removes redundant depends-on=\"bootstrap\" attributes now that Media's manifest declares bootstrap as a dependency of scripts that already load bootstrap-select, and adds a missing source map file/asset entry, all low-impact resource-manifest tweaks unlikely to break tenant behavior."
+}

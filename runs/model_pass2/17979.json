@@ -1,0 +1,25 @@
+{
+ "pr": 17979,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "206f2e0b4c72c4bf11a4416d87d96860e65c7daccbb7fde40e849481bfd7b9ae",
+ "attempts": [
+  {
+   "seconds": 4.4,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 90,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1043
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 1, \"reason\": \"Small targeted fix that adds a missing return after a redirect in the AutoSetup middleware, preventing pipeline continuation on first-request 404s for non-Default tenants, with minimal surface area and no impact on other code paths.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 1,
+ "reason": "Small targeted fix that adds a missing return after a redirect in the AutoSetup middleware, preventing pipeline continuation on first-request 404s for non-Default tenants, with minimal surface area and no impact on other code paths."
+}

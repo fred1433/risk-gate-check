@@ -1,0 +1,53 @@
+{
+ "pr": 17332,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "62227e654b46d34e453c411092606bc682d2819844c870efe0d41355460ae8d5",
+ "attempts": [
+  {
+   "seconds": 4.7,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 180,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 2065
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Refactors LockedAsyncFieldResolver from inheriting FuncFieldResolver to directly implementing IFieldResolver, which fixes a bug (using 'new' hiding instead of overriding, meaning the lock was likely never applied) but changes core GraphQL resolver behavior used throughout the API surface, so any subtle mismatch (e.g., the non-generic-source overload now correctly casting context via .As<TSourceType>()) could affect all GraphQL field resolution across tenants.\""
+  },
+  {
+   "seconds": 4.2,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 146,
+    "cache_read_input_tokens": 2065,
+    "cache_creation_input_tokens": 0
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 3, \"reason\": \"Removing the FuncFieldResolver base and reimplementing IFieldResolver directly (with a change from Task to ValueTask return type) touches a core GraphQL resolver used widely across the CMS's GQL fields, so any subtle behavioral mismatch (e.g., argument coercion, exception handling, or interface contract differences) could break GraphQL queries across modules despite the fix's good intent.\""
+  },
+  {
+   "seconds": 4.9,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 99,
+    "cache_read_input_tokens": 2065,
+    "cache_creation_input_tokens": 0
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Refactors resolver classes to implement IFieldResolver directly instead of inheriting FuncFieldResolver, which is a self-contained change to GraphQL locking logic with low blast radius but touches shared resolver infrastructure used across GQL field types.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Refactors resolver classes to implement IFieldResolver directly instead of inheriting FuncFieldResolver, which is a self-contained change to GraphQL locking logic with low blast radius but touches shared resolver infrastructure used across GQL field types."
+}

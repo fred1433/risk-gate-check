@@ -1,0 +1,25 @@
+{
+ "pr": 17744,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "4a28d16adf8b25bbad28cd078903bf1ec073ce6de2805f26d2586d3c9992f809",
+ "attempts": [
+  {
+   "seconds": 3.7,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 79,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 5506
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 1, \"reason\": \"Purely additive change scoped to the HTML body part editor's CodeMirror styling, adding a new theme resource and dark-mode toggle without touching shared APIs, models, or existing behavior.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 1,
+ "reason": "Purely additive change scoped to the HTML body part editor's CodeMirror styling, adding a new theme resource and dark-mode toggle without touching shared APIs, models, or existing behavior."
+}

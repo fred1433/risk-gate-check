@@ -1,0 +1,25 @@
+{
+ "pr": 17834,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "ecfe9cdbf330a92f148d8ed666b52f31cec61f3c0ff5c8c42c960ddd0baa4b03",
+ "attempts": [
+  {
+   "seconds": 16.2,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 1361,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 2427
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 4, \"reason\": \"In LayerFilter, `_adminThemeService?.GetAdminThemeNameAsync()` returns null when IAdminThemeService isn't registered (e.g. Admin module disabled), and awaiting that null Task will throw a NullReferenceException on every request for any site using Layers without the Admin feature enabled.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 4,
+ "reason": "In LayerFilter, `_adminThemeService?.GetAdminThemeNameAsync()` returns null when IAdminThemeService isn't registered (e.g. Admin module disabled), and awaiting that null Task will throw a NullReferenceException on every request for any site using Layers without the Admin feature enabled."
+}

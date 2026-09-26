@@ -1,0 +1,25 @@
+{
+ "pr": 17713,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "fe54c0f89ce0b1f3edd0ed95c9085a7bde0524a6a6e3503365fca5d11761908e",
+ "attempts": [
+  {
+   "seconds": 3.5,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 82,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1862
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 1, \"reason\": \"Small, targeted fix that switches to the named resource manifest (already used elsewhere and now correctly declares jquery dependency) for a single view, with minimal blast radius limited to the icon picker field editor.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 1,
+ "reason": "Small, targeted fix that switches to the named resource manifest (already used elsewhere and now correctly declares jquery dependency) for a single view, with minimal blast radius limited to the icon picker field editor."
+}

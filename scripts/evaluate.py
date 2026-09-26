@@ -5,19 +5,21 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from riskgate.policies import simple, deterministic, hybrid, is_review, needs_model, ALLOW, UNKNOWN
 from riskgate.stats import clopper_pearson
 period=sys.argv[1]
+MODEL_DIR=sys.argv[2] if len(sys.argv)>2 else "runs/model"
+TAG=("_"+MODEL_DIR.split("/")[-1]) if len(sys.argv)>2 else ""
 F=json.load(open("policies/frozen.json"))
 man=json.load(open("data/cohort_manifest.json"))[period]
 labels={l["pr"]:l for l in json.load(open("oracle/labels.json"))["labels"]}
 rows=[]
 for e in man["prs"]:
     n=e["pr"]; s=json.load(open(f"snapshots/{n}/snapshot.json")); d=open(f"snapshots/{n}/diff.patch",errors="replace").read()
-    mr=json.load(open(f"runs/model/{n}.json")) if os.path.exists(f"runs/model/{n}.json") else None
+    mr=json.load(open(f"{MODEL_DIR}/{n}.json")) if os.path.exists(f"{MODEL_DIR}/{n}.json") else None
     nm=needs_model(s,d)
     p1=simple(s); p2=deterministic(s,d,F["theta"]); p3=hybrid(s,d,mr if nm else None,F["tau"])
     rows.append(dict(pr=n,title=s["title"],merged_at=e["merged_at"],label=labels.get(n,{}).get("cls"),family=labels.get(n,{}).get("family"),
                      simple=p1,deterministic=p2,hybrid=p3,model=mr if nm else None,needs_model=nm))
 os.makedirs("results",exist_ok=True)
-with open(f"results/decisions_{period}.jsonl","w") as f:
+with open(f"results/decisions_{period}{TAG}.jsonl","w") as f:
     for r in rows: f.write(json.dumps({k:v for k,v in r.items() if k!="model"} | {"model_status":(r["model"] or {}).get("status")})+"\n")
 N=len(rows)
 def summ(pol, cls=("A",)):
@@ -58,7 +60,7 @@ out["model_usage"]=dict(prs_sent_to_model=len(calls),attempts=len(att),retries=l
     input_tokens=sum((a.get("usage") or {}).get("input_tokens") or 0 for a in att)+sum((a.get("usage") or {}).get("cache_creation_input_tokens") or 0 for a in att)+sum((a.get("usage") or {}).get("cache_read_input_tokens") or 0 for a in att),
     output_tokens=sum((a.get("usage") or {}).get("output_tokens") or 0 for a in att),
     seconds=round(sum(a.get("seconds",0) for a in att),1), models=sorted({m for a in att for m in a.get("model",[])}))
-json.dump(out,open(f"results/summary_{period}.json","w"),indent=1)
+json.dump(out,open(f"results/summary_{period}{TAG}.json","w"),indent=1)
 for pol,v in out["policies"].items():
     c=v["confirmed"]; s=v["sensitivity_A_or_B"]
     print(f"{pol:14s} missed {c['k']}/{c['m']} (fam {c['families_k']}/{c['families_m']}) CI{c['k_over_m_ci95']} review {c['R']}/{N}={c['load']:.1%} unknown {c['unknown']} | A+B {s['k']}/{s['m']} | random@load {c['random_same_load_expected_k']}  missed={c['missed']}")

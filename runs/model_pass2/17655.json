@@ -1,0 +1,25 @@
+{
+ "pr": 17655,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "183f5a4ceee4efeb6c5e2c82d5dd03ba22ce66ce8ce75b732aa2b23145e2ffe5",
+ "attempts": [
+  {
+   "seconds": 4.4,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 151,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 6742
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 3, \"reason\": \"Client-side-only JS change to Flow/Bag widget drag-and-drop with nontrivial DOM/id-rewriting logic and no server-side validation, so a bug here could allow disallowed content types to be dropped or corrupt input name/id rewriting (breaking form posts) across all sites using Flow/Bag parts, but it's isolated to admin editor UI and doesn't touch content storage or APIs.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 3,
+ "reason": "Client-side-only JS change to Flow/Bag widget drag-and-drop with nontrivial DOM/id-rewriting logic and no server-side validation, so a bug here could allow disallowed content types to be dropped or corrupt input name/id rewriting (breaking form posts) across all sites using Flow/Bag parts, but it's isolated to admin editor UI and doesn't touch content storage or APIs."
+}

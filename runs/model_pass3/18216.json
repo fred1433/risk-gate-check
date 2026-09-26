@@ -1,0 +1,25 @@
+{
+ "pr": 18216,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "c027c8ac6426e59132ead42ba3a90286a0cba02012d20b26f8ec540985e99523",
+ "attempts": [
+  {
+   "seconds": 3.4,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 51,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1103
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 1, \"reason\": \"Purely additive new property on a context class with no initialization required by existing callers, so it cannot break existing behavior.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 1,
+ "reason": "Purely additive new property on a context class with no initialization required by existing callers, so it cannot break existing behavior."
+}

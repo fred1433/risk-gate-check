@@ -1,0 +1,25 @@
+{
+ "pr": 17577,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "7519bc3557a2f9fdf5bd4ebc4b53fe3a47310e4ac34b5fe9c462b31997e23066",
+ "attempts": [
+  {
+   "seconds": 5.2,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 213,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 14230
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 4, \"reason\": \"This is a pre-3.0 (unreleased per docs/releases/3.0.0.md) breaking API change that removes the public IAzureAISearchEvents interface and AzureAIIndexDocumentManager.GetMappingsAsync method, altering DI registrations and recipe step behavior (e.g., ResetStep now calls UpdateAsync before index creation and drops explicit ProcessContentItemsAsync/SetLastTaskId reset calls), which could silently change indexing/rebuild semantics for any downstream module implementing the old interface or relying on the old rebuild/reset ordering.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 4,
+ "reason": "This is a pre-3.0 (unreleased per docs/releases/3.0.0.md) breaking API change that removes the public IAzureAISearchEvents interface and AzureAIIndexDocumentManager.GetMappingsAsync method, altering DI registrations and recipe step behavior (e.g., ResetStep now calls UpdateAsync before index creation and drops explicit ProcessContentItemsAsync/SetLastTaskId reset calls), which could silently chang"
+}

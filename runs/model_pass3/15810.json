@@ -1,0 +1,25 @@
+{
+ "pr": 15810,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "0e28281a8dd5675e3e51226952c7c26add481b6d195b6701f786c32edc849d1e",
+ "attempts": [
+  {
+   "seconds": 4.3,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 115,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 2592
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"This changes behavior for localized content items with AutoroutePart by clearing the cloned path so a new permalink is auto-generated, which is a targeted, feature-gated (ContentLocalization) change but could surprise sites that relied on the previous behavior of duplicating the exact path/pattern when localizing content.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "This changes behavior for localized content items with AutoroutePart by clearing the cloned path so a new permalink is auto-generated, which is a targeted, feature-gated (ContentLocalization) change but could surprise sites that relied on the previous behavior of duplicating the exact path/pattern when localizing content."
+}

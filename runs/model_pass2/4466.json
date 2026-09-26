@@ -1,0 +1,25 @@
+{
+ "pr": 4466,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "3090a70976ead592b66fff7804995e3643e6593ae08d1d3be2a51978233eae81",
+ "attempts": [
+  {
+   "seconds": 5.2,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 188,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 29960
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"This is a purely additive new module (OrchardCore.DataLocalization) plus new abstractions/services with an internal NullDataTranslationProvider default, wired via a new AddDataLocalization extension only referenced by the new module's Startup, so existing tenants/modules that don't reference it are unaffected\u2014the only shared-file changes are new project references and a new AddDataLocalization method, which is low risk though the code contains a likely-broken deployment source (indexer misuse on JsonArray) that would only affect users of the new feature itself.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "This is a purely additive new module (OrchardCore.DataLocalization) plus new abstractions/services with an internal NullDataTranslationProvider default, wired via a new AddDataLocalization extension only referenced by the new module's Startup, so existing tenants/modules that don't reference it are unaffected\u2014the only shared-file changes are new project references and a new AddDataLocalization met"
+}

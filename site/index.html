@@ -93,13 +93,11 @@ footer a{color:var(--muted)}
   .finding{font-size:18px}
   section{margin-top:44px}
   .chart .lab,.chart .sub,.chart .chance,.chart .endlab{display:none}
-  .chart .t-lo{display:none}
-  .chart .tick{font-size:22px} .chart .axis{font-size:22px}
+    .chart .tick{font-size:22px} .chart .axis{font-size:22px}
   .legend-m{display:block;margin:12px 0 0;padding:0;list-style:none;font-size:15px}
   .legend-m li{padding:4px 0}
   .legend-m b{font-weight:600}
-  table{font-size:14.5px;table-layout:fixed} th,td{padding:10px 6px} th.num{white-space:normal} td small{font-size:12.5px}
-  .col-chance{display:none}
+  table{font-size:14px;table-layout:fixed} th:first-child{width:31%} td.num,th.num{white-space:normal} th,td{padding:10px 6px} th.num{white-space:normal} td small{font-size:12.5px}
   .panes{grid-template-columns:1fr}
   .pane+.pane{border-left:0;border-top:1px solid var(--rule)}
   .two{grid-template-columns:1fr;gap:8px}
@@ -117,68 +115,63 @@ footer a{color:var(--muted)}
 
 <dl class="fields">
   <div class="field"><dt>Changes judged</dt><dd>479 pull requests merged in 2025</dd></div>
-  <div class="field"><dt>Rules fixed on</dt><dd>891 merged in 2024, frozen before 2025 was scored</dd></div>
-  <div class="field"><dt>Known failures</dt><dd>11 changes with a confirmed later breakage</dd></div>
+  <div class="field"><dt>Thresholds set on</dt><dd>891 merged in 2024 only</dd></div>
+  <div class="field"><dt>Known failures</dt><dd>10 changes with a confirmed later breakage</dd></div>
   <div class="field"><dt>Outcomes observed until</dt><dd>26 September 2026</dd></div>
 </dl>
 
 <section aria-labelledby="tradeoff">
 <h2 id="tradeoff">What each policy let through, for the work it sent to a senior</h2>
-<p class="finding">A path list and a deterministic diff reader each let <strong>7 of the 11</strong> through while sending a third of all changes to a senior. Sending a random third would let about 7 through. The hybrid, which lets a model read what the structural rules cannot, let <strong>2 of 11</strong> through for 35%.</p>
+<p class="finding">A path list and a deterministic diff reader each let <strong>7 of the 10</strong> through while sending a third of all changes to a senior. Sending a random third would let about 7 through. The hybrid, which lets a model read what the structural rules cannot, let <strong>2 of 10</strong> through in each of three runs, for 34 to 35%.</p>
 
 <figure>
 <svg class="chart" viewBox="0 0 600 400" role="img" aria-labelledby="chart-title chart-desc">
   <title id="chart-title">Confirmed failures that passed, against the share of changes sent to a senior</title>
-  <desc id="chart-desc">Random routing runs from 11 passed at 0 percent reviewed to 0 passed at 100 percent. The path list and the deterministic policy sit at 7 passed and 32 percent reviewed, on the chance line. The hybrid sits at 2 passed and 35 percent reviewed, well below it.</desc>
-  <!-- plot area: x 70..570 for 0..100%, y 330..40 for 0..11 -->
+  <desc id="chart-desc">Random routing runs from 10 passed at 0 percent reviewed to 0 passed at 100 percent. The path list and the deterministic policy sit at 7 passed and 32 percent reviewed, on the chance line. The hybrid sits at 2 passed and 34 to 35 percent reviewed in each of three runs, well below it.</desc>
   <polygon points="70,330 570,330 70,40" fill="#E6EEF7" />
   <g stroke="#E1E8F0" stroke-width="1">
-    <line x1="70" y1="40" x2="570" y2="40"/><line x1="70" y1="92.7" x2="570" y2="92.7"/><line x1="70" y1="145.5" x2="570" y2="145.5"/><line x1="70" y1="198.2" x2="570" y2="198.2"/><line x1="70" y1="250.9" x2="570" y2="250.9"/><line x1="70" y1="303.6" x2="570" y2="303.6"/>
+    <line x1="70" y1="40" x2="570" y2="40"/><line x1="70" y1="98" x2="570" y2="98"/><line x1="70" y1="156" x2="570" y2="156"/><line x1="70" y1="214" x2="570" y2="214"/><line x1="70" y1="272" x2="570" y2="272"/>
     <line x1="195" y1="40" x2="195" y2="330"/><line x1="320" y1="40" x2="320" y2="330"/><line x1="445" y1="40" x2="445" y2="330"/><line x1="570" y1="40" x2="570" y2="330"/>
   </g>
   <line x1="70" y1="330" x2="570" y2="330" stroke="#8FA3BA" stroke-width="1.2"/>
   <line x1="70" y1="40" x2="70" y2="330" stroke="#8FA3BA" stroke-width="1.2"/>
   <g class="tick" text-anchor="end">
-    <text class="t-lo" x="62" y="334">0</text><text class="t-lo" x="62" y="307.6">1</text><text x="62" y="254.9">3</text><text x="62" y="202.2">5</text><text x="62" y="149.5">7</text><text x="62" y="96.7">9</text><text x="62" y="44">11</text>
+    <text x="62" y="335">0</text><text x="62" y="277">2</text><text x="62" y="219">4</text><text x="62" y="161">6</text><text x="62" y="103">8</text><text x="62" y="45">10</text>
   </g>
   <g class="tick" text-anchor="middle">
-    <text x="70" y="352">0%</text><text x="195" y="352">25%</text><text x="320" y="352">50%</text><text x="445" y="352">75%</text><text x="570" y="352">100%</text>
+    <text x="70" y="354">0%</text><text x="195" y="354">25%</text><text x="320" y="354">50%</text><text x="445" y="354">75%</text><text x="570" y="354">100%</text>
   </g>
-  <text class="axis" x="320" y="384" text-anchor="middle">Share of all changes sent to a senior</text>
+  <text class="axis" x="320" y="386" text-anchor="middle">Share of all changes sent to a senior</text>
   <text class="axis" x="16" y="185" text-anchor="middle" transform="rotate(-90 16 185)">Confirmed failures that passed</text>
-
   <line x1="70" y1="40" x2="570" y2="330" stroke="#2F5C8F" stroke-width="1.6" stroke-dasharray="6 5"/>
   <text class="chance" x="0" y="0" transform="translate(410 225) rotate(30.1)">Random routing</text>
-
   <circle cx="70" cy="40" r="4.5" fill="#fff" stroke="#16202E" stroke-width="1.4"/>
   <text class="sub endlab" x="80" y="36">Review nothing</text>
   <circle cx="570" cy="330" r="4.5" fill="#fff" stroke="#16202E" stroke-width="1.4"/>
   <text class="sub endlab" x="520" y="316" text-anchor="end">Review everything</text>
-
-  <circle cx="232" cy="145.5" r="7" fill="#A4281D"/>
-  <text class="lab" x="248" y="104">Path list and deterministic</text>
-  <text class="sub" x="248" y="122">7 of 11 passed, 32% reviewed</text>
-
-  <circle cx="243.5" cy="277.3" r="7" fill="#2D6A4F"/>
-  <text class="lab" x="258" y="273">Hybrid</text>
-  <text class="sub" x="258" y="291">2 of 11 passed, 35% reviewed</text>
+  <circle cx="232" cy="127" r="7" fill="#A4281D"/>
+  <text class="lab" x="248" y="100">Path list and deterministic</text>
+  <text class="sub" x="248" y="118">7 of 10 passed, 32% reviewed</text>
+  <line x1="242" y1="272" x2="243.5" y2="272" stroke="#2D6A4F" stroke-width="14" stroke-linecap="round"/>
+  <text class="lab" x="260" y="268">Hybrid, three runs</text>
+  <text class="sub" x="260" y="286">2 of 10 passed each time, 34 to 35% reviewed</text>
 </svg>
 <ul class="legend-m">
-  <li><b style="color:var(--red)">Path list and deterministic</b>: 7 of 11 passed, 32% reviewed</li>
-  <li><b style="color:var(--green)">Hybrid</b>: 2 of 11 passed, 35% reviewed</li>
+  <li><b style="color:var(--red)">Red, path list and deterministic</b>: 7 of 10 passed, 32% reviewed</li>
+  <li><b style="color:var(--green)">Green, hybrid</b>: 2 of 10 passed in each of three runs, 34 to 35% reviewed</li>
   <li><b style="color:var(--form)">Dashed line</b>: random routing, a random share sent to a senior</li>
 </ul>
 </figure>
 
 <table>
-  <thead><tr><th>Policy</th><th class="num">Confirmed failures passed</th><th class="num">Sent to a senior</th><th class="num col-chance">Chance at that share</th></tr></thead>
+  <thead><tr><th>Policy</th><th class="num">Failures passed</th><th class="num">Sent to a senior</th><th class="num">Random at that share</th></tr></thead>
   <tbody>
-    <tr><td>Path list<small>Migrations, auth, tenants, data, abstractions</small></td><td class="num">7 of 11</td><td class="num">155 of 479</td><td class="num col-chance">7.4</td></tr>
-    <tr><td>Deterministic<small>Structural signals read from the diff</small></td><td class="num">7 of 11</td><td class="num">155 of 479</td><td class="num col-chance">7.4</td></tr>
-    <tr class="hy"><td>Hybrid<small>Same structural triggers; a model reads the rest</small></td><td class="num">2 of 11</td><td class="num">166 of 479</td><td class="num col-chance">7.2</td></tr>
+    <tr><td>Path list<small>Migrations, auth, tenants, data, abstractions</small></td><td class="num">7 of 10</td><td class="num">155 of 479</td><td class="num">6.8</td></tr>
+    <tr><td>Deterministic<small>Structural signals read from the diff</small></td><td class="num">7 of 10</td><td class="num">155 of 479</td><td class="num">6.8</td></tr>
+    <tr class="hy"><td>Hybrid, 3 runs<small>Same structural triggers; a model reads the rest</small></td><td class="num">2, 2, 2 of 10</td><td class="num">165 to 166 of 479</td><td class="num">6.5</td></tr>
   </tbody>
 </table>
-<p class="note">95% intervals, treating the 11 as independent: 31% to 89% of such failures pass for the first two, 2% to 52% for the hybrid. The 11 are 11 distinct defects. On them, the hybrid escalated 5 that the deterministic policy passed, and never the reverse (sign test on 5 discordant cases, p = 0.06). With 11 incomplete attributions added (22 cases), 14, 12 and 5 passed. Two of the hybrid's reviews are UNKNOWN: the model answered in a malformed way, and UNKNOWN never passes.</p>
+<p class="note">The model does not answer the same way twice, so the hybrid was run three times. It let 2 through each time, but not always the same two: #18508 every time, then #17421 or #17369. Each run caught 5 confirmed failures the rules passed: 4 of them in all three runs, #17369 in two, #17421 in one. 95% intervals, treating the 10 as independent: 35% to 93% of such failures pass for the rules, 3% to 56% for the hybrid (sign test on the 5 discordant cases, p = 0.06, in each run). With 12 incomplete attributions added (22 cases), 14 and 12 passed for the rules, 4 to 6 for the hybrid. When the model answered in a malformed way (2, 1 and 0 times), the decision was UNKNOWN, and UNKNOWN never passes.</p>
 </section>
 
 <section aria-labelledby="cases">
@@ -196,9 +189,9 @@ footer a{color:var(--muted)}
       <ul class="decisions">
         <li><span>Path list</span><span class="stamp green">Passed</span></li>
         <li><span>Deterministic, no structural signal</span><span class="stamp green">Passed</span></li>
-        <li><span>Hybrid, model risk 3 of 5</span><span class="stamp red">Senior</span></li>
+        <li><span>Hybrid, model risk 3, 4, 4 of 5 in three runs</span><span class="stamp red">Senior</span></li>
       </ul>
-      <p>The model's reason: “The new "useCdn" case incorrectly assigns to the 'name' variable instead of introducing/using a useCdn variable, so the CDN flag is never actually applied while silently overwriting 'name' if both attributes are used together.”</p>
+      <p>The model's reason, first run: “The new "useCdn" case incorrectly assigns to the 'name' variable instead of introducing/using a useCdn variable, so the CDN flag is never actually applied while silently overwriting 'name' if both attributes are used together.”</p>
     </div>
     <div class="pane">
       <h4>What was learned later</h4>
@@ -221,7 +214,7 @@ footer a{color:var(--muted)}
       <ul class="decisions">
         <li><span>Path list</span><span class="stamp green">Passed</span></li>
         <li><span>Deterministic, no structural signal</span><span class="stamp green">Passed</span></li>
-        <li><span>Hybrid, model risk 2 of 5</span><span class="stamp green">Passed</span></li>
+        <li><span>Hybrid, model risk 2 of 5 in all three runs</span><span class="stamp green">Passed</span></li>
       </ul>
       <p>The model's reason named the mechanism and still rated it low: “could subtly change behavior if another feature also registers KeyManagementOptions setups that were relied upon.”</p>
     </div>
@@ -239,9 +232,10 @@ footer a{color:var(--muted)}
 <section aria-labelledby="limits">
 <h2 id="limits">What this does not show</h2>
 <ul class="limits">
-  <li><strong>Eleven cases are few.</strong> The intervals are wide, and the difference between hybrid and rules rests on 5 cases.</li>
-  <li><strong>An unlabelled change is not a safe change.</strong> The labels only know failures someone later tied to their cause: a merged revert with a stated defect, or an attribution by a maintainer or in the merged fix, checked against the files. Weaker attributions are the 22-case line.</li>
-  <li><strong>The model may remember.</strong> Most of these failures were public before its training cutoff (January 2026). Its reasons cite the diff, and the four failures first reported after the cutoff, all from the 22-case line, were all sent to a senior, but only a run on new pull requests settles it.</li>
+  <li><strong>Ten cases are few.</strong> The intervals are wide, and the difference between hybrid and rules rests on 5 cases, one of which the hybrid caught in two runs of three.</li>
+  <li><strong>The labels were written before the rules.</strong> The thresholds were set on 2024 alone and frozen before any 2025 decision or model answer existed, but the 2025 failures had already been identified and their titles read. What argues against rules fitted to 2025: in 2024 the deterministic rules let 7 of 28 through at 32.5% reviewed, where random routing lets 18.9 through; in 2025 they fell to chance.</li>
+  <li><strong>An unlabelled change is not a safe change.</strong> The labels only know failures someone later tied to their cause: a merged revert with a stated defect, or an attribution by a maintainer or in the merged fix, checked against the files. Weaker attributions and CI-only failures, such as a flaky test, are the 22-case line.</li>
+  <li><strong>The model may remember.</strong> Most of these failures were public before its training cutoff (January 2026). Of the five reported after it, three were also caught by the deterministic rules; #17409 is the only one that rests on the model, caught in two runs of three; #18508, reported on 21 January 2026, passed every time. Only a run on new pull requests settles it.</li>
   <li><strong>No test coverage was available.</strong> Missing coverage is unknown, not zero.</li>
   <li><strong>A detected migration is not a safe migration.</strong> Orchard Core migrates with YesSql, not EF, and separates tenants by table prefix or database; the rules detect those changes, they do not prove them safe.</li>
   <li><strong>Passing this gate is not merging.</strong> Real auto-merge also depends on tests, required reviews and branch rules.</li>
@@ -253,11 +247,11 @@ footer a{color:var(--muted)}
 <div class="two">
   <div>
     <p>The cohort manifest, the labels with their evidence and exclusions, the three policies, every decision with its reason and the model's raw answers are in <a href="https://github.com/fred1433/risk-gate-check">the repository</a>.</p>
-    <p>A policy is one function, <code>decide(snapshot, diff)</code>, returning ALLOW, REVIEW_REQUIRED or UNKNOWN. The replayer scores it against the same 479 changes and 11 failures.</p>
+    <p>A policy is one function, <code>decide(snapshot, diff)</code>, returning ALLOW, REVIEW_REQUIRED or UNKNOWN. The replayer scores it against the same 479 changes and 10 failures.</p>
   </div>
   <div>
-    <p>The deterministic policy also runs as a required GitHub check that fails closed. It judges the pull request with the policy from the base branch, never the one in the pull request, and only a named senior can release it, for that exact commit: <a href="https://github.com/fred1433/risk-gate-check/pull/2">see it on a change to an authorization check</a>.</p>
-    <p>The model read 357 of the 479 changes: 372 calls to Claude Sonnet 5, 3.1 million tokens in, 86 thousand out.</p>
+    <p>The deterministic policy also runs as a required GitHub check that fails closed. It judges the pull request with the policy from the base branch, never the one in the pull request. Only a named senior who is not the author can release it, and only for that exact commit: <a href="https://github.com/fred1433/risk-gate-check/pull/2">see it on a change to an authorization check</a>.</p>
+    <p>The model read 357 of the 479 changes in each run: 1,107 calls to Claude Sonnet 5 over three runs, 9.1 million tokens in, 279 thousand out.</p>
   </div>
 </div>
 </section>

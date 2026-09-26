@@ -1,0 +1,25 @@
+{
+ "pr": 17696,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "3f5a438b53155966e56e02a8aa1647ad00ed41147309068ca57d1129d41a3969",
+ "attempts": [
+  {
+   "seconds": 3.3,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 60,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1104
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 1, \"reason\": \"Trivial change swapping to the minified setup script, which is functionally equivalent to setup.js assuming the minified file is built and in sync.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 1,
+ "reason": "Trivial change swapping to the minified setup script, which is functionally equivalent to setup.js assuming the minified file is built and in sync."
+}

@@ -1,0 +1,25 @@
+{
+ "pr": 17899,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "e3ceb591053f10f3d481c42b632be5c271336a945162f30a6ad7708813619378",
+ "attempts": [
+  {
+   "seconds": 4.4,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 122,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 2991
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Renaming/repurposing the public data loader method (GetOrAddPublishedContentItemByIdDataLoader -> GetOrAddContentItemByIdDataLoader) is a breaking API change for any external module referencing it, though behavior for existing default 'status' argument stays Published so functional impact on stock queries is low.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Renaming/repurposing the public data loader method (GetOrAddPublishedContentItemByIdDataLoader -> GetOrAddContentItemByIdDataLoader) is a breaking API change for any external module referencing it, though behavior for existing default 'status' argument stays Published so functional impact on stock queries is low."
+}

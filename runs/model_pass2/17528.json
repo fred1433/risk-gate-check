@@ -1,0 +1,51 @@
+{
+ "pr": 17528,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "12aec903b7d9d56368a57fdd87a547c792d35b581c3690db9c185bbd6b8efded",
+ "attempts": [
+  {
+   "seconds": 6.3,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 173,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 51955
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 5, \"reason\": \"Massive overhaul of the core Resources module's asset build pipeline and ResourceManagementOptionsConfiguration.cs (which registers script/style paths, versions, and CDN fallbacks used by every module and theme), including vendored library moves/renames (fontawesome, jquery-ui, monaco, vue) and bundled JS/CSS regeneration, so any path/version mismatch or missed reference update would break scripts/styles admin-wide across all tenants and dependent applications.\""
+  },
+  {
+   "seconds": 7.0,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 247,
+    "cache_read_input_tokens": 51955,
+    "cache_creation_input_tokens": 0
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 5, \"reason\": \"This is a massive overhaul of the OrchardCore.Resources build pipeline and vendored assets (jQuery, jQuery UI, Bootstrap, Vue moved to vue-2.6.14 vendor path plus new toolchain for Vue 3, FontAwesome path moved from wwwroot to Assets, Monaco/CodeMirror files regenerated, and an 850+ line rewrite of ResourceManagementOptionsConfiguration.cs which defines nearly every shared script/style resource path/version used by every module and every downstream site) \u2014 any path, filename, or version mismatch here breaks core admin UI, editors, and third-party themes/modules referencing these well-known resource names across all tenants.\""
+  },
+  {
+   "seconds": 6.4,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 221,
+    "cache_read_input_tokens": 51955,
+    "cache_creation_input_tokens": 0
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 5, \"reason\": \"Massive overhaul of the frontend build pipeline and core OrchardCore.Resources module (Assets.json reshuffled, jQuery/Bootstrap/FontAwesome/Vue vendor files relocated from wwwroot to Assets with build-time copy, ResourceManagementOptionsConfiguration.cs changed by ~850/-207 lines, and prep for Vue 3) which affects resource paths/CDN fallbacks and script tag ordering used by virtually every tenant, theme, and module across the CMS, so any path mismatch or resource-name regression would break admin UI and front-end rendering site-wide.\""
+  }
+ ],
+ "status": "malformed_or_failed"
+}

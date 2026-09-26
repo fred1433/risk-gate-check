@@ -1,0 +1,25 @@
+{
+ "pr": 17364,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "4ae6cfb12e5a5d9f166cc1de9acb8928521e046d3f74edcbf4e9a57c816af3a9",
+ "attempts": [
+  {
+   "seconds": 3.8,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 121,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1407
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 3, \"reason\": \"Adds a new deserialization path (dictionary->JObject->ContentEventContext) that changes behavior when workflow input is re-hydrated as a dictionary, and now throws InvalidCastException for any other unexpected type instead of silently ignoring it, which could break existing workflows that previously worked with null/other input shapes.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 3,
+ "reason": "Adds a new deserialization path (dictionary->JObject->ContentEventContext) that changes behavior when workflow input is re-hydrated as a dictionary, and now throws InvalidCastException for any other unexpected type instead of silently ignoring it, which could break existing workflows that previously worked with null/other input shapes."
+}

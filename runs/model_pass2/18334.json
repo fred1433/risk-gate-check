@@ -1,0 +1,25 @@
+{
+ "pr": 18334,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "b4d9cda2bf668607234f157147316c59524b3984ad511c68ad88b8dfa27d0c34",
+ "attempts": [
+  {
+   "seconds": 5.2,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 71,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1048
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"This tightens validation to also reject empty permission names, which is safe unless some existing module was relying on constructing a Permission with an empty (non-null) string name, which would now throw.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "This tightens validation to also reject empty permission names, which is safe unless some existing module was relying on constructing a Permission with an empty (non-null) string name, which would now throw."
+}

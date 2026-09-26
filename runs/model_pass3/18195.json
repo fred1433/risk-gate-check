@@ -1,0 +1,25 @@
+{
+ "pr": 18195,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "af2389f65ce360a25e160b950ae9bc1b0cd38ed105c941a4fa255e222b92a71f",
+ "attempts": [
+  {
+   "seconds": 21.7,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 1717,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 13160
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 3, \"reason\": \"Touches core shell composition and extension-loading plumbing (CompositionStrategy, ExtensionManager, ShellDescriptorManager) used on every tenant boot, and while the refactor looks logically equivalent and is now unit-tested, an interface change plus multiple call-site tweaks (array\u2192lazy IEnumerable, HashSet swap) in such foundational, widely-consumed code carries a nontrivial risk of subtle behavioral regressions affecting all tenants/modules.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 3,
+ "reason": "Touches core shell composition and extension-loading plumbing (CompositionStrategy, ExtensionManager, ShellDescriptorManager) used on every tenant boot, and while the refactor looks logically equivalent and is now unit-tested, an interface change plus multiple call-site tweaks (array\u2192lazy IEnumerable, HashSet swap) in such foundational, widely-consumed code carries a nontrivial risk of subtle beha"
+}

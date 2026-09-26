@@ -1,0 +1,25 @@
+{
+ "pr": 18377,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "13868bca7222aa3322602617a6cf14332be9ca17346b120775302395a34a5698",
+ "attempts": [
+  {
+   "seconds": 3.2,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 37,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1636
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 1, \"reason\": \"Only removes unused using directives with no functional or compiled code changes.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 1,
+ "reason": "Only removes unused using directives with no functional or compiled code changes."
+}

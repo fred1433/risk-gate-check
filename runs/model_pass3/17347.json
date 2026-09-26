@@ -1,0 +1,25 @@
+{
+ "pr": 17347,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "a3473223595cfebb84f790dfa4d8c91b863282ddefd922fc30c2b1e22c0b39cf",
+ "attempts": [
+  {
+   "seconds": 4.9,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 115,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1452
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"This narrows accepted input for all_route_data from Dictionary<string,string> to any IFluidIndexable while filtering to only string-valued entries, which is a small, localized behavior change in a liquid tag helper that could silently drop non-string route values previously passed differently but is unlikely to break most existing templates.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "This narrows accepted input for all_route_data from Dictionary<string,string> to any IFluidIndexable while filtering to only string-valued entries, which is a small, localized behavior change in a liquid tag helper that could silently drop non-string route values previously passed differently but is unlikely to break most existing templates."
+}

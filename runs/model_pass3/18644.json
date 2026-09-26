@@ -1,0 +1,25 @@
+{
+ "pr": 18644,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "c64ce0ec553a88898c3519a19009d7bf9f2fe2634a160627d30540a486509879",
+ "attempts": [
+  {
+   "seconds": 3.9,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 93,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1409
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 1, \"reason\": \"Small, well-scoped bugfix that correctly checks Directory.Exists instead of a always-false FileInfo.Exists check, fixing a cache-cleanup path with low blast radius and no API/behavioral changes elsewhere.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 1,
+ "reason": "Small, well-scoped bugfix that correctly checks Directory.Exists instead of a always-false FileInfo.Exists check, fixing a cache-cleanup path with low blast radius and no API/behavioral changes elsewhere."
+}

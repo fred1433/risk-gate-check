@@ -1,0 +1,25 @@
+{
+ "pr": 17552,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "b9bac7fe873794685dcbe27d8d2bdd0891e8087c8433098de58f9580fab53bd2",
+ "attempts": [
+  {
+   "seconds": 5.1,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 129,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 34377
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 4, \"reason\": \"Renames build output extensions from .prod.js to .min.js across many modules/themes and updates ResourceManagementOptionsConfiguration.cs references plus a bootstrap-select dependency change from 'bootstrap' to 'admin', so any external theme/module referencing the old .prod.js filenames or resource names will break after this widespread convention change.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 4,
+ "reason": "Renames build output extensions from .prod.js to .min.js across many modules/themes and updates ResourceManagementOptionsConfiguration.cs references plus a bootstrap-select dependency change from 'bootstrap' to 'admin', so any external theme/module referencing the old .prod.js filenames or resource names will break after this widespread convention change."
+}

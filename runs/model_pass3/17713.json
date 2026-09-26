@@ -1,0 +1,25 @@
+{
+ "pr": 17713,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "fe54c0f89ce0b1f3edd0ed95c9085a7bde0524a6a6e3503365fca5d11761908e",
+ "attempts": [
+  {
+   "seconds": 4.6,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 70,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1863
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 1, \"reason\": \"Small, targeted fix that switches to the already-registered named resource with correct jquery dependency, resolving a missing script issue without altering any public APIs or broader behavior.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 1,
+ "reason": "Small, targeted fix that switches to the already-registered named resource with correct jquery dependency, resolving a missing script issue without altering any public APIs or broader behavior."
+}

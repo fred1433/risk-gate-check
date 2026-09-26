@@ -1,0 +1,25 @@
+{
+ "pr": 18015,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "0f17a707c7a9517dbe3ea16a6337a09330f35dabdf1ec2b9a34cab967ad95893",
+ "attempts": [
+  {
+   "seconds": 30.4,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 2562,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 11752
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 3, \"reason\": \"The PR relocates public taxonomy types (TaxonomyPart, TermPart, TaxonomyIndex) into a new Taxonomies.Core assembly and non-trivially rewrites the term-listing pagination query logic (adding a secondary sort, a new extensibility filter hook, and altered query composition), which could break binary compatibility for precompiled downstream modules and subtly change taxonomy listing/paging behavior on existing sites.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 3,
+ "reason": "The PR relocates public taxonomy types (TaxonomyPart, TermPart, TaxonomyIndex) into a new Taxonomies.Core assembly and non-trivially rewrites the term-listing pagination query logic (adding a secondary sort, a new extensibility filter hook, and altered query composition), which could break binary compatibility for precompiled downstream modules and subtly change taxonomy listing/paging behavior on"
+}

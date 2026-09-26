@@ -1,0 +1,25 @@
+{
+ "pr": 18098,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "b96a2b708f5c6502040e70175e5b0130555f9f3ac5e21101b1216735859feb62",
+ "attempts": [
+  {
+   "seconds": 6.2,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 422,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 2990
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 4, \"reason\": \"Changing IContentManager.CreateAsync's return type from Task to Task<bool> is a breaking API change for any custom IContentManager implementations or module code in the ecosystem, even though most simple await-callers remain source-compatible.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 4,
+ "reason": "Changing IContentManager.CreateAsync's return type from Task to Task<bool> is a breaking API change for any custom IContentManager implementations or module code in the ecosystem, even though most simple await-callers remain source-compatible."
+}

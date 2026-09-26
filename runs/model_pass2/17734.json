@@ -1,0 +1,25 @@
+{
+ "pr": 17734,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "751dbe1822870aaa7370efb571f068f8fffff92f542257d5fad8be03329d04cb",
+ "attempts": [
+  {
+   "seconds": 3.6,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 129,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 30382
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Routine third-party Bootstrap 5.3.3\u21925.3.5 patch bump (JS/CSS vendor files, package.json versions, CDN URLs/integrity hashes) with no changes to OrchardCore application logic, so risk is limited to minor upstream Bootstrap behavior tweaks rather than framework-specific regressions.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Routine third-party Bootstrap 5.3.3\u21925.3.5 patch bump (JS/CSS vendor files, package.json versions, CDN URLs/integrity hashes) with no changes to OrchardCore application logic, so risk is limited to minor upstream Bootstrap behavior tweaks rather than framework-specific regressions."
+}

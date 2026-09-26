@@ -1,0 +1,25 @@
+{
+ "pr": 18611,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "f46018705a57b8f2e0acb6d1be854247c5fc566de73ccfecfc56a5e9c6ee61b6",
+ "attempts": [
+  {
+   "seconds": 5.2,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 140,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 36195
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Purely CSS/SCSS cleanup removing duplicate @import/variable declarations and regenerating compiled CSS, with generated diffs confirming only duplicated ':root' blocks and rules were removed (not the underlying values), so visual regression risk is low but front-end admin theme rendering should be spot-checked (including dark mode and RTL) since import order changed across many partials.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Purely CSS/SCSS cleanup removing duplicate @import/variable declarations and regenerating compiled CSS, with generated diffs confirming only duplicated ':root' blocks and rules were removed (not the underlying values), so visual regression risk is low but front-end admin theme rendering should be spot-checked (including dark mode and RTL) since import order changed across many partials."
+}

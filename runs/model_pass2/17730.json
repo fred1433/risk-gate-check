@@ -1,0 +1,25 @@
+{
+ "pr": 17730,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "f2165a3f95e4af057167edf9284e2107598dfeb07edadd924a9bf181da68c744",
+ "attempts": [
+  {
+   "seconds": 3.6,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 116,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 2114
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Small, targeted fix scoped to FlowPart's widget prefix mapping (bind-never, json-ignored property) with a bounds-checked fallback to the old behavior, so it's unlikely to affect unrelated content types or existing data but should still be reviewed for edge cases in widget reordering/validation.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Small, targeted fix scoped to FlowPart's widget prefix mapping (bind-never, json-ignored property) with a bounds-checked fallback to the old behavior, so it's unlikely to affect unrelated content types or existing data but should still be reviewed for edge cases in widget reordering/validation."
+}

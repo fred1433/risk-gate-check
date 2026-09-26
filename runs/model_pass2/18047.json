@@ -1,0 +1,25 @@
+{
+ "pr": 18047,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "77afd30ed6ef26415c3a5829e424b43351a35a22d10301fabf66958353dbfaaf",
+ "attempts": [
+  {
+   "seconds": 9.6,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 701,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 4448
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 3, \"reason\": \"Moving AzureAISearchContentIndexProfileHandler's SetMappingAsync from CreatingAsync to InitializingAsync changes when index mapping is applied (now on every load, not just creation), which could unexpectedly alter existing Azure AI Search index profiles for tenants using that module.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 3,
+ "reason": "Moving AzureAISearchContentIndexProfileHandler's SetMappingAsync from CreatingAsync to InitializingAsync changes when index mapping is applied (now on every load, not just creation), which could unexpectedly alter existing Azure AI Search index profiles for tenants using that module."
+}

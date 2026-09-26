@@ -1,0 +1,25 @@
+{
+ "pr": 18474,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "7d2f7cb3a111d4bd0a2bb5db760ef8541aa0b61ae5a8414d001644670f6fbb0f",
+ "attempts": [
+  {
+   "seconds": 6.8,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 310,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1895
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 1, \"reason\": \"Trivial type/style changes and micro-optimizations in DependencyOrdering and AlternatesCollection that preserve behavior (relying on Add's existing lazy-init), with no external API changes.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 1,
+ "reason": "Trivial type/style changes and micro-optimizations in DependencyOrdering and AlternatesCollection that preserve behavior (relying on Add's existing lazy-init), with no external API changes."
+}

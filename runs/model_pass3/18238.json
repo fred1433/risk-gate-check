@@ -1,0 +1,25 @@
+{
+ "pr": 18238,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "7aef5da487259ff85a4161cb8718ddee808b4e9c343cae00505a771cbb3ba1c7",
+ "attempts": [
+  {
+   "seconds": 4.0,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 101,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1262
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 3, \"reason\": \"Renaming the public static class SiteServiceCollectionExtensions to ServiceCollectionExtensions is a breaking API change for any external module that references the class name directly (e.g., via static using or explicit type reference), even though the extension methods themselves are unchanged.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 3,
+ "reason": "Renaming the public static class SiteServiceCollectionExtensions to ServiceCollectionExtensions is a breaking API change for any external module that references the class name directly (e.g., via static using or explicit type reference), even though the extension methods themselves are unchanged."
+}

@@ -1,0 +1,25 @@
+{
+ "pr": 18304,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "850479e6c8351c08e6b9140ab3c9c255e45eb7169110db7e4996462d1529cbf0",
+ "attempts": [
+  {
+   "seconds": 7.6,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 74,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 5244
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 1, \"reason\": \"Purely cosmetic CSS class additions to admin view labels for Bootstrap 5.3 styling, with no logic, markup structure, or binding changes that could affect functionality.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 1,
+ "reason": "Purely cosmetic CSS class additions to admin view labels for Bootstrap 5.3 styling, with no logic, markup structure, or binding changes that could affect functionality."
+}

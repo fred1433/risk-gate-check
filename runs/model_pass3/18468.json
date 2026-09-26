@@ -1,0 +1,25 @@
+{
+ "pr": 18468,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "00e5d48ee267e14d45e0c6f1107cc4f905295328e2b95e3af383b97e41b54a1b",
+ "attempts": [
+  {
+   "seconds": 17.8,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 1575,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 5283
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 4, \"reason\": \"This changes core shape-binding override/merge semantics in the display engine (shared by every theme and module across all tenants), and the new 'first-source-wins per ShapeDescriptorIndex' logic depends on feature iteration order in subtle ways that could silently change which view/binding is selected for existing sites despite the added test.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 4,
+ "reason": "This changes core shape-binding override/merge semantics in the display engine (shared by every theme and module across all tenants), and the new 'first-source-wins per ShapeDescriptorIndex' logic depends on feature iteration order in subtle ways that could silently change which view/binding is selected for existing sites despite the added test."
+}

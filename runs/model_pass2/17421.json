@@ -1,0 +1,25 @@
+{
+ "pr": 17421,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "5977f1a8303e8e8b79cf7043981715961bf3c1a70acdcb4c9290b995847d0ebe",
+ "attempts": [
+  {
+   "seconds": 8.0,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 141,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 5687
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Client-side-only JS/Razor view changes scoped to Flows widget drag-drop UX, gated behind widget-type checks with sensible fallbacks, but relies on undeclared globals (draggedWidget, originalContainer) and dataset attributes that could throw if a widget lacks a content-type/definition, risking a JS error in the admin editor rather than any data or backend regression.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Client-side-only JS/Razor view changes scoped to Flows widget drag-drop UX, gated behind widget-type checks with sensible fallbacks, but relies on undeclared globals (draggedWidget, originalContainer) and dataset attributes that could throw if a widget lacks a content-type/definition, risking a JS error in the admin editor rather than any data or backend regression."
+}

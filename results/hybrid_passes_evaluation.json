@@ -1,0 +1,129 @@
+{
+ "passes": {
+  "pass1": {
+   "k": 2,
+   "m": 11,
+   "missed": [
+    17421,
+    18508
+   ],
+   "R": 166,
+   "N": 479,
+   "unknown": 2,
+   "ab_k": 5,
+   "usage": {
+    "prs_sent_to_model": 357,
+    "attempts": 372,
+    "retries": 15,
+    "failed": 2,
+    "input_tokens": 3075298,
+    "output_tokens": 85628,
+    "seconds": 2158.1,
+    "models": [
+     "claude-sonnet-5"
+    ]
+   }
+  },
+  "pass2": {
+   "k": 2,
+   "m": 10,
+   "missed": [
+    17421,
+    18508
+   ],
+   "R": 165,
+   "N": 479,
+   "unknown": 1,
+   "ab_k": 6,
+   "usage": {
+    "prs_sent_to_model": 357,
+    "attempts": 366,
+    "retries": 9,
+    "failed": 1,
+    "input_tokens": 2942691,
+    "output_tokens": 97421,
+    "seconds": 2139.0,
+    "models": [
+     "claude-sonnet-5"
+    ]
+   }
+  },
+  "pass3": {
+   "k": 2,
+   "m": 10,
+   "missed": [
+    17369,
+    18508
+   ],
+   "R": 165,
+   "N": 479,
+   "unknown": 0,
+   "ab_k": 4,
+   "usage": {
+    "prs_sent_to_model": 357,
+    "attempts": 369,
+    "retries": 12,
+    "failed": 0,
+    "input_tokens": 3039978,
+    "output_tokens": 96093,
+    "seconds": 2249.2,
+    "models": [
+     "claude-sonnet-5"
+    ]
+   }
+  }
+ },
+ "risk_per_confirmed_case": {
+  "17262": {
+   "pass1": 5,
+   "pass2": 5,
+   "pass3": 5
+  },
+  "17369": {
+   "pass1": 3,
+   "pass2": 4,
+   "pass3": 2
+  },
+  "17421": {
+   "pass1": 2,
+   "pass2": 2,
+   "pass3": 3
+  },
+  "17481": {
+   "pass1": 4,
+   "pass2": 4,
+   "pass3": 4
+  },
+  "17515": {
+   "pass1": 4,
+   "pass2": 3,
+   "pass3": 3
+  },
+  "17528": {
+   "pass1": null,
+   "pass2": null,
+   "pass3": 5
+  },
+  "17552": {
+   "pass1": null,
+   "pass2": 4,
+   "pass3": 4
+  },
+  "18121": {
+   "pass1": 3,
+   "pass2": 3,
+   "pass3": 3
+  },
+  "18508": {
+   "pass1": 2,
+   "pass2": 2,
+   "pass3": 2
+  },
+  "18541": {
+   "pass1": 3,
+   "pass2": 4,
+   "pass3": 4
+  }
+ },
+ "tau": 3
+}

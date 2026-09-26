@@ -1,0 +1,25 @@
+{
+ "pr": 18379,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "fce18db6731c3914fbefc83f5ed7bd8c786ab8eef77694545f231b86f969fcaa",
+ "attempts": [
+  {
+   "seconds": 3.9,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 114,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 2709
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Small, well-tested bug fix in Lucene BooleanQueryProvider that adds a null/empty-key guard and returns early instead of relying on a possibly-null loop variable, changing behavior only for previously-broken (throwing) inputs like array filters, with low chance of regressing existing working queries.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Small, well-tested bug fix in Lucene BooleanQueryProvider that adds a null/empty-key guard and returns early instead of relying on a possibly-null loop variable, changing behavior only for previously-broken (throwing) inputs like array filters, with low chance of regressing existing working queries."
+}

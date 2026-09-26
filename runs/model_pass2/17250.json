@@ -1,0 +1,25 @@
+{
+ "pr": 17250,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "94f707825bdaca7b7034a365cc315ca368516ee9787ce4798ca068c60007cdb0",
+ "attempts": [
+  {
+   "seconds": 3.8,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 103,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 12585
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 1, \"reason\": \"Changes are confined entirely to the test suite (xunit v2->v3 migration, csproj/package updates, test method signatures) with no modifications to shipped library or runtime code, so it cannot affect behavior for sites/tenants/modules consuming Orchard Core.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 1,
+ "reason": "Changes are confined entirely to the test suite (xunit v2->v3 migration, csproj/package updates, test method signatures) with no modifications to shipped library or runtime code, so it cannot affect behavior for sites/tenants/modules consuming Orchard Core."
+}

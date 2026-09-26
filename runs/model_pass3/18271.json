@@ -1,0 +1,25 @@
+{
+ "pr": 18271,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "f54747206066e22bbdccfd18db65f2720334de399de42a929eeff57fefa07f61",
+ "attempts": [
+  {
+   "seconds": 8.7,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 417,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 2061
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Mostly a defensive null-check fix, but it changes the public JsonNodeExtensions.TryGetEnumValue signature (out Enum -> out TEnum?), which could break other compiled callers of this shared abstraction if any exist outside this PR.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Mostly a defensive null-check fix, but it changes the public JsonNodeExtensions.TryGetEnumValue signature (out Enum -> out TEnum?), which could break other compiled callers of this shared abstraction if any exist outside this PR."
+}

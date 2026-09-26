@@ -1,0 +1,25 @@
+{
+ "pr": 18233,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "9245b0f69204cc25b7aa0f16ff5485da77680aa79922234396c5a182dd723785",
+ "attempts": [
+  {
+   "seconds": 4.7,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 129,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 2919
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Moves the Delete action from a form POST on the Edit page to a separate GET-routed link on the list page while keeping the same authorization and confirmation UX, so behavior is largely equivalent but changes to the AdminController action signature/attributes (removing ActionName/FormValueRequired) could affect any other code or extensions relying on the old routing convention.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Moves the Delete action from a form POST on the Edit page to a separate GET-routed link on the list page while keeping the same authorization and confirmation UX, so behavior is largely equivalent but changes to the AdminController action signature/attributes (removing ActionName/FormValueRequired) could affect any other code or extensions relying on the old routing convention."
+}

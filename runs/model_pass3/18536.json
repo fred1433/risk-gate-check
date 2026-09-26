@@ -1,0 +1,25 @@
+{
+ "pr": 18536,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "49a8eb9d97b71a0d003709a334e7168b902d0cf9df6d27cf4a2ba6ff888c0b1e",
+ "attempts": [
+  {
+   "seconds": 7.2,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 348,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1587
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Small targeted fix updating the confirm-email link generator to point at the correct EmailConfirmationController/action, but it changes a live registration workflow route so it should be verified that the controller/action names and area match to avoid broken confirmation links.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Small targeted fix updating the confirm-email link generator to point at the correct EmailConfirmationController/action, but it changes a live registration workflow route so it should be verified that the controller/action names and area match to avoid broken confirmation links."
+}

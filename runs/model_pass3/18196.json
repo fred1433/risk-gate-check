@@ -1,0 +1,25 @@
+{
+ "pr": 18196,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "74439e23a3bab56829b807d8e71c18cb43e99f952217636b98a04a0c1b4c6aff",
+ "attempts": [
+  {
+   "seconds": 7.6,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 272,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 38509
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 4, \"reason\": \"Font Awesome 5\u21926/7 upgrade renames many icon classes (fa-edit\u2192fa-pen-to-square, fa-times\u2192fa-xmark, far\u2192fa-regular, fa-arrows-alt\u2192fa-up-down-left-right, fa-trash-alt\u2192fa-trash, etc.) across dozens of core admin views, so any theme/module overriding these views, extending them, or using old FA5 class names (including third-party FA CDN/version pinned sites) will show broken/missing icons, and the sheer breadth of touched shared admin templates makes regressions likely (e.g. the VisitSiteNavbarItem change introduces 'fa-width-auto' which isn't even a valid FA6/7 class, unlike the correct 'fa-fw' it replaced).\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 4,
+ "reason": "Font Awesome 5\u21926/7 upgrade renames many icon classes (fa-edit\u2192fa-pen-to-square, fa-times\u2192fa-xmark, far\u2192fa-regular, fa-arrows-alt\u2192fa-up-down-left-right, fa-trash-alt\u2192fa-trash, etc.) across dozens of core admin views, so any theme/module overriding these views, extending them, or using old FA5 class names (including third-party FA CDN/version pinned sites) will show broken/missing icons, and the she"
+}

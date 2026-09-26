@@ -1,0 +1,25 @@
+{
+ "pr": 18053,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "8c289e593973f8f22f0ace9ff5c7ade990e063a44982c1f2bca5cc493212bc13",
+ "attempts": [
+  {
+   "seconds": 4.2,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 101,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1214
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Small, targeted timing fix that only delays setting the IsTerminating flag until after termination events/callbacks run, reducing risk of the InvalidOperationException, but changes callback/event ordering during shell termination which could subtly affect code relying on the previous timing.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Small, targeted timing fix that only delays setting the IsTerminating flag until after termination events/callbacks run, reducing risk of the InvalidOperationException, but changes callback/event ordering during shell termination which could subtly affect code relying on the previous timing."
+}

@@ -1,0 +1,25 @@
+{
+ "pr": 17871,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "8331c51b1166bff29e931ac8d2d02610ebc25bed9608b25d92cf3db93bb499f4",
+ "attempts": [
+  {
+   "seconds": 14.3,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 1040,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 3240
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 3, \"reason\": \"Reworks core workflow cancellation semantics (previously-dead CancellationToken checks now wired to a real, shared CancellationTokenSource) and makes WorkflowExecutionContext sealed/IDisposable without visible Dispose call sites, which could change behavior for activities relying on the old no-op cancellation and introduce resource leaks or break any external code that subclasses/extends the previously non-sealed class.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 3,
+ "reason": "Reworks core workflow cancellation semantics (previously-dead CancellationToken checks now wired to a real, shared CancellationTokenSource) and makes WorkflowExecutionContext sealed/IDisposable without visible Dispose call sites, which could change behavior for activities relying on the old no-op cancellation and introduce resource leaks or break any external code that subclasses/extends the previ"
+}

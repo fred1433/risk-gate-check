@@ -1,0 +1,25 @@
+{
+ "pr": 17575,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "52dd298beb1792d652367b4203f81e19a3af184ab28e575b0002469298472238",
+ "attempts": [
+  {
+   "seconds": 8.1,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 73,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1167
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 1, \"reason\": \"Pins vue-draggable's dependency to the Vue 2 resource version it actually requires, a minimal, targeted fix that reduces breakage risk rather than introducing it.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 1,
+ "reason": "Pins vue-draggable's dependency to the Vue 2 resource version it actually requires, a minimal, targeted fix that reduces breakage risk rather than introducing it."
+}

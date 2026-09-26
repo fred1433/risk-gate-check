@@ -1,0 +1,25 @@
+{
+ "pr": 17540,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "48835a538c47e85ae5a8b50c67851f099c386f6d33b9637d9e571fb1c3442914",
+ "attempts": [
+  {
+   "seconds": 3.7,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 137,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 2414
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 3, \"reason\": \"The new Clone() method only shallow-copies a subset of ContentItem properties (missing Weld/ContentItemMetadata-related state like Sagas, and relies on JObject.Clone for Data), so any code path depending on full fidelity of the cloned widget content item during rendering could behave differently than before, though the core intent (fixing shared-instance thread safety) is sound.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 3,
+ "reason": "The new Clone() method only shallow-copies a subset of ContentItem properties (missing Weld/ContentItemMetadata-related state like Sagas, and relies on JObject.Clone for Data), so any code path depending on full fidelity of the cloned widget content item during rendering could behave differently than before, though the core intent (fixing shared-instance thread safety) is sound."
+}

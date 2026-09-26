@@ -1,0 +1,25 @@
+{
+ "pr": 17723,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "83293bd573a2811e0316ae06926b4f8e0d8a3f68cd42f6476306d668ef91fb01",
+ "attempts": [
+  {
+   "seconds": 3.5,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 86,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1063
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Small additive change that imports an optional Properties object into Query during deserialization, unlikely to affect existing queries lacking that field but should be reviewed for whether it should merge/overwrite existing properties rather than replace them.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Small additive change that imports an optional Properties object into Query during deserialization, unlikely to affect existing queries lacking that field but should be reviewed for whether it should merge/overwrite existing properties rather than replace them."
+}

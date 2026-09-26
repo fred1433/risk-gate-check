@@ -1,0 +1,25 @@
+{
+ "pr": 18493,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "2fd4c83bc8481afec308e90a2529da69eedfeddc06a56abd3d45ae44f5915a5b",
+ "attempts": [
+  {
+   "seconds": 2.8,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 75,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 3996
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Mostly formatting/docs changes, but DisplayAsAsync now throws on null/empty shapeType instead of silently proceeding, which could break existing callers passing an empty string.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Mostly formatting/docs changes, but DisplayAsAsync now throws on null/empty shapeType instead of silently proceeding, which could break existing callers passing an empty string."
+}

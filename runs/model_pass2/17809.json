@@ -1,0 +1,25 @@
+{
+ "pr": 17809,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "7bb5798d68e91c6e90ed2c59728b746fe99153ea1e268231459d5d2867873554",
+ "attempts": [
+  {
+   "seconds": 3.4,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 66,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1168
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 1, \"reason\": \"One-line change of a settings tab location string (adding #General tab hint) purely affects UI placement in the admin registration settings screen, with no functional or API impact.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 1,
+ "reason": "One-line change of a settings tab location string (adding #General tab hint) purely affects UI placement in the admin registration settings screen, with no functional or API impact."
+}

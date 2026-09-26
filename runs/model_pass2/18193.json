@@ -1,0 +1,25 @@
+{
+ "pr": 18193,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "21791b4c2f249cef76f4749053c991a82232c0d7ba431213e9dd44ea138babe1",
+ "attempts": [
+  {
+   "seconds": 5.7,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 177,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 8479
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Mostly a namespace/project reorganization (moving BagPart models to a new Flows.Core project and moving the Azure AI Search field indexer into the Search.AzureAI module) with behavior preserved via RequireFeatures/DI wiring, but cross-project moves and namespace changes for BagPart-related types carry some risk of breaking external modules that reference the old OrchardCore.Flows namespace or depend on OrchardCore.Flows referencing Search.AzureAI.Core.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Mostly a namespace/project reorganization (moving BagPart models to a new Flows.Core project and moving the Azure AI Search field indexer into the Search.AzureAI module) with behavior preserved via RequireFeatures/DI wiring, but cross-project moves and namespace changes for BagPart-related types carry some risk of breaking external modules that reference the old OrchardCore.Flows namespace or depe"
+}

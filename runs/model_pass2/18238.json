@@ -1,0 +1,25 @@
+{
+ "pr": 18238,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "7aef5da487259ff85a4161cb8718ddee808b4e9c343cae00505a771cbb3ba1c7",
+ "attempts": [
+  {
+   "seconds": 6.3,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 355,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1261
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Renaming a public static class (SiteServiceCollectionExtensions -> ServiceCollectionExtensions) is a low-risk API surface change since extension methods are usually called without qualifying the class name, but any code referencing the class name directly (e.g., via `using static` or reflection) would break, and there's a small chance of naming collision with another ServiceCollectionExtensions class in the same assembly/namespace.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Renaming a public static class (SiteServiceCollectionExtensions -> ServiceCollectionExtensions) is a low-risk API surface change since extension methods are usually called without qualifying the class name, but any code referencing the class name directly (e.g., via `using static` or reflection) would break, and there's a small chance of naming collision with another ServiceCollectionExtensions cl"
+}

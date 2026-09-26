@@ -1,0 +1,25 @@
+{
+ "pr": 17614,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "f93bb1b142a94f23b370807529a4e4300a5ce041213659a2996b064bfe8b5f58",
+ "attempts": [
+  {
+   "seconds": 3.1,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 97,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 3673
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Purely a view/admin-UI refactor to iterate WorkflowStatus enum values instead of hard-coding indices, plus a doc comment\u2014low risk but a mismatch between enum order and the Statuses model list order could mislabel checkboxes.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Purely a view/admin-UI refactor to iterate WorkflowStatus enum values instead of hard-coding indices, plus a doc comment\u2014low risk but a mismatch between enum order and the Statuses model list order could mislabel checkboxes."
+}

@@ -1,0 +1,25 @@
+{
+ "pr": 17316,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "cfa335af070442430167ca786b285374624b0550cce7337c9e2ad103e47d5785",
+ "attempts": [
+  {
+   "seconds": 3.1,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 49,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 6799
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 1, \"reason\": \"Documentation link fixes and doc-URL string updates only, with no changes to executable logic or APIs.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 1,
+ "reason": "Documentation link fixes and doc-URL string updates only, with no changes to executable logic or APIs."
+}

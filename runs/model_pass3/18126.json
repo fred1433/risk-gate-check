@@ -1,0 +1,25 @@
+{
+ "pr": 18126,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "b75e12183aa26a0e05e8bb8087001a13997235ac818f4681c045759d4abca737",
+ "attempts": [
+  {
+   "seconds": 5.0,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 116,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 2182
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Defaults are empty arrays so existing behavior (no known networks/proxies configured, unchanged ForwardedHeaders processing) is preserved unless a site explicitly opts in, though malformed IP/network strings in config would throw at startup via IPNetwork.Parse/IPAddress.Parse.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Defaults are empty arrays so existing behavior (no known networks/proxies configured, unchanged ForwardedHeaders processing) is preserved unless a site explicitly opts in, though malformed IP/network strings in config would throw at startup via IPNetwork.Parse/IPAddress.Parse."
+}

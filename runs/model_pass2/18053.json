@@ -1,0 +1,25 @@
+{
+ "pr": 18053,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "8c289e593973f8f22f0ace9ff5c7ade990e063a44982c1f2bca5cc493212bc13",
+ "attempts": [
+  {
+   "seconds": 4.8,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 119,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1213
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Small, targeted change that only reorders when the IsTerminating flag is set relative to the ServiceScopeOnly check and event firing, reducing a race that caused InvalidOperationException on before-dispose callbacks, with minimal surface area and low likelihood of regressing existing shell scope lifecycle behavior.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Small, targeted change that only reorders when the IsTerminating flag is set relative to the ServiceScopeOnly check and event firing, reducing a race that caused InvalidOperationException on before-dispose callbacks, with minimal surface area and low likelihood of regressing existing shell scope lifecycle behavior."
+}

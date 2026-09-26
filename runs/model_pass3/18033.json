@@ -1,0 +1,25 @@
+{
+ "pr": 18033,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "02c897e4d9f2f38279fcabdb8a06387334583cb2d2c8defee8dce6c57a3277e3",
+ "attempts": [
+  {
+   "seconds": 4.8,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 159,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 6810
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 4, \"reason\": \"Changes the public IContentsTaxonomyListQueryService interface signature (PagerSlim to Pager) and swaps TermPart's pager/shape from PagerSlim to full Pager, which is a breaking API and rendering change for any site/module that customized the TermPart view, injected IContentsTaxonomyListFilter, or relied on the old cursor-based (before/after) pagination behavior on public-facing taxonomy term pages.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 4,
+ "reason": "Changes the public IContentsTaxonomyListQueryService interface signature (PagerSlim to Pager) and swaps TermPart's pager/shape from PagerSlim to full Pager, which is a breaking API and rendering change for any site/module that customized the TermPart view, injected IContentsTaxonomyListFilter, or relied on the old cursor-based (before/after) pagination behavior on public-facing taxonomy term pages"
+}

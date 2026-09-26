@@ -1,0 +1,25 @@
+{
+ "pr": 17425,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "b2ea015030ff7bac0d182463862be5bae0792dd902dedaa03cf844d3e547bb78",
+ "attempts": [
+  {
+   "seconds": 8.2,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 397,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 2070
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Purely cosmetic admin-nav icon rendering changes in Razor views, but the Azure AI Search template is missing a return after the legacy-format branch, causing duplicate icon/title output when legacy format is enabled.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Purely cosmetic admin-nav icon rendering changes in Razor views, but the Azure AI Search template is missing a return after the legacy-format branch, causing duplicate icon/title output when legacy format is enabled."
+}

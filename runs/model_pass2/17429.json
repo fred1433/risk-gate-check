@@ -1,0 +1,25 @@
+{
+ "pr": 17429,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "17e4948653ed85ea8c5179157021f349853090234151efd110941b99e070685e",
+ "attempts": [
+  {
+   "seconds": 4.0,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 128,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 12903
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 5, \"reason\": \"This is a fundamental behavioral change to the core content pipeline (Updating/Updated no longer fire during creation, plus new Created/Creating semantics and obsoleted UpdatingItem/PublishingItem properties), which will silently break any first- or third-party module/handler relying on the old semantics unless it also implements the new Creating/Created events.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 5,
+ "reason": "This is a fundamental behavioral change to the core content pipeline (Updating/Updated no longer fire during creation, plus new Created/Creating semantics and obsoleted UpdatingItem/PublishingItem properties), which will silently break any first- or third-party module/handler relying on the old semantics unless it also implements the new Creating/Created events."
+}

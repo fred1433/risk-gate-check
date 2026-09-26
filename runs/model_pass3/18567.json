@@ -1,0 +1,25 @@
+{
+ "pr": 18567,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "f898b9c57086bcddfff1fdea2f0eca59c2767eab15e0fb6f8b0da1713ecae06c",
+ "attempts": [
+  {
+   "seconds": 4.4,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 123,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 29708
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Change is a client-side UX enhancement (auto-selecting the first/only thumbnail in single-image Media Fields) confined to Vue components, SCSS, and their compiled/minified counterparts, with no server-side or API changes, so worst-case impact is a minor UI regression in the Media Field widget rather than a breaking change.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Change is a client-side UX enhancement (auto-selecting the first/only thumbnail in single-image Media Fields) confined to Vue components, SCSS, and their compiled/minified counterparts, with no server-side or API changes, so worst-case impact is a minor UI regression in the Media Field widget rather than a breaking change."
+}

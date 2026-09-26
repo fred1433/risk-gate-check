@@ -1,0 +1,25 @@
+{
+ "pr": 18545,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "319d5452964049f4abbffd729120a87cf20b1b276f1c548776ba744e8dcfb6c2",
+ "attempts": [
+  {
+   "seconds": 3.3,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 64,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1826
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 1, \"reason\": \"Purely additive change exposing a new optional 'useCdn' liquid tag attribute with no modification to existing behavior when the attribute is omitted.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 1,
+ "reason": "Purely additive change exposing a new optional 'useCdn' liquid tag attribute with no modification to existing behavior when the attribute is omitted."
+}

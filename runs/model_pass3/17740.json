@@ -1,0 +1,25 @@
+{
+ "pr": 17740,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "98dc78c9fe8a5c5529259300202128406362667285c72a72aadcef4495ab000a",
+ "attempts": [
+  {
+   "seconds": 2.8,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 68,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1573
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 1, \"reason\": \"Behavior-preserving refactor that keeps the public interface method intact (now marked Obsolete but still functional) and delegates to a new extension method with identical logic.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 1,
+ "reason": "Behavior-preserving refactor that keeps the public interface method intact (now marked Obsolete but still functional) and delegates to a new extension method with identical logic."
+}

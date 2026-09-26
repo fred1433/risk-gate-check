@@ -1,0 +1,25 @@
+{
+ "pr": 18341,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "6aab59874ddb27c631a3f5b3ba19089f2785897aee4b15aee575717e998397fa",
+ "attempts": [
+  {
+   "seconds": 3.5,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 65,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1133
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 1, \"reason\": \"Small, well-contained early-return guard that only adds a not-exists check before deletion, avoiding a benign exception without altering existing successful-path behavior.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 1,
+ "reason": "Small, well-contained early-return guard that only adds a not-exists check before deletion, avoiding a benign exception without altering existing successful-path behavior."
+}

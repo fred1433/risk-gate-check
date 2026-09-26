@@ -1,0 +1,25 @@
+{
+ "pr": 18099,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "757edf98459a1d7f35f6988f590e0cdd7dbd9884085d04593deeacd8da734de7",
+ "attempts": [
+  {
+   "seconds": 4.2,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 127,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 8763
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Purely mechanical refactor consolidating duplicate Hint/Required properties into a common base class with identical property names/types/JSON serialization, so existing settings JSON and consumers should deserialize/bind the same, though it touches many field settings classes across modules and any external module referencing these settings types via specific base classes or reflection could be marginally affected.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Purely mechanical refactor consolidating duplicate Hint/Required properties into a common base class with identical property names/types/JSON serialization, so existing settings JSON and consumers should deserialize/bind the same, though it touches many field settings classes across modules and any external module referencing these settings types via specific base classes or reflection could be ma"
+}

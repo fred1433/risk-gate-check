@@ -1,0 +1,25 @@
+{
+ "pr": 17769,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "c9f6a3e73bbdf1650e7f71b10eb4ca303ba2a579f21d2e592f36be0891797c38",
+ "attempts": [
+  {
+   "seconds": 3.3,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 72,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1190
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Reverts to always using EditPassword action even for current user, meaning users changing their own password will no longer be required to enter their current password, which is a minor security regression rather than a functional break.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Reverts to always using EditPassword action even for current user, meaning users changing their own password will no longer be required to enter their current password, which is a minor security regression rather than a functional break."
+}

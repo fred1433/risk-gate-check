@@ -1,0 +1,25 @@
+{
+ "pr": 18175,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "3ad0bfeff2df71d945629dfb4304f004cb275e8f6f6567474c362e53f49614b5",
+ "attempts": [
+  {
+   "seconds": 3.7,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 92,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 4028
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 1, \"reason\": \"This is a purely additive, feature-gated (RequireFeatures GraphQL) new file/module for GeoPointField GraphQL support with no changes to existing code paths, so it cannot break existing behaviour for sites not using this feature.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 1,
+ "reason": "This is a purely additive, feature-gated (RequireFeatures GraphQL) new file/module for GeoPointField GraphQL support with no changes to existing code paths, so it cannot break existing behaviour for sites not using this feature."
+}

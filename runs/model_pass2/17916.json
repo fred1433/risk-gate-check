@@ -1,0 +1,25 @@
+{
+ "pr": 17916,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "2db5bc555dca48c054c0fe11855c6e5a8e91c00dca28e31e74f58a987dffc740",
+ "attempts": [
+  {
+   "seconds": 3.0,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 92,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 3361
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 1, \"reason\": \"Patch-level bump of standard Microsoft ASP.NET Core/Extensions packages across both net8.0 and net9.0 TFMs, which are routine security/bugfix point releases with no API or behavioral surface changes expected.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 1,
+ "reason": "Patch-level bump of standard Microsoft ASP.NET Core/Extensions packages across both net8.0 and net9.0 TFMs, which are routine security/bugfix point releases with no API or behavioral surface changes expected."
+}

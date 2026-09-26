@@ -1,0 +1,25 @@
+{
+ "pr": 17526,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "da0dfca5586c178aef9c190c418510e46cfa864ca6900aceba11effed69dfbf3",
+ "attempts": [
+  {
+   "seconds": 4.6,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 128,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 14425
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Mostly pinning Vue-related resource versions and dependency declarations for consistency, but two style/script tags had their 'depends-on=\\\"admin\\\"'/asset reference removed (AdminMenu Edit.cshtml and AuditTrailContentEventDiff), which could subtly affect load order or missing script inclusion on those admin pages.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Mostly pinning Vue-related resource versions and dependency declarations for consistency, but two style/script tags had their 'depends-on=\"admin\"'/asset reference removed (AdminMenu Edit.cshtml and AuditTrailContentEventDiff), which could subtly affect load order or missing script inclusion on those admin pages."
+}

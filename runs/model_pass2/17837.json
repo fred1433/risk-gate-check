@@ -1,0 +1,25 @@
+{
+ "pr": 17837,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "d3ecb85b78ccfce7c9b57ca7f37131678cc8bd1af7dd8a5dc64caca095913fd5",
+ "attempts": [
+  {
+   "seconds": 3.4,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 94,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1114
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Fixes a stray parenthesis in the Redis DataProtection key prefix string, changing the actual key/lock name used in Redis which could invalidate existing cached data protection keys but is otherwise a low-risk, localized syntax correction.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Fixes a stray parenthesis in the Redis DataProtection key prefix string, changing the actual key/lock name used in Redis which could invalidate existing cached data protection keys but is otherwise a low-risk, localized syntax correction."
+}

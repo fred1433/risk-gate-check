@@ -1,0 +1,25 @@
+{
+ "pr": 18537,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "376e9f241b5c8912b85f8f9024a9898d2577cb73d47dfa84739199ea41358982",
+ "attempts": [
+  {
+   "seconds": 5.4,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 117,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 4848
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 3, \"reason\": \"The Shortcodes AdminController.IsValidShortcodeName rewrite changes validation logic (using ShortcodesParser + case-insensitive identifier match instead of Parlot identifier scanning), which could alter accepted/rejected shortcode names in existing tenants despite the dependency-bump framing.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 3,
+ "reason": "The Shortcodes AdminController.IsValidShortcodeName rewrite changes validation logic (using ShortcodesParser + case-insensitive identifier match instead of Parlot identifier scanning), which could alter accepted/rejected shortcode names in existing tenants despite the dependency-bump framing."
+}

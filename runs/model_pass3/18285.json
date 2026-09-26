@@ -1,0 +1,25 @@
+{
+ "pr": 18285,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "5f8de984f189f8a9435fa399cd2ab8b19a2764f4dbb96e5d3ec65ae18f635bbb",
+ "attempts": [
+  {
+   "seconds": 4.6,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 117,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 4606
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Client-side-only JS refactor to Monaco editor init (handles late DOM-ready for dynamically loaded flows/bags content) repeated consistently across views with no server-side or API changes, but the reordering of divEditor lookup vs require() callback in two files is a behavioral change worth a quick sanity check.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Client-side-only JS refactor to Monaco editor init (handles late DOM-ready for dynamically loaded flows/bags content) repeated consistently across views with no server-side or API changes, but the reordering of divEditor lookup vs require() callback in two files is a behavioral change worth a quick sanity check."
+}

@@ -1,0 +1,25 @@
+{
+ "pr": 17397,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "cce302c4ec373b11fcec238435242a73f08286d375d9d1e708239dc58e30eb37",
+ "attempts": [
+  {
+   "seconds": 16.3,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 1332,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 2111
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Only flips the default checkbox state in the SMTP settings edit UI (and reorders view markup) without touching the SmtpSettings model, mail sending logic, or existing saved settings, so it can only affect behavior if an admin re-saves the form and misses the new default state.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Only flips the default checkbox state in the SMTP settings edit UI (and reorders view markup) without touching the SmtpSettings model, mail sending logic, or existing saved settings, so it can only affect behavior if an admin re-saves the form and misses the new default state."
+}

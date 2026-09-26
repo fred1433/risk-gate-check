@@ -1,0 +1,25 @@
+{
+ "pr": 18335,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "fd5ce3498406d6cc1cb79fc41f9fad83a277db0d126976313ae3eebbdd6fb565",
+ "attempts": [
+  {
+   "seconds": 16.9,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 1289,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 31565
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 3, \"reason\": \"In OrchardCore.ContentPreview's contentpreview.edit.js (source, minified, and map) the keyup handler param is not renamed to e but the condition uses e.key, causing a ReferenceError on every keystroke that will break the backspace-triggered live preview and spam console errors, whereas the same refactor in OrchardCore.Templates correctly renamed the parameter.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 3,
+ "reason": "In OrchardCore.ContentPreview's contentpreview.edit.js (source, minified, and map) the keyup handler param is not renamed to e but the condition uses e.key, causing a ReferenceError on every keystroke that will break the backspace-triggered live preview and spam console errors, whereas the same refactor in OrchardCore.Templates correctly renamed the parameter."
+}

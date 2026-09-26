@@ -1,0 +1,25 @@
+{
+ "pr": 18173,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "96f826e2cf3fcbf6726b52540e9219cd626b8b32a67c10c522bffecbb0de4681",
+ "attempts": [
+  {
+   "seconds": 7.5,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 446,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1808
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 3, \"reason\": \"Changes the DI registration order of the workflow ContentsHandler (now forced to run last among content handlers), which alters event execution order for all content types/tenants using workflows and could break custom handlers or workflows relying on the previous ordering.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 3,
+ "reason": "Changes the DI registration order of the workflow ContentsHandler (now forced to run last among content handlers), which alters event execution order for all content types/tenants using workflows and could break custom handlers or workflows relying on the previous ordering."
+}

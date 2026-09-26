@@ -1,0 +1,25 @@
+{
+ "pr": 17294,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "191a4918117d977d6f0135ddef5593373a3c8bf62b9f4130a111999beb40e27e",
+ "attempts": [
+  {
+   "seconds": 3.8,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 87,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1239
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 1, \"reason\": \"Small, correct fix changing a write-only temp FileStream to ReadWrite so it can be seeked/read back after copying, which is necessary for PDF text extraction and isolated to this single non-seekable-stream code path.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 1,
+ "reason": "Small, correct fix changing a write-only temp FileStream to ReadWrite so it can be seeked/read back after copying, which is necessary for PDF text extraction and isolated to this single non-seekable-stream code path."
+}

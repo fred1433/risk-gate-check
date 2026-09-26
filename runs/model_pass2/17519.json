@@ -1,0 +1,25 @@
+{
+ "pr": 17519,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "8058676a25346061b5ddff1daab1134d8f85df5e73d65dff8aefcf129cc6c838",
+ "attempts": [
+  {
+   "seconds": 6.7,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 124,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 7677
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Small, well-contained client-side JS change scoping event handlers to the closest widget-editor-body instead of an outer wrapper variable (fixing multi-widget bleed), but relies on the DOM always containing a '.widget-editor-body' ancestor which could throw a null-reference error in edge cases or custom themes lacking that class.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Small, well-contained client-side JS change scoping event handlers to the closest widget-editor-body instead of an outer wrapper variable (fixing multi-widget bleed), but relies on the DOM always containing a '.widget-editor-body' ancestor which could throw a null-reference error in edge cases or custom themes lacking that class."
+}

@@ -1,0 +1,25 @@
+{
+ "pr": 18511,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "601be398ebebc69f1159714761c6d395d9303467fcce00b0ab8981c76b38ec13",
+ "attempts": [
+  {
+   "seconds": 4.5,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 134,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 5096
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 3, \"reason\": \"This revert reintroduces a semaphore-based locking scheme (SemaphoreSlim held for the full build duration, including per-tenant re-check) instead of the per-key ILocalLock approach, which was presumably replaced to fix a real concurrency/caching bug, so reverting risks reintroducing shape table build contention/deadlock issues across tenants under load.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 3,
+ "reason": "This revert reintroduces a semaphore-based locking scheme (SemaphoreSlim held for the full build duration, including per-tenant re-check) instead of the per-key ILocalLock approach, which was presumably replaced to fix a real concurrency/caching bug, so reverting risks reintroducing shape table build contention/deadlock issues across tenants under load."
+}

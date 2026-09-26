@@ -1,0 +1,25 @@
+{
+ "pr": 18293,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "d73f99f77e659c5631503a09a1e0683dced3a631cdcde020cefbc7df74a16ce6",
+ "attempts": [
+  {
+   "seconds": 5.3,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 155,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 16029
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 3, \"reason\": \"New TextFieldHandler.SetValueAsync uses field.ContentItem before it's guaranteed set and mutates content on Create/Update via liquid rendering, plus TextFieldSettings gains a new required-by-convention Type/Pattern behavior touching many widely-used field templates, so any edge case (null ContentItem, missing part, invalid liquid) could break content creation/update across all sites using TextField-based fields.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 3,
+ "reason": "New TextFieldHandler.SetValueAsync uses field.ContentItem before it's guaranteed set and mutates content on Create/Update via liquid rendering, plus TextFieldSettings gains a new required-by-convention Type/Pattern behavior touching many widely-used field templates, so any edge case (null ContentItem, missing part, invalid liquid) could break content creation/update across all sites using TextFiel"
+}

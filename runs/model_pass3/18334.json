@@ -1,0 +1,25 @@
+{
+ "pr": 18334,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "b4d9cda2bf668607234f157147316c59524b3984ad511c68ad88b8dfa27d0c34",
+ "attempts": [
+  {
+   "seconds": 3.4,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 58,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1049
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Now throws on empty string permission names, which is safer but could break any existing module that was constructing permissions with an empty (non-null) name.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Now throws on empty string permission names, which is safer but could break any existing module that was constructing permissions with an empty (non-null) name."
+}

@@ -1,0 +1,25 @@
+{
+ "pr": 17768,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "ca65e9fe8db742b33002bc0c514731b0c91c4b3766c72fc6cd59ad1069fe7dd4",
+ "attempts": [
+  {
+   "seconds": 3.8,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 93,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 3245
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 1, \"reason\": \"Routine patch-level bump of Microsoft ASP.NET Core/Extensions packages within the same minor versions (9.0.3->9.0.4, 8.0.14->8.0.15), which are backward-compatible servicing releases.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 1,
+ "reason": "Routine patch-level bump of Microsoft ASP.NET Core/Extensions packages within the same minor versions (9.0.3->9.0.4, 8.0.14->8.0.15), which are backward-compatible servicing releases."
+}

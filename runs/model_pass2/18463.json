@@ -1,0 +1,25 @@
+{
+ "pr": 18463,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "62cee9fd0bb681aefa4da92a7bda73304d897ba4e9966dff477460590111cff3",
+ "attempts": [
+  {
+   "seconds": 3.1,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 104,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 5132
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 4, \"reason\": \"This changes ILocalizationService's static GetAllCulturesAndAliases() into an instance method (breaking interface API), requiring all implementers and callers\u2014including any third-party modules implementing ILocalizationService\u2014to update, which will cause compile-time breaks for downstream code.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 4,
+ "reason": "This changes ILocalizationService's static GetAllCulturesAndAliases() into an instance method (breaking interface API), requiring all implementers and callers\u2014including any third-party modules implementing ILocalizationService\u2014to update, which will cause compile-time breaks for downstream code."
+}

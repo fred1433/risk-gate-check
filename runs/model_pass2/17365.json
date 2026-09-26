@@ -1,0 +1,25 @@
+{
+ "pr": 17365,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "1150a2e219f1d3b8260bd5d562320585385ebfd4f0f08f0dcc90fe353a322e4f",
+ "attempts": [
+  {
+   "seconds": 4.0,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 120,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 6377
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 3, \"reason\": \"Non-trivial rewrite of column/alias quoting logic (including new quote-detection and dialect-specific parsing) used by GraphQL predicate queries across all supported databases, so subtle regressions in path parsing or quoting could break custom GraphQL filters/sorts on any tenant, though tests cover key cases.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 3,
+ "reason": "Non-trivial rewrite of column/alias quoting logic (including new quote-detection and dialect-specific parsing) used by GraphQL predicate queries across all supported databases, so subtle regressions in path parsing or quoting could break custom GraphQL filters/sorts on any tenant, though tests cover key cases."
+}

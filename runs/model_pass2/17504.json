@@ -1,0 +1,25 @@
+{
+ "pr": 17504,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "ea3ced84e358453f3d877b4073162de115041bd712a90e4a803f99a1a50872dc",
+ "attempts": [
+  {
+   "seconds": 3.5,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 125,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 5691
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 3, \"reason\": \"This reverts a bugfix that restricted drag-and-drop of widgets between Bag/Flow parts to compatible content types, reintroducing the original bug (13068) allowing widgets to be dropped into containers that don't permit their content type, which is a frontend admin-editor behavioral regression but not a data-integrity or breaking API change.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 3,
+ "reason": "This reverts a bugfix that restricted drag-and-drop of widgets between Bag/Flow parts to compatible content types, reintroducing the original bug (13068) allowing widgets to be dropped into containers that don't permit their content type, which is a frontend admin-editor behavioral regression but not a data-integrity or breaking API change."
+}

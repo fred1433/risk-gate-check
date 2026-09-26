@@ -1,0 +1,25 @@
+{
+ "pr": 17478,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "11c5954e6965ded8e84d843bce10f10d1a9d66d33253262140ef3479d720021d",
+ "attempts": [
+  {
+   "seconds": 4.6,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 70,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 3295
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 1, \"reason\": \"Simple patch-level bump of official Microsoft ASP.NET Core/Extensions package versions with no code changes, extremely low likelihood of breaking behavior.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 1,
+ "reason": "Simple patch-level bump of official Microsoft ASP.NET Core/Extensions package versions with no code changes, extremely low likelihood of breaking behavior."
+}

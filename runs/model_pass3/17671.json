@@ -1,0 +1,25 @@
+{
+ "pr": 17671,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "92410134db08d3fb1f77cd10a4047174adf58f554bc03124e3e1d862c95c140c",
+ "attempts": [
+  {
+   "seconds": 5.0,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 187,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 2514
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Logic is moved/refactored from the display driver into the controller (Create/Edit/Bulk Approve) with equivalent behavior via a shared ConfirmUserEmailAsync helper, but removing the email-confirmation handling from UserDisplayDriver.UpdateAsync could affect other code paths (e.g., API or custom drivers) that relied on that driver alone to confirm emails, and email confirmation logic tied directly to Password-bound modelstate could subtly change behavior if driver ordering/validation differs.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Logic is moved/refactored from the display driver into the controller (Create/Edit/Bulk Approve) with equivalent behavior via a shared ConfirmUserEmailAsync helper, but removing the email-confirmation handling from UserDisplayDriver.UpdateAsync could affect other code paths (e.g., API or custom drivers) that relied on that driver alone to confirm emails, and email confirmation logic tied directly "
+}

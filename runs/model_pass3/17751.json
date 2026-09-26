@@ -1,0 +1,25 @@
+{
+ "pr": 17751,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "a008dd7e9db05a629755410671916015fa29a7276bdfb3389a910a4a3b16b951",
+ "attempts": [
+  {
+   "seconds": 10.1,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 661,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1185
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Small view-only change limited to the password-change link, but it relies on isCurrentUser/FullRequestPath variables and an Account/ChangePassword action not shown in this diff, so if those aren't already defined elsewhere it could break the UserActionsMenu view.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Small view-only change limited to the password-change link, but it relies on isCurrentUser/FullRequestPath variables and an Account/ChangePassword action not shown in this diff, so if those aren't already defined elsewhere it could break the UserActionsMenu view."
+}

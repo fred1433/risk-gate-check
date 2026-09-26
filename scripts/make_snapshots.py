@@ -2,8 +2,6 @@
 its file list. Nothing else: no body, no comments, no later history. The gate and the model only ever read these files."""
 import json,subprocess,os,hashlib,sys
 G=["git","--git-dir","work/oc-full.git"]
-prs=[json.loads(l) for l in open("data/raw/prs_2023-01-01_2026-09-27.jsonl")]
-bots={"renovate","dependabot","github-actions","allcontributors"}
 man=json.load(open("data/cohort_manifest.json"))
 for part in ("development","evaluation"):
     for e in man[part]["prs"]:

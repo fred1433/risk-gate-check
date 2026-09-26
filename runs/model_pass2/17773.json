@@ -1,0 +1,25 @@
+{
+ "pr": 17773,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "2cdb5bb5541d4e5f148ff9c275643909b71eb8fd4d9f3fe045ef23e0e7a72a90",
+ "attempts": [
+  {
+   "seconds": 4.1,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 118,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 17768
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 1, \"reason\": \"Small, self-contained client-side JS change (replaces insertAdjacentHTML wrapping with equivalent DOM createElement/insertBefore/appendChild) that preserves the same DOM structure/classes for the shortcodes editor button, with no server-side, API, or data model changes affecting tenants/modules.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 1,
+ "reason": "Small, self-contained client-side JS change (replaces insertAdjacentHTML wrapping with equivalent DOM createElement/insertBefore/appendChild) that preserves the same DOM structure/classes for the shortcodes editor button, with no server-side, API, or data model changes affecting tenants/modules."
+}
