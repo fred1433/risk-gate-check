@@ -1,0 +1,25 @@
+{
+ "pr": 18608,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "15ee377d419a40deb85af6ddaf4be880c606bbf5b4ed1872c23f5065c5d47aa6",
+ "attempts": [
+  {
+   "seconds": 5.0,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 87,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 6297
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Change is localized to migration Create/Uninstall method resolution and adds support for void/Task Uninstall signatures with correct Task casting, well covered by new unit tests, and preserves existing Create/Update logic paths.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Change is localized to migration Create/Uninstall method resolution and adds support for void/Task Uninstall signatures with correct Task casting, well covered by new unit tests, and preserves existing Create/Update logic paths."
+}

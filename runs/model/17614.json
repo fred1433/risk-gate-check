@@ -1,0 +1,25 @@
+{
+ "pr": 17614,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "f93bb1b142a94f23b370807529a4e4300a5ce041213659a2996b064bfe8b5f58",
+ "attempts": [
+  {
+   "seconds": 3.8,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 87,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 3674
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Purely a settings-editor UI refactor (admin view + comment on enum) that preserves the same statuses/behavior, low risk but worth a quick review since a minor mismatch in the switch-case could mislabel a status.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Purely a settings-editor UI refactor (admin view + comment on enum) that preserves the same statuses/behavior, low risk but worth a quick review since a minor mismatch in the switch-case could mislabel a status."
+}

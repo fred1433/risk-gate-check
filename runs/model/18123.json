@@ -1,0 +1,25 @@
+{
+ "pr": 18123,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "d2f9b15c0118a6b3c89fade9f4a3bf5e915fe26b390b29177a11ec46fb18590d",
+ "attempts": [
+  {
+   "seconds": 3.8,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 98,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 4226
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Adds a new opt-in settings field (default false, matching prior implicit behavior) with a new interface member implemented in both concrete ILocalizationService implementations, so it's low risk though any other external ILocalizationService implementations would break to compile without the new property.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Adds a new opt-in settings field (default false, matching prior implicit behavior) with a new interface member implemented in both concrete ILocalizationService implementations, so it's low risk though any other external ILocalizationService implementations would break to compile without the new property."
+}

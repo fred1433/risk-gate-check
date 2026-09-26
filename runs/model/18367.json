@@ -1,0 +1,25 @@
+{
+ "pr": 18367,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "5bb40624ae17c392b661517b35c7da1151d6623b2a64b64650160671ff8cdb69",
+ "attempts": [
+  {
+   "seconds": 9.2,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 512,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 2327
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 4, \"reason\": \"Changing WorkflowIndex.WorkflowStatus from int to an enum alters the persisted index column type/schema, and without a visible data migration this can break querying/filtering against existing production WorkflowIndex tables on upgrade.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 4,
+ "reason": "Changing WorkflowIndex.WorkflowStatus from int to an enum alters the persisted index column type/schema, and without a visible data migration this can break querying/filtering against existing production WorkflowIndex tables on upgrade."
+}

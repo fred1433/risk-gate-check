@@ -1,0 +1,25 @@
+{
+ "pr": 17439,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "db7e525b7f1052301a445c92bab4d17d4ebbf1afa3816c16188f5256ebe2323f",
+ "attempts": [
+  {
+   "seconds": 4.1,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 180,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1612
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 1, \"reason\": \"Removes only obsolete WithCulture() overrides that trivially returned the same instance, relying on the interface's default implementation, so behavior is unchanged.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 1,
+ "reason": "Removes only obsolete WithCulture() overrides that trivially returned the same instance, relying on the interface's default implementation, so behavior is unchanged."
+}

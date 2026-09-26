@@ -1,0 +1,25 @@
+{
+ "pr": 18513,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "43c125d7396ee713f84b6a8ef03c1628818699ac62054535cf3f0c7d607a3bfa",
+ "attempts": [
+  {
+   "seconds": 5.2,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 153,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 5495
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 3, \"reason\": \"Core shape table caching/locking mechanism used on every request across all tenants is reworked to use ILocalLock and cache Task<ShapeTable> instead of ShapeTable, so any bug (e.g., a faulted task getting cached, deadlock in ILocalLock, or DI resolution failure for ILocalLock in consuming modules) could break rendering tenant-wide, warranting careful review despite tests being updated.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 3,
+ "reason": "Core shape table caching/locking mechanism used on every request across all tenants is reworked to use ILocalLock and cache Task<ShapeTable> instead of ShapeTable, so any bug (e.g., a faulted task getting cached, deadlock in ILocalLock, or DI resolution failure for ILocalLock in consuming modules) could break rendering tenant-wide, warranting careful review despite tests being updated."
+}

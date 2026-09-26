@@ -1,0 +1,25 @@
+{
+ "pr": 18001,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "30d83849e61f9bebb4947a68faf474767b3db272f0c6e0ead21ba22daa688b0f",
+ "attempts": [
+  {
+   "seconds": 10.1,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 598,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 2832
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"This reverts a recently introduced optional JsonSerializerOptions parameter to restore the original public API signatures on widely-used IEntity extension methods, fixing binary compatibility for most consumers but breaking the small number of callers who already adopted the options overload.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "This reverts a recently introduced optional JsonSerializerOptions parameter to restore the original public API signatures on widely-used IEntity extension methods, fixing binary compatibility for most consumers but breaking the small number of callers who already adopted the options overload."
+}

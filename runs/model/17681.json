@@ -1,0 +1,25 @@
+{
+ "pr": 17681,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "44b9c03210ec77f167ff11a6feb9f6e3f9219264d1bd8bd70df1aa302138e980",
+ "attempts": [
+  {
+   "seconds": 6.2,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 293,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 3401
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Change is scoped to the Lists module's admin menu node driver/views, adding null-safety and content-type validation with no changes to public APIs or unrelated components, though the new validation could reject saves for existing nodes whose stored content type no longer matches a valid ListPart type.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Change is scoped to the Lists module's admin menu node driver/views, adding null-safety and content-type validation with no changes to public APIs or unrelated components, though the new validation could reject saves for existing nodes whose stored content type no longer matches a valid ListPart type."
+}

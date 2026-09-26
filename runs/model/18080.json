@@ -1,0 +1,25 @@
+{
+ "pr": 18080,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "d3d334d3bf8179a777e29ecacc3fb6519f922dc983249e41d770a13746bd4a4d",
+ "attempts": [
+  {
+   "seconds": 15.0,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 939,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 4528
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 4, \"reason\": \"Beyond the test fix, this changes production index-creation semantics in AzureAISearchIndexManager (return value for 'already exists' flips from true to false, and a null-conditional check is removed) and alters error-path returns in ElasticsearchIndexManager, plus reworks Lucene writer/reader locking and disposal logic\u2014all core indexing paths used by every tenant, where subtle regressions in concurrency or return-value contracts would be hard to catch pre-merge.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 4,
+ "reason": "Beyond the test fix, this changes production index-creation semantics in AzureAISearchIndexManager (return value for 'already exists' flips from true to false, and a null-conditional check is removed) and alters error-path returns in ElasticsearchIndexManager, plus reworks Lucene writer/reader locking and disposal logic\u2014all core indexing paths used by every tenant, where subtle regressions in conc"
+}

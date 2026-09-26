@@ -1,0 +1,25 @@
+{
+ "pr": 18347,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "45502435c083d4c91bcc5ae43fbdeef2a39b453bbf4960476292b14afd0a0e95",
+ "attempts": [
+  {
+   "seconds": 5.0,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 110,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 5090
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Small, well-tested change restoring input-order semantics in GetAsync via OrderBy on Array.IndexOf, which uses O(n) lookup per item (fine for typical batch sizes) but could subtly change behavior for any callers relying on the previous (undefined/storage) ordering.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Small, well-tested change restoring input-order semantics in GetAsync via OrderBy on Array.IndexOf, which uses O(n) lookup per item (fine for typical batch sizes) but could subtly change behavior for any callers relying on the previous (undefined/storage) ordering."
+}

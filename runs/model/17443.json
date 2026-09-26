@@ -1,0 +1,25 @@
+{
+ "pr": 17443,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "96ff0764050eae140b6d127c02f545158c7a719a62e4c72399c58e286589f977",
+ "attempts": [
+  {
+   "seconds": 3.3,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 89,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 35522
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Small, well-scoped fix that prefixes ModelState keys correctly and adds CSS validation styling for taxonomy fields, with minimal behavioral change risk limited to validation UI/error-key matching in this specific module.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Small, well-scoped fix that prefixes ModelState keys correctly and adds CSS validation styling for taxonomy fields, with minimal behavioral change risk limited to validation UI/error-key matching in this specific module."
+}

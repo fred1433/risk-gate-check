@@ -1,0 +1,25 @@
+{
+ "pr": 18054,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "caa28bab01c05a1d974f092eee75f1384c0bf5581e2216f2cc2de3dad645afc7",
+ "attempts": [
+  {
+   "seconds": 3.7,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 107,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 3766
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Adds a small internal counter and RegisterBeforeDispose hook to production HttpBackgroundJob code (used only by tests via internal ActiveJobsCount), with the rest of the change confined to test infrastructure, so real-world runtime behavior is essentially unaffected.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Adds a small internal counter and RegisterBeforeDispose hook to production HttpBackgroundJob code (used only by tests via internal ActiveJobsCount), with the rest of the change confined to test infrastructure, so real-world runtime behavior is essentially unaffected."
+}

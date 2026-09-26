@@ -1,0 +1,25 @@
+{
+ "pr": 17837,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "d3ecb85b78ccfce7c9b57ca7f37131678cc8bd1af7dd8a5dc64caca095913fd5",
+ "attempts": [
+  {
+   "seconds": 3.8,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 101,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1115
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Removes stray parentheses in a Redis key name string, which changes the actual Redis key used for DataProtection-Keys and could invalidate existing keys for tenants upgrading from the buggy version, though the new format is objectively correct and low-risk for new deployments.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Removes stray parentheses in a Redis key name string, which changes the actual Redis key used for DataProtection-Keys and could invalidate existing keys for tenants upgrading from the buggy version, though the new format is objectively correct and low-risk for new deployments."
+}

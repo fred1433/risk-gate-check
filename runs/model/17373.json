@@ -1,0 +1,25 @@
+{
+ "pr": 17373,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "bb5afb9f5d7b8bf191d5a41d66403174fe1659569fc1e514f2f8aaf07e7a9f8f",
+ "attempts": [
+  {
+   "seconds": 18.9,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 1583,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 15226
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 4, \"reason\": \"The Facebook ResourceManagementOptionsConfiguration.Configure method is now 'async void' with an awaited settings call, meaning the ResourceManifest may not be populated before ResourceManagementOptions is consumed, risking missing/broken 'fb' script resources on sites using the Facebook module, on top of core ResourceManager.cs dependency-resolution changes that affect resource rendering behavior for every tenant.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 4,
+ "reason": "The Facebook ResourceManagementOptionsConfiguration.Configure method is now 'async void' with an awaited settings call, meaning the ResourceManifest may not be populated before ResourceManagementOptions is consumed, risking missing/broken 'fb' script resources on sites using the Facebook module, on top of core ResourceManager.cs dependency-resolution changes that affect resource rendering behavior"
+}

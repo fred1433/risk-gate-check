@@ -1,0 +1,25 @@
+{
+ "pr": 17629,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "056e5fb1254e434cf0e5620dcf4939d1ccbfeeb8c46fed4c3ec79b16fbdb6cc3",
+ "attempts": [
+  {
+   "seconds": 5.3,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 88,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 3467
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 1, \"reason\": \"Small additive change (new optional Rows property with sensible default nullable behavior) confined to the Forms module's TextArea widget, with backward-compatible model/viewmodel changes and no impact on existing stored content or other modules.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 1,
+ "reason": "Small additive change (new optional Rows property with sensible default nullable behavior) confined to the Forms module's TextArea widget, with backward-compatible model/viewmodel changes and no impact on existing stored content or other modules."
+}

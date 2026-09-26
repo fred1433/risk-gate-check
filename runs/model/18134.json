@@ -1,0 +1,25 @@
+{
+ "pr": 18134,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "4a1ec324061203afe19eb74c15ce08bc55c190d8f54624a2924d05250f2f9c7e",
+ "attempts": [
+  {
+   "seconds": 3.7,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 87,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1835
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 1, \"reason\": \"Adds the standard ASP.NET Core tilde app-relative path prefix to local resource URLs, fixing tenant/sub-path resolution with no behavioral change for root-hosted sites or the CDN fallback.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 1,
+ "reason": "Adds the standard ASP.NET Core tilde app-relative path prefix to local resource URLs, fixing tenant/sub-path resolution with no behavioral change for root-hosted sites or the CDN fallback."
+}

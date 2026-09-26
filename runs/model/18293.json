@@ -1,0 +1,25 @@
+{
+ "pr": 18293,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "d73f99f77e659c5631503a09a1e0683dced3a631cdcde020cefbc7df74a16ce6",
+ "attempts": [
+  {
+   "seconds": 6.8,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 152,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 16029
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 4, \"reason\": \"This changes the constructor signature and settings serialization of the widely-used TextField (adding required DI dependencies, a new enum property with default GeneratedDisabled-like behavior, and pattern computation logic that mutates field.Text and welds parts on Created/Updated), which can affect existing content types/tenants relying on TextFieldHandler and TitlePartHandler behavior in subtle ways not fully covered by tests.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 4,
+ "reason": "This changes the constructor signature and settings serialization of the widely-used TextField (adding required DI dependencies, a new enum property with default GeneratedDisabled-like behavior, and pattern computation logic that mutates field.Text and welds parts on Created/Updated), which can affect existing content types/tenants relying on TextFieldHandler and TitlePartHandler behavior in subtl"
+}

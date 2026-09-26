@@ -1,0 +1,25 @@
+{
+ "pr": 17654,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "aca7af7be8f1c48cd306605310a758bc5b3a41615c5c593de6f3491bcb3d5655",
+ "attempts": [
+  {
+   "seconds": 5.0,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 120,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1517
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Additive GraphQL schema change (adds multi-value where filters for ID fields and fixes existing multi-value filters to use ListGraphType) that is scoped to the GraphQL query API and unlikely to break existing queries, though it could affect any code relying on the previous (arguably buggy) multi-value filter input shape.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Additive GraphQL schema change (adds multi-value where filters for ID fields and fixes existing multi-value filters to use ListGraphType) that is scoped to the GraphQL query API and unlikely to break existing queries, though it could affect any code relying on the previous (arguably buggy) multi-value filter input shape."
+}

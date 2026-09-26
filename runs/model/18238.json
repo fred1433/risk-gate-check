@@ -1,0 +1,25 @@
+{
+ "pr": 18238,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "7aef5da487259ff85a4161cb8718ddee808b4e9c343cae00505a771cbb3ba1c7",
+ "attempts": [
+  {
+   "seconds": 5.4,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 288,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1262
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Renaming this public static class is a source-breaking change for any external code that references SiteServiceCollectionExtensions directly (e.g., via static class name or reflection) rather than just calling the extension method.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Renaming this public static class is a source-breaking change for any external code that references SiteServiceCollectionExtensions directly (e.g., via static class name or reflection) rather than just calling the extension method."
+}

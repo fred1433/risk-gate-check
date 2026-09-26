@@ -1,0 +1,51 @@
+{
+ "pr": 17552,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "b9bac7fe873794685dcbe27d8d2bdd0891e8087c8433098de58f9580fab53bd2",
+ "attempts": [
+  {
+   "seconds": 7.1,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 156,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 34377
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 4, \"reason\": \"Renames build output extension from .prod.js to .min.js referenced in ResourceManagementOptionsConfiguration.cs across multiple modules/themes, and changes bootstrap-select script dependency from 'bootstrap' to 'admin' in several admin views\u2014any tenant/module with custom resource overrides, CDN caching of old filenames, or manifests referencing the old .prod.js/dependency names could break admin UI script loading.\""
+  },
+  {
+   "seconds": 5.3,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 154,
+    "cache_read_input_tokens": 34377,
+    "cache_creation_input_tokens": 0
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 4, \"reason\": \"Renames build output extension from .prod.js to .min.js and changes multiple ResourceManagementOptionsConfiguration.cs registrations plus script depends-on attributes (e.g., bootstrap-select now depends-on 'admin' instead of 'bootstrap'), which can break resource resolution/CDN manifests and script load order for any theme or module referencing the old .prod.js filenames or resource names across many admin areas.\""
+  },
+  {
+   "seconds": 6.1,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 155,
+    "cache_read_input_tokens": 34377,
+    "cache_creation_input_tokens": 0
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 3, \"reason\": \"Renames build output extensions (.prod.js -> .min.js) and changes multiple ResourceManagementOptionsConfiguration.cs / cshtml resource references and bootstrap-select dependsOn (bootstrap -> admin) across many modules, so any external module/theme referencing the old .prod.js filenames or relying on the old resource dependency chain could break, though the changes are broadly mechanical and consistent within the repo.\""
+  }
+ ],
+ "status": "malformed_or_failed"
+}

@@ -1,0 +1,39 @@
+{
+ "pr": 17796,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "7375880fa8d49c6dfad4d9de2ead95a4f8524b7f846f16f67b717ce10c9e2df8",
+ "attempts": [
+  {
+   "seconds": 4.5,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 139,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 4579
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Refactors recipe index-step parsing behind a new shared abstraction with backward-compatible 'Indices'/'Indexes' property support, but subtle JSON deserialization differences (e.g., relying on ToObject<IndexRecipeStep<T>> instead of raw JsonArray parsing) could change behavior for existing recipes with malformed or edge-case index definitions.\""
+  },
+  {
+   "seconds": 9.8,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 138,
+    "cache_read_input_tokens": 4579,
+    "cache_creation_input_tokens": 0
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Refactors recipe step parsing to use a shared base class/extension with backward-compatible 'Indices' property support, but changes JSON deserialization path (Step[\\\"Indices\\\"] as JsonArray vs ToObject<IndexRecipeStep<T>>) which could subtly break existing recipes if the new model binding doesn't handle all prior JSON shapes identically.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Refactors recipe step parsing to use a shared base class/extension with backward-compatible 'Indices' property support, but changes JSON deserialization path (Step[\"Indices\"] as JsonArray vs ToObject<IndexRecipeStep<T>>) which could subtly break existing recipes if the new model binding doesn't handle all prior JSON shapes identically."
+}

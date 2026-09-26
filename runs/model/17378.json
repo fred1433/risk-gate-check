@@ -1,0 +1,25 @@
+{
+ "pr": 17378,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "6c3313aa4160b8ccdbf5c953fb5aeeac070f6d120074188a25457665c44643ec",
+ "attempts": [
+  {
+   "seconds": 4.4,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 188,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 22717
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 4, \"reason\": \"This is a substantial, cross-module rework of GraphQL predicate/alias building (renamed/moved public extension namespace, changed IPredicateQuery/IIndexAliasProvider contracts, new partial-alias resolution logic in PredicateQuery and ContentItemsFieldType) that touches core query-filtering behavior used by every content type's GraphQL API, so a subtle bug in alias resolution or SQL column mapping could silently corrupt or break existing GraphQL queries across all tenants despite the added tests.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 4,
+ "reason": "This is a substantial, cross-module rework of GraphQL predicate/alias building (renamed/moved public extension namespace, changed IPredicateQuery/IIndexAliasProvider contracts, new partial-alias resolution logic in PredicateQuery and ContentItemsFieldType) that touches core query-filtering behavior used by every content type's GraphQL API, so a subtle bug in alias resolution or SQL column mapping "
+}

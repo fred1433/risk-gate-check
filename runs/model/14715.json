@@ -1,0 +1,25 @@
+{
+ "pr": 14715,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "aebdcd2611e3b7d7d207633ee745f7d305bc5f02fb53be0025483d42d1c4fb45",
+ "attempts": [
+  {
+   "seconds": 12.5,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 894,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 11714
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 4, \"reason\": \"MailMessage.Body/IsHtmlBody are kept but marked Obsolete (warning only, not compile error) while the SMTP/Azure providers now ignore them entirely in favor of new TextBody/HtmlBody properties, so any downstream module/tenant code still setting message.Body directly will silently send emails with an empty body with no compiler error to alert them.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 4,
+ "reason": "MailMessage.Body/IsHtmlBody are kept but marked Obsolete (warning only, not compile error) while the SMTP/Azure providers now ignore them entirely in favor of new TextBody/HtmlBody properties, so any downstream module/tenant code still setting message.Body directly will silently send emails with an empty body with no compiler error to alert them."
+}

@@ -1,0 +1,25 @@
+{
+ "pr": 18643,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "1a1022c509d928ebabcb9b36ccf7ca83e1e0496e49eae9182cc2c3f39ae48391",
+ "attempts": [
+  {
+   "seconds": 3.8,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 80,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 2170
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Removes the shortcode-insertion UI/action from the Template editor's Monaco editor, a minor feature-loss regression for admins editing templates but not a functional/data risk for tenants or modules.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Removes the shortcode-insertion UI/action from the Template editor's Monaco editor, a minor feature-loss regression for admins editing templates but not a functional/data risk for tenants or modules."
+}

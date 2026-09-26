@@ -1,0 +1,25 @@
+{
+ "pr": 18241,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "6348e0e266d9e5a5e431c7811ab50a80aac81296708b83a65e7d1cd729dc0f0e",
+ "attempts": [
+  {
+   "seconds": 4.9,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 114,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 3471
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 3, \"reason\": \"Renaming public static classes (OrchardRazorHelperExtensions -> Content/Media/ShortcodesOrchardRazorHelperExtensions) is a breaking API change for any external module or application code that directly references these class names, even though normal Razor/Liquid extension-method usage is unaffected.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 3,
+ "reason": "Renaming public static classes (OrchardRazorHelperExtensions -> Content/Media/ShortcodesOrchardRazorHelperExtensions) is a breaking API change for any external module or application code that directly references these class names, even though normal Razor/Liquid extension-method usage is unaffected."
+}

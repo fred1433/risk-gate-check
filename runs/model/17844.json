@@ -1,0 +1,25 @@
+{
+ "pr": 17844,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "56122a09c6b00c04a9ae4ec2541591aad1504f56d98a9c0dfe59bce6995a0586",
+ "attempts": [
+  {
+   "seconds": 3.1,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 103,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 6385
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Feature is additive and opt-in (new RemoveFilesFromBasePath flag defaulting to false) confined to the Media.Azure module's tenant-removal path, with existing RemoveContainer behavior preserved, so blast radius for existing sites is minimal.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Feature is additive and opt-in (new RemoveFilesFromBasePath flag defaulting to false) confined to the Media.Azure module's tenant-removal path, with existing RemoveContainer behavior preserved, so blast radius for existing sites is minimal."
+}

@@ -1,0 +1,25 @@
+{
+ "pr": 17429,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "17e4948653ed85ea8c5179157021f349853090234151efd110941b99e070685e",
+ "attempts": [
+  {
+   "seconds": 4.1,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 115,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 12904
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 5, \"reason\": \"This is a fundamental behavioral change to core content lifecycle events (Updating/Updated no longer fire on creation, requiring separate Creating/Created handling), which will silently break any first-party or third-party content part handlers, workflows, or modules relying on the previous semantics unless they are updated in lockstep.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 5,
+ "reason": "This is a fundamental behavioral change to core content lifecycle events (Updating/Updated no longer fire on creation, requiring separate Creating/Created handling), which will silently break any first-party or third-party content part handlers, workflows, or modules relying on the previous semantics unless they are updated in lockstep."
+}

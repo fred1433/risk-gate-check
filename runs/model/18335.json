@@ -1,0 +1,25 @@
+{
+ "pr": 18335,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "fd5ce3498406d6cc1cb79fc41f9fad83a277db0d126976313ae3eebbdd6fb565",
+ "attempts": [
+  {
+   "seconds": 12.9,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 910,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 31566
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 3, \"reason\": \"In contentpreview.edit.js the keyup handler's parameter is still named 'event' but the new code references the undefined variable 'e', causing a ReferenceError that will silently break the live content-preview refresh-on-typing feature in the admin UI (bug is baked into src, dist, min and map files, so it wasn't caught before commit).\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 3,
+ "reason": "In contentpreview.edit.js the keyup handler's parameter is still named 'event' but the new code references the undefined variable 'e', causing a ReferenceError that will silently break the live content-preview refresh-on-typing feature in the admin UI (bug is baked into src, dist, min and map files, so it wasn't caught before commit)."
+}

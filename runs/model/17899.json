@@ -1,0 +1,25 @@
+{
+ "pr": 17899,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "e3ceb591053f10f3d481c42b632be5c271336a945162f30a6ad7708813619378",
+ "attempts": [
+  {
+   "seconds": 6.5,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 339,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 2991
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 3, \"reason\": \"Renames/removes the public GetOrAddPublishedContentItemByIdDataLoader extension method (replaced by GetOrAddContentItemByIdDataLoader requiring a 'status' GraphQL argument), which is a breaking API/source change for any external modules or GraphQL queries relying on the old method or field signature, even though default published-status behavior is preserved.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 3,
+ "reason": "Renames/removes the public GetOrAddPublishedContentItemByIdDataLoader extension method (replaced by GetOrAddContentItemByIdDataLoader requiring a 'status' GraphQL argument), which is a breaking API/source change for any external modules or GraphQL queries relying on the old method or field signature, even though default published-status behavior is preserved."
+}

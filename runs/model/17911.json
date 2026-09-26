@@ -1,0 +1,25 @@
+{
+ "pr": 17911,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "260397be0174766900df8c64f96710280a5a799a908bcd4318222055c7b84b3c",
+ "attempts": [
+  {
+   "seconds": 13.5,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 1102,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 3843
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"The new UseLocalTime timezone conversion is opt-in and defaults to false (preserving original UTC cron calculation), but the change also converts TimerEvent's CanExecute/Resume to async overrides, which is a meaningful behavioral change to widely-used workflow timer logic that all tenants relying on scheduled workflows would be affected by if a regression exists.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "The new UseLocalTime timezone conversion is opt-in and defaults to false (preserving original UTC cron calculation), but the change also converts TimerEvent's CanExecute/Resume to async overrides, which is a meaningful behavioral change to widely-used workflow timer logic that all tenants relying on scheduled workflows would be affected by if a regression exists."
+}

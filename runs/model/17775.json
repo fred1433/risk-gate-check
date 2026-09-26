@@ -1,0 +1,25 @@
+{
+ "pr": 17775,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "47b3c1d49c71d2006eaa8799eebee9caf1922f04553a73ba3e983fdf63b4798b",
+ "attempts": [
+  {
+   "seconds": 11.7,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 741,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 4086
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 3, \"reason\": \"Changes how lastTaskId is persisted (moving from an in-memory field to serialized Entity metadata) and alters index-name uniqueness validation and index matching logic, which could change reindexing/task-tracking behavior for existing sites already using Azure AI Search.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 3,
+ "reason": "Changes how lastTaskId is persisted (moving from an in-memory field to serialized Entity metadata) and alters index-name uniqueness validation and index matching logic, which could change reindexing/task-tracking behavior for existing sites already using Azure AI Search."
+}

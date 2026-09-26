@@ -1,0 +1,25 @@
+{
+ "pr": 17481,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "953cd5812ccc345d83175a29b6fe543c7e274f9c217ff64a4777d790c52957c0",
+ "attempts": [
+  {
+   "seconds": 33.6,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 2715,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1779
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 4, \"reason\": \"This shared helper builds the taxonomy term tree used for rendering (likely including the multiselect editor's checkbox tree), and the rewrite now only emits entries for terms already present in TermContentItemIds while only recursing into their children \u2014 meaning unselected terms (and their descendants) are silently dropped from the tree, which could break the ability to pick new terms in the multiselect UI across every content type using taxonomy fields, with no tests added to verify the fix doesn't regress that path.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 4,
+ "reason": "This shared helper builds the taxonomy term tree used for rendering (likely including the multiselect editor's checkbox tree), and the rewrite now only emits entries for terms already present in TermContentItemIds while only recursing into their children \u2014 meaning unselected terms (and their descendants) are silently dropped from the tree, which could break the ability to pick new terms in the mul"
+}

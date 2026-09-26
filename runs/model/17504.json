@@ -1,0 +1,25 @@
+{
+ "pr": 17504,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "ea3ced84e358453f3d877b4073162de115041bd712a90e4a803f99a1a50872dc",
+ "attempts": [
+  {
+   "seconds": 5.5,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 129,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 5692
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"This reverts a bugfix that restricted drag-and-drop of widgets into Bag/Flow parts by content type, removing that validation and restoring cross-type dragging behavior in the admin editor UI, which is low risk to site functionality but reintroduces the original bug (invalid content type placement) for editors using nested content/widget drag-and-drop.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "This reverts a bugfix that restricted drag-and-drop of widgets into Bag/Flow parts by content type, removing that validation and restoring cross-type dragging behavior in the admin editor UI, which is low risk to site functionality but reintroduces the original bug (invalid content type placement) for editors using nested content/widget drag-and-drop."
+}

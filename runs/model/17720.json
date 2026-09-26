@@ -1,0 +1,25 @@
+{
+ "pr": 17720,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "4ac18e91c2f19ac8236a2f15f2a784a58c0c14d90f10d9f9e7ed092647dae383",
+ "attempts": [
+  {
+   "seconds": 5.6,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 158,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 52015
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Removing depends-on=\\\"bootstrap\\\" from bootstrap-select script tags across many admin views relies on resource manifest ordering/other declarations to still load bootstrap first, and adding a large generated .js.map file plus dependency changes in Media module are low-risk but the widespread removal of explicit dependencies could cause admin UI script load-order regressions if bootstrap isn't otherwise guaranteed to load first on some pages.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Removing depends-on=\"bootstrap\" from bootstrap-select script tags across many admin views relies on resource manifest ordering/other declarations to still load bootstrap first, and adding a large generated .js.map file plus dependency changes in Media module are low-risk but the widespread removal of explicit dependencies could cause admin UI script load-order regressions if bootstrap isn't otherw"
+}
