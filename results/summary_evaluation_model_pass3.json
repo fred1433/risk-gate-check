@@ -176,9 +176,55 @@
     ],
     "random_same_load_expected_k": 14.42
    }
+  },
+  "hybrid_deployable": {
+   "confirmed": {
+    "k": 2,
+    "m": 10,
+    "families_m": 10,
+    "families_k": 2,
+    "R": 190,
+    "N": 479,
+    "unknown": 25,
+    "load": 0.3966597077244259,
+    "k_over_m_ci95": [
+     0.025,
+     0.556
+    ],
+    "missed": [
+     17369,
+     18508
+    ],
+    "random_same_load_expected_k": 6.03
+   },
+   "sensitivity_A_or_B": {
+    "k": 4,
+    "m": 22,
+    "families_m": 22,
+    "families_k": 4,
+    "R": 190,
+    "N": 479,
+    "unknown": 25,
+    "load": 0.3966597077244259,
+    "k_over_m_ci95": [
+     0.052,
+     0.403
+    ],
+    "missed": [
+     17369,
+     17751,
+     17837,
+     18508
+    ],
+    "random_same_load_expected_k": 13.27
+   }
   }
  },
- "matched_load_secondary": {
+ "stored_model_answers": {
+  "ok": 357
+ },
+ "nearest_load_threshold_secondary": {
+  "note": "each policy at the threshold whose load is nearest the path list's; loads stay unequal",
   "target_load": 0.324,
   "deterministic": {
    "threshold": 3,

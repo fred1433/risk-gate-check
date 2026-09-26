@@ -4,6 +4,9 @@ import json, sys, os, collections
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from riskgate.policies import simple, deterministic, hybrid, is_review, needs_model, ALLOW, UNKNOWN
 from riskgate.stats import clopper_pearson
+from riskgate.strict import validate_record, hybrid_deployable
+import hashlib
+SNAP_HASH=json.load(open('data/snapshot_diff_sha256.json'))
 period=sys.argv[1]
 MODEL_DIR=sys.argv[2] if len(sys.argv)>2 else "runs/model"
 TAG=("_"+MODEL_DIR.split("/")[-1]) if len(sys.argv)>2 else ""
@@ -11,13 +14,19 @@ F=json.load(open("policies/frozen.json"))
 man=json.load(open("data/cohort_manifest.json"))[period]
 labels={l["pr"]:l for l in json.load(open("oracle/labels.json"))["labels"]}
 rows=[]
+VALID={}
 for e in man["prs"]:
     n=e["pr"]; s=json.load(open(f"snapshots/{n}/snapshot.json")); d=open(f"snapshots/{n}/diff.patch",errors="replace").read()
-    mr=json.load(open(f"{MODEL_DIR}/{n}.json")) if os.path.exists(f"{MODEL_DIR}/{n}.json") else None
+    if hashlib.sha256(d.encode()).hexdigest()!=SNAP_HASH[str(n)] or s["diff_sha256"]!=SNAP_HASH[str(n)]:
+        sys.exit(f"snapshot {n} differs from data/snapshot_diff_sha256.json: rebuild it from the mirror")
+    raw_mr=json.load(open(f"{MODEL_DIR}/{n}.json")) if os.path.exists(f"{MODEL_DIR}/{n}.json") else None
     nm=needs_model(s,d)
+    mr,why=validate_record(raw_mr,s,d) if nm else (None,"not needed")
+    if nm: VALID[why]=VALID.get(why,0)+1
     p1=simple(s); p2=deterministic(s,d,F["theta"]); p3=hybrid(s,d,mr if nm else None,F["tau"])
+    p3d=hybrid_deployable(s,d,mr if nm else None,F["tau"])
     rows.append(dict(pr=n,title=s["title"],merged_at=e["merged_at"],label=labels.get(n,{}).get("cls"),family=labels.get(n,{}).get("family"),
-                     simple=p1,deterministic=p2,hybrid=p3,model=mr if nm else None,needs_model=nm))
+                     simple=p1,deterministic=p2,hybrid=p3,hybrid_deployable=p3d,model=mr if nm else None,needs_model=nm))
 os.makedirs("results",exist_ok=True)
 with open(f"results/decisions_{period}{TAG}.jsonl","w") as f:
     for r in rows: f.write(json.dumps({k:v for k,v in r.items() if k!="model"} | {"model_status":(r["model"] or {}).get("status")})+"\n")
@@ -32,7 +41,8 @@ def summ(pol, cls=("A",)):
                 k_over_m_ci95=[round(lo,3),round(hi,3)],missed=[r["pr"] for r in missed],
                 random_same_load_expected_k=round(len(lab)*(1-R/N),2))
 out=dict(period=period,N=N,frozen=F,policies={})
-for pol in ("simple","deterministic","hybrid"):
+out["stored_model_answers"]=VALID
+for pol in ("simple","deterministic","hybrid","hybrid_deployable"):
     out["policies"][pol]=dict(confirmed=summ(pol),sensitivity_A_or_B=summ(pol,("A","B")))
 # secondary: matched load to the simple policy's load in THIS period, using each policy's own score ordering (labels unused)
 target=out["policies"]["simple"]["confirmed"]["load"]
@@ -45,7 +55,7 @@ def at_load(pol):
     th,load,rev=best; ids={r["pr"] for r in rev}
     lab=[r for r in rows if r["label"]=="A"]
     return dict(threshold=th,load=round(load,3),k=sum(1 for r in lab if r["pr"] not in ids),m=len(lab))
-out["matched_load_secondary"]=dict(target_load=round(target,3),deterministic=at_load("deterministic"),hybrid=at_load("hybrid"))
+out["nearest_load_threshold_secondary"]=dict(note="each policy at the threshold whose load is nearest the path list's; loads stay unequal",target_load=round(target,3),deterministic=at_load("deterministic"),hybrid=at_load("hybrid"))
 # where hybrid and deterministic disagree
 dis=[r for r in rows if is_review(r["hybrid"])!=is_review(r["deterministic"])]
 out["hybrid_vs_deterministic"]=dict(disagreements=len(dis),
@@ -61,9 +71,10 @@ out["model_usage"]=dict(prs_sent_to_model=len(calls),attempts=len(att),retries=l
     output_tokens=sum((a.get("usage") or {}).get("output_tokens") or 0 for a in att),
     seconds=round(sum(a.get("seconds",0) for a in att),1), models=sorted({m for a in att for m in a.get("model",[])}))
 json.dump(out,open(f"results/summary_{period}{TAG}.json","w"),indent=1)
+print("stored answers:",VALID)
 for pol,v in out["policies"].items():
     c=v["confirmed"]; s=v["sensitivity_A_or_B"]
     print(f"{pol:14s} missed {c['k']}/{c['m']} (fam {c['families_k']}/{c['families_m']}) CI{c['k_over_m_ci95']} review {c['R']}/{N}={c['load']:.1%} unknown {c['unknown']} | A+B {s['k']}/{s['m']} | random@load {c['random_same_load_expected_k']}  missed={c['missed']}")
-print(out["matched_load_secondary"]); print({k:v for k,v in out["hybrid_vs_deterministic"].items() if k!="labelled"})
+print(out["nearest_load_threshold_secondary"]); print({k:v for k,v in out["hybrid_vs_deterministic"].items() if k!="labelled"})
 for x in out["hybrid_vs_deterministic"]["labelled"]: print("  ",x["pr"],x["label"],x["title"][:60],"H:",x["hybrid"],"D:",x["deterministic"])
 print(out["model_usage"])

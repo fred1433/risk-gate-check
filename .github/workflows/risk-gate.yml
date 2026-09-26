@@ -1,14 +1,15 @@
 # Required check "risk-gate". Fail-closed: only ALLOW, or a senior's release on this exact head commit, passes.
 # pull_request_target runs THIS file and the policy as they are on the base branch, so a pull request cannot rewrite
 # the gate that judges it. The PR's code is read as data through the API and never checked out or executed.
-# No repository secrets are used; the token is read-only except for removing a stale release label.
+# No repository secrets are used; the token is read-only. The senior-approved label only requests a re-run; the evidence
+# is an approving review on the exact head commit (see riskgate/check.py).
 name: risk-gate
 on:
   pull_request_target:
-    types: [opened, synchronize, reopened, labeled, unlabeled]
+    types: [opened, synchronize, reopened, labeled]
 permissions:
   contents: read
-  pull-requests: write
+  pull-requests: read
 concurrency:
   group: risk-gate-${{ github.event.pull_request.number }}
   cancel-in-progress: true
