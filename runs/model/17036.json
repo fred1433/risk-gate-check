@@ -1,0 +1,25 @@
+{
+ "pr": 17036,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "b6c49929b4ebc310ad07f1e3d4b7b8fccf501c2e737324a4ced41ffe504cb332",
+ "attempts": [
+  {
+   "seconds": 3.5,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 86,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1568
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 1, \"reason\": \"Simply relocates the OrchardCore.Translations.All package reference from the Cms.Targets to the Core.Targets project, which likely already depends on Core.Targets, so translations remain included with no functional or API impact.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 1,
+ "reason": "Simply relocates the OrchardCore.Translations.All package reference from the Cms.Targets to the Core.Targets project, which likely already depends on Core.Targets, so translations remain included with no functional or API impact."
+}

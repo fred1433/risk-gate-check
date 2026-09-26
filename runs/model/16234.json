@@ -1,0 +1,25 @@
+{
+ "pr": 16234,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "955eb8e3f7bed3afba3405be58a43f29a57bc0fec3e81bc6cae1228414558990",
+ "attempts": [
+  {
+   "seconds": 15.3,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 1151,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 2919
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 3, \"reason\": \"Changes the column-selection logic used to extract document IDs from arbitrary SQL query results (falling back to first long column or first column with silent 0 default), which could alter results for existing tenant SQL queries that previously relied on the old strict first-column mapping behavior.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 3,
+ "reason": "Changes the column-selection logic used to extract document IDs from arbitrary SQL query results (falling back to first long column or first column with silent 0 default), which could alter results for existing tenant SQL queries that previously relied on the old strict first-column mapping behavior."
+}

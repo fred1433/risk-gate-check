@@ -1,0 +1,25 @@
+{
+ "pr": 15532,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "eb50f59e4d27c9e586debdc0bb562eb45f75b4cc385d2a8077c43afb3d1a429b",
+ "attempts": [
+  {
+   "seconds": 6.3,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 236,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 8069
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 4, \"reason\": \"This changes the DisplayDriver signature/behavior for CulturePickerViewModel (RenderWhen removed and model population moved into the view), refactors BuildDisplayAsync<T> calls to non-generic overloads across core theme layouts (TheAdmin, TheTheme) and Navbar/UserMenu views, and modifies core Liquid parser behavior (AllowFunctions) plus adds new Navbar()/MemberAccessStrategy globals to TemplateOptions\u2014any of which could subtly break existing custom themes, drivers, or Liquid templates relying on prior Navbar/CulturePicker rendering conditions or generic shape-building semantics.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 4,
+ "reason": "This changes the DisplayDriver signature/behavior for CulturePickerViewModel (RenderWhen removed and model population moved into the view), refactors BuildDisplayAsync<T> calls to non-generic overloads across core theme layouts (TheAdmin, TheTheme) and Navbar/UserMenu views, and modifies core Liquid parser behavior (AllowFunctions) plus adds new Navbar()/MemberAccessStrategy globals to TemplateOpt"
+}

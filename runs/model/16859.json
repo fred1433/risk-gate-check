@@ -1,0 +1,25 @@
+{
+ "pr": 16859,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "f7e1248045aadf9aa16632f3a726684b500ba991135af25ebc9b38da42a8afe0",
+ "attempts": [
+  {
+   "seconds": 3.4,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 69,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1412
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 1, \"reason\": \"Small, self-contained view template change affecting only image alt text rendering (improves accessibility by not falling back to filename), with no impact on APIs, data, or other modules.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 1,
+ "reason": "Small, self-contained view template change affecting only image alt text rendering (improves accessibility by not falling back to filename), with no impact on APIs, data, or other modules."
+}

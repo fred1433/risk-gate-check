@@ -1,0 +1,25 @@
+{
+ "pr": 15350,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "6bca93787127472d44060dfb9f090c86a3f13a3a5b8b91e9452856c675100119",
+ "attempts": [
+  {
+   "seconds": 2.9,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 84,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 4571
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Straightforward DI refactor replacing static HttpClient with IHttpClientFactory (constructor reorder in HttpRequestTask could break any external subclasses via positional DI, but that's uncommon).\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Straightforward DI refactor replacing static HttpClient with IHttpClientFactory (constructor reorder in HttpRequestTask could break any external subclasses via positional DI, but that's uncommon)."
+}

@@ -1,0 +1,25 @@
+{
+ "pr": 16978,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "bcf2106f8db3333712d2ee6b016087603c05e673933cc0bc73812efb569ecd42",
+ "attempts": [
+  {
+   "seconds": 3.5,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 91,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1049
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 3, \"reason\": \"This changes truthiness semantics for {% if Culture %}-style checks in all Liquid templates across sites/tenants, so any existing template relying on the old falsy behavior (e.g., to fallback logic) could silently change behavior.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 3,
+ "reason": "This changes truthiness semantics for {% if Culture %}-style checks in all Liquid templates across sites/tenants, so any existing template relying on the old falsy behavior (e.g., to fallback logic) could silently change behavior."
+}

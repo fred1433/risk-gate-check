@@ -1,0 +1,25 @@
+{
+ "pr": 16760,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "619f741b64c818412d17eeec91b3910bc0ed678984d77f6ee079feaa7b008042",
+ "attempts": [
+  {
+   "seconds": 3.8,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 103,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1337
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Small, localized change that skips middleware processing when the sub-path normalizes to empty (i.e., request is exactly the media root), which is a narrow edge case unlikely to affect normal asset serving but could subtly change behavior for edge-case requests to the bare media root path.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Small, localized change that skips middleware processing when the sub-path normalizes to empty (i.e., request is exactly the media root), which is a narrow edge case unlikely to affect normal asset serving but could subtly change behavior for edge-case requests to the bare media root path."
+}

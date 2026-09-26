@@ -1,0 +1,25 @@
+{
+ "pr": 15306,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "30e0bc2f9f6a22c49d7d4195085c33750217beabd20ccc6efbc9df1e2925616f",
+ "attempts": [
+  {
+   "seconds": 7.9,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 499,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 2194
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"The compiled wwwroot scripts correctly guard against a missing #stepOrder element, but the Assets source file has inverted logic (if (sortable) return;) that would disable step reordering entirely whenever the element does exist if the asset is ever rebuilt/minified from source.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "The compiled wwwroot scripts correctly guard against a missing #stepOrder element, but the Assets source file has inverted logic (if (sortable) return;) that would disable step reordering entirely whenever the element does exist if the asset is ever rebuilt/minified from source."
+}

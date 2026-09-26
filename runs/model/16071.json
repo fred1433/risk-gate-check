@@ -1,0 +1,25 @@
+{
+ "pr": 16071,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "5040f207b717f49090dd9607adc5624973ea362dfebf17582970d4f1942d187a",
+ "attempts": [
+  {
+   "seconds": 6.3,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 108,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 2006
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Small, self-contained change limited to profile link and redirect priority logic in AdminController, with low blast radius but the reordering of returnUrl vs editingOwnUser precedence in Edit POST could subtly change redirect behavior for other callers that pass returnUrl when editing own user.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Small, self-contained change limited to profile link and redirect priority logic in AdminController, with low blast radius but the reordering of returnUrl vs editingOwnUser precedence in Edit POST could subtly change redirect behavior for other callers that pass returnUrl when editing own user."
+}

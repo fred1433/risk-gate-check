@@ -1,0 +1,25 @@
+{
+ "pr": 15607,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "c878a49df406898745e3e658175499e962673d0ec4361be988946b0df21a52f0",
+ "attempts": [
+  {
+   "seconds": 13.6,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 912,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 25127
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 4, \"reason\": \"Adding a required Subject member to the public INotificationMessage interface and changing Summary from plain text to raw-rendered HTML (via new @Html.Raw calls) breaks external implementers/consumers and reintroduces XSS risk for any notification producer that doesn't sanitize its Summary.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 4,
+ "reason": "Adding a required Subject member to the public INotificationMessage interface and changing Summary from plain text to raw-rendered HTML (via new @Html.Raw calls) breaks external implementers/consumers and reintroduces XSS risk for any notification producer that doesn't sanitize its Summary."
+}

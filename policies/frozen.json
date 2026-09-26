@@ -1,0 +1,19 @@
+{
+ "frozen_at": "2026-09-26, before any evaluation-period decision was computed",
+ "target_load": 0.364,
+ "target_load_source": "review load of the simple sensitive-area policy on the 2024 development cohort (324/891)",
+ "theta": 3,
+ "theta_rule": "deterministic soft-score threshold whose 2024 load is closest to the target (0.325; theta 2 gave 0.404)",
+ "tau": 3,
+ "tau_rule": "model risk threshold whose estimated 2024 load is closest to the target (0.356), estimated on a seeded random sample of 150 of the 696 development PRs the model would read (seed 20260926)",
+ "model_alias": "sonnet",
+ "model_resolved": "claude-sonnet-5",
+ "prompt_version": "b82137b70589",
+ "diff_budget_chars": 60000,
+ "invocation": "claude -p --model sonnet --tools '' --setting-sources '' --strict-mcp-config --mcp-config '{\"mcpServers\":{}}' --disable-slash-commands --no-session-persistence --system-prompt <fixed> --output-format json, from an empty temporary directory",
+ "source_hashes": {
+  "riskgate/signals.py": "76b5d1f8bbd1df09",
+  "riskgate/policies.py": "37a0bd248bd26337",
+  "riskgate/model.py": "08e8759106a928f3"
+ }
+}

@@ -1,0 +1,25 @@
+{
+ "pr": 13434,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "e9a8391dce35ee090716dbd363b150d00af088ad6debeb9dda25e855d9df356f",
+ "attempts": [
+  {
+   "seconds": 5.0,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 81,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1682
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"StringLength allows empty strings unlike the old min-length check, but SiteName is also marked [Required] which should catch empty/whitespace-only input, so behavior change is minor and limited to the setup form.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "StringLength allows empty strings unlike the old min-length check, but SiteName is also marked [Required] which should catch empty/whitespace-only input, so behavior change is minor and limited to the setup form."
+}

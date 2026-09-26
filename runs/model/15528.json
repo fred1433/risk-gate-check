@@ -1,0 +1,25 @@
+{
+ "pr": 15528,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "e425dcfe28669b7bb544fe1dbf87e4a4d5e5fe4fe7816163719d43be4fbdcaab",
+ "attempts": [
+  {
+   "seconds": 7.2,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 437,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 10860
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Renaming shape templates (TwitterSettings_Edit\u2192XSettings_Edit, TwitterSigninSettings_Edit\u2192XSigninSettings_Edit) and admin menu item ids (twitter\u2192x) could silently break any downstream theme/module that overrides those specific view names or targets the old menu id, though the config key change is backward-compatible and feature IDs are preserved.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Renaming shape templates (TwitterSettings_Edit\u2192XSettings_Edit, TwitterSigninSettings_Edit\u2192XSigninSettings_Edit) and admin menu item ids (twitter\u2192x) could silently break any downstream theme/module that overrides those specific view names or targets the old menu id, though the config key change is backward-compatible and feature IDs are preserved."
+}

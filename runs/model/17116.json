@@ -1,0 +1,25 @@
+{
+ "pr": 17116,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "b759b9a21cb3a1e70ea49a3119002bb0f0787dc547afcf968dc7ac665494ac9d",
+ "attempts": [
+  {
+   "seconds": 10.8,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 863,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1697
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Small, contained fix to GraphQL content-status filtering logic that relies on the default enum value matching prior default (Published), but since it touches a widely-used content query path, a mismatch in default status handling could subtly change results for any GraphQL clients not explicitly passing a status argument.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Small, contained fix to GraphQL content-status filtering logic that relies on the default enum value matching prior default (Published), but since it touches a widely-used content query path, a mismatch in default status handling could subtly change results for any GraphQL clients not explicitly passing a status argument."
+}

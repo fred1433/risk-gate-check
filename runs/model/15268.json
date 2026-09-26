@@ -1,0 +1,25 @@
+{
+ "pr": 15268,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "e322a43e9e551e9f4f48800071135d4ea213469dcb36be50d199808ec0fa8cbb",
+ "attempts": [
+  {
+   "seconds": 3.3,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 66,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1987
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 1, \"reason\": \"Only bumps a test-only dev dependency (Microsoft.NET.Test.Sdk) and updates docs, with no impact on runtime/production code.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 1,
+ "reason": "Only bumps a test-only dev dependency (Microsoft.NET.Test.Sdk) and updates docs, with no impact on runtime/production code."
+}

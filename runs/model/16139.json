@@ -1,0 +1,25 @@
+{
+ "pr": 16139,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "59f46aa2446dee43013069e0e2dcccf1194d51cc87f9e49e5836dc1b52443832",
+ "attempts": [
+  {
+   "seconds": 15.6,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 1155,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 2381
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Well-scoped bug fix for workflow restart casting, but it changes shared low-level DictionaryExtensions.GetValue<T> behavior (falling back to JSON round-trip on cast mismatch) used across all workflow activities, so any non-JSON-serializable stored values could behave differently than before.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Well-scoped bug fix for workflow restart casting, but it changes shared low-level DictionaryExtensions.GetValue<T> behavior (falling back to JSON round-trip on cast mismatch) used across all workflow activities, so any non-JSON-serializable stored values could behave differently than before."
+}

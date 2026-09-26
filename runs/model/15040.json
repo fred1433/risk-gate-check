@@ -1,0 +1,25 @@
+{
+ "pr": 15040,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "99c35df10a2ab3dab42095bd7c79a4b71637e8e80be7d27ed1d01d7976146e87",
+ "attempts": [
+  {
+   "seconds": 5.0,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 132,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 9483
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Mostly mechanical swaps of Dictionary/Immutable dictionaries for FrozenDictionary behind IReadOnlyDictionary-typed properties (semantically equivalent, just optimizes lookup), plus removal of an unused public GetTimestamps() method in LuceneIndexManager which could theoretically break external callers relying on that API.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Mostly mechanical swaps of Dictionary/Immutable dictionaries for FrozenDictionary behind IReadOnlyDictionary-typed properties (semantically equivalent, just optimizes lookup), plus removal of an unused public GetTimestamps() method in LuceneIndexManager which could theoretically break external callers relying on that API."
+}

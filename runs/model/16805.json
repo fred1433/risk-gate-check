@@ -1,0 +1,25 @@
+{
+ "pr": 16805,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "51764ff9b88934fdb00a0893fba32cfc6498bbe10df660f435a177f6a93879fe",
+ "attempts": [
+  {
+   "seconds": 4.9,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 98,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1210
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 1, \"reason\": \"Trivial fix of an obvious typo/tautology bug (comparing model.UseSiteTheme to itself) to correctly compare against settings.UseSiteTheme, only affecting whether a change-detection flag correctly triggers cache invalidation.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 1,
+ "reason": "Trivial fix of an obvious typo/tautology bug (comparing model.UseSiteTheme to itself) to correctly compare against settings.UseSiteTheme, only affecting whether a change-detection flag correctly triggers cache invalidation."
+}

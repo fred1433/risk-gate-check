@@ -1,0 +1,25 @@
+{
+ "pr": 16157,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "53a2a2652efb88956f615b41c69e197218becfc043bff295c3cec9ad6ce695c2",
+ "attempts": [
+  {
+   "seconds": 2.8,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 61,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 2035
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 1, \"reason\": \"Minor patch-level version bump of the Jint JS interpreter dependency with corresponding docs update, low likelihood of breaking changes.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 1,
+ "reason": "Minor patch-level version bump of the Jint JS interpreter dependency with corresponding docs update, low likelihood of breaking changes."
+}

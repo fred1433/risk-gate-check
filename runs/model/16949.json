@@ -1,0 +1,25 @@
+{
+ "pr": 16949,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "e3951228867ee2b042405257151803b8f9aeb696a438db7eedeacf91f6716314",
+ "attempts": [
+  {
+   "seconds": 17.0,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 1291,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 18003
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 4, \"reason\": \"Rewrites the core DefaultDocumentSerializer (used to persist shell/site documents across all tenants) plus base64 decoding logic used in password-reset and media import paths with new span/stream-based buffer-pooled code, so any subtle off-by-one or disposal bug in the new Microsoft.IO.RecyclableMemoryStream-based logic could corrupt or break document persistence or auth tokens platform-wide.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 4,
+ "reason": "Rewrites the core DefaultDocumentSerializer (used to persist shell/site documents across all tenants) plus base64 decoding logic used in password-reset and media import paths with new span/stream-based buffer-pooled code, so any subtle off-by-one or disposal bug in the new Microsoft.IO.RecyclableMemoryStream-based logic could corrupt or break document persistence or auth tokens platform-wide."
+}

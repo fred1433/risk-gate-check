@@ -1,0 +1,25 @@
+{
+ "pr": 15291,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "2cacbe52df508e4d978607d7c51eb4f9f3f941d0856f6e88c6d3c997b153ef6c",
+ "attempts": [
+  {
+   "seconds": 9.7,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 721,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 2199
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 4, \"reason\": \"The constructor now unconditionally resolves an IUrlHelper via IActionContextAccessor.ActionContext, which is often null during non-HTTP recipe execution (setup, tenant provisioning, background import), risking exceptions when importing any workflow recipe\u2014even ones without HttpRequestEvent activities.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 4,
+ "reason": "The constructor now unconditionally resolves an IUrlHelper via IActionContextAccessor.ActionContext, which is often null during non-HTTP recipe execution (setup, tenant provisioning, background import), risking exceptions when importing any workflow recipe\u2014even ones without HttpRequestEvent activities."
+}

@@ -1,0 +1,6 @@
+work/
+snapshots/
+__pycache__/
+data/_*.txt
+.vercel
+site/node_modules

@@ -1,0 +1,25 @@
+{
+ "pr": 16722,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "7a7a6454379fe73a760203bb35abd5c4e36df8893d132c617b1742f31a0df75e",
+ "attempts": [
+  {
+   "seconds": 3.1,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 88,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 4906
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Purely additive shape alternates registered via new IShapeTableProvider implementations, only adding new alternate names without modifying existing shape resolution, rendering, or APIs, so existing templates and behavior remain unaffected.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Purely additive shape alternates registered via new IShapeTableProvider implementations, only adding new alternate names without modifying existing shape resolution, rendering, or APIs, so existing templates and behavior remain unaffected."
+}

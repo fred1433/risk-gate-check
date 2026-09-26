@@ -1,0 +1,25 @@
+{
+ "pr": 17008,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "0b210c6bad3420eb30eaa1ac7d8a4dcd2126a736b5dfdda93214b08ab1ed591a",
+ "attempts": [
+  {
+   "seconds": 5.7,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 104,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 3362
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Removes obsolete synchronous WriteTo overrides in favor of WriteToAsync (aligning with Fluid.Core 2.12.0 update), which is low risk but does bump a third-party dependency version that could subtly change Liquid rendering behavior across templates.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Removes obsolete synchronous WriteTo overrides in favor of WriteToAsync (aligning with Fluid.Core 2.12.0 update), which is low risk but does bump a third-party dependency version that could subtly change Liquid rendering behavior across templates."
+}

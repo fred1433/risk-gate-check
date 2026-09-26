@@ -1,0 +1,25 @@
+{
+ "pr": 16830,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "028e9891dd3ce9237f63d54d600ae9438d918c5516ed448f73e6f99bcd435719",
+ "attempts": [
+  {
+   "seconds": 3.4,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 58,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1254
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 1, \"reason\": \"Minor patch version bump of a phone-number parsing library metadata file only, with no code changes, very low risk of breaking behavior.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 1,
+ "reason": "Minor patch version bump of a phone-number parsing library metadata file only, with no code changes, very low risk of breaking behavior."
+}

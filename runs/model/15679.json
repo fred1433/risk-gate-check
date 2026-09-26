@@ -1,0 +1,25 @@
+{
+ "pr": 15679,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "f85e102824105a7fa63065610704e05a89a30c37c1f18f8f4943dbb76ce5b84e",
+ "attempts": [
+  {
+   "seconds": 3.5,
+   "usage": {
+    "input_tokens": 1024,
+    "output_tokens": 92,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 3, \"reason\": \"Removing the post-save redirect changes admin settings pages from POST-redirect-GET to re-rendering the view, which can cause form resubmission warnings and may leave the model/state inconsistent across all setting groups that use this shared controller.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 3,
+ "reason": "Removing the post-save redirect changes admin settings pages from POST-redirect-GET to re-rendering the view, which can cause form resubmission warnings and may leave the model/state inconsistent across all setting groups that use this shared controller."
+}

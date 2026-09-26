@@ -1,0 +1,150 @@
+{
+ "19923": [
+  {
+   "commit": "0a12489b48",
+   "pr": 14256,
+   "date": "2026-08-04",
+   "lines": 1,
+   "weak": true
+  }
+ ],
+ "19098": [
+  {
+   "commit": "1c99d43478",
+   "pr": 19182,
+   "date": "2026-04-23",
+   "lines": 6,
+   "weak": false
+  },
+  {
+   "commit": "8ad610435c",
+   "pr": 2565,
+   "date": "2018-11-06",
+   "lines": 3,
+   "weak": false
+  },
+  {
+   "commit": "7662d230a0",
+   "pr": 2748,
+   "date": "2018-11-29",
+   "lines": 2,
+   "weak": false
+  },
+  {
+   "commit": "5dc244bf64",
+   "pr": 16736,
+   "date": "2024-11-22",
+   "lines": 1,
+   "weak": false
+  },
+  {
+   "commit": "66d792ca7e",
+   "pr": 15129,
+   "date": "2024-02-08",
+   "lines": 1,
+   "weak": true
+  }
+ ],
+ "19840": [
+  {
+   "commit": "0a12489b48",
+   "pr": 14256,
+   "date": "2026-08-04",
+   "lines": 4,
+   "weak": false
+  },
+  {
+   "commit": "ac78e92233",
+   "pr": 933,
+   "date": "2017-08-23",
+   "lines": 2,
+   "weak": false
+  },
+  {
+   "commit": "f8cc04c1fc",
+   "pr": 1186,
+   "date": "2017-11-17",
+   "lines": 2,
+   "weak": false
+  },
+  {
+   "commit": "abd536bc39",
+   "pr": 14273,
+   "date": "2023-09-12",
+   "lines": 1,
+   "weak": false
+  },
+  {
+   "commit": "45d3fe645e",
+   "pr": 16293,
+   "date": "2024-06-13",
+   "lines": 1,
+   "weak": false
+  },
+  {
+   "commit": "94d4ff1458",
+   "pr": 19653,
+   "date": "2026-08-07",
+   "lines": 1,
+   "weak": true
+  },
+  {
+   "commit": "7418cecfe3",
+   "pr": 19805,
+   "date": "2026-09-02",
+   "lines": 1,
+   "weak": true
+  }
+ ],
+ "19696": [
+  {
+   "commit": "197b68db45",
+   "pr": 15204,
+   "date": "2024-01-30",
+   "lines": 1,
+   "weak": false
+  },
+  {
+   "commit": "960e630123",
+   "pr": 12683,
+   "date": "2023-01-04",
+   "lines": 1,
+   "weak": false
+  },
+  {
+   "commit": "0905e31a16",
+   "pr": 11822,
+   "date": "2022-08-18",
+   "lines": 1,
+   "weak": false
+  },
+  {
+   "commit": "4aadfbf613",
+   "pr": 13773,
+   "date": "2023-07-02",
+   "lines": 1,
+   "weak": false
+  },
+  {
+   "commit": "64a2c2d6c5",
+   "pr": 749,
+   "date": "2017-05-15",
+   "lines": 1,
+   "weak": true
+  },
+  {
+   "commit": "69d73c267a",
+   "pr": 19369,
+   "date": "2026-06-25",
+   "lines": 1,
+   "weak": true
+  },
+  {
+   "commit": "e83a457a71",
+   "pr": 10934,
+   "date": "2022-03-16",
+   "lines": 1,
+   "weak": true
+  }
+ ]
+}

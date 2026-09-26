@@ -1,0 +1,1246 @@
+{
+ "generated": "2026-09-26",
+ "rule": "Manual adjudication of failure-introducing candidates (ORACLE, never shown to the gate).\nMined 2026-09-26 from GitHub cross-references and post-merge comments of every cohort PR (scripts/mine_candidates.py),\nthen read by hand. Each row: introducing PR, evidence kind, statement, url, fix/revert PR, family, proposed class.\nRule for A: attribution made or endorsed by a core maintainer, or restated in the merged fix PR itself, or a merged\nrevert with a stated defect, or a stated reproducible witness; unhedged; AND the fix/revert diff touches a file the PR touched.\nClass is finalised by scripts/build_labels.py (A requires a merged fix/revert whose diff overlaps the PR's files).\nClasses: A = confirmed cause; B = attribution or revert, interpretation incomplete; C = SZZ-only / ambiguous.",
+ "labels": [
+  {
+   "pr": 7446,
+   "merged": "2024-01-19T12:02:44Z",
+   "title": "yessql.db -> OrchardCore.db",
+   "proposed": "A",
+   "cls": "A",
+   "kind": "revert",
+   "who": "MikeAlhayek",
+   "statement": "this caused a problem for me. All my local site that were using Sqllite are no longer working",
+   "evidence": "https://github.com/OrchardCMS/OrchardCore/issues/15154",
+   "fix_or_revert": 15167,
+   "family": "sqlite-default-db-name",
+   "overlap_files": [
+    "src/OrchardCore/OrchardCore.Data.YesSql/Options/SqliteOptions.cs",
+    "src/OrchardCore/OrchardCore.Data.YesSql/SqliteHelper.cs",
+    "src/docs/reference/core/Data/README.md",
+    "src/docs/releases/1.9.0.md"
+   ],
+   "n_overlap": 4,
+   "note": ""
+  },
+  {
+   "pr": 13764,
+   "merged": "2024-04-19T02:06:03Z",
+   "title": "13715: Added edit button to the ContentPickerField Edit view",
+   "proposed": "A",
+   "cls": "A",
+   "kind": "fix-pr",
+   "who": "gvkries",
+   "statement": "Since PR #13764, the title pattern configured in a content picker field was not displayed anymore",
+   "evidence": "https://github.com/OrchardCMS/OrchardCore/pull/19103",
+   "fix_or_revert": 19103,
+   "family": "contentpicker-titlepattern",
+   "overlap_files": [
+    "src/OrchardCore.Modules/OrchardCore.ContentFields/Controllers/ContentPickerAdminController.cs"
+   ],
+   "n_overlap": 1,
+   "note": ""
+  },
+  {
+   "pr": 14572,
+   "merged": "2024-02-02T19:22:03Z",
+   "title": "Remove Newtonsoft",
+   "proposed": "A",
+   "cls": "A",
+   "kind": "fix-pr",
+   "who": "MikeAlhayek",
+   "statement": "PR #14572 changed the constructor type from protected to internal ... it cause breaking change",
+   "evidence": "https://github.com/OrchardCMS/OrchardCore/pull/15365",
+   "fix_or_revert": 15365,
+   "family": "contentelement-ctor-internal",
+   "overlap_files": [
+    "src/OrchardCore/OrchardCore.ContentManagement.Abstractions/ContentElement.cs"
+   ],
+   "n_overlap": 1,
+   "note": ""
+  },
+  {
+   "pr": 15204,
+   "merged": "2024-01-30T18:22:48Z",
+   "title": "Fix multiple suggestions",
+   "proposed": "A",
+   "cls": "A",
+   "kind": "fix-pr",
+   "who": "sebastienros",
+   "statement": "Reverts some changes introduced by mistake in #15204",
+   "evidence": "https://github.com/OrchardCMS/OrchardCore/pull/15212",
+   "fix_or_revert": 15212,
+   "family": "yessql-string-comparison",
+   "overlap_files": [
+    "src/OrchardCore.Modules/OrchardCore.Alias/Services/AliasPartContentHandleProvider.cs",
+    "src/OrchardCore.Modules/OrchardCore.Alias/Startup.cs"
+   ],
+   "n_overlap": 2,
+   "note": ""
+  },
+  {
+   "pr": 15306,
+   "merged": "2024-02-12T15:25:14Z",
+   "title": "Javascript error when there are no deployment steps",
+   "proposed": "A",
+   "cls": "A",
+   "kind": "maintainer",
+   "who": "sebastienros",
+   "statement": "you updated these by hand which introduced errors. For instance the wwwroot version has the opposite test",
+   "evidence": "https://github.com/OrchardCMS/OrchardCore/pull/15306",
+   "fix_or_revert": 15387,
+   "family": "deployment-steps-js-hand-edit",
+   "overlap_files": [
+    "src/OrchardCore.Modules/OrchardCore.Deployment/Assets/js/steporder.js",
+    "src/OrchardCore.Modules/OrchardCore.Deployment/wwwroot/Scripts/steporder.js",
+    "src/OrchardCore.Modules/OrchardCore.Deployment/wwwroot/Scripts/steporder.min.js"
+   ],
+   "n_overlap": 3,
+   "note": ""
+  },
+  {
+   "pr": 15318,
+   "merged": "2024-02-13T16:25:14Z",
+   "title": "CORS settings fix",
+   "proposed": "A",
+   "cls": "A",
+   "kind": "fix-pr",
+   "who": "sebastienros",
+   "statement": "Fix CORS assets by running gulp; addresses the issue in the PR #15318",
+   "evidence": "https://github.com/OrchardCMS/OrchardCore/pull/15380",
+   "fix_or_revert": 15380,
+   "family": "cors-assets-not-built",
+   "overlap_files": [
+    "src/OrchardCore.Modules/OrchardCore.Cors/Assets/Admin/cors-admin.js",
+    "src/OrchardCore.Modules/OrchardCore.Cors/Views/Admin/Index.cshtml",
+    "src/OrchardCore.Modules/OrchardCore.Cors/wwwroot/Scripts/cors-admin.js",
+    "src/OrchardCore.Modules/OrchardCore.Cors/wwwroot/Scripts/cors-admin.min.js"
+   ],
+   "n_overlap": 4,
+   "note": ""
+  },
+  {
+   "pr": 15319,
+   "merged": "2024-02-13T16:29:07Z",
+   "title": "Fix GraphQL Explorer",
+   "proposed": "A",
+   "cls": "A",
+   "kind": "maintainer",
+   "who": "gvkries",
+   "statement": "GraphQL types are registered as scoped (as introduced by #15319). Therefore resolving them while building the schema as a singleton fails",
+   "evidence": "https://github.com/OrchardCMS/OrchardCore/pull/16141",
+   "fix_or_revert": 16143,
+   "family": "graphql-scoped-types",
+   "overlap_files": [
+    "src/OrchardCore/OrchardCore.Apis.GraphQL.Abstractions/ServiceCollectionExtensions.cs"
+   ],
+   "n_overlap": 1,
+   "note": ""
+  },
+  {
+   "pr": 15389,
+   "merged": "2024-04-24T20:50:49Z",
+   "title": "Add GraphQL support to UserPickerField",
+   "proposed": "B",
+   "cls": "B",
+   "kind": "policy",
+   "who": "(contributor)",
+   "statement": "PR #15389 introduced a module-to-module reference which we denied from the beginning",
+   "evidence": "https://github.com/OrchardCMS/OrchardCore/pull/15926",
+   "fix_or_revert": 15926,
+   "family": "module-to-module-ref",
+   "overlap_files": [
+    "src/OrchardCore.Modules/OrchardCore.ContentFields/OrchardCore.ContentFields.csproj"
+   ],
+   "n_overlap": 1,
+   "note": ""
+  },
+  {
+   "pr": 15460,
+   "merged": "2024-03-07T19:19:02Z",
+   "title": "Configure JsonOptions by default",
+   "proposed": "A",
+   "cls": "A",
+   "kind": "maintainer",
+   "who": "MikeAlhayek",
+   "statement": "I would say this is a bug in 2.0 and should be fixed ... I added it in #15460",
+   "evidence": "https://github.com/OrchardCMS/OrchardCore/pull/16837",
+   "fix_or_revert": 16837,
+   "family": "jsonoptions-default",
+   "overlap_files": [
+    "src/OrchardCore/OrchardCore.Abstractions/Json/JsonOptionsConfigurations.cs",
+    "src/OrchardCore/OrchardCore/Modules/Extensions/ServiceCollectionExtensions.cs"
+   ],
+   "n_overlap": 2,
+   "note": ""
+  },
+  {
+   "pr": 15471,
+   "merged": "2024-03-07T21:57:40Z",
+   "title": "Remove TitlePart wrapper when it is hidden",
+   "proposed": "B",
+   "cls": "B",
+   "kind": "author-comment",
+   "who": "douwinga",
+   "statement": "It breaks with a placement.json ... (no merged fix found)",
+   "evidence": "https://github.com/OrchardCMS/OrchardCore/pull/15471",
+   "fix_or_revert": null,
+   "family": "titlepart-wrapper",
+   "overlap_files": [],
+   "n_overlap": 0,
+   "note": ""
+  },
+  {
+   "pr": 15488,
+   "merged": "2024-04-18T19:47:43Z",
+   "title": "Display Drivers validation issue",
+   "proposed": "A",
+   "cls": "A",
+   "kind": "maintainer",
+   "who": "MikeAlhayek",
+   "statement": "it seems that some of the display drivers were not updated in #15488. I made the changes here",
+   "evidence": "https://github.com/OrchardCMS/OrchardCore/pull/15875",
+   "fix_or_revert": 15875,
+   "family": "section-display-driver",
+   "overlap_files": [
+    "src/OrchardCore.Modules/OrchardCore.Email.Azure/Drivers/AzureEmailSettingsDisplayDriver.cs",
+    "src/OrchardCore.Modules/OrchardCore.Email.Smtp/Drivers/SmtpSettingsDisplayDriver.cs",
+    "src/OrchardCore.Modules/OrchardCore.Email/Drivers/EmailSettingsDisplayDriver.cs",
+    "src/OrchardCore.Modules/OrchardCore.Facebook/Drivers/FacebookSettingsDisplayDriver.cs",
+    "src/OrchardCore.Modules/OrchardCore.Facebook/Login/Drivers/FacebookLoginSettingsDisplayDriver.cs",
+    "src/OrchardCore.Modules/OrchardCore.GitHub/Drivers/GithubAuthenticationSettingsDisplayDriver.cs"
+   ],
+   "n_overlap": 29,
+   "note": ""
+  },
+  {
+   "pr": 15524,
+   "merged": "2024-03-21T18:48:20Z",
+   "title": "Use JsonPath.Net for JSONPath selectors (Lombiq Technologies: OCORE-148)",
+   "proposed": "C",
+   "cls": "C",
+   "kind": "suspicion",
+   "who": "hyzx86",
+   "statement": "looking at the logs, it looks like the problem is with the JNode class, PR #15524 was update the JNode class",
+   "evidence": "https://github.com/OrchardCMS/OrchardCore/issues/15590",
+   "fix_or_revert": null,
+   "family": "taxonomy-jnode",
+   "overlap_files": [],
+   "n_overlap": 0,
+   "note": ""
+  },
+  {
+   "pr": 15651,
+   "merged": "2024-04-04T16:13:46Z",
+   "title": "Use FrozenDictionaries in ShapeTables",
+   "proposed": "A",
+   "cls": "A",
+   "kind": "maintainer",
+   "who": "Piedone",
+   "statement": "Unsafe async behavior in DefaultShapeTableManager ... Latest main, all previews since #15651",
+   "evidence": "https://github.com/OrchardCMS/OrchardCore/issues/16445",
+   "fix_or_revert": 16456,
+   "family": "shapetable-async-lock",
+   "overlap_files": [
+    "src/OrchardCore/OrchardCore.DisplayManagement/Descriptors/DefaultShapeTableManager.cs"
+   ],
+   "n_overlap": 1,
+   "note": ""
+  },
+  {
+   "pr": 15679,
+   "merged": "2024-04-08T00:23:34Z",
+   "title": "Remove redirect to index after settings update",
+   "proposed": "A",
+   "cls": "A",
+   "kind": "revert",
+   "who": "sebastienros",
+   "statement": "we should keep a redirect after POSTs or refreshing the pages will do a re-submission",
+   "evidence": "https://github.com/OrchardCMS/OrchardCore/pull/15925",
+   "fix_or_revert": 15925,
+   "family": "settings-post-redirect",
+   "overlap_files": [
+    "src/OrchardCore.Modules/OrchardCore.Settings/Controllers/AdminController.cs"
+   ],
+   "n_overlap": 1,
+   "note": ""
+  },
+  {
+   "pr": 15793,
+   "merged": "2024-05-24T16:27:07Z",
+   "title": "Corrects the mapping of types to features in ITypeFeatureProvider ",
+   "proposed": "A",
+   "cls": "A",
+   "kind": "fix-pr",
+   "who": "gvkries",
+   "statement": "This reverts some of the changes made by #15793 ... this is too late e.g. for the CompositionStrategy",
+   "evidence": "https://github.com/OrchardCMS/OrchardCore/pull/16324",
+   "fix_or_revert": 16324,
+   "family": "type-feature-mapping-setup",
+   "overlap_files": [
+    "src/OrchardCore/OrchardCore.Abstractions/Extensions/IExtensionManager.cs",
+    "src/OrchardCore/OrchardCore/Extensions/ExtensionManager.cs",
+    "src/OrchardCore/OrchardCore/Shell/Builders/ShellContainerFactory.cs",
+    "test/OrchardCore.Tests/DisplayManagement/Decriptors/DefaultShapeTableManagerTests.cs",
+    "test/OrchardCore.Tests/Extensions/ExtensionManagerTests.cs",
+    "test/OrchardCore.Tests/Stubs/StubExtensionManager.cs"
+   ],
+   "n_overlap": 6,
+   "note": ""
+  },
+  {
+   "pr": 15887,
+   "merged": "2024-04-28T19:45:01Z",
+   "title": "More automatic documentation build checks (Lombiq Technologies: OCORE-164)",
+   "proposed": "A",
+   "cls": "A",
+   "kind": "fix-pr",
+   "who": "Piedone",
+   "statement": "I've broken the logo on the docs page in #15887",
+   "evidence": "https://github.com/OrchardCMS/OrchardCore/pull/15927",
+   "fix_or_revert": 15927,
+   "family": "docs-logo",
+   "overlap_files": [
+    "mkdocs.yml"
+   ],
+   "n_overlap": 1,
+   "note": ""
+  },
+  {
+   "pr": 16077,
+   "merged": "2024-05-22T00:30:42Z",
+   "title": "Cleanup IContentManager",
+   "proposed": "B",
+   "cls": "B",
+   "kind": "maintainer",
+   "who": "gvkries",
+   "statement": "It has been changed in #16077 (GetAsync no longer returns items in order); fixed by #18347 much later",
+   "evidence": "https://github.com/OrchardCMS/OrchardCore/issues/18290",
+   "fix_or_revert": 18347,
+   "family": "getasync-ordering",
+   "overlap_files": [
+    "src/OrchardCore/OrchardCore.ContentManagement/DefaultContentManager.cs"
+   ],
+   "n_overlap": 1,
+   "note": ""
+  },
+  {
+   "pr": 16139,
+   "merged": "2024-05-23T15:31:17Z",
+   "title": "Fix casting during workflow instance restart ",
+   "proposed": "B",
+   "cls": "B",
+   "kind": "fix-pr",
+   "who": "MikeAlhayek",
+   "statement": "In the PR #16139 I introduced a change ... This PR removes that logic to prevent new issues",
+   "evidence": "https://github.com/OrchardCMS/OrchardCore/pull/16224",
+   "fix_or_revert": 16224,
+   "family": "dictionary-getvalue-serialize",
+   "overlap_files": [
+    "src/OrchardCore.Modules/OrchardCore.Contents/Workflows/Activities/ContentActivity.cs",
+    "src/OrchardCore.Modules/OrchardCore.Contents/Workflows/Activities/UpdateContentTask.cs",
+    "src/OrchardCore/OrchardCore.Workflows.Abstractions/Helpers/DictionaryExtensions.cs"
+   ],
+   "n_overlap": 3,
+   "note": ""
+  },
+  {
+   "pr": 16143,
+   "merged": "2024-05-23T15:01:15Z",
+   "title": "Register GraphQL types as transient",
+   "proposed": "A",
+   "cls": "B",
+   "kind": "maintainer",
+   "who": "gvkries",
+   "statement": "After merging #16143, building the GraphQL schema may fail",
+   "evidence": "https://github.com/OrchardCMS/OrchardCore/issues/16182",
+   "fix_or_revert": 16184,
+   "family": "graphql-transient-schema",
+   "overlap_files": [],
+   "n_overlap": 0,
+   "note": "downgraded: fix diff shares no file with the PR"
+  },
+  {
+   "pr": 16234,
+   "merged": "2024-06-04T18:02:30Z",
+   "title": "Make SQL query source more forgiving for returning content items",
+   "proposed": "B",
+   "cls": "B",
+   "kind": "issue",
+   "who": "sarahelsaig (contributor)",
+   "statement": "This was fine in 1.8, but became a problem after #16234 where the assumption that the document ID column must be long is hard coded",
+   "evidence": "https://github.com/OrchardCMS/OrchardCore/issues/16580",
+   "fix_or_revert": 16581,
+   "family": "sql-docid-int-older-tenants",
+   "overlap_files": [
+    "src/OrchardCore.Modules/OrchardCore.Queries/Sql/SqlQuerySource.cs"
+   ],
+   "n_overlap": 1,
+   "note": ""
+  },
+  {
+   "pr": 16326,
+   "merged": "2024-06-16T18:01:30Z",
+   "title": "Added option to select the Target in Link Field",
+   "proposed": "A",
+   "cls": "A",
+   "kind": "maintainer",
+   "who": "MikeAlhayek",
+   "statement": "This issue was caused by PR #16326",
+   "evidence": "https://github.com/OrchardCMS/OrchardCore/issues/16378",
+   "fix_or_revert": 16397,
+   "family": "linkfieldindex-target-column",
+   "overlap_files": [
+    "src/OrchardCore.Modules/OrchardCore.ContentFields/Indexing/SQL/LinkFieldIndexProvider.cs"
+   ],
+   "n_overlap": 1,
+   "note": ""
+  },
+  {
+   "pr": 16351,
+   "merged": "2024-07-04T22:00:13Z",
+   "title": "Remove set as startup task button for non-event activities",
+   "proposed": "B",
+   "cls": "B",
+   "kind": "maintainer-hedged",
+   "who": "MikeAlhayek",
+   "statement": "I think this PR is causing this issue (no merged fix)",
+   "evidence": "https://github.com/OrchardCMS/OrchardCore/issues/16512",
+   "fix_or_revert": null,
+   "family": "workflow-task-toggle",
+   "overlap_files": [],
+   "n_overlap": 0,
+   "note": ""
+  },
+  {
+   "pr": 16356,
+   "merged": "2024-06-27T17:49:07Z",
+   "title": "Fix Wysiwyg/Trumbowyg editor colors when dark theme enabled",
+   "proposed": "A",
+   "cls": "A",
+   "kind": "fix-pr",
+   "who": "MikeAlhayek",
+   "statement": "The PR #16356 moved some of the theme related scripts ... but did not include all",
+   "evidence": "https://github.com/OrchardCMS/OrchardCore/pull/16386",
+   "fix_or_revert": 16386,
+   "family": "theme-manager-script",
+   "overlap_files": [
+    "src/OrchardCore.Modules/OrchardCore.ContentFields/Views/HtmlField-Trumbowyg.Edit.cshtml",
+    "src/OrchardCore.Modules/OrchardCore.Resources/Assets.json",
+    "src/OrchardCore.Modules/OrchardCore.Resources/Assets/trumbowyg/js/trumbowyg.theme.js",
+    "src/OrchardCore.Modules/OrchardCore.Resources/ResourceManagementOptionsConfiguration.cs",
+    "src/OrchardCore.Modules/OrchardCore.Resources/wwwroot/Scripts/trumbowyg/trumbowyg.theme.js",
+    "src/OrchardCore.Modules/OrchardCore.Resources/wwwroot/Scripts/trumbowyg/trumbowyg.theme.min.js"
+   ],
+   "n_overlap": 11,
+   "note": ""
+  },
+  {
+   "pr": 16402,
+   "merged": "2024-07-19T13:55:57Z",
+   "title": "Fix the QueriesDocument and the Queries UI",
+   "proposed": "A",
+   "cls": "A",
+   "kind": "fix-pr",
+   "who": "Piedone",
+   "statement": "The code was originally introduced in #16402",
+   "evidence": "https://github.com/OrchardCMS/OrchardCore/pull/17120",
+   "fix_or_revert": 17120,
+   "family": "queried-content-items-validation",
+   "overlap_files": [
+    "src/OrchardCore.Modules/OrchardCore.Queries/Deployment/QueryBasedContentDeploymentSource.cs",
+    "src/OrchardCore.Modules/OrchardCore.Queries/Deployment/QueryBasedContentDeploymentStepDriver.cs",
+    "src/OrchardCore.Modules/OrchardCore.Queries/Sql/SqlQueryHandler.cs",
+    "src/OrchardCore.Modules/OrchardCore.Search.Lucene/Services/LuceneQueryHandler.cs",
+    "src/OrchardCore/OrchardCore.Queries.Abstractions/Models/Query.cs",
+    "src/OrchardCore/OrchardCore.Search.Elasticsearch.Core/Services/ElasticsearchQueryHandler.cs"
+   ],
+   "n_overlap": 6,
+   "note": ""
+  },
+  {
+   "pr": 16539,
+   "merged": "2024-08-14T13:21:44Z",
+   "title": "Convert to file-scope namespaces",
+   "proposed": "A",
+   "cls": "A",
+   "kind": "fix-pr",
+   "who": "hishamco",
+   "statement": "Fixes bug introduced in PR #16539",
+   "evidence": "https://github.com/OrchardCMS/OrchardCore/pull/16712",
+   "fix_or_revert": 16712,
+   "family": "composite-trygetindex",
+   "overlap_files": [
+    "src/OrchardCore/OrchardCore.DisplayManagement/Shapes/Composite.cs"
+   ],
+   "n_overlap": 1,
+   "note": ""
+  },
+  {
+   "pr": 16614,
+   "merged": "2024-09-01T20:20:06Z",
+   "title": "Add IUserTimeZoneService to make it easier to mock UserTimeZoneService",
+   "proposed": "A",
+   "cls": "A",
+   "kind": "issue",
+   "who": "deanmarcussen",
+   "statement": "#16614 has made some changes to how the users time zones are cached which makes the cache useless",
+   "evidence": "https://github.com/OrchardCMS/OrchardCore/issues/16932",
+   "fix_or_revert": 16942,
+   "family": "user-timezone-cache",
+   "overlap_files": [
+    "src/OrchardCore.Modules/OrchardCore.Users/TimeZone/Drivers/UserTimeZoneDisplayDriver.cs",
+    "src/OrchardCore.Modules/OrchardCore.Users/TimeZone/Services/IUserTimeZoneService.cs",
+    "src/OrchardCore.Modules/OrchardCore.Users/TimeZone/Services/UserTimeZoneSelector.cs",
+    "src/OrchardCore.Modules/OrchardCore.Users/TimeZone/Services/UserTimeZoneService.cs",
+    "src/OrchardCore.Modules/OrchardCore.Users/TimeZone/Startup.cs"
+   ],
+   "n_overlap": 5,
+   "note": ""
+  },
+  {
+   "pr": 16651,
+   "merged": "2024-09-03T19:18:04Z",
+   "title": "Remove tenant list from OpenID scopes",
+   "proposed": "A",
+   "cls": "A",
+   "kind": "maintainer",
+   "who": "kevinchalet",
+   "statement": "this scenario used to work correctly but it seems we broke it with #16651",
+   "evidence": "https://github.com/OrchardCMS/OrchardCore/issues/17233",
+   "fix_or_revert": 17266,
+   "family": "openid-validation-authority",
+   "overlap_files": [
+    "src/OrchardCore.Modules/OrchardCore.OpenId/Drivers/OpenIdValidationSettingsDisplayDriver.cs"
+   ],
+   "n_overlap": 1,
+   "note": ""
+  },
+  {
+   "pr": 16721,
+   "merged": "2024-09-18T19:53:00Z",
+   "title": "External Authentication Feature",
+   "proposed": "A",
+   "cls": "A",
+   "kind": "fix-pr",
+   "who": "hishamco",
+   "statement": "Fixes a bug introduced in #16721",
+   "evidence": "https://github.com/OrchardCMS/OrchardCore/pull/16805",
+   "fix_or_revert": 16805,
+   "family": "registration-settings-update",
+   "overlap_files": [
+    "src/OrchardCore.Modules/OrchardCore.Users/Drivers/RegistrationSettingsDisplayDriver.cs"
+   ],
+   "n_overlap": 1,
+   "note": ""
+  },
+  {
+   "pr": 16730,
+   "merged": "2024-09-16T18:48:03Z",
+   "title": "Disable CentralPackageTransitivePinningEnabled",
+   "proposed": "B",
+   "cls": "B",
+   "kind": "revert",
+   "who": "MikeAlhayek",
+   "statement": "Reverted the same day, no stated defect",
+   "evidence": "https://github.com/OrchardCMS/OrchardCore/pull/16731",
+   "fix_or_revert": 16731,
+   "family": "central-package-pinning",
+   "overlap_files": [
+    "Directory.Packages.props"
+   ],
+   "n_overlap": 1,
+   "note": ""
+  },
+  {
+   "pr": 16820,
+   "merged": "2024-10-03T22:13:30Z",
+   "title": "Batch Dependabot updates per directories (Lombiq Technologies: OCORE-202)",
+   "proposed": "B",
+   "cls": "B",
+   "kind": "revert",
+   "who": "Piedone",
+   "statement": "the syntax has some issue ... directory won't look into subdirectories (CI config)",
+   "evidence": "https://github.com/OrchardCMS/OrchardCore/pull/16823",
+   "fix_or_revert": 16823,
+   "family": "dependabot-directories",
+   "overlap_files": [
+    ".github/dependabot.yml"
+   ],
+   "n_overlap": 1,
+   "note": ""
+  },
+  {
+   "pr": 16843,
+   "merged": "2024-10-17T21:56:54Z",
+   "title": "Add support of Elasticsearch Token Filters",
+   "proposed": "B",
+   "cls": "B",
+   "kind": "issue",
+   "who": "(contributor)",
+   "statement": "This issue was caused by PR #16843 (custom analyzers)",
+   "evidence": "https://github.com/OrchardCMS/OrchardCore/issues/17012",
+   "fix_or_revert": 17013,
+   "family": "elastic-custom-analyzer",
+   "overlap_files": [
+    "src/OrchardCore.Modules/OrchardCore.Search.Elasticsearch/Extensions/ElasticsearchOptionsExtensions.cs",
+    "src/OrchardCore.Modules/OrchardCore.Search.Elasticsearch/Startup.cs",
+    "src/OrchardCore/OrchardCore.Search.Elasticsearch.Abstractions/ElasticsearchOptions.cs",
+    "src/OrchardCore/OrchardCore.Search.Elasticsearch.Core/Services/ElasticIndexManager.cs"
+   ],
+   "n_overlap": 4,
+   "note": ""
+  },
+  {
+   "pr": 16872,
+   "merged": "2024-10-14T17:45:21Z",
+   "title": "Cleanup OptionsFluidParser Helper",
+   "proposed": "A",
+   "cls": "A",
+   "kind": "fix-pr",
+   "who": "(contributor)",
+   "statement": "The class-default of true had been masking this since #16872; CreateContainer false was silently ignored",
+   "evidence": "https://github.com/OrchardCMS/OrchardCore/pull/19267",
+   "fix_or_revert": 19267,
+   "family": "azure-media-createcontainer",
+   "overlap_files": [
+    "src/OrchardCore.Modules/OrchardCore.Media.Azure/OrchardCore.Media.Azure.csproj",
+    "src/OrchardCore.Modules/OrchardCore.Media.Azure/Services/MediaBlobStorageOptionsConfiguration.cs",
+    "src/OrchardCore/OrchardCore.FileStorage.AzureBlob/BlobStorageOptionsConfiguration.cs"
+   ],
+   "n_overlap": 3,
+   "note": ""
+  },
+  {
+   "pr": 16942,
+   "merged": "2024-11-07T01:24:45Z",
+   "title": "Fix the User TimeZoneService",
+   "proposed": "B",
+   "cls": "B",
+   "kind": "witness",
+   "who": "mvarblow",
+   "statement": "I think this PR introduced the problem ... Reverting that PR seems to resolve the problem",
+   "evidence": "https://github.com/OrchardCMS/OrchardCore/issues/17069",
+   "fix_or_revert": 17071,
+   "family": "user-timezone-di-loop",
+   "overlap_files": [
+    "src/OrchardCore.Modules/OrchardCore.Users/TimeZone/Services/UserTimeZoneService.cs",
+    "src/OrchardCore.Modules/OrchardCore.Users/TimeZone/Startup.cs"
+   ],
+   "n_overlap": 2,
+   "note": ""
+  },
+  {
+   "pr": 16949,
+   "merged": "2024-11-09T20:24:28Z",
+   "title": "Use RecyclableMemoryStream",
+   "proposed": "A",
+   "cls": "A",
+   "kind": "maintainer",
+   "who": "gvkries",
+   "statement": "this was broken by PR #16949",
+   "evidence": "https://github.com/OrchardCMS/OrchardCore/pull/17055",
+   "fix_or_revert": 17055,
+   "family": "recyclable-stream-disposed",
+   "overlap_files": [
+    "src/OrchardCore/OrchardCore.Infrastructure/Shells.Database/Configuration/DatabaseShellConfigurationSources.cs",
+    "src/OrchardCore/OrchardCore.Infrastructure/Shells.Database/Configuration/DatabaseShellsSettingsSources.cs"
+   ],
+   "n_overlap": 2,
+   "note": ""
+  },
+  {
+   "pr": 16976,
+   "merged": "2024-11-09T18:39:34Z",
+   "title": "Add AddDisplayDriver Service Collection Extension",
+   "proposed": "A",
+   "cls": "A",
+   "kind": "issue",
+   "who": "MikeAlhayek",
+   "statement": "In PR #16976 ... renamed ... which introduced a binary breaking change",
+   "evidence": "https://github.com/OrchardCMS/OrchardCore/issues/16997",
+   "fix_or_revert": 16996,
+   "family": "binary-break-rename-2024",
+   "overlap_files": [
+    "src/OrchardCore/OrchardCore.DisplayManagement/SiteServiceCollectionExtensions.cs"
+   ],
+   "n_overlap": 1,
+   "note": ""
+  },
+  {
+   "pr": 17008,
+   "merged": "2024-11-13T15:51:03Z",
+   "title": "Remove unnecessary WriteTo() in FludiValue subclasses",
+   "proposed": "B",
+   "cls": "B",
+   "kind": "revert",
+   "who": "hishamco",
+   "statement": "Reverted the same day, no stated defect",
+   "evidence": "https://github.com/OrchardCMS/OrchardCore/pull/17010",
+   "fix_or_revert": 17010,
+   "family": "fluidvalue-writeto",
+   "overlap_files": [
+    "Directory.Packages.props",
+    "src/OrchardCore/OrchardCore.DisplayManagement.Liquid/Values/CultureValue.cs",
+    "src/OrchardCore/OrchardCore.DisplayManagement.Liquid/Values/HostingEnvironmentValue.cs",
+    "src/OrchardCore/OrchardCore.DisplayManagement.Liquid/Values/HttpContextValue.cs",
+    "src/OrchardCore/OrchardCore.DisplayManagement.Liquid/Values/HttpRequestValue.cs"
+   ],
+   "n_overlap": 5,
+   "note": ""
+  },
+  {
+   "pr": 17027,
+   "merged": "2024-11-26T23:41:04Z",
+   "title": "Replace Nest package with Elastic.Clients.Elasticsearch",
+   "proposed": "A",
+   "cls": "A",
+   "kind": "witness",
+   "who": "Piedone",
+   "statement": "Commit bb7359e, slightly before #17027, works with the original query",
+   "evidence": "https://github.com/OrchardCMS/OrchardCore/issues/17185",
+   "fix_or_revert": 17194,
+   "family": "elastic-raw-query",
+   "overlap_files": [
+    "src/OrchardCore/OrchardCore.Search.Elasticsearch.Core/Services/ElasticsearchIndexManager.cs",
+    "src/OrchardCore/OrchardCore.Search.Elasticsearch.Core/Services/ElasticsearchQueryService.cs"
+   ],
+   "n_overlap": 2,
+   "note": ""
+  },
+  {
+   "pr": 17036,
+   "merged": "2024-12-20T16:33:00Z",
+   "title": "Move OrchardCore.Translations.All",
+   "proposed": "A",
+   "cls": "A",
+   "kind": "revert",
+   "who": "MikeAlhayek",
+   "statement": "this PR caused an issue ... error NU1100: Unable to resolve OrchardCore.Translations.All",
+   "evidence": "https://github.com/OrchardCMS/OrchardCore/pull/17317",
+   "fix_or_revert": 17317,
+   "family": "translations-all-package",
+   "overlap_files": [
+    "src/OrchardCore/OrchardCore.Application.Cms.Core.Targets/OrchardCore.Application.Cms.Core.Targets.csproj",
+    "src/OrchardCore/OrchardCore.Application.Cms.Targets/OrchardCore.Application.Cms.Targets.csproj"
+   ],
+   "n_overlap": 2,
+   "note": ""
+  },
+  {
+   "pr": 17050,
+   "merged": "2024-11-25T18:14:08Z",
+   "title": "Prevent External Users Registration",
+   "proposed": "A",
+   "cls": "A",
+   "kind": "fix-pr",
+   "who": "(contributor)",
+   "statement": "Disabled users could authenticate via external providers ... because AddUserEnabledError was no longer called after the external auth refactoring in #17050",
+   "evidence": "https://github.com/OrchardCMS/OrchardCore/pull/19220",
+   "fix_or_revert": 19220,
+   "family": "disabled-user-external-login",
+   "overlap_files": [
+    "src/OrchardCore.Modules/OrchardCore.Users/Controllers/AccountBaseController.cs",
+    "src/OrchardCore.Modules/OrchardCore.Users/Startup.cs",
+    "src/docs/releases/3.0.0.md"
+   ],
+   "n_overlap": 3,
+   "note": ""
+  },
+  {
+   "pr": 17111,
+   "merged": "2024-12-03T22:55:52Z",
+   "title": "Layers enhancements",
+   "proposed": "A",
+   "cls": "A",
+   "kind": "revert",
+   "who": "MikeAlhayek",
+   "statement": "some of the changes in #17111 cased an issue when trying to update other content items",
+   "evidence": "https://github.com/OrchardCMS/OrchardCore/pull/17125",
+   "fix_or_revert": 17125,
+   "family": "layers-enhancements",
+   "overlap_files": [
+    "src/OrchardCore.Modules/OrchardCore.Layers/Drivers/LayerMetadataWelder.cs",
+    "src/OrchardCore.Modules/OrchardCore.Layers/Models/LayerMetadata.cs",
+    "src/OrchardCore.Modules/OrchardCore.Layers/ViewModels/LayerMetadataEditViewModel.cs",
+    "src/OrchardCore.Modules/OrchardCore.Layers/Views/Admin/Index.cshtml",
+    "src/OrchardCore.Modules/OrchardCore.Layers/Views/LayerMetadata.Edit.cshtml"
+   ],
+   "n_overlap": 5,
+   "note": ""
+  },
+  {
+   "pr": 17210,
+   "merged": "2024-12-10T20:54:11Z",
+   "title": "Fix Layer translations",
+   "proposed": "A",
+   "cls": "A",
+   "kind": "revert",
+   "who": "MikeAlhayek",
+   "statement": "We need to revert this PR until the issue it introduced is fixed",
+   "evidence": "https://github.com/OrchardCMS/OrchardCore/pull/17314",
+   "fix_or_revert": 17314,
+   "family": "layer-translations-package",
+   "overlap_files": [
+    "src/OrchardCore.Modules/OrchardCore.Layers/Views/LayerMetadata.Edit.cshtml"
+   ],
+   "n_overlap": 1,
+   "note": ""
+  },
+  {
+   "pr": 16973,
+   "merged": "2025-01-26T00:37:50Z",
+   "title": "Liquid.Core Services",
+   "proposed": "B",
+   "cls": "B",
+   "kind": "revert",
+   "who": "hishamco",
+   "statement": "Revert sanitize_html & supported_cultures changes, related to #16973 (partial revert)",
+   "evidence": "https://github.com/OrchardCMS/OrchardCore/pull/17460",
+   "fix_or_revert": 17460,
+   "family": "liquid-core-filters",
+   "overlap_files": [
+    "src/OrchardCore.Modules/OrchardCore.Liquid/Startup.cs",
+    "src/OrchardCore/OrchardCore.DisplayManagement.Liquid/Extensions/LiquidCoreServices.cs"
+   ],
+   "n_overlap": 2,
+   "note": ""
+  },
+  {
+   "pr": 17262,
+   "merged": "2025-02-22T18:07:00Z",
+   "title": "New Assets Build Tool (Assets Manager)",
+   "proposed": "A",
+   "cls": "A",
+   "kind": "maintainer",
+   "who": "MikeAlhayek",
+   "statement": "this PR introduced a problem. By default it is not generating the .min.js file ... causing production issues",
+   "evidence": "https://github.com/OrchardCMS/OrchardCore/issues/17522",
+   "fix_or_revert": 17523,
+   "family": "assets-manager-minjs",
+   "overlap_files": [
+    "src/OrchardCore.Themes/TheAdmin/ResourceManagementOptionsConfiguration.cs"
+   ],
+   "n_overlap": 1,
+   "note": ""
+  },
+  {
+   "pr": 17369,
+   "merged": "2025-01-17T21:16:57Z",
+   "title": "Encode analytics ids in script",
+   "proposed": "A",
+   "cls": "A",
+   "kind": "fix-pr",
+   "who": "MikeAlhayek",
+   "statement": "PR #17369 introduced a bug where an exception is throw if there is not ids are provided",
+   "evidence": "https://github.com/OrchardCMS/OrchardCore/pull/17406",
+   "fix_or_revert": 17406,
+   "family": "analytics-ids-null",
+   "overlap_files": [
+    "src/OrchardCore.Modules/OrchardCore.Facebook/Filters/FacebookPixelFilter.cs",
+    "src/OrchardCore.Modules/OrchardCore.Google/Analytics/GoogleAnalyticsFilter.cs",
+    "src/OrchardCore.Modules/OrchardCore.Google/TagManager/GoogleTagManagerFilter.cs"
+   ],
+   "n_overlap": 3,
+   "note": ""
+  },
+  {
+   "pr": 17378,
+   "merged": "2025-01-31T14:01:09Z",
+   "title": "Fixes errors when filtering by content fields in GraphQL",
+   "proposed": "B",
+   "cls": "B",
+   "kind": "issue",
+   "who": "(contributor)",
+   "statement": "I noticed that the issue was introduced in this PR (#17378)",
+   "evidence": "https://github.com/OrchardCMS/OrchardCore/issues/18896",
+   "fix_or_revert": 18897,
+   "family": "graphql-localization-filter",
+   "overlap_files": [
+    "src/OrchardCore/OrchardCore.ContentManagement.GraphQL/Queries/ContentItemsFieldType.cs"
+   ],
+   "n_overlap": 1,
+   "note": ""
+  },
+  {
+   "pr": 17409,
+   "merged": "2025-01-27T12:18:25Z",
+   "title": "Fix CSP header policy separator (Lombiq Technologies: OCORE-222)",
+   "proposed": "B",
+   "cls": "B",
+   "kind": "issue",
+   "who": "(contributor)",
+   "statement": "a regression from #17409, backported to 2.1 in #17458: the constant is also used by Permissions-Policy",
+   "evidence": "https://github.com/OrchardCMS/OrchardCore/issues/19730",
+   "fix_or_revert": 19732,
+   "family": "permissions-policy-separator",
+   "overlap_files": [
+    "src/OrchardCore.Modules/OrchardCore.Security/SecurityHeaderDefaults.cs",
+    "test/OrchardCore.Tests/Modules/OrchardCore.Security/Extensions/SecurityHeadersApplicationBuilderExtensionsTests.cs",
+    "test/OrchardCore.Tests/Modules/OrchardCore.Security/SecurityHeadersMiddlewareTests.cs"
+   ],
+   "n_overlap": 3,
+   "note": ""
+  },
+  {
+   "pr": 17421,
+   "merged": "2025-02-13T18:55:32Z",
+   "title": "Bugfix/13068 dragdrop widgets",
+   "proposed": "A",
+   "cls": "A",
+   "kind": "revert",
+   "who": "MikeAlhayek",
+   "statement": "PR#17421 cause issue #17502. I have to revert it",
+   "evidence": "https://github.com/OrchardCMS/OrchardCore/pull/17504",
+   "fix_or_revert": 17504,
+   "family": "widgets-dragdrop",
+   "overlap_files": [
+    "src/OrchardCore.Modules/OrchardCore.Flows/Views/BagPart.Edit.cshtml",
+    "src/OrchardCore.Modules/OrchardCore.Flows/Views/ContentCard-BagPart.Edit.cshtml",
+    "src/OrchardCore.Modules/OrchardCore.Flows/Views/ContentCard-FlowPart.Edit.cshtml",
+    "src/OrchardCore.Modules/OrchardCore.Flows/Views/FlowPart.Edit.cshtml"
+   ],
+   "n_overlap": 4,
+   "note": ""
+  },
+  {
+   "pr": 17481,
+   "merged": "2025-02-13T19:00:30Z",
+   "title": "fix taxonomy field multiselect mode tags automatic sorting problem",
+   "proposed": "A",
+   "cls": "A",
+   "kind": "fix-pr",
+   "who": "MikeAlhayek",
+   "statement": "PR #17481 tried to fix #17480 but introduced an issue ... Undo changes done by #17481",
+   "evidence": "https://github.com/OrchardCMS/OrchardCore/pull/17501",
+   "fix_or_revert": 17501,
+   "family": "taxonomy-editor-terms",
+   "overlap_files": [
+    "src/OrchardCore.Modules/OrchardCore.Taxonomies/Drivers/TaxonomyFieldDriverHelper.cs"
+   ],
+   "n_overlap": 1,
+   "note": ""
+  },
+  {
+   "pr": 17515,
+   "merged": "2025-03-08T18:25:19Z",
+   "title": "Add \"save and continue\" button to admin menu node and content type editors",
+   "proposed": "A",
+   "cls": "A",
+   "kind": "maintainer",
+   "who": "hishamco",
+   "statement": "The main issue comes from the PR #17515",
+   "evidence": "https://github.com/OrchardCMS/OrchardCore/issues/17646",
+   "fix_or_revert": 17648,
+   "family": "content-type-edit-delete",
+   "overlap_files": [
+    "src/OrchardCore.Modules/OrchardCore.ContentTypes/Controllers/AdminController.cs",
+    "src/OrchardCore.Modules/OrchardCore.ContentTypes/Views/Admin/Edit.cshtml"
+   ],
+   "n_overlap": 2,
+   "note": ""
+  },
+  {
+   "pr": 17528,
+   "merged": "2025-03-03T18:00:35Z",
+   "title": "Resources dependencies fixes and Vue 3",
+   "proposed": "A",
+   "cls": "A",
+   "kind": "maintainer",
+   "who": "gvkries",
+   "statement": "The error is caused by migrating away from jQuery in #17528",
+   "evidence": "https://github.com/OrchardCMS/OrchardCore/pull/17773",
+   "fix_or_revert": 17773,
+   "family": "shortcodes-button-wrapper",
+   "overlap_files": [
+    "src/OrchardCore.Modules/OrchardCore.Shortcodes/Assets/js/shortcodes.js",
+    "src/OrchardCore.Modules/OrchardCore.Shortcodes/wwwroot/Scripts/shortcodes.js",
+    "src/OrchardCore.Modules/OrchardCore.Shortcodes/wwwroot/Scripts/shortcodes.map",
+    "src/OrchardCore.Modules/OrchardCore.Shortcodes/wwwroot/Scripts/shortcodes.min.js"
+   ],
+   "n_overlap": 4,
+   "note": ""
+  },
+  {
+   "pr": 17552,
+   "merged": "2025-03-07T01:52:46Z",
+   "title": "Asset Manager Parcel prod.js -> min.js",
+   "proposed": "A",
+   "cls": "A",
+   "kind": "issue",
+   "who": "gvkries",
+   "statement": "PR #17552 introduced a change to the TheAdmin.ts script ... Bootstrap script included twice",
+   "evidence": "https://github.com/OrchardCMS/OrchardCore/issues/17686",
+   "fix_or_revert": 17693,
+   "family": "bootstrap-twice",
+   "overlap_files": [
+    "src/OrchardCore.Modules/OrchardCore.AuditTrail/Views/AuditTrailAdminList.cshtml",
+    "src/OrchardCore.Modules/OrchardCore.BackgroundTasks/Views/BackgroundTask/Index.cshtml",
+    "src/OrchardCore.Modules/OrchardCore.ContentTypes/Assets/js/autocomplete.ts",
+    "src/OrchardCore.Modules/OrchardCore.ContentTypes/wwwroot/Scripts/autocomplete/autocomplete.js",
+    "src/OrchardCore.Modules/OrchardCore.ContentTypes/wwwroot/Scripts/autocomplete/autocomplete.js.map",
+    "src/OrchardCore.Modules/OrchardCore.ContentTypes/wwwroot/Scripts/autocomplete/autocomplete.min.js"
+   ],
+   "n_overlap": 24,
+   "note": ""
+  },
+  {
+   "pr": 17611,
+   "merged": "2025-03-14T22:15:21Z",
+   "title": "Add condition for User moderation and Email confirmation upon registration",
+   "proposed": "B",
+   "cls": "B",
+   "kind": "revert",
+   "who": "gvkries",
+   "statement": "Actually, I think this patch is not correct ... revert and implement proper fix",
+   "evidence": "https://github.com/OrchardCMS/OrchardCore/pull/17650",
+   "fix_or_revert": 17650,
+   "family": "registration-moderation-condition",
+   "overlap_files": [
+    "src/OrchardCore/OrchardCore.Users.Core/Services/UserService.cs"
+   ],
+   "n_overlap": 1,
+   "note": ""
+  },
+  {
+   "pr": 17751,
+   "merged": "2025-04-07T00:52:59Z",
+   "title": "Current user should provide the current password during change password process",
+   "proposed": "B",
+   "cls": "B",
+   "kind": "revert",
+   "who": "MikeAlhayek",
+   "statement": "Reverted after a triage discussion on change-password design",
+   "evidence": "https://github.com/OrchardCMS/OrchardCore/pull/17769",
+   "fix_or_revert": 17769,
+   "family": "change-password-current",
+   "overlap_files": [
+    "src/OrchardCore.Modules/OrchardCore.Users/Views/UserActionsMenu.cshtml"
+   ],
+   "n_overlap": 1,
+   "note": ""
+  },
+  {
+   "pr": 17837,
+   "merged": "2025-04-23T23:44:35Z",
+   "title": "Fix string interpolation syntax in RedisKeyManagementOptionsSetup",
+   "proposed": "B",
+   "cls": "B",
+   "kind": "revert",
+   "who": "(maintainer)",
+   "statement": "We'll revert this change while we discuss other options",
+   "evidence": "https://github.com/OrchardCMS/OrchardCore/pull/17854",
+   "fix_or_revert": 17854,
+   "family": "redis-key-interpolation",
+   "overlap_files": [
+    "src/OrchardCore.Modules/OrchardCore.Redis/Options/RedisKeyManagementOptionsSetup.cs"
+   ],
+   "n_overlap": 1,
+   "note": ""
+  },
+  {
+   "pr": 17931,
+   "merged": "2025-05-20T18:21:40Z",
+   "title": "Upgrade Elasticsearch to v9",
+   "proposed": "B",
+   "cls": "B",
+   "kind": "revert",
+   "who": "MikeAlhayek",
+   "statement": "Reverted as a result of the conversation: we should not upgrade to v9",
+   "evidence": "https://github.com/OrchardCMS/OrchardCore/pull/17949",
+   "fix_or_revert": 17949,
+   "family": "elasticsearch-v9",
+   "overlap_files": [
+    "Directory.Packages.props",
+    "src/OrchardCore/OrchardCore.Search.Elasticsearch.Core/ElasticsearchConstants.cs",
+    "src/OrchardCore/OrchardCore.Search.Elasticsearch.Core/Providers/ElasticsearchContentPickerResultProvider.cs",
+    "src/OrchardCore/OrchardCore.Search.Elasticsearch.Core/Services/ElasticsearchIndexManager.cs"
+   ],
+   "n_overlap": 4,
+   "note": ""
+  },
+  {
+   "pr": 17951,
+   "merged": "2025-06-08T22:53:34Z",
+   "title": "Centralize the Indexing process",
+   "proposed": "A",
+   "cls": "A",
+   "kind": "maintainer",
+   "who": "gvkries",
+   "statement": "This has been caused by the redesign of the indexing modules in PR #17951 (flaky test)",
+   "evidence": "https://github.com/OrchardCMS/OrchardCore/issues/18007",
+   "fix_or_revert": 18080,
+   "family": "indexing-flaky-test",
+   "overlap_files": [
+    "src/OrchardCore/OrchardCore.Search.AzureAI.Core/Services/AzureAISearchIndexManager.cs",
+    "src/OrchardCore/OrchardCore.Search.Elasticsearch.Core/Services/ElasticsearchIndexManager.cs",
+    "src/OrchardCore/OrchardCore.Search.Lucene.Core/LuceneIndexStore.cs",
+    "test/OrchardCore.Tests/Apis/ContentManagement/DeploymentPlans/ContentStepLuceneQueryTests.cs"
+   ],
+   "n_overlap": 4,
+   "note": ""
+  },
+  {
+   "pr": 18121,
+   "merged": "2025-07-03T03:43:30Z",
+   "title": "Add opacity option for the text color field",
+   "proposed": "A",
+   "cls": "A",
+   "kind": "issue",
+   "who": "gvkries",
+   "statement": "PR #18121 introduced an alpha slider ... its value is not persisting & breaks in Flows/Bags",
+   "evidence": "https://github.com/OrchardCMS/OrchardCore/issues/18359",
+   "fix_or_revert": 18361,
+   "family": "color-alpha-slider",
+   "overlap_files": [
+    "src/OrchardCore.Modules/OrchardCore.ContentFields/Views/TextField-Color.Edit.cshtml"
+   ],
+   "n_overlap": 1,
+   "note": ""
+  },
+  {
+   "pr": 18238,
+   "merged": "2025-08-10T19:04:42Z",
+   "title": "SiteServiceCollectionExtensions -> ServiceCollectionExtensions",
+   "proposed": "B",
+   "cls": "B",
+   "kind": "maintainer",
+   "who": "MikeAlhayek",
+   "statement": "Such a small PR with not much value caused a binary braking change (no fix, kept for 3.0)",
+   "evidence": "https://github.com/OrchardCMS/OrchardCore/pull/18238",
+   "fix_or_revert": null,
+   "family": "binary-break-rename-2025",
+   "overlap_files": [],
+   "n_overlap": 0,
+   "note": ""
+  },
+  {
+   "pr": 18413,
+   "merged": "2025-09-29T15:45:54Z",
+   "title": "Fix own permission check in ListPart",
+   "proposed": "B",
+   "cls": "B",
+   "kind": "issue",
+   "who": "(contributor)",
+   "statement": "Seems to be caused by #18413: ownership is checked against NameIdentifier",
+   "evidence": "https://github.com/OrchardCMS/OrchardCore/issues/18940",
+   "fix_or_revert": 18941,
+   "family": "editowncontent-owner-check",
+   "overlap_files": [
+    "src/OrchardCore.Modules/OrchardCore.ContentFields/Controllers/UserPickerAdminController.cs",
+    "src/OrchardCore.Modules/OrchardCore.ContentLocalization/Controllers/AdminController.cs",
+    "src/OrchardCore.Modules/OrchardCore.Contents/Controllers/AdminController.cs",
+    "src/OrchardCore.Modules/OrchardCore.Lists/Views/ListPartNavigationAdmin.cshtml",
+    "src/OrchardCore/OrchardCore.Contents.Core/AuthorizationServiceExtensions.cs"
+   ],
+   "n_overlap": 5,
+   "note": ""
+  },
+  {
+   "pr": 18503,
+   "merged": "2025-11-26T00:02:04Z",
+   "title": "Replace Irony-based SqlParser with Parlot SqlParser",
+   "proposed": "B",
+   "cls": "B",
+   "kind": "issue",
+   "who": "(contributor)",
+   "statement": "most likely in the new SqlTranslator.cs from #18503",
+   "evidence": "https://github.com/OrchardCMS/OrchardCore/issues/18895",
+   "fix_or_revert": 18902,
+   "family": "sql-translator-cte-prefix",
+   "overlap_files": [
+    "src/OrchardCore.Modules/OrchardCore.Queries/Sql/SqlTranslator.cs",
+    "test/OrchardCore.Tests/Orchard.Queries/SqlParserTests.cs"
+   ],
+   "n_overlap": 2,
+   "note": ""
+  },
+  {
+   "pr": 18504,
+   "merged": "2025-10-30T18:54:31Z",
+   "title": "Fix shape table concurrency and improve caching efficiency",
+   "proposed": "B",
+   "cls": "B",
+   "kind": "revert",
+   "who": "gvkries",
+   "statement": "Reverted same day: test added in #18502 merged before had not been adjusted (merge race)",
+   "evidence": "https://github.com/OrchardCMS/OrchardCore/pull/18511",
+   "fix_or_revert": 18511,
+   "family": "shape-table-concurrency",
+   "overlap_files": [
+    "src/OrchardCore/OrchardCore.DisplayManagement/Descriptors/DefaultShapeTableManager.cs",
+    "src/OrchardCore/OrchardCore.DisplayManagement/OrchardCoreBuilderExtensions.cs",
+    "test/OrchardCore.Tests/DisplayManagement/Decriptors/DefaultShapeTableManagerBindingsTests.cs",
+    "test/OrchardCore.Tests/DisplayManagement/Decriptors/DefaultShapeTableManagerTests.cs"
+   ],
+   "n_overlap": 4,
+   "note": ""
+  },
+  {
+   "pr": 18508,
+   "merged": "2025-10-30T19:01:35Z",
+   "title": "Properly register KeyManagementOptions for protection-data",
+   "proposed": "A",
+   "cls": "A",
+   "kind": "fix-pr",
+   "who": "gvkries",
+   "statement": "Fixes a regression introduced by PR #18508",
+   "evidence": "https://github.com/OrchardCMS/OrchardCore/pull/18731",
+   "fix_or_revert": 18731,
+   "family": "redis-data-protection",
+   "overlap_files": [
+    "src/OrchardCore.Modules/OrchardCore.Redis/Startup.cs"
+   ],
+   "n_overlap": 1,
+   "note": ""
+  },
+  {
+   "pr": 18541,
+   "merged": "2025-11-11T08:16:35Z",
+   "title": "Add missing useCdn in ScriptBlock",
+   "proposed": "A",
+   "cls": "A",
+   "kind": "revert",
+   "who": "gvkries",
+   "statement": "resetting is the right choice, as a new error was introduced by it",
+   "evidence": "https://github.com/OrchardCMS/OrchardCore/pull/18542",
+   "fix_or_revert": 18542,
+   "family": "scriptblock-usecdn",
+   "overlap_files": [
+    "src/OrchardCore.Modules/OrchardCore.Resources/Liquid/ScriptBlock.cs"
+   ],
+   "n_overlap": 1,
+   "note": ""
+  }
+ ],
+ "excluded": [
+  {
+   "pr": 15438,
+   "reason": "reporter retracted: 'This is my mistake. It is not true'"
+  },
+  {
+   "pr": 15539,
+   "reason": "module missing from a release package, not a code defect of the PR"
+  },
+  {
+   "pr": 16862,
+   "reason": "suspicion rebutted by maintainer"
+  },
+  {
+   "pr": 17429,
+   "reason": "hedged; maintainer says it is an older issue (#13394)"
+  },
+  {
+   "pr": 18089,
+   "reason": "reverted because it did not fix the target issue, it introduced nothing"
+  },
+  {
+   "pr": 18241,
+   "reason": "'I bet this PR too will cause...' speculative"
+  },
+  {
+   "pr": 16713,
+   "reason": "change reverted inside the PR before merge"
+  }
+ ]
+}

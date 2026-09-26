@@ -1,0 +1,25 @@
+{
+ "pr": 16227,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "98fc50780a7e8d1296002801dd72bdd6660a18e482ee1b0f3efc114561369f7a",
+ "attempts": [
+  {
+   "seconds": 15.3,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 1254,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 7769
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 4, \"reason\": \"Beyond refactoring into constants, this actually changes the real Order values for ReverseProxy (-1\u2192-300), Cors (-1\u2192-290) and Security (default 0\u2192-290) relative to Authentication (-150), altering core middleware/pipeline sequencing that all tenants and downstream modules depend on, so subtle regressions in auth-behind-proxy, CORS, or security-header behavior are plausible.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 4,
+ "reason": "Beyond refactoring into constants, this actually changes the real Order values for ReverseProxy (-1\u2192-300), Cors (-1\u2192-290) and Security (default 0\u2192-290) relative to Authentication (-150), altering core middleware/pipeline sequencing that all tenants and downstream modules depend on, so subtle regressions in auth-behind-proxy, CORS, or security-header behavior are plausible."
+}

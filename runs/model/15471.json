@@ -1,0 +1,25 @@
+{
+ "pr": 15471,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "3dbb1fd2e125ef9225528cb8fe0a0f3100a3afecd4012680e9e04ad9e8107b31",
+ "attempts": [
+  {
+   "seconds": 3.9,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 106,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 2407
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Moves the GeneratedHidden check to a wrapper shape and adds a new part wrapper template, which could affect custom themes/modules that override TitlePart.Edit.cshtml or rely on the wrapper always rendering, but the core edit form behavior remains equivalent.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Moves the GeneratedHidden check to a wrapper shape and adds a new part wrapper template, which could affect custom themes/modules that override TitlePart.Edit.cshtml or rely on the wrapper always rendering, but the core edit form behavior remains equivalent."
+}

@@ -1,0 +1,53 @@
+{
+ "pr": 16942,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "1b04771f05ac5bb93f76b907c834c68bb57f28253a766ebfe1b07847936b27dd",
+ "attempts": [
+  {
+   "seconds": 4.5,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 144,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 7616
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 3, \"reason\": \"Public interface IUserTimeZoneService.GetAsync(IUser) is obsoleted (behavior changed to look up by username via UserManager, altering caching semantics) and UserTimeZoneSelector now gates on Identity.IsAuthenticated instead of resolving the actual user, which could break custom modules/themes still calling the old API or relying on the previous authentication-resolution behavior.\""
+  },
+  {
+   "seconds": 4.8,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 149,
+    "cache_read_input_tokens": 7616,
+    "cache_creation_input_tokens": 0
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 3, \"reason\": \"Changes the public IUserTimeZoneService contract (obsoletes GetAsync/UpdateAsync(IUser), adds a default-interface GetAsync(userName) that silently returns null) and alters cache-key semantics ('empty' -> 'NoTimeZoneFound'), which could subtly break third-party modules or leave stale/incorrect cached timezones for existing tenants until they upgrade.\""
+  },
+  {
+   "seconds": 4.6,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 137,
+    "cache_read_input_tokens": 7616,
+    "cache_creation_input_tokens": 0
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 3, \"reason\": \"The public interface method IUserTimeZoneService.GetAsync(IUser) is obsoleted and re-implemented via a new GetAsync(userName) that does an extra UserManager.FindByNameAsync lookup and changes the cache sentinel value, which could subtly alter behavior/performance for any downstream module or tenant code calling the old API or depending on cache key format.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 3,
+ "reason": "The public interface method IUserTimeZoneService.GetAsync(IUser) is obsoleted and re-implemented via a new GetAsync(userName) that does an extra UserManager.FindByNameAsync lookup and changes the cache sentinel value, which could subtly alter behavior/performance for any downstream module or tenant code calling the old API or depending on cache key format."
+}

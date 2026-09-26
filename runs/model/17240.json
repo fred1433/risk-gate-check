@@ -1,0 +1,25 @@
+{
+ "pr": 17240,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "b8c1b4407d6c5bd2547f6e8760b96c3455b9fc4bd1ba2f929829623c61b908a8",
+ "attempts": [
+  {
+   "seconds": 3.5,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 69,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 2250
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 1, \"reason\": \"Removes an unused IHostEnvironment dependency and dead branching that had identical behavior in both paths, and adds a new unit test, with no functional change to schema output.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 1,
+ "reason": "Removes an unused IHostEnvironment dependency and dead branching that had identical behavior in both paths, and adds a new unit test, with no functional change to schema output."
+}

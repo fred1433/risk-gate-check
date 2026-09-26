@@ -1,0 +1,25 @@
+{
+ "pr": 15413,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "370c2cef2c08f0dfa450a7ba94a25b162714212c6660ef79a2aec9a389591d1c",
+ "attempts": [
+  {
+   "seconds": 11.3,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 696,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 3255
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 3, \"reason\": \"Removing the public constructors from CultureDictionaryRecordKey in the public Abstractions package is a source-breaking API change for any external module or tenant code that directly constructs this key via `new CultureDictionaryRecordKey(id, context)`.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 3,
+ "reason": "Removing the public constructors from CultureDictionaryRecordKey in the public Abstractions package is a source-breaking API change for any external module or tenant code that directly constructs this key via `new CultureDictionaryRecordKey(id, context)`."
+}

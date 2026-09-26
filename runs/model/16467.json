@@ -1,0 +1,25 @@
+{
+ "pr": 16467,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "ba6fc7537b31c64e69da8cacbe9ba687600234fe2526a7e8d0c77b7bc243ff38",
+ "attempts": [
+  {
+   "seconds": 19.1,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 1439,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 31352
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 3, \"reason\": \"The PR refactors a shared randomUUID helper out of Media into a new OrchardCore.Resources 'credential-helpers' script (relying on correct dependency wiring across modules) while also changing OpenId ApplicationController logic and multiple Create/Edit views/scopes for OAuth client secrets, which are security- and admin-flow-sensitive areas where a subtle mistake could affect application/client credential generation across tenants.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 3,
+ "reason": "The PR refactors a shared randomUUID helper out of Media into a new OrchardCore.Resources 'credential-helpers' script (relying on correct dependency wiring across modules) while also changing OpenId ApplicationController logic and multiple Create/Edit views/scopes for OAuth client secrets, which are security- and admin-flow-sensitive areas where a subtle mistake could affect application/client cre"
+}

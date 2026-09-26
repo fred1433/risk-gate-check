@@ -1,0 +1,25 @@
+{
+ "pr": 16127,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "cc363c07b582735776a35ce2e05b487b193d5db6bd09252ac082373b2d7e529b",
+ "attempts": [
+  {
+   "seconds": 6.0,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 161,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 23562
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 4, \"reason\": \"This substantially reworks Azure AI Search field mapping/index schema logic (new event-driven mapping system, changed key/collection/searchable determination, GetFieldType now throws on unsupported types, suggester field logic) which affects index creation, rebuild, and document indexing behavior for an isolated but non-trivial feature module, risking breakage or data-loss for existing tenants using Azure AI Search if mappings/schemas change incompatibly.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 4,
+ "reason": "This substantially reworks Azure AI Search field mapping/index schema logic (new event-driven mapping system, changed key/collection/searchable determination, GetFieldType now throws on unsupported types, suggester field logic) which affects index creation, rebuild, and document indexing behavior for an isolated but non-trivial feature module, risking breakage or data-loss for existing tenants usi"
+}

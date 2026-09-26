@@ -1,0 +1,25 @@
+{
+ "pr": 15262,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "49545b816349dda372916f6dbf9d147bd5ea510ea28c9916bb158488a197f106",
+ "attempts": [
+  {
+   "seconds": 4.9,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 97,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 2121
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Minor patch version bump of an authentication dependency with a doc update only, so the main risk is a transitive behavior change in Microsoft.Identity.Web affecting Azure AD/AD B2C authentication flows, but it's low given the small version delta.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Minor patch version bump of an authentication dependency with a doc update only, so the main risk is a transitive behavior change in Microsoft.Identity.Web affecting Azure AD/AD B2C authentication flows, but it's low given the small version delta."
+}

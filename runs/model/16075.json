@@ -1,0 +1,25 @@
+{
+ "pr": 16075,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "8ed40c1a226f39d7dab04f26abf98e37e9534c70ce5b330f6351a6c29f2a01ca",
+ "attempts": [
+  {
+   "seconds": 3.4,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 125,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 2110
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 3, \"reason\": \"Explicitly registering DataProtectorTokenProvider as the default token provider in identity's DI setup could override or conflict with token providers previously configured elsewhere (e.g., by other modules or IdentityOptionsConfigurations), potentially affecting password reset, email confirmation, and 2FA token generation/validation across all tenants.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 3,
+ "reason": "Explicitly registering DataProtectorTokenProvider as the default token provider in identity's DI setup could override or conflict with token providers previously configured elsewhere (e.g., by other modules or IdentityOptionsConfigurations), potentially affecting password reset, email confirmation, and 2FA token generation/validation across all tenants."
+}

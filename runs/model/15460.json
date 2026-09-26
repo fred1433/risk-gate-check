@@ -1,0 +1,25 @@
+{
+ "pr": 15460,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "4e361e24a42c57fcd96ddf58b091f7635bce0a01e8ab200ff45e0c35afdf7b7d",
+ "attempts": [
+  {
+   "seconds": 4.1,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 123,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 2921
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 3, \"reason\": \"Applying the app's global JsonSerializerOptions (custom converters, naming policy, ignore conditions) onto AspNetCore.Http.Json's default JsonOptions used by minimal APIs/MVC could change serialization behavior for existing endpoints across all modules and tenants in subtle, hard-to-predict ways.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 3,
+ "reason": "Applying the app's global JsonSerializerOptions (custom converters, naming policy, ignore conditions) onto AspNetCore.Http.Json's default JsonOptions used by minimal APIs/MVC could change serialization behavior for existing endpoints across all modules and tenants in subtle, hard-to-predict ways."
+}

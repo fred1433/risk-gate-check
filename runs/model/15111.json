@@ -1,0 +1,25 @@
+{
+ "pr": 15111,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "29fc9b81c759a2d07259709a6c0ec124a2758eae72566ac4f64235405d2a2759",
+ "attempts": [
+  {
+   "seconds": 3.2,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 61,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1917
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 1, \"reason\": \"Minor patch version bump of the StackExchange.Redis dependency with no code changes, extremely low likelihood of breaking behaviour.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 1,
+ "reason": "Minor patch version bump of the StackExchange.Redis dependency with no code changes, extremely low likelihood of breaking behaviour."
+}

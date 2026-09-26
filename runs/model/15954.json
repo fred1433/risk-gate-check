@@ -1,0 +1,25 @@
+{
+ "pr": 15954,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "967f763b79a5d2cb75db9130de174c8185935cc08761646ac14ae9ce37b448f2",
+ "attempts": [
+  {
+   "seconds": 3.5,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 77,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 5192
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Refactors inline script/style tags to named resource manifests, which is low risk but could break theming/customizations that override the old asp-src paths or expect CSS to load at Foot instead of Head.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Refactors inline script/style tags to named resource manifests, which is low risk but could break theming/customizations that override the old asp-src paths or expect CSS to load at Foot instead of Head."
+}

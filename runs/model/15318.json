@@ -1,0 +1,25 @@
+{
+ "pr": 15318,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "28d86d22ee7f4b08c90e2955efa08c40ff2a789562baa4600914ab6ab35a39c0",
+ "attempts": [
+  {
+   "seconds": 8.5,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 562,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 7609
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Client-side only fix in the CORS admin UI aligning Vue model property casing (PascalCase -> camelCase) with the server's JSON serialization, low blast radius but could break loading of previously saved CORS policy JSON if casing assumptions are wrong.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Client-side only fix in the CORS admin UI aligning Vue model property casing (PascalCase -> camelCase) with the server's JSON serialization, low blast radius but could break loading of previously saved CORS policy JSON if casing assumptions are wrong."
+}

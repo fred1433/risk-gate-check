@@ -1,0 +1,27 @@
+# Required check "risk-gate". Fail-closed: only ALLOW, or a senior's release on this exact head commit, passes.
+# pull_request_target runs THIS file and the policy as they are on the base branch, so a pull request cannot rewrite
+# the gate that judges it. The PR's code is read as data through the API and never checked out or executed.
+# No repository secrets are used; the token is read-only except for removing a stale release label.
+name: risk-gate
+on:
+  pull_request_target:
+    types: [opened, synchronize, reopened, labeled, unlabeled]
+permissions:
+  contents: read
+  pull-requests: write
+concurrency:
+  group: risk-gate-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+jobs:
+  risk-gate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2, base commit only
+        with:
+          persist-credentials: false
+      - name: Evaluate the pull request with the frozen deterministic policy
+        run: python3 riskgate/check.py
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          RISKGATE_SENIORS: fred1433

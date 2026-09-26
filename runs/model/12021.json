@@ -1,0 +1,25 @@
+{
+ "pr": 12021,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "dbf3ec1176896c3a29a428f4e5fc74c3ef45eb401e1aed23b9874eb3cc07cdda",
+ "attempts": [
+  {
+   "seconds": 4.8,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 146,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 5864
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 3, \"reason\": \"The default Syntax property value is JavaScript and existing behavior for that path is preserved, but the DI constructor now requires IWorkflowExpressionEvaluator and the editor UI was rewritten from Monaco to CodeMirror, so any misregistration of the new dependency or missing CodeMirror liquid.js asset would break the CorrelateTask activity/editor across all tenants using workflows.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 3,
+ "reason": "The default Syntax property value is JavaScript and existing behavior for that path is preserved, but the DI constructor now requires IWorkflowExpressionEvaluator and the editor UI was rewritten from Monaco to CodeMirror, so any misregistration of the new dependency or missing CodeMirror liquid.js asset would break the CorrelateTask activity/editor across all tenants using workflows."
+}

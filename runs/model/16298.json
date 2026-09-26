@@ -1,0 +1,25 @@
+{
+ "pr": 16298,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "14a88c5c69753406c04ca0352fbe080bcaa33ea67286ce73771b9d062ce1b79e",
+ "attempts": [
+  {
+   "seconds": 6.8,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 127,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 3369
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Adds a WrapObjectHandler in Jint to properly unwrap JsonDynamicObject/Array/Value for JS interop, a targeted fix with fallback to default wrapping and added test coverage, but changes core JavaScript scripting engine behavior used across all tenants/modules so subtle interop regressions for other object types are possible.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Adds a WrapObjectHandler in Jint to properly unwrap JsonDynamicObject/Array/Value for JS interop, a targeted fix with fallback to default wrapping and added test coverage, but changes core JavaScript scripting engine behavior used across all tenants/modules so subtle interop regressions for other object types are possible."
+}

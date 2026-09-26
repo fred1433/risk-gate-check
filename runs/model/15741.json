@@ -1,0 +1,25 @@
+{
+ "pr": 15741,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "beea41eec6a97ba45ab452b309a3c32e06c70486c4d67110258c233cd774232e",
+ "attempts": [
+  {
+   "seconds": 4.1,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 74,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 22738
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 1, \"reason\": \"Purely a CSS/SVG icon fix scoped to the Shortcodes module's editor button, with no C# or behavioral changes affecting hosts, tenants, or modules.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 1,
+ "reason": "Purely a CSS/SVG icon fix scoped to the Shortcodes module's editor button, with no C# or behavioral changes affecting hosts, tenants, or modules."
+}

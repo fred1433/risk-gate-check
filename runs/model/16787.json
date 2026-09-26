@@ -1,0 +1,25 @@
+{
+ "pr": 16787,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "f7578ab9a9c7fd0d8625cd8df389d8b3f60bcc42ce0f80a97388b63653646868",
+ "attempts": [
+  {
+   "seconds": 3.3,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 108,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 3054
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Behavior-preserving refactor (constructor now takes IDistributedCache via DI factory, class made internal with InternalsVisibleTo for tests) that keeps the same non-disposal semantics, low risk but touches the Redis caching path used across tenants so warrants a quick review.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Behavior-preserving refactor (constructor now takes IDistributedCache via DI factory, class made internal with InternalsVisibleTo for tests) that keeps the same non-disposal semantics, low risk but touches the Redis caching path used across tenants so warrants a quick review."
+}

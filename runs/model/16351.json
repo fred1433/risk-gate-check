@@ -1,0 +1,25 @@
+{
+ "pr": 16351,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "9379dc8a4c58849c3e56a18263efeb67db2eedfa611cac8d15205d13095ee441",
+ "attempts": [
+  {
+   "seconds": 3.7,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 68,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1337
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 1, \"reason\": \"Small UI-only change in a workflow designer view that conditionally hides a button for non-event activities, with no impact on server logic, data, or existing tenant configurations.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 1,
+ "reason": "Small UI-only change in a workflow designer view that conditionally hides a button for non-event activities, with no impact on server logic, data, or existing tenant configurations."
+}

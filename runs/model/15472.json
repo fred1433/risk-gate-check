@@ -1,0 +1,25 @@
+{
+ "pr": 15472,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "873d6a7a9e45748902afe46fc9c2a8b164aa0bcf0fbc39a76edc438d2c147850",
+ "attempts": [
+  {
+   "seconds": 17.2,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 1283,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 7584
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 4, \"reason\": \"ContentTypeDefinitionDriverOptions has no default values set (bool fields default to false), so the new GetOptions fallback (_defaultOptions) would hide the Creatable/Listable/Draftable/Versionable/Securable checkboxes for every content type that isn't explicitly registered in the new Stereotypes/ContentTypes dictionaries, silently removing standard admin UI controls from all existing sites/tenants.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 4,
+ "reason": "ContentTypeDefinitionDriverOptions has no default values set (bool fields default to false), so the new GetOptions fallback (_defaultOptions) would hide the Creatable/Listable/Draftable/Versionable/Securable checkboxes for every content type that isn't explicitly registered in the new Stereotypes/ContentTypes dictionaries, silently removing standard admin UI controls from all existing sites/tenant"
+}

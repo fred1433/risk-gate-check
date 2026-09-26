@@ -1,0 +1,25 @@
+{
+ "pr": 15480,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "13422a9a9a5aa7a3cc59f6cf651a85d12ce4498d8817e401dc52cb3815459647",
+ "attempts": [
+  {
+   "seconds": 5.0,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 148,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1359
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Changes the target options bucket for LoginInfoJsonConverter from global JsonSerializerOptions to ContentSerializerJsonOptions, which is a more scoped and likely intended fix, but any external code depending on the converter being registered in the generic JsonSerializerOptions (e.g., via IOptions<JsonSerializerOptions> for user login serialization elsewhere) could lose that converter.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Changes the target options bucket for LoginInfoJsonConverter from global JsonSerializerOptions to ContentSerializerJsonOptions, which is a more scoped and likely intended fix, but any external code depending on the converter being registered in the generic JsonSerializerOptions (e.g., via IOptions<JsonSerializerOptions> for user login serialization elsewhere) could lose that converter."
+}

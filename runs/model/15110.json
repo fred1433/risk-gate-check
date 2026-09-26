@@ -1,0 +1,25 @@
+{
+ "pr": 15110,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "493dc8bf0ce6702475a51d367ac515bddb5fb7f03e5e5b70a0441215c90e7349",
+ "attempts": [
+  {
+   "seconds": 3.4,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 73,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 2046
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 1, \"reason\": \"Minor patch version bump of a beta JS interpreter dependency plus matching docs update, with no code changes, so worst case is a small upstream regression easily caught by existing tests.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 1,
+ "reason": "Minor patch version bump of a beta JS interpreter dependency plus matching docs update, with no code changes, so worst case is a small upstream regression easily caught by existing tests."
+}

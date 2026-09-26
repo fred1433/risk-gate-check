@@ -1,0 +1,25 @@
+{
+ "pr": 16635,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "139e684db9d4d9190327b39f153c694887742f4a9c414a20d24a63e33afebff9",
+ "attempts": [
+  {
+   "seconds": 3.1,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 79,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 5520
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 1, \"reason\": \"Purely stylistic changes converting static readonly fields to const (and reordering some) for simple literal values, with identical public API surface and semantics, plus a harmless whitespace/indentation tweak.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 1,
+ "reason": "Purely stylistic changes converting static readonly fields to const (and reordering some) for simple literal values, with identical public API surface and semantics, plus a harmless whitespace/indentation tweak."
+}

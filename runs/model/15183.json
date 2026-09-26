@@ -1,0 +1,25 @@
+{
+ "pr": 15183,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "b97731365857874b7ce59197ec8ca3973a62b8916f916a692dd698442a050877",
+ "attempts": [
+  {
+   "seconds": 4.6,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 83,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1159
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 1, \"reason\": \"Adding a jQuery dependency declaration to a script manifest only affects load order/inclusion for the contentpreview-edit script and is a minimal, low-risk fix for a likely existing runtime dependency.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 1,
+ "reason": "Adding a jQuery dependency declaration to a script manifest only affects load order/inclusion for the contentpreview-edit script and is a minimal, low-risk fix for a likely existing runtime dependency."
+}

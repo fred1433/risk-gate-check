@@ -1,0 +1,25 @@
+{
+ "pr": 16132,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "1c81cb581b99052dbccc9ebb409d7199b4e5a67a2d3406d262493c7d6970db9c",
+ "attempts": [
+  {
+   "seconds": 4.2,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 54,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 2065
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 1, \"reason\": \"Minor version bump of a small JSON-path library plus matching docs update, with no code changes to Orchard Core itself.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 1,
+ "reason": "Minor version bump of a small JSON-path library plus matching docs update, with no code changes to Orchard Core itself."
+}

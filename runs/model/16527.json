@@ -1,0 +1,25 @@
+{
+ "pr": 16527,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "69e91e17412281edf0ba7cab18736b0a5233d5b02431493021f07584c78fc5b9",
+ "attempts": [
+  {
+   "seconds": 3.6,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 85,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 2490
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 3, \"reason\": \"Edit flow now deletes the query by QueryId and re-updates it, so if QueryId is empty/mismatched or the delete succeeds but update fails, a saved query could be permanently lost instead of just renamed.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 3,
+ "reason": "Edit flow now deletes the query by QueryId and re-updates it, so if QueryId is empty/mismatched or the delete succeeds but update fails, a saved query could be permanently lost instead of just renamed."
+}

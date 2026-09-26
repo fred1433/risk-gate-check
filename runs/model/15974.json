@@ -1,0 +1,25 @@
+{
+ "pr": 15974,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "b3429607ff1486bb9796e2096d9448aaa9583c2132fae6d8f5870cab2f1a44f1",
+ "attempts": [
+  {
+   "seconds": 4.6,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 105,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 2249
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 3, \"reason\": \"Changes the widely-used ContentElement.Get() caching/lookup behavior with a type-assignability check, which could alter existing polymorphic access patterns (e.g., getting a part first as base ContentPart then as derived type) across many modules relying on the previous caching semantics.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 3,
+ "reason": "Changes the widely-used ContentElement.Get() caching/lookup behavior with a type-assignability check, which could alter existing polymorphic access patterns (e.g., getting a part first as base ContentPart then as derived type) across many modules relying on the previous caching semantics."
+}

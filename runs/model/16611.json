@@ -1,0 +1,25 @@
+{
+ "pr": 16611,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "14fc79c90d01cb7fdc997eb6bc04d26197a34f5c50daf152f10333331f857a88",
+ "attempts": [
+  {
+   "seconds": 4.5,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 119,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 7931
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"This is a mechanical refactor extracting a DocumentIndexBase class (public API surface change for OrchardCore.Indexing.Abstractions), which could break external modules referencing DocumentIndex's static Types/GeoPoint nested types directly, but internal usages are all updated consistently and behavior is preserved.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "This is a mechanical refactor extracting a DocumentIndexBase class (public API surface change for OrchardCore.Indexing.Abstractions), which could break external modules referencing DocumentIndex's static Types/GeoPoint nested types directly, but internal usages are all updated consistently and behavior is preserved."
+}

@@ -1,0 +1,25 @@
+{
+ "pr": 16538,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "6b0b4f1ad941fa29a46b342cc168bb1131548fb9dff51cd17fe55466ebe9876e",
+ "attempts": [
+  {
+   "seconds": 35.2,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 3286,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1738
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Isolated fix to taxonomy term deletion recursion looks logically sound for nested hierarchies, but it drops the explicit 'item not found' check (now only NotFound if deserialization fails), silently succeeding on invalid/nonexistent IDs instead of returning 404.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Isolated fix to taxonomy term deletion recursion looks logically sound for nested hierarchies, but it drops the explicit 'item not found' check (now only NotFound if deserialization fails), silently succeeding on invalid/nonexistent IDs instead of returning 404."
+}

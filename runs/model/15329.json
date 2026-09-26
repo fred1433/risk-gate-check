@@ -1,0 +1,25 @@
+{
+ "pr": 15329,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "95bc2a87092435ce406f066f29fcb09cb9bd9a94826955935fc50a2fabe650ae",
+ "attempts": [
+  {
+   "seconds": 3.1,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 46,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1144
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 1, \"reason\": \"Minor patch version bump of a resilience library dependency, low likelihood of breaking changes.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 1,
+ "reason": "Minor patch version bump of a resilience library dependency, low likelihood of breaking changes."
+}
