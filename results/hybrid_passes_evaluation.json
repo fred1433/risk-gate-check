@@ -22,6 +22,19 @@
     "models": [
      "claude-sonnet-5"
     ]
+   },
+   "deployable_truncated_to_unknown": {
+    "k": 2,
+    "R": 193,
+    "unknown": 29
+   },
+   "rerouting_vs_deterministic": {
+    "newly_reviewed": 46,
+    "newly_allowed": 35
+   },
+   "stored_answers": {
+    "ok": 355,
+    "model failed": 2
    }
   },
   "pass2": {
@@ -46,6 +59,19 @@
     "models": [
      "claude-sonnet-5"
     ]
+   },
+   "deployable_truncated_to_unknown": {
+    "k": 2,
+    "R": 193,
+    "unknown": 29
+   },
+   "rerouting_vs_deterministic": {
+    "newly_reviewed": 46,
+    "newly_allowed": 36
+   },
+   "stored_answers": {
+    "ok": 356,
+    "model failed": 1
    }
   },
   "pass3": {
@@ -70,6 +96,18 @@
     "models": [
      "claude-sonnet-5"
     ]
+   },
+   "deployable_truncated_to_unknown": {
+    "k": 2,
+    "R": 190,
+    "unknown": 25
+   },
+   "rerouting_vs_deterministic": {
+    "newly_reviewed": 45,
+    "newly_allowed": 35
+   },
+   "stored_answers": {
+    "ok": 357
    }
   }
  },
@@ -125,5 +163,6 @@
    "pass3": 4
   }
  },
- "tau": 3
+ "tau": 3,
+ "truncated_model_inputs": "38 of 357 (diff over 60,000 characters or over 400 files)"
 }

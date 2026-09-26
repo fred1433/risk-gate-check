@@ -17,5 +17,6 @@
   "riskgate/model.py": "08e8759106a928f3"
  },
  "what_was_known_when": "Thresholds theta and tau were chosen on 2024 data only. Before the freeze commit, the 2025 labels had already been adjudicated (oracle/labels.json, 10:35) and the list of 2025 PRs the model would read had been computed from the deterministic signals (10:50); signals.py was last edited at 10:53 (a path-based persistence signal, chosen from 2024 misses). No 2025 policy decision and no 2025 model answer existed before the commit: the first 2025 model answer is timestamped 10:55:33, the 2025 scoring ran at 11:02. The rule author had read the titles of the 2025 labelled PRs before writing the rules.",
- "check_against_overfitting_2025": "On 2024 the deterministic policy passed 7 of 28 confirmed failures at 32.5% load (random routing: 18.9); the path list 8 of 28 at 36.4% (random: 17.8). On 2025 both fall to chance level, which is not what rules tuned on 2025 would do."
+ "claim": "Thresholds were selected on 2024. The rule author had already seen the labelled 2025 cases, so this is an exploratory retrospective comparison, not a blinded holdout.",
+ "changed_after_evaluation": "riskgate/model.py: stricter parsing of new model answers and an input-completeness flag (hash now 031ceac45c86fad3); build_input and the prompt are unchanged, and every stored answer is re-checked at replay against its recorded input and prompt fingerprints (riskgate/strict.py). signals.py and policies.py are unchanged."
 }

@@ -14,8 +14,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <!--
 Design plan: a change-control decision sheet. Printed-form blue on cool paper, one ink, two decision colours.
-Paper #F4F6F8, ink #16202E, form blue #2F5C8F, form rule #C5D2E0, sent-to-senior red #A4281D, passed green #2D6A4F.
-Public Sans throughout (government form lineage), tabular figures. One memorable element: the trade-off chart.
+Paper #F4F6F8, ink #16202E, form blue #2F5C8F, form rule #C5D2E0, outcome red #A4281D (known regression let through), outcome green #2D6A4F (known regression routed to review); routing states stay neutral.
+Public Sans throughout (government form lineage), tabular figures. Two focal points: the trade-off chart, then the caught/missed pair.
 -->
 <style>
 :root{
@@ -62,6 +62,24 @@ tr.hy td{font-weight:600}
 .case h3 a{color:var(--ink)}
 .stamp{display:inline-block;border:1.5px solid currentColor;border-radius:3px;padding:1px 8px;font-size:13.5px;font-weight:600}
 .stamp.red{color:var(--red)} .stamp.green{color:var(--green)}
+.state{display:inline-block;border-radius:3px;padding:1px 8px;font-size:13.5px;font-weight:600;white-space:nowrap}
+.state.allow{border:1.5px solid var(--rule);color:var(--muted)}
+.state.review{background:var(--ink);color:#fff;border:1.5px solid var(--ink)}
+.result-row{display:grid;grid-template-columns:1fr 250px;gap:40px;align-items:start}
+.try{border-left:2px solid var(--form);padding:2px 0 2px 16px;font-size:15px}
+.try b{display:block;font-size:16px;margin-bottom:4px}
+.try p{margin:0 0 8px}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:30px}
+.tile{border:1px solid var(--rule);border-top:4px solid var(--c);border-radius:2px;padding:16px 18px 18px}
+.tile .out{font-size:14px;font-weight:600;color:var(--c);margin:0 0 6px}
+.tile h3{font-size:18px;margin:0 0 8px;line-height:1.3}
+.tile p{margin:0;font-size:15.5px}
+.tile.caught{--c:var(--green)} .tile.missed{--c:var(--red)}
+details{margin-top:16px;border-top:1px solid var(--rule);padding-top:12px;max-width:72ch}
+summary{cursor:pointer;color:var(--form);font-weight:500;font-size:15.5px}
+details ul{margin:12px 0 0;padding-left:18px;font-size:14.5px;color:var(--ink)}
+details li{margin:0 0 8px}
+.note b{color:var(--ink);font-weight:600}
 .panes{display:grid;grid-template-columns:1.15fr 1fr}
 .pane{padding:18px 20px 20px;min-width:0}
 .pane+.pane{border-left:1px solid var(--rule)}
@@ -101,6 +119,8 @@ footer a{color:var(--muted)}
   .panes{grid-template-columns:1fr}
   .pane+.pane{border-left:0;border-top:1px solid var(--rule)}
   .two{grid-template-columns:1fr;gap:8px}
+  .result-row{grid-template-columns:1fr;gap:10px;margin-bottom:22px}
+  .pair{grid-template-columns:1fr;gap:12px}
   footer{padding:14px 16px 36px}
 }
 @media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
@@ -111,24 +131,31 @@ footer a{color:var(--muted)}
 <div class="sheet">
 
 <h1>Which changes can skip senior review?</h1>
-<p class="lede">Three routing policies replayed on a year of pull requests to Orchard Core, a public multi-tenant .NET CMS. For each: how many changes that later broke something it let through, and how much work it sent to a senior.</p>
+<p class="lede">Three routing policies replayed on a year of pull requests to Orchard Core, a public multi-tenant .NET CMS: for each, how many known regressions it let through, and how many changes it routed to review. An exploratory look back at public history, not a blinded test and not a measure of how safe auto-merging is.</p>
 
 <dl class="fields">
   <div class="field"><dt>Changes judged</dt><dd>479 pull requests merged in 2025</dd></div>
   <div class="field"><dt>Thresholds set on</dt><dd>891 merged in 2024 only</dd></div>
-  <div class="field"><dt>Known failures</dt><dd>10 changes with a confirmed later breakage</dd></div>
+  <div class="field"><dt>Known regressions</dt><dd>10 changes later confirmed to have broken something</dd></div>
   <div class="field"><dt>Outcomes observed until</dt><dd>26 September 2026</dd></div>
 </dl>
 
 <section aria-labelledby="tradeoff">
-<h2 id="tradeoff">What each policy let through, for the work it sent to a senior</h2>
-<p class="finding">A path list and a deterministic diff reader each let <strong>7 of the 10</strong> through while sending a third of all changes to a senior. Sending a random third would let about 7 through. The hybrid, which lets a model read what the structural rules cannot, let <strong>2 of 10</strong> through in each of three runs, for 34 to 35%.</p>
+<h2 id="tradeoff">Known regressions let through, for the share routed to review</h2>
+<div class="result-row">
+  <p class="finding">Both rule-based policies let <strong>7 of 10</strong> confirmed regressions pass, near what routing a random third of changes would do. The hybrid, where a model reads what the structural rules cannot, let <strong>2 pass in each of three runs</strong>, routing 34 to 35% of changes to review rather than 32%. This measures routing, not prevented failures.</p>
+  <aside class="try">
+    <b>Run your policy on the same cases</b>
+    <p>One function, <code>decide(snapshot, diff)</code>, scored against the same 479 changes and 10 regressions.</p>
+    <p><a href="https://github.com/fred1433/risk-gate-check">The repository</a></p>
+  </aside>
+</div>
 
 <figure>
 <svg class="chart" viewBox="0 0 600 400" role="img" aria-labelledby="chart-title chart-desc">
-  <title id="chart-title">Confirmed failures that passed, against the share of changes sent to a senior</title>
-  <desc id="chart-desc">Random routing runs from 10 passed at 0 percent reviewed to 0 passed at 100 percent. The path list and the deterministic policy sit at 7 passed and 32 percent reviewed, on the chance line. The hybrid sits at 2 passed and 34 to 35 percent reviewed in each of three runs, well below it.</desc>
-  <polygon points="70,330 570,330 70,40" fill="#E6EEF7" />
+  <title id="chart-title">Known regressions let through, against the share of changes routed to review</title>
+  <desc id="chart-desc">The random-routing expectation runs from 10 let through at 0 percent routed to review down to 0 at 100 percent. The path list and the deterministic policy sit at 7 let through and 32 percent routed to review, near that expectation. The hybrid sits at 2 let through and 34 to 35 percent in each of three runs, below it.</desc>
+  <polygon points="70,330 570,330 70,40" fill="#EDF2F8" />
   <g stroke="#E1E8F0" stroke-width="1">
     <line x1="70" y1="40" x2="570" y2="40"/><line x1="70" y1="98" x2="570" y2="98"/><line x1="70" y1="156" x2="570" y2="156"/><line x1="70" y1="214" x2="570" y2="214"/><line x1="70" y1="272" x2="570" y2="272"/>
     <line x1="195" y1="40" x2="195" y2="330"/><line x1="320" y1="40" x2="320" y2="330"/><line x1="445" y1="40" x2="445" y2="330"/><line x1="570" y1="40" x2="570" y2="330"/>
@@ -141,45 +168,71 @@ footer a{color:var(--muted)}
   <g class="tick" text-anchor="middle">
     <text x="70" y="354">0%</text><text x="195" y="354">25%</text><text x="320" y="354">50%</text><text x="445" y="354">75%</text><text x="570" y="354">100%</text>
   </g>
-  <text class="axis" x="320" y="386" text-anchor="middle">Share of all changes sent to a senior</text>
-  <text class="axis" x="16" y="185" text-anchor="middle" transform="rotate(-90 16 185)">Confirmed failures that passed</text>
+  <text class="axis" x="320" y="386" text-anchor="middle">Share of all changes routed to review</text>
+  <text class="axis" x="16" y="185" text-anchor="middle" transform="rotate(-90 16 185)">Known regressions let through</text>
   <line x1="70" y1="40" x2="570" y2="330" stroke="#2F5C8F" stroke-width="1.6" stroke-dasharray="6 5"/>
-  <text class="chance" x="0" y="0" transform="translate(410 225) rotate(30.1)">Random routing</text>
+  <text class="chance" x="0" y="0" transform="translate(338 178) rotate(30.1)">Random-routing expectation</text>
   <circle cx="70" cy="40" r="4.5" fill="#fff" stroke="#16202E" stroke-width="1.4"/>
   <text class="sub endlab" x="80" y="36">Review nothing</text>
   <circle cx="570" cy="330" r="4.5" fill="#fff" stroke="#16202E" stroke-width="1.4"/>
   <text class="sub endlab" x="520" y="316" text-anchor="end">Review everything</text>
-  <circle cx="232" cy="127" r="7" fill="#A4281D"/>
+  <rect x="225" y="120" width="14" height="14" fill="#16202E"/>
   <text class="lab" x="248" y="100">Path list and deterministic</text>
-  <text class="sub" x="248" y="118">7 of 10 passed, 32% reviewed</text>
-  <line x1="242" y1="272" x2="243.5" y2="272" stroke="#2D6A4F" stroke-width="14" stroke-linecap="round"/>
+  <text class="sub" x="248" y="118">7 of 10 let through, 32% routed to review</text>
+  <circle cx="243" cy="272" r="7.5" fill="#2F5C8F"/>
   <text class="lab" x="260" y="266">Hybrid, three runs</text>
-  <text class="sub" x="260" y="284">2 of 10 passed in each run</text>
-  <text class="sub" x="260" y="301">34 to 35% reviewed</text>
+  <text class="sub" x="260" y="284">2 of 10 let through in each run</text>
+  <text class="sub" x="260" y="301">34 to 35% routed to review</text>
 </svg>
 <ul class="legend-m">
-  <li><b style="color:var(--red)">Red, path list and deterministic</b>: 7 of 10 passed, 32% reviewed</li>
-  <li><b style="color:var(--green)">Green, hybrid</b>: 2 of 10 passed in each of three runs, 34 to 35% reviewed</li>
-  <li><b style="color:var(--form)">Dashed line</b>: random routing, a random share sent to a senior</li>
+  <li><b>Square, path list and deterministic</b>: 7 of 10 let through, 32% routed to review</li>
+  <li><b style="color:var(--form)">Circle, hybrid</b>: 2 of 10 let through in each of three runs, 34 to 35% routed to review</li>
+  <li><b style="color:var(--form)">Dashed line</b>: what routing a random share to review would let through, on average</li>
 </ul>
 </figure>
 
+<div class="pair">
+  <div class="tile caught">
+    <p class="out">Regression routed to review by the hybrid only</p>
+    <h3><a href="#case-18541">#18541, a one-file change</a></h3>
+    <p>A new <code>useCdn</code> case assigned its value to the resource name. The model named that line; both rule sets allowed it. Reverted the same day.</p>
+  </div>
+  <div class="tile missed">
+    <p class="out">Regression let through by all three</p>
+    <h3><a href="#case-18508">#18508, nine added lines</a></h3>
+    <p>A call removing existing key-management registrations. The model named the mechanism and still rated it low. Redis sites failed to start twelve weeks later.</p>
+  </div>
+</div>
+
 <table>
-  <thead><tr><th>Policy</th><th class="num">Failures passed</th><th class="num">Sent to a senior</th><th class="num">Random at that share</th></tr></thead>
+  <thead><tr><th>Policy</th><th class="num">Known regressions let through</th><th class="num">Routed to review</th><th class="num">Random-routing expectation</th></tr></thead>
   <tbody>
     <tr><td>Path list<small>Migrations, auth, tenants, data, abstractions</small></td><td class="num">7 of 10</td><td class="num">155 of 479</td><td class="num">6.8</td></tr>
     <tr><td>Deterministic<small>Structural signals read from the diff</small></td><td class="num">7 of 10</td><td class="num">155 of 479</td><td class="num">6.8</td></tr>
-    <tr class="hy"><td>Hybrid, 3 runs<small>Same structural triggers; a model reads the rest</small></td><td class="num">2, 2, 2 of 10</td><td class="num">165 to 166 of 479</td><td class="num">6.5</td></tr>
+    <tr class="hy"><td>Hybrid, 3 runs<small>Same structural triggers; a model reads the rest</small></td><td class="num">2, 2, 2 of 10</td><td class="num">165 to 166 of 479</td><td class="num">6.5 to 6.6</td></tr>
   </tbody>
 </table>
-<p class="note">The model does not answer the same way twice, so the hybrid was run three times. It let 2 through each time, but not always the same two: #18508 every time, then #17421 or #17369. Each run caught 5 confirmed failures the rules passed: 4 of them in all three runs, #17369 in two, #17421 in one. 95% intervals, treating the 10 as independent: 35% to 93% of such failures pass for the rules, 3% to 56% for the hybrid (sign test on the 5 discordant cases, p = 0.06, in each run). With 12 incomplete attributions added (22 cases), 14 and 12 passed for the rules, 4 to 6 for the hybrid. When the model answered in a malformed way (2, 1 and 0 times), the decision was UNKNOWN, and UNKNOWN never passes.</p>
+<p class="note"><b>Ten known cases.</b> <b>Retrospective, not blinded:</b> thresholds were selected on 2024, but the 2025 regressions had already been identified. <b>Not a safe-to-merge estimate:</b> 2 of 10 is the share of known regressions let through, not an error rate among allowed changes.</p>
+<details>
+  <summary>Statistics, stability and method details</summary>
+  <ul>
+    <li>95% intervals, treating the 10 as independent: 35% to 93% let through for the rules, 3% to 56% for the hybrid. Sign test on the 5 discordant cases, in each run: p = 0.06. Three runs do not make ten cases thirty.</li>
+    <li>Each run routed to review five confirmed regressions that the deterministic policy allowed. Four were the same across all runs (#17481, #17515, #18121, #18541); the fifth alternated between two cases (#17369 in two runs, #17421 in one). A correct routing is not always a correct diagnosis.</li>
+    <li>The hybrid keeps the structural triggers but replaces the rules' score, so it reroutes rather than only adds: in run 1 it routed 46 changes to review that the deterministic policy allowed, and allowed 35 that it routed to review.</li>
+    <li>The loads are near, not equal: 32.4% against 34.4 to 34.7%. PR counts stand in for review work; review time was not measured.</li>
+    <li>With 12 incomplete attributions added (22 cases): 14 and 12 let through by the rules, 5, 6 and 4 by the hybrid.</li>
+    <li>38 of the 357 model inputs were truncated (over 60,000 characters of diff or 400 files), and the frozen hybrid allowed most of them. A deployable version that never allows a truncated input lets the same 2 of 10 through at 39.7 to 40.3% routed to review.</li>
+    <li>Malformed model answers become UNKNOWN, which is always routed to review: 2, 1 and 0 per run. Every stored answer is checked against the fingerprint of the exact input it was given before it is scored.</li>
+    <li>The gate sees the merged change, its file list and the PR title as read in September 2026 (not proven to be the title at merge; it differs from the squash-commit subject for 92 of 479 changes, never by mentioning a later failure). Model: Claude Sonnet 5, 1,107 calls over three runs, 9.1 million tokens in, 279 thousand out.</li>
+  </ul>
+</details>
 </section>
 
 <section aria-labelledby="cases">
-<h2 id="cases">One it caught, one it missed</h2>
+<h2 id="cases">The two cases, as the gate saw them and as it turned out</h2>
 
-<article class="case">
-  <header><h3><a href="https://github.com/OrchardCMS/OrchardCore/pull/18541">#18541 Add missing useCdn in ScriptBlock</a></h3><span class="stamp red">Hybrid sent it to a senior</span></header>
+<article class="case" id="case-18541">
+  <header><h3><a href="https://github.com/OrchardCMS/OrchardCore/pull/18541">#18541 Add missing useCdn in ScriptBlock</a></h3><span class="stamp green">Regression routed to review</span></header>
   <div class="panes">
     <div class="pane">
       <h4>What the gate saw, at merge on 11 November 2025</h4>
@@ -188,9 +241,9 @@ footer a{color:var(--muted)}
 <span class="add">+     name = (await argument.Expression.EvaluateAsync(context)).ToStringValue();</span>
       break;</pre>
       <ul class="decisions">
-        <li><span>Path list</span><span class="stamp green">Passed</span></li>
-        <li><span>Deterministic, no structural signal</span><span class="stamp green">Passed</span></li>
-        <li><span>Hybrid, model risk 3, 4, 4 of 5 in three runs</span><span class="stamp red">Senior</span></li>
+        <li><span>Path list</span><span class="state allow">Allowed</span></li>
+        <li><span>Deterministic, no structural signal</span><span class="state allow">Allowed</span></li>
+        <li><span>Hybrid, model risk 3, 4, 4 of 5 in three runs</span><span class="state review">Review</span></li>
       </ul>
       <p>The model's reason, first run: “The new "useCdn" case incorrectly assigns to the 'name' variable instead of introducing/using a useCdn variable, so the CDN flag is never actually applied while silently overwriting 'name' if both attributes are used together.”</p>
     </div>
@@ -203,8 +256,8 @@ footer a{color:var(--muted)}
   </div>
 </article>
 
-<article class="case">
-  <header><h3><a href="https://github.com/OrchardCMS/OrchardCore/pull/18508">#18508 Properly register KeyManagementOptions for protection-data</a></h3><span class="stamp green">All three let it pass</span></header>
+<article class="case" id="case-18508">
+  <header><h3><a href="https://github.com/OrchardCMS/OrchardCore/pull/18508">#18508 Properly register KeyManagementOptions for protection-data</a></h3><span class="stamp red">Regression let through by all three</span></header>
   <div class="panes">
     <div class="pane">
       <h4>What the gate saw, at merge on 30 October 2025</h4>
@@ -213,9 +266,9 @@ footer a{color:var(--muted)}
   services.AddTransient&lt;IConfigureOptions&lt;KeyManagementOptions&gt;,
       RedisKeyManagementOptionsSetup&gt;();</pre>
       <ul class="decisions">
-        <li><span>Path list</span><span class="stamp green">Passed</span></li>
-        <li><span>Deterministic, no structural signal</span><span class="stamp green">Passed</span></li>
-        <li><span>Hybrid, model risk 2 of 5 in all three runs</span><span class="stamp green">Passed</span></li>
+        <li><span>Path list</span><span class="state allow">Allowed</span></li>
+        <li><span>Deterministic, no structural signal</span><span class="state allow">Allowed</span></li>
+        <li><span>Hybrid, model risk 2 of 5 in all three runs</span><span class="state allow">Allowed</span></li>
       </ul>
       <p>The model's reason named the mechanism and still rated it low: “could subtly change behavior if another feature also registers KeyManagementOptions setups that were relied upon.”</p>
     </div>
@@ -224,7 +277,7 @@ footer a{color:var(--muted)}
       <p>Twelve weeks on, sites with Redis data protection failed to start with a NullReferenceException. The fix:</p>
       <blockquote>“Fixes a regression introduced by PR #18508. For Redis, the existing IConfigureOptions&lt;KeyManagementOptions&gt; must not be removed, because it is being altered by the RedisKeyManagementOptionsSetup.”</blockquote>
       <p class="quote-src"><a href="https://github.com/OrchardCMS/OrchardCore/pull/18731">#18731</a>, 22 January 2026</p>
-      <p>Removing registrations is a structural fact. The deterministic rule only watched deleted registration lines, not an added call that deletes them: a gap a rule can close.</p>
+      <p>The lesson, kept apart from the frozen rules and not used to rescore them: an added call that removes or replaces existing registrations deserves its own escalation. Widening the old detector would not have been enough, since it was worth one point against a threshold of three.</p>
     </div>
   </div>
 </article>
@@ -233,26 +286,26 @@ footer a{color:var(--muted)}
 <section aria-labelledby="limits">
 <h2 id="limits">What this does not show</h2>
 <ul class="limits">
-  <li><strong>Ten cases are few.</strong> The intervals are wide, and the difference between hybrid and rules rests on 5 cases, one of which the hybrid caught in two runs of three.</li>
-  <li><strong>The labels were written before the rules.</strong> The thresholds were set on 2024 alone and frozen before any 2025 decision or model answer existed, but the 2025 failures had already been identified and their titles read. What argues against rules fitted to 2025: in 2024 the deterministic rules let 7 of 28 through at 32.5% reviewed, where random routing lets 18.9 through; in 2025 they fell to chance.</li>
-  <li><strong>An unlabelled change is not a safe change.</strong> The labels only know failures someone later tied to their cause: a merged revert with a stated defect, or an attribution by a maintainer or in the merged fix, checked against the files. Weaker attributions and CI-only failures, such as a flaky test, are the 22-case line.</li>
-  <li><strong>The model may remember.</strong> Most of these failures were public before its training cutoff (January 2026). Of the five reported after it, three were also caught by the deterministic rules; #17409 is the only one that rests on the model, caught in two runs of three; #18508, reported on 21 January 2026, passed every time. Only a run on new pull requests settles it.</li>
+  <li><strong>Ten cases are few.</strong> The intervals are wide, and the gap between hybrid and rules rests on five cases per run, one of which alternated.</li>
+  <li><strong>It is not a blinded test.</strong> Thresholds were selected on 2024. The rule author had already seen the labelled 2025 cases, so this is an exploratory retrospective comparison, not a blinded holdout.</li>
+  <li><strong>An unlabelled change is not a safe change.</strong> The labels only know regressions someone later tied to their cause: a merged revert with a stated defect, or an attribution by a maintainer or in the merged fix, checked against the files. Weaker attributions and CI-only failures are the 22-case line.</li>
+  <li><strong>The model may remember.</strong> Its training cutoff is January 2026, with no day given. Four labelled failures were reported from February 2026 on: three were also routed to review by the deterministic rules, and #17409 is the only one resting on the model, routed to review in two runs of three. #18508, reported on 21 January 2026, cannot be placed either side of the cutoff. Only a run on new pull requests settles it.</li>
   <li><strong>No test coverage was available.</strong> Missing coverage is unknown, not zero.</li>
   <li><strong>A detected migration is not a safe migration.</strong> Orchard Core migrates with YesSql, not EF, and separates tenants by table prefix or database; the rules detect those changes, they do not prove them safe.</li>
   <li><strong>Passing this gate is not merging.</strong> Real auto-merge also depends on tests, required reviews and branch rules.</li>
 </ul>
 </section>
 
-<section aria-labelledby="yours">
-<h2 id="yours">Run it on your own policy</h2>
+<section aria-labelledby="check">
+<h2 id="check">The same rules as a required check</h2>
 <div class="two">
   <div>
-    <p>The cohort manifest, the labels with their evidence and exclusions, the three policies, every decision with its reason and the model's raw answers are in <a href="https://github.com/fred1433/risk-gate-check">the repository</a>.</p>
-    <p>A policy is one function, <code>decide(snapshot, diff)</code>, returning ALLOW, REVIEW_REQUIRED or UNKNOWN. The replayer scores it against the same 479 changes and 10 failures.</p>
+    <p>The deterministic policy runs as a required GitHub check that fails closed. It judges each pull request with the policy from the base branch, never the one in the pull request, and reads the pull request's code as data without running it.</p>
+    <p>An unknown result never passes. A change routed to review passes only once a named senior other than the author approves that exact commit; a new push leaves the approval behind. <a href="https://github.com/fred1433/risk-gate-check/pull/2">See it on a change to an authorization check</a>.</p>
   </div>
   <div>
-    <p>The deterministic policy also runs as a required GitHub check that fails closed. It judges the pull request with the policy from the base branch, never the one in the pull request. Only a named senior who is not the author can release it, and only for that exact commit: <a href="https://github.com/fred1433/risk-gate-check/pull/2">see it on a change to an authorization check</a>.</p>
-    <p>The model read 357 of the 479 changes in each run: 1,107 calls to Claude Sonnet 5 over three runs, 9.1 million tokens in, 279 thousand out.</p>
+    <p>The cohort manifest, the labels with their evidence and exclusions, the three policies, every decision with its reason and the model's raw answers are in <a href="https://github.com/fred1433/risk-gate-check">the repository</a>, with tests for the check's contract.</p>
+    <p>A policy is one function, <code>decide(snapshot, diff)</code>, returning ALLOW, REVIEW_REQUIRED or UNKNOWN; the replayer scores it against the same 479 changes and 10 regressions.</p>
   </div>
 </div>
 </section>

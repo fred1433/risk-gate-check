@@ -17,6 +17,20 @@ def build_input(snapshot, diff):
     d = diff if len(diff) <= DIFF_BUDGET else diff[:DIFF_BUDGET] + f"\n[diff truncated: {len(diff)} characters in total]"
     return f"Title: {snapshot['title']}\n\nFiles changed:\n{files}{more}\n\nDiff:\n{d}"
 
+def input_complete(snapshot, diff):
+    return len(diff) <= DIFF_BUDGET and len(snapshot["files"]) <= 400
+
+def parse_answer(raw):
+    """Strict: one JSON object, risk a genuine integer 1-5 (not 2.9, not true), reason a non-empty string. Else None."""
+    m = re.search(r"\{.*\}", raw or "", re.S)
+    if not m: return None
+    try: j = json.loads(m.group(0))
+    except ValueError: return None
+    risk, reason = j.get("risk"), j.get("reason")
+    if type(risk) is not int or not 1 <= risk <= 5: return None
+    if not isinstance(reason, str) or not reason.strip(): return None
+    return risk, reason.strip()[:400]
+
 NEUTRAL = tempfile.mkdtemp(prefix="riskgate-neutral-")
 
 def call(snapshot, diff, retries=2):
@@ -35,10 +49,9 @@ def call(snapshot, diff, retries=2):
             att = dict(seconds=round(time.time()-t,1), usage={k:out.get("usage",{}).get(k) for k in ("input_tokens","output_tokens","cache_read_input_tokens","cache_creation_input_tokens")},
                        model=list((out.get("modelUsage") or {}).keys()), is_error=out.get("is_error"), raw=raw)
             rec["attempts"].append(att)
-            m = re.search(r"\{.*\}", raw, re.S)
-            j = json.loads(m.group(0)) if m else None
-            if j and int(j.get("risk",0)) in (1,2,3,4,5) and j.get("reason"):
-                rec.update(status="ok", risk=int(j["risk"]), reason=str(j["reason"])[:400]); return rec
+            v = parse_answer(raw) if (p.returncode == 0 and not out.get("is_error")) else None
+            if v:
+                rec.update(status="ok", risk=v[0], reason=v[1], input_complete=input_complete(snapshot, diff)); return rec
         except Exception as e:
             rec["attempts"].append(dict(seconds=round(time.time()-t,1), error=repr(e)[:300]))
     rec["status"]="malformed_or_failed"; return rec
