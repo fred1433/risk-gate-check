@@ -1,0 +1,25 @@
+{
+ "pr": 17364,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "4ae6cfb12e5a5d9f166cc1de9acb8928521e046d3f74edcbf4e9a57c816af3a9",
+ "attempts": [
+  {
+   "seconds": 4.0,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 115,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1407
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 3, \"reason\": \"The fix handles serialized dictionary inputs but introduces a throw of InvalidCastException for unexpected types (where previously it silently skipped), which could break workflows passing other object shapes for this input key, and relies on JObject conversion round-trip that may not perfectly reconstruct ContentEventContext.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 3,
+ "reason": "The fix handles serialized dictionary inputs but introduces a throw of InvalidCastException for unexpected types (where previously it silently skipped), which could break workflows passing other object shapes for this input key, and relies on JObject conversion round-trip that may not perfectly reconstruct ContentEventContext."
+}

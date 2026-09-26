@@ -1,0 +1,25 @@
+{
+ "pr": 17324,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "721eb1f682a192f58ff77472c77e46ce14b1abc7b95a74aadc391ab7218dc1de",
+ "attempts": [
+  {
+   "seconds": 4.9,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 287,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1152
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 1, \"reason\": \"Purely cosmetic variable rename with an equivalent implicit ValueTask conversion, no behavioral change to the filter's output.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 1,
+ "reason": "Purely cosmetic variable rename with an equivalent implicit ValueTask conversion, no behavioral change to the filter's output."
+}

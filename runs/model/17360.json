@@ -1,0 +1,25 @@
+{
+ "pr": 17360,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "6433758a8c42f71877589115e56e3b8ca015c1040b330f9f603ab9fcb2a778fe",
+ "attempts": [
+  {
+   "seconds": 4.8,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 176,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 3893
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 3, \"reason\": \"Refactors GraphQL input type field resolution (moving from cached ResolvedType instances to Type-based fields and moving schema/field-provider initialization into the constructor) which touches core dynamic schema-building logic used by all content types with fields, so any subtle regression (e.g. shared mutable schema state, timing of field provider resolution, or duplicate scalar graph type registration) could break GraphQL queries across many tenants, though the change appears to fix a real bug and is reasonably scoped.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 3,
+ "reason": "Refactors GraphQL input type field resolution (moving from cached ResolvedType instances to Type-based fields and moving schema/field-provider initialization into the constructor) which touches core dynamic schema-building logic used by all content types with fields, so any subtle regression (e.g. shared mutable schema state, timing of field provider resolution, or duplicate scalar graph type regi"
+}

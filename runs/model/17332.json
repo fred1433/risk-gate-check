@@ -1,0 +1,25 @@
+{
+ "pr": 17332,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "62227e654b46d34e453c411092606bc682d2819844c870efe0d41355460ae8d5",
+ "attempts": [
+  {
+   "seconds": 5.1,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 161,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 2065
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Refactors resolver base class to implement IFieldResolver directly instead of inheriting FuncFieldResolver, which is a low-risk internal change but touches core GraphQL field resolution used across all GraphQL queries/mutations, so any subtle behavior mismatch (e.g., the `new` keyword removal changing dispatch, or `.As<TSourceType>()` conversion semantics) could affect all GQL field resolution site-wide.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Refactors resolver base class to implement IFieldResolver directly instead of inheriting FuncFieldResolver, which is a low-risk internal change but touches core GraphQL field resolution used across all GraphQL queries/mutations, so any subtle behavior mismatch (e.g., the `new` keyword removal changing dispatch, or `.As<TSourceType>()` conversion semantics) could affect all GQL field resolution sit"
+}

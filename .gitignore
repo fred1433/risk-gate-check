@@ -4,3 +4,4 @@ __pycache__/
 data/_*.txt
 .vercel
 site/node_modules
+data/raw/

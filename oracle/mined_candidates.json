@@ -1,0 +1,3564 @@
+[
+ {
+  "pr": 15204,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 15212,
+  "src_title": "Fix string comparison changes in YesSql queries",
+  "when": "2024-01-31",
+  "snips": [
+   "Fix string comparison changes in YesSql queries Reverts some changes introduced by mistake in https://github.com/OrchardCMS/OrchardCore/pull/15204"
+  ]
+ },
+ {
+  "pr": 15143,
+  "kind": "postmerge_comment",
+  "who": "hishamco",
+  "when": "2024-01-23",
+  "snips": [
+   "@MikeAlhayek I just noticed UI issue\r \r ![Screenshot 2024-01-23 095459](https://github.com/OrchardCMS/OrchardCore/assets/3237266/5f2dc221-a108-4af3-bac9-104db2bb596a)\r "
+  ]
+ },
+ {
+  "pr": 15143,
+  "kind": "postmerge_comment",
+  "who": "MikeAlhayek",
+  "when": "2024-01-23",
+  "snips": [
+   "What is the issue? "
+  ]
+ },
+ {
+  "pr": 15138,
+  "kind": "postmerge_comment",
+  "who": "sebastienros",
+  "when": "2024-01-25",
+  "snips": [
+   "This one should be kept even if we are reverting the database name."
+  ]
+ },
+ {
+  "pr": 15114,
+  "kind": "postmerge_comment",
+  "who": "Piedone",
+  "when": "2024-01-30",
+  "snips": [
+   "What's the issue you're seeing?"
+  ]
+ },
+ {
+  "pr": 15035,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 14984,
+  "src_title": "Azure AI Search settings throws, failing to resolve service",
+  "when": "2024-01-10",
+  "snips": [
+   "(mention in a comment) Azure AI Search settings throws, failing to resolve service ### Describe the bug\r \r Settings for the new Azure AI Search are not accessible after setting up a simple site from scratch.\r \r cc @MikeAlhayek \r \r ### To Reproduce\r Create a new Agency site with everything default\r Activate Azure AI Search"
+  ],
+  "comment_snips": [
+   "[MikeAlhayek 2024-01-10] @bleroy PR #15035 will fix the issue you and I experienced with TheBlogTheme. If you pull the latest from the main branch and run the code, you should be able to completely disable Lucene and Elasticsearch and e"
+  ]
+ },
+ {
+  "pr": 15015,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 15019,
+  "src_title": "Release 1.8.1",
+  "when": "2024-01-08",
+  "snips": [
+   "Release 1.8.1 Fix #14999 via #15015\r Fix #14985 via  #15013\r Fix #14983 via #14998"
+  ]
+ },
+ {
+  "pr": 15013,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 15019,
+  "src_title": "Release 1.8.1",
+  "when": "2024-01-08",
+  "snips": [
+   "Release 1.8.1 Fix #14999 via #15015\r Fix #14985 via  #15013\r Fix #14983 via #14998"
+  ]
+ },
+ {
+  "pr": 14998,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 15019,
+  "src_title": "Release 1.8.1",
+  "when": "2024-01-08",
+  "snips": [
+   "Release 1.8.1 Fix #14999 via #15015\r Fix #14985 via  #15013\r Fix #14983 via #14998"
+  ]
+ },
+ {
+  "pr": 14998,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 15715,
+  "src_title": "What was changed in the DI container , v1.9.0-preview-18169",
+  "when": "2024-04-10",
+  "snips": [
+   "(mention in a comment) What was changed in the DI container , v1.9.0-preview-18169 ### Describe the bug\r \r ### To Reproduce\r Steps to reproduce the behavior:\r \r I recently updated to `1.9.0-preview-18169` and found that the original service replacement code did not work and threw the following exception,\r `This service de"
+  ],
+  "comment_snips": [
+   "[hyzx86 2024-04-10] Hi @MikeAlhayek \uff0c is this issue related to  this PR  https://github.com/OrchardCMS/OrchardCore/pull/14998 ?"
+  ]
+ },
+ {
+  "pr": 14989,
+  "kind": "postmerge_comment",
+  "who": "hishamco",
+  "when": "2024-01-09",
+  "snips": [
+   "I just hold my reply because this comment https://github.com/OrchardCMS/OrchardCore/issues/14941#issuecomment-1879697766"
+  ]
+ },
+ {
+  "pr": 14866,
+  "kind": "postmerge_comment",
+  "who": "bashuss",
+  "when": "2024-02-28",
+  "snips": [
+   "Could this change have broken my frontend language picker? After update to 1.8.2 from 1.7.x, a necessary View cannot be found anymore. `ContentCulturePickerContainer.liquid` was used before (for rendering ), but this seems to have changed to `ContentCulturePicker.liquid` - at least, that is the one, which is missing.\r The Culture Picker is part of the main-menu: LinkMenuItem with Text, no link, bu"
+  ]
+ },
+ {
+  "pr": 7446,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 15137,
+  "src_title": "Sqlite DatabaseName read from config not mapped to Options object",
+  "when": "2024-01-20",
+  "snips": [
+   "Sqlite DatabaseName read from config not mapped to Options object ### Describe the bug\r After getting the latest changes (#7446) existing site won't load.\r \r Added DatabaseName to the configuration as described in the documentation, but the site didn't load.\r "
+  ]
+ },
+ {
+  "pr": 7446,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 15154,
+  "src_title": "Keep `yessql.db` as the fallback name for sqlite for backward compatability",
+  "when": "2024-01-23",
+  "snips": [
+   "Keep `yessql.db` as the fallback name for sqlite for backward compatability @hishamco PR #7446 introduced a breaking change. All of my local tenants that use Sqlite are failing because they are expecting a file called `yessql.db` and not t"
+  ]
+ },
+ {
+  "pr": 7446,
+  "kind": "postmerge_comment",
+  "who": "MikeAlhayek",
+  "when": "2024-01-23",
+  "snips": [
+   "@hishamco this caused a problem for me. All my local site that were using Sqllite are no longer working. I think it's because it is now looking for a database named \"OrchardCore\" but I was using \"yessql\".\r \r Here is what you should do here. When creating new sites that use Sqllite, save `\"DatabaseName\": \"OrchardCore.db\",` to the shellSettings. If the shellsettings does not have `DatabaseName` valu"
+  ]
+ },
+ {
+  "pr": 7446,
+  "kind": "postmerge_comment",
+  "who": "hishamco",
+  "when": "2024-01-23",
+  "snips": [
+   "I replied on the newly created issue"
+  ]
+ },
+ {
+  "pr": 15319,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 16141,
+  "src_title": "Prevent crashing crashing the GraphQL schema when SEO feature is also enabled",
+  "when": "2024-05-23",
+  "snips": [
+   "(mention in a comment) Prevent crashing crashing the GraphQL schema when SEO feature is also enabled Fixes #16140 "
+  ],
+  "comment_snips": [
+   "[gvkries 2024-05-23] This does not actually fix the underlaying problem. The problem is that GraphQL types are registered as scoped (as introduced by #15319). Therefore resolving them while building the schema as a singleton fails.\r \r We will encounter these errors again, if we don't fix the way types are registered for GraphQL."
+  ]
+ },
+ {
+  "pr": 15318,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 15380,
+  "src_title": "Fix CORS assets by running gulp",
+  "when": "2024-02-21",
+  "snips": [
+   "Fix CORS assets by running gulp Addresses the issue https://github.com/OrchardCMS/OrchardCore/pull/15318#issuecomment-1955028918 in the PR #15318\r \r /cc @sebastienros ",
+   "Fix CORS assets by running gulp Addresses the issue https://github.com/OrchardCMS/OrchardCore/pull/15318#issuecomment-1955028918 in the PR #15318\r \r /cc @sebastienros "
+  ]
+ },
+ {
+  "pr": 15306,
+  "kind": "postmerge_comment",
+  "who": "sebastienros",
+  "when": "2024-02-21",
+  "snips": [
+   "@lampersky I am looking at this PR as it reflect another problem we saw with one of yours. It appears you don't know about the gulp pipeline we use to generate /wwwroot and minimized files and you updated these by hand which introduced errors. For instance the wwwroot version has the opposite test, and the minimized version was forgotten altogether. We'll fix it in main but it's important you unde"
+  ]
+ },
+ {
+  "pr": 15306,
+  "kind": "postmerge_comment",
+  "who": "MikeAlhayek",
+  "when": "2024-02-21",
+  "snips": [
+   "@lampersky the issue was fix by #15387 "
+  ]
+ },
+ {
+  "pr": 15296,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 15267,
+  "src_title": "\"Blank Recipe\" theme and error at first running: \"InvalidOperationException: The model item passed into the ViewDataDictionary is of type 'OrchardCore.Diagnostics.ViewModels.HttpErrorShapeViewModel', but this ViewDataDictionary instance requires a model item of type 'WebApp.Models.ErrorViewModel'\"",
+  "when": "2026-04-16",
+  "snips": [
+   "(mention in a comment) \"Blank Recipe\" theme and error at first running: \"InvalidOperationException: The model item passed into the ViewDataDictionary is of type 'OrchardCore.Diagnostics.ViewModels.HttpErrorShapeViewModel', but this ViewDataDictionary instance requires a model item of type 'WebApp.Models.ErrorViewModel'\" #"
+  ],
+  "comment_snips": [
+   "[gvkries 2026-04-16] Fixed by #15296"
+  ]
+ },
+ {
+  "pr": 15284,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 10781,
+  "src_title": "GraphQL & Gatsby 3, 4 - not working",
+  "when": "2024-05-18",
+  "snips": [
+   "(mention in a comment) GraphQL & Gatsby 3, 4 - not working OrchardCore does not work with new gatsby versions. \r \r It seems that it is caused by different data type structures. I have tested update of GraphQL .NET update and it helped. \r \r I have also created a PR that resolves this issue.\r \r stacktrace from error here:\r "
+  ],
+  "comment_snips": [
+   "[MikeKry 2024-05-18] dCMS/OrchardCore/pull/9087 that we had done long time ago, but it took kinda long to merge so I forgot because I was locally already using version containing my last commit.\r \r That said - it is working in OrchardCore 1.4 to 1.8. But as @hishamco mentioned, there was another update of GraphQL done (#15284) and I noticed that there were multiple bug reports. That is reason why I did not switch to latest version of OrchardCore yet and I do not know if it works on new version.\r \r But I think we can"
+  ]
+ },
+ {
+  "pr": 15254,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 265,
+  "src_title": "OCC-245: Update OC preview version and fix breaking changes",
+  "when": "2024-07-26",
+  "snips": [
+   "(mention in a comment) OCC-245: Update OC preview version and fix breaking changes [OCC-245](https://lombiq.atlassian.net/browse/OCC-245)  [OCC-245]: https://lombiq.atlassian.net/browse/OCC-245?atlOrigin=eyJpIjoiNWRkNTljNzYxNjVmNDY3MDlhMDU5Y2ZhYzA5YTRkZjUiLCJwIjoiZ2l0aHViLWNvbS1KU1cifQ"
+  ],
+  "comment_snips": []
+ },
+ {
+  "pr": 15229,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 16520,
+  "src_title": "Jalali date time in sitemap.xml",
+  "when": "2024-08-05",
+  "snips": [
+   "(mention in a comment) Jalali date time in sitemap.xml Describe the bug\r Hi,\r In the site map, instead of the Gregorian date, the solar calendar is displayed, which cannot be used in search engines. Our site is bilingual and its main language is Farsi (right to left).\r Like:\r https://t-one-net.com/fa-IR/%D8%AA%D9%85%D8%A7"
+  ],
+  "comment_snips": [
+   "[MikeAlhayek 2024-08-05] I think PR #15229 fixes this issue. This fix is part of OC 2.0.0 preview. Are you able to try it with the 2.0.0 previews?"
+  ]
+ },
+ {
+  "pr": 15215,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 15129,
+  "src_title": "Upgrade graphql  to 7.7.2",
+  "when": "2024-02-02",
+  "snips": [
+   "(mention in a comment) Upgrade graphql  to 7.7.2 Make a note of any problems you encounter during the upgrade\r - [x] Upgrade the dependency package to `GraphQL 7.7.2`\r - [x] All FieldType builds in the project were reconstructed in the way `Graphql-dotnet 7.x` recommended\r - [x] fix Operation is not valid due to the curre"
+  ],
+  "comment_snips": [
+   "[sebastienros 2024-02-02] https://github.com/OrchardCMS/OrchardCore/pull/15215 has been merged and needs to be updated."
+  ]
+ },
+ {
+  "pr": 14572,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 692,
+  "src_title": "Upgrade to latest OC preview to test System.Text.Json (OSOE-795)",
+  "when": "2024-02-04",
+  "snips": [
+   "Upgrade to latest OC preview to test System.Text.Json (OSOE-795) After https://github.com/OrchardCMS/OrchardCore/pull/14572, OC now uses `System.Text.Json` instead of Json.NET. So, let's upgrade to this preview version and test if anything is broken.\r \r - [x] Op"
+  ]
+ },
+ {
+  "pr": 14572,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 15365,
+  "src_title": "Update the ContentElement constructor",
+  "when": "2024-02-19",
+  "snips": [
+   "Update the ContentElement constructor PR #14572 changed the constructor type from protected to internal. I do not see the reason for this change but it cause breaking change for anyone that i"
+  ]
+ },
+ {
+  "pr": 14572,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 15397,
+  "src_title": "\"ContentDefinition.PopulateSettings\" inconsistent documentation",
+  "when": "2024-02-24",
+  "snips": [
+   "/src/OrchardCore/OrchardCore.ContentManagement.Abstractions/Metadata/Models/ContentDefinition.cs#L14) says \r \r > Do not access this property directly. Migrate to use GetSettings and **PopulateSettings**.\r \r But `PopulateSettings` has been removed in #14572. This makes the property documentation confusing, and also makes migration to 1.9.0 harder. I see that in the PR usages of the method have been",
+   "ttings` has been removed in #14572. This makes the property documentation confusing, and also makes migration to 1.9.0 harder. I see that in the PR usages of the method have been [expanded into direct access](https://github.com/OrchardCMS/OrchardCore/pull/14572/files#diff-fa1e2ac156a7991674caa1250f26d5ef3e38211e2844cd58f806d874cc071359L13) of `ContentDefinition.Settings`.\r \r ### Discussion\r \r Base"
+  ]
+ },
+ {
+  "pr": 14572,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 16364,
+  "src_title": "Fix graphql where clause when database schema is configured",
+  "when": "2024-07-02",
+  "snips": [
+   "(mention in a comment) Fix graphql where clause when database schema is configured <!--- Please make sure that you're familiar with our contribution guidelines before submitting a pull request: https://docs.orchardcore.net/en/latest/guides/contributing/. -->\r \r Fix #14627 \r \r The old code `Dialect.QuoteForTableName(tableA"
+  ],
+  "comment_snips": []
+ },
+ {
+  "pr": 14572,
+  "kind": "postmerge_comment",
+  "who": "Piedone",
+  "when": "2024-02-04",
+  "snips": [
+   "We'll first need to finish [the 1.8 upgrade](https://github.com/Lombiq/Open-Source-Orchard-Core-Extensions/issues/638) but after that we'll look into this: https://github.com/Lombiq/Open-Source-Orchard-Core-Extensions/issues/692. Please wait with an 1.9 release for that because that can bring up a lot of feedback."
+  ]
+ },
+ {
+  "pr": 13181,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 692,
+  "src_title": "Upgrade to latest OC preview to test System.Text.Json (OSOE-795)",
+  "when": "2024-04-27",
+  "snips": [
+   "rom there. After this issue is done, we won't yet merge this to `dev`, waiting for that for OC v2.0.\r - [x] Upgrade OC as usual.\r - [x] Change all of our code that uses Json.NET to use STJ instead.\r - [x] The https://github.com/OrchardCMS/OrchardCore/pull/13181 PR [changed the registration order of the authentication middleware](https://github.com/OrchardCMS/OrchardCore/pull/13181/files#diff-79fba",
+   "usual.\r - [x] Change all of our code that uses Json.NET to use STJ instead.\r - [x] The https://github.com/OrchardCMS/OrchardCore/pull/13181 PR [changed the registration order of the authentication middleware](https://github.com/OrchardCMS/OrchardCore/pull/13181/files#diff-79fbaf725f0ce29f3982bdf05070824259b3cb3e0f5a523324151423cadef58cL520). This might break [`BlockMediaThemeTemplateDirectAccessMi"
+  ]
+ },
+ {
+  "pr": 15524,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 15590,
+  "src_title": "Taxonomy Terms Management is broken",
+  "when": "2024-03-27",
+  "snips": [
+   "(mention in a comment) Taxonomy Terms Management is broken ### Describe the bug\r Terms in a Taxonomy cannot be deleted and hierarchy cannot be created\r \r ### To Reproduce\r Steps to reproduce the behavior:\r 1. Create a new site with Blog Recipe\r 2. Go To Category Taxonomy\r 3. Add a new term\r 4. Publish\r 5. Try to delete a "
+  ],
+  "comment_snips": [
+   "[hyzx86 2024-03-27] @hishamco , No\uff0cThe PR #15509 just and some method \uff0c \r looking at the logs, it looks like the problem is with the JNode class,\r PR https://github.com/OrchardCMS/OrchardCore/pull/15524 was update the JNode  class,\r @sarahelsaig  can you  take a look \uff1f"
+  ]
+ },
+ {
+  "pr": 15509,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 15590,
+  "src_title": "Taxonomy Terms Management is broken",
+  "when": "2024-03-27",
+  "snips": [
+   "(mention in a comment) Taxonomy Terms Management is broken ### Describe the bug\r Terms in a Taxonomy cannot be deleted and hierarchy cannot be created\r \r ### To Reproduce\r Steps to reproduce the behavior:\r 1. Create a new site with Blog Recipe\r 2. Go To Category Taxonomy\r 3. Add a new term\r 4. Publish\r 5. Try to delete a "
+  ],
+  "comment_snips": [
+   "[hishamco 2024-03-27] @hyzx86 this PR #15509 should fix the issue, right? or Shall I did a similar fix to the admin menu",
+   "[hyzx86 2024-03-27] @hishamco , No\uff0cThe PR #15509 just and some method \uff0c \r looking at the logs, it looks like the problem is with the JNode class,\r PR https://github.com/OrchardCMS/OrchardCore/pull/15524 was update the JNode  class,\r @sarahels"
+  ]
+ },
+ {
+  "pr": 15500,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 16989,
+  "src_title": "Unable to delete sub menus",
+  "when": "2024-11-11",
+  "snips": [
+   "Unable to delete sub menus 8 months ago we fixed an issue with deleting the menu #15500 but it seems no one reported that sub-menus are not deleted even after the fix. This PR fixes both\r \r Related to #15497\r \r /cc @sarahelsaig "
+  ]
+ },
+ {
+  "pr": 15471,
+  "kind": "postmerge_comment",
+  "who": "sebastienros",
+  "when": "2024-03-07",
+  "snips": [
+   "So we are hoping this doesn't break anything, the issue wasn't to fix an actual problem but something that looked odd. It's totally possible that some other feature was using (or could use in the future) these wrappers even if the shape was not rendered (e.g. content preview, placement, shape debugger, ...)"
+  ]
+ },
+ {
+  "pr": 15471,
+  "kind": "postmerge_comment",
+  "who": "douwinga",
+  "when": "2024-03-07",
+  "snips": [
+   "Hmmm, I bet this change would actually cause an issue with admin templates and shape rendering. It would no longer obey the hide check. Should probably keep that check on the TitlePart.Edit. it seemed like an innocent change"
+  ]
+ },
+ {
+  "pr": 15471,
+  "kind": "postmerge_comment",
+  "who": "sebastienros",
+  "when": "2024-03-07",
+  "snips": [
+   "If you can do some test and see if nothing is broken, otherwise we'll just revert the change."
+  ]
+ },
+ {
+  "pr": 15471,
+  "kind": "postmerge_comment",
+  "who": "douwinga",
+  "when": "2024-03-07",
+  "snips": [
+   "Ya, I will look tonight and try to fix any issues. Having an empty div isn't ideal. I wonder if these wrappers were just to give JavaScript something to target or something."
+  ]
+ },
+ {
+  "pr": 15471,
+  "kind": "postmerge_comment",
+  "who": "MikeAlhayek",
+  "when": "2024-03-08",
+  "snips": [
+   "I tested the change before merging and it worked as expected with no issues. But another set of eyes wont hurt."
+  ]
+ },
+ {
+  "pr": 15471,
+  "kind": "postmerge_comment",
+  "who": "douwinga",
+  "when": "2024-03-08",
+  "snips": [
+   "I was wrong. Having `{{ Model.Parts.TitlePart | shape_render }}` in an admin template does still obey the hidden setting. So far nothing else has broken either."
+  ]
+ },
+ {
+  "pr": 15471,
+  "kind": "postmerge_comment",
+  "who": "douwinga",
+  "when": "2024-03-08",
+  "snips": [
+   "It breaks with a placement.json with the following:\r \r ```\r {\r   \"TitlePart_Edit\": [\r     {\r       \"place\": \"Parts:0\",\r       \"displayType\": \"Edit\"\r     }\r   ]\r }\r ```\r If we do the `TitlePartOptions.GeneratedHidden` check in `TitlePart.Edit.cshtml` it works correctly as the only thing that is broken is that it no longer is checking that and shows when it should be hidden.\r \r I can do a PR to just"
+  ]
+ },
+ {
+  "pr": 15471,
+  "kind": "postmerge_comment",
+  "who": "douwinga",
+  "when": "2024-03-08",
+  "snips": [
+   "> shape debugger\r \r Not sure what that is to test"
+  ]
+ },
+ {
+  "pr": 15460,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 16837,
+  "src_title": "Don't configure JsonOptions by default",
+  "when": "2024-10-04",
+  "snips": [
+   "(mention in a comment) Don't configure JsonOptions by default Fix #16831\r \r "
+  ],
+  "comment_snips": [
+   "[MikeAlhayek 2024-10-04] > It introducing a breaking-change\r \r I would say this is a bug in 2.0 and should be fixed. If someone already build on the top of the bug, we should fix the bug and release it. We should document it as a breaking change due to a bug.\r \r > Why we have it before?\r \r Not sure but I added it in #15460\r ",
+   "[Piedone 2024-10-07] How did https://github.com/OrchardCMS/OrchardCore/pull/15460 fix its issue originally (since it wasn't about web APIs), and how does this not break what it fixed?",
+   "[Piedone 2024-10-08] So, how did https://github.com/OrchardCMS/OrchardCore/pull/15460 fix its issue originally (since it wasn't about web APIs), and how does this not break what it fixed?"
+  ]
+ },
+ {
+  "pr": 15438,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 15375,
+  "src_title": "Script type=\"module\" issue",
+  "when": "2024-03-13",
+  "snips": [
+   "(mention in a comment) Script type=\"module\" issue ### Describe the bug\r \r When using `<script asp-name=\"something\" type=\"module\">` the dependent scripts also gets a type=\"module\" parameter added to its script tag if it is defined in a ResourceManagementOptionsConfiguration as a dependency.\r \r ### To Reproduce\r \r ```\r     "
+  ],
+  "comment_snips": [
+   "[Piedone 2024-03-13] I'm not sure I understand. Why did you approve https://github.com/OrchardCMS/OrchardCore/pull/15438 without them, then? Otherwise, please create an issue for unit tests."
+  ]
+ },
+ {
+  "pr": 15438,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 17283,
+  "src_title": "RequireSettings.Attributes are lost for dependencies",
+  "when": "2024-12-27",
+  "snips": [
+   "gs requireSettings = _orchardCoreResourceManager.RegisterResource(resourceType, resourceName);     AppendNonce(requireSettings, resourceType); // Sets the \"nonce\" HTML attribute     return requireSettings; } ```  I think this can change be traced to #15438.  ```cs // Settings is given so the location can cascade down into dependencies. For example, if Foo depends on Bar, // and Foo's required loca",
+   "script B to stick around. Should the `New` method be copying those?  I think the intention of the PR was to stop script A's attributes from cascading to script B, but it is maybe an unintended side effect that script B's attributes are lost.  Before #15438 it would have called `NewAndCombine` which did copy the attributes.  **EDIT:** This is my mistake. It is not true that script B's attributes ar"
+  ]
+ },
+ {
+  "pr": 15407,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 15381,
+  "src_title": "OrchardCore.Contents API: Admin user is not able to GET a content, an error 401 unauthorized is returned, but if I grant all privileges to the \"anonymous\" user role, it works",
+  "when": "2024-05-21",
+  "snips": [
+   "(mention in a comment) OrchardCore.Contents API: Admin user is not able to GET a content, an error 401 unauthorized is returned, but if I grant all privileges to the \"anonymous\" user role, it works ### Describe the bug\r \r According to what discussed [here](https://github.com/OrchardCMS/OrchardCore/discussions/15372#discus"
+  ],
+  "comment_snips": [
+   "[kevinchalet 2024-05-21] The description has been fixed in https://github.com/OrchardCMS/OrchardCore/pull/15407. Closing."
+  ]
+ },
+ {
+  "pr": 15407,
+  "kind": "postmerge_comment",
+  "who": "MarGraz",
+  "when": "2024-03-13",
+  "snips": [
+   "@sebastienros, the issue was born from the fact that the \"OpenId Authorization Server\" does not automatically activate the \"OpenId Token Validation\". As a result, the \"OpenId Token Validation\" feature remained deactivated. I assumed, like others I think, that token validation by the server was automatic and required no additional actions. However, attempting to access `ApiController.cs` within `Or"
+  ]
+ },
+ {
+  "pr": 15364,
+  "kind": "postmerge_comment",
+  "who": "hyzx86",
+  "when": "2024-03-11",
+  "snips": [
+   "It seems that this change would require tweaking existing config file,\r This is because the old version of the `NLog.config` file will not log anything after updating the latest package\r \r \r "
+  ]
+ },
+ {
+  "pr": 15276,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 6814,
+  "src_title": "There is a bug in rename operation.",
+  "when": "2025-05-15",
+  "snips": [
+   "(mention in a comment) There is a bug in rename operation. https://github.com/OrchardCMS/OrchardCore/blob/dc1c2016e5fbbafd7033928ebd124d85faf79f37/src/OrchardCore.Modules/OrchardCore.Media/wwwroot/Scripts/media.js#L602\r \r After rename operation, if we don't refresh the page, there will be no update for the link of the cor"
+  ],
+  "comment_snips": [
+   "[gvkries 2025-05-15] Fixed by #15276"
+  ]
+ },
+ {
+  "pr": 15887,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 15927,
+  "src_title": "Fix docs broken logo and redirect from old URLs (Lombiq Technologies: OCORE-165)",
+  "when": "2024-04-30",
+  "snips": [
+   "Fix docs broken logo and redirect from old URLs (Lombiq Technologies: OCORE-165) I've broken the logo on the docs page in https://github.com/OrchardCMS/OrchardCore/pull/15887, ironically, and fixing that here (didn't realize that `docs_dir` also affects the public URLs).\r \r ![image](https://github.com/OrchardCMS"
+  ]
+ },
+ {
+  "pr": 15767,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 15826,
+  "src_title": "Release v1.8.3 (Lombiq Technologies: OCORE-162)",
+  "when": "2024-04-25",
+  "snips": [
+   "(mention in a comment) Release v1.8.3 (Lombiq Technologies: OCORE-162) Fix #15824"
+  ],
+  "comment_snips": []
+ },
+ {
+  "pr": 15736,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 16619,
+  "src_title": "User Registration Validation Lists Email Missing Error Twice",
+  "when": "2024-08-28",
+  "snips": [
+   "(mention in a comment) User Registration Validation Lists Email Missing Error Twice <!-- Please also see the docs on how we manage issues: https://docs.orchardcore.net/en/latest/docs/guides/contributing/managing-issues/. -->\r \r ### Describe the bug\r Registration produces duplicate \"Email is required\" messages when the sub"
+  ],
+  "comment_snips": [
+   "[gvkries 2024-08-28] This issue has been fixed in 2.0, but by #15736. "
+  ]
+ },
+ {
+  "pr": 15735,
+  "kind": "postmerge_comment",
+  "who": "Piedone",
+  "when": "2024-04-19",
+  "snips": [
+   "I'm joking with Mike, but I genuinely asked for your feedback under https://github.com/OrchardCMS/OrchardCore/pull/15735#issuecomment-2062459518. Certainly no offense intended. Sorry if it came over like that."
+  ]
+ },
+ {
+  "pr": 15735,
+  "kind": "postmerge_comment",
+  "who": "Skrypt",
+  "when": "2024-04-19",
+  "snips": [
+   "Yeah, it sounded like if I was abusing my contributor role by blocking PR's and altering them to meet some requirements.\r I never had that issue here in 10 years?\r \r @MikeAlhayek All of this starts with trolling me on : \"should I test this?\" on meetings, PR's and then here by making allusions. I don't like where this discussion is going to be honest.  I was really not making a joke when I said las"
+  ]
+ },
+ {
+  "pr": 15735,
+  "kind": "postmerge_comment",
+  "who": "Piedone",
+  "when": "2024-04-19",
+  "snips": [
+   "It wasn't really meant against you like that. Let me try to clear it up; I'll kill the joke by explaining it (including Mike's part, how I understand it, but of course I don't speak for him), but of course, a joke is only good if everyone can laugh at it, and apparently this wasn't a good one. And it's better to talk through conflicts too much than too little.\r \r 1. Since you were involved with th"
+  ]
+ },
+ {
+  "pr": 15679,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 15925,
+  "src_title": "Revert \"Remove redirect to index after settings update\"",
+  "when": "2024-04-30",
+  "snips": [
+   "Revert \"Remove redirect to index after settings update\" Reverts OrchardCMS/OrchardCore#15679  <!-- This is an auto-generated comment: release notes by coderabbit.ai -->  ## Summary by CodeRabbit  - **New Features** \t- Enhanced site sett"
+  ]
+ },
+ {
+  "pr": 15679,
+  "kind": "postmerge_comment",
+  "who": "sebastienros",
+  "when": "2024-04-09",
+  "snips": [
+   "I believe we should keep a redirect after POSTs or refreshing the pages will do a re-submission.\r The problem is probably a caching issue, and the Index action should re-load the information to display."
+  ]
+ },
+ {
+  "pr": 15668,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 17901,
+  "src_title": "Fix null exception of Nlog",
+  "when": "2025-05-07",
+  "snips": [
+   "(mention in a comment) Fix null exception of Nlog fix #17896 \r "
+  ],
+  "comment_snips": []
+ },
+ {
+  "pr": 15651,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 16445,
+  "src_title": "Unsafe async behavior in `DefaultShapeTableManager`",
+  "when": "2024-07-16",
+  "snips": [
+   " cache is built, it causes a database deadlock. This can break the site although only in a short time frame after startup so the threat impact is limited. Still, it should be fixed asap.\r \r ### Orchard Core version\r \r Latest main, all previews since #15651.\r \r ### To Reproduce\r \r I wasn't able to create an easy repro, but I've experienced this in OrchardCore.Commerce (https://github.com/OrchardCMS"
+  ]
+ },
+ {
+  "pr": 15620,
+  "kind": "postmerge_comment",
+  "who": "hyzx86",
+  "when": "2024-04-10",
+  "snips": [
+   "Hi @sebastienros ,Is this issue realted to this PR https://github.com/OrchardCMS/OrchardCore/issues/15715 \uff1f"
+  ]
+ },
+ {
+  "pr": 15488,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 15792,
+  "src_title": "Release notes about SectionDisplayDriver breaking changes",
+  "when": "2024-04-19",
+  "snips": [
+   "(mention in a comment) Release notes about SectionDisplayDriver breaking changes @piedone"
+  ],
+  "comment_snips": [
+   "[Piedone 2024-04-19] Related to https://github.com/OrchardCMS/OrchardCore/pull/15488."
+  ]
+ },
+ {
+  "pr": 15488,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 15811,
+  "src_title": "asp-for taghelper not working properly in DisplayDrivers",
+  "when": "2024-04-23",
+  "snips": [
+   "asp-for taghelper not working properly in DisplayDrivers As a follow up to #15488\r When a custom validation is required in the UpdateEditorAsync method of a display driver.\r The asp-for taghelper doesn't display the proper mu"
+  ]
+ },
+ {
+  "pr": 15488,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 15875,
+  "src_title": "Add a way to queue releasing shell context from setting display drivers",
+  "when": "2024-04-25",
+  "snips": [
+   "(mention in a comment) Add a way to queue releasing shell context from setting display drivers Fix #15884\r \r ### Goals\r  1. The settings drivers should not release the shell context.\r  2. Add a way for the settings display drivers to request reloading the shell. \r  3. Only reload the tenant when requested and the model st"
+  ],
+  "comment_snips": [
+   "[MikeAlhayek 2024-04-25] @Skrypt it seems that some of the display drivers were not updated in #15488. I made the changes here along with adding Queue `site.QueueReleaseShellContext()`"
+  ]
+ },
+ {
+  "pr": 15488,
+  "kind": "postmerge_comment",
+  "who": "Piedone",
+  "when": "2024-04-19",
+  "snips": [
+   "Wait, wasn't this prematurely merged? Is this really fully solving the issue? Also, this seems like a breaking change, which needs to be documented in the release notes, and since the recommendations for module authors also changed regarding how to handle ViewModel updates, that needs to be added to the release notes too."
+  ]
+ },
+ {
+  "pr": 15488,
+  "kind": "postmerge_comment",
+  "who": "Skrypt",
+  "when": "2024-04-19",
+  "snips": [
+   "It was discussed on today's meeting that even if we are adding obsolete methods it will break the SectionDisplayDriver usage. It is not solving the entire issue but I will dig further down the issue by myself on my spare time.\r The only thing needed to be added in the Readme is to say that we broke the SectionDisplayDriver by using the UpdateEditorContext.\r \r Of course the issue with the asp-for s"
+  ]
+ },
+ {
+  "pr": 15488,
+  "kind": "postmerge_comment",
+  "who": "Piedone",
+  "when": "2024-04-19",
+  "snips": [
+   "I see, thanks for explaining. Would it be good to have an issue for this for visibility, and to keep brainstorming there?"
+  ]
+ },
+ {
+  "pr": 15389,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 15926,
+  "src_title": "Move UserType to OC.Users.Core",
+  "when": "2024-04-30",
+  "snips": [
+   "Move UserType to OC.Users.Core PR #15389 introduced a module-to-module reference which we denied from the beginning, and tonight @sebastienros mentioned this during the meeting\r \r /cc "
+  ]
+ },
+ {
+  "pr": 15173,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 19660,
+  "src_title": "Enhance folder-level authorization and SignalR integration for media",
+  "when": "2026-08-06",
+  "snips": [
+   "(mention in a comment) Enhance folder-level authorization and SignalR integration for media This pull request introduces enhancements to folder-level authorization for the Media module, ensuring that users only see and receive updates for media folders they are permitted to access. The changes span both backend API endpoi"
+  ],
+  "comment_snips": [
+   "[sebastienros 2026-08-06] https://github.com/OrchardCMS/OrchardCore/pull/15173"
+  ]
+ },
+ {
+  "pr": 13764,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 19103,
+  "src_title": "Fix Content Picker TitlePattern not being displayed",
+  "when": "2026-04-03",
+  "snips": [
+   "Fix Content Picker TitlePattern not being displayed Since PR #13764, the title pattern configured in a content picker field was not displayed anymore.\r \r Fixes #19086"
+  ]
+ },
+ {
+  "pr": 16143,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 16182,
+  "src_title": "GraphQL schema building fails and is inefficient",
+  "when": "2024-05-28",
+  "snips": [
+   "GraphQL schema building fails and is inefficient ### Describe the bug\r After merging #16143, building the GraphQL schema may fail if a field is resolved through DI multiple times.\r E.g. if we have a content type with a media field and "
+  ]
+ },
+ {
+  "pr": 16139,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 16224,
+  "src_title": "Don't Serialize in GetValue<> of Dictionary Extensions",
+  "when": "2024-06-03",
+  "snips": [
+   "Don't Serialize in GetValue<> of Dictionary Extensions In the PR #16139 I introduced a change how get get a value from dictionary. This PR removes that logic to prevent new issues\r \r @sebastienros "
+  ]
+ },
+ {
+  "pr": 16139,
+  "kind": "postmerge_comment",
+  "who": "sebastienros",
+  "when": "2024-05-28",
+  "snips": [
+   "Workflow activities seem to pass a ContentItem around using a well-known constant.\r \r It seems that previously (with Newtonsoft JSON) this item was an `IContent` and now it's a Dictionary<string, object>`. We should understand why this change happened and if instead we should ensure that the object that flows is of `IContent`, by doing the correct deserialization once.\r \r ```\r 138. content = workf"
+  ]
+ },
+ {
+  "pr": 16135,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 11673,
+  "src_title": "Plus signs in Media file or folder name break Media Library links and previews",
+  "when": "2024-05-28",
+  "snips": [
+   "(mention in a comment) Plus signs in Media file or folder name break Media Library links and previews ### Describe the bug\r if i upload a file named `aaa+++.jpg` to azure storage. it will lost in preview page.\r \r ### To Reproduce\r Steps to reproduce the behavior:\r 1. Upload a file named `aaa+++.png` in media library page."
+  ],
+  "comment_snips": [
+   "[gvkries 2024-05-28] I thought that maybe #16135 fixes issue #16163 as well, but I couldn't repro it from the main branch with local files (on Windows). So not sure if it still is an issue or has been fixed. Can someone else check again? Than"
+  ]
+ },
+ {
+  "pr": 16077,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 18290,
+  "src_title": "IContentManager.GetAsync(IEnumerable<string> contentItemIds) no longer returns the ContentItems with the same order",
+  "when": "2025-08-29",
+  "snips": [
+   "(mention in a comment) IContentManager.GetAsync(IEnumerable<string> contentItemIds) no longer returns the ContentItems with the same order ### Describe the bug  IContentManager.GetAsync(IEnumerable<string> contentItemIds) no longer returns the ContentItems with the same order as the input  ### Orchard Core version  2.1.9 "
+  ],
+  "comment_snips": [
+   "[gvkries 2025-08-29] It has been changed in https://github.com/OrchardCMS/OrchardCore/pull/16077. "
+  ]
+ },
+ {
+  "pr": 16077,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 18295,
+  "src_title": "Update the behavior breaking change in `GetAsync(IEnumerable<string> contentItemIds, VersionOptions options = null)`",
+  "when": "2025-08-30",
+  "snips": [
+   "(mention in a comment) Update the behavior breaking change in `GetAsync(IEnumerable<string> contentItemIds, VersionOptions options = null)` Fix #18290\r \r "
+  ],
+  "comment_snips": []
+ },
+ {
+  "pr": 16054,
+  "kind": "postmerge_comment",
+  "who": "kevinchalet",
+  "when": "2024-05-14",
+  "snips": [
+   "> OK, thanks. Just that it's unusual for a PR to have a milestone, but when it's for the upcoming concrete release then that means we really want it to have in it. So, I was confused.\r \r Haha, I do that with all my PRs (not just here, but basically everywhere), as it's a very easy way for users to know when the change(s) introduced by a PR ship(s) (otherwise they have to look at the merged commit "
+  ]
+ },
+ {
+  "pr": 15954,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 16099,
+  "src_title": "BagPart/FlowPart editors couldn't be collapsed",
+  "when": "2024-05-20",
+  "snips": [
+   "(mention in a comment) BagPart/FlowPart editors couldn't be collapsed Fixes #16103"
+  ],
+  "comment_snips": []
+ },
+ {
+  "pr": 15942,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 16346,
+  "src_title": "Database breaks when multiple features are enabled in a single recipe",
+  "when": "2024-06-19",
+  "snips": [
+   "(mention in a comment) Database breaks when multiple features are enabled in a single recipe ### Describe the bug\r \r Recipe with certain features will crash the database both in SQLite and MS SQL. Happens both with setup and recipe execution. It's not clear yet if the problem is caused by a single recipe's migrations or i"
+  ],
+  "comment_snips": [
+   "[Piedone 2024-06-19]  the frontend**. I can't repro just by looking around on the admin, including content editors, but opening the Blog Post of the Blog recipe surfaces it.\r \r All the errors in the issue seem like a concurrency issue during recipe import that we recently fixed: https://github.com/OrchardCMS/OrchardCore/pull/15942. Setting `YesSqlOptions.EnableThreadSafetyChecks` surfaces such issues, and if I enable it, I get:\r \r ```\r System.InvalidOperationException: Two concurrent threads have been detected acces"
+  ]
+ },
+ {
+  "pr": 15820,
+  "kind": "postmerge_comment",
+  "who": "Piedone",
+  "when": "2024-05-24",
+  "snips": [
+   "@hishamco @MikeAlhayek @sebastienros If you asked the author something and the issue should be closed if they don't reply, now you can add the `needs author feedback` label. This will automatically mark the issue as stale after 15 days, and then close it after another 7."
+  ]
+ },
+ {
+  "pr": 15793,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 16213,
+  "src_title": "Inconsistent UrlHelper behavior when two different endpoints have the same action name and use `[Admin(\"url template\")]`",
+  "when": "2024-06-02",
+  "snips": [
+   "(mention in a comment) Inconsistent UrlHelper behavior when two different endpoints have the same action name and use `[Admin(\"url template\")]` ### Describe the bug\r \r I found inconsistent behavior when your module has two different controllers with matching action names (one with default routing and one with custom routi"
+  ],
+  "comment_snips": [
+   "[Piedone 2024-06-02] This is a regression. To confirm: does this only happen with `[Admin]` or any other custom routing (`[Route]` or routes declared in the `Startup`) too?\r \r This has a chance to be related to https://github.com/OrchardCMS/OrchardCore/pull/15793. @gvkries do you perhaps have an idea if this is plausible?\r \r In any case, the suggested fixes look good, though I'd like to understand why this got broken (or rather, how did it work bef",
+   "[gvkries 2024-06-03] I can't confirm or disagree that it's caused by #15793. I'm seeing the same behavior before and after this change, but I don't see any other PR that could have caused this behavior change in the specified time period. Maybe I did something wrong wh"
+  ]
+ },
+ {
+  "pr": 15793,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 16229,
+  "src_title": "Recipes Improvements",
+  "when": "2024-06-03",
+  "snips": [
+   "Recipes Improvements One of the issues with recipes is that we currently tie a recipe to a specific feature when a module has multiple features. This should not longer be a limitation.\r \r Since #15793 was merged, we should be able to tie a service to a feature with no problems. With that, we should be able to register multiple instanced of th"
+  ]
+ },
+ {
+  "pr": 15793,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 16324,
+  "src_title": "Fixes that type/feature mappings are not available during setup",
+  "when": "2024-06-14",
+  "snips": [
+   "Fixes that type/feature mappings are not available during setup This reverts some of the changes made by #15793. Especially, the population of the `ITypeFeatureProvider` was completley moved into the `ShellContainerFactory`. But this is too late e.g. for ",
+   "pletley moved into the `ShellContainerFactory`. But this is too late e.g. for the `CompositionStrategy` which already requires some types being populated.\r \r So I've moved that part back to the `ExtensionManager`, where it originally was done before #15793. This does not change the new behavior of having multiple features per type or the automatic detection of the feature without the `FeatureAttri"
+  ]
+ },
+ {
+  "pr": 15793,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 16346,
+  "src_title": "Database breaks when multiple features are enabled in a single recipe",
+  "when": "2024-06-19",
+  "snips": [
+   "(mention in a comment) Database breaks when multiple features are enabled in a single recipe ### Describe the bug\r \r Recipe with certain features will crash the database both in SQLite and MS SQL. Happens both with setup and recipe execution. It's not clear yet if the problem is caused by a single recipe's migrations or i"
+  ],
+  "comment_snips": [
+   "[gvkries 2024-06-19] At first I had the feeling this could be caused by #15793, but it actually looks like a STJ problem. The Facebook widgets migration fails:\r \r ```\r OrchardCore.Data.Migration.DataMigrationManager: Error: Error while running migration version 0 for 'Orc"
+  ]
+ },
+ {
+  "pr": 15714,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 15810,
+  "src_title": "Avoid cloning the AutoroutePart pattern in the localized content",
+  "when": "2024-05-03",
+  "snips": [
+   "(mention in a comment) Avoid cloning the AutoroutePart pattern in the localized content Fixes #15805  <!-- This is an auto-generated comment: release notes by coderabbit.ai -->  ## Summary by CodeRabbit  - **New Features**   - Enhanced content localization by automatically regenerating permalinks when localizing content. "
+  ],
+  "comment_snips": []
+ },
+ {
+  "pr": 16356,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 16386,
+  "src_title": "Fix theme manager script",
+  "when": "2024-06-28",
+  "snips": [
+   "Fix theme manager script The PR #16356 moved some of the theme related scripts into `OrchardCore.Themes` but did not include all the theme reusable scripts.\r \r Here is a summary of t"
+  ]
+ },
+ {
+  "pr": 16326,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 16378,
+  "src_title": "Rebuilding Lucene Index fails",
+  "when": "2024-06-27",
+  "snips": [
+   "(mention in a comment) Rebuilding Lucene Index fails ### Describe the bug\r Rebuilding Lucene Index in one of my tenants fails with the Error `SqlException: Invalid column name 'Target'.` and the Stacktrace shown below. Creating a fresh Lucene Index works on that tenant, rebuilding it fails.\r \r On a different tenant rebuil"
+  ],
+  "comment_snips": [
+   "[MikeAlhayek 2024-06-27] This issue was caused by PR #16326 \r "
+  ]
+ },
+ {
+  "pr": 16326,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 16380,
+  "src_title": "Add Target column to the LinkFieldIndex table",
+  "when": "2024-07-02",
+  "snips": [
+   "(mention in a comment) Add Target column to the LinkFieldIndex table Fix #16378\r \r <!--- Please make sure that you're familiar with our contribution guidelines before submitting a pull request: https://docs.orchardcore.net/en/latest/guides/contributing/. -->"
+  ],
+  "comment_snips": [
+   "[sebastienros 2024-07-02] So nobody agrees with my comments ? (https://github.com/OrchardCMS/OrchardCore/pull/16326#issuecomment-2191143589) we just accept anything in the index? (or graphql, sql index, ... why stop there). Even when there is an obvious alternative: adding fields using existing types."
+  ]
+ },
+ {
+  "pr": 16326,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 16397,
+  "src_title": "Remove 'Target' from LinkFieldIndex",
+  "when": "2024-07-02",
+  "snips": [
+   "(mention in a comment) Remove 'Target' from LinkFieldIndex Fix #16378\r \r /cc: @sebastienros "
+  ],
+  "comment_snips": []
+ },
+ {
+  "pr": 16317,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 462,
+  "src_title": "Prevent NuGet audit warnings from failing the CI builds and set up automated package updates with Dependabot (OCC-263)",
+  "when": "2024-07-10",
+  "snips": [
+   "ak the CI build, requiring quick fixes like https://github.com/OrchardCMS/OrchardCore.Commerce/commit/34ae00470e954459f19f688c9bfc51d196c386ca.\r \r ### Describe the solution you'd like\r \r Do what I did for OC: https://github.com/OrchardCMS/OrchardCore/pull/16317. This needs automated package updates with Dependabot though, so these vulnerabilities don't remain for long.\r \r ### Describe alternatives"
+  ]
+ },
+ {
+  "pr": 16284,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 16317,
+  "src_title": "Prevent NuGet audit warnings from failing the CI builds (Lombiq Technologies: OCORE-184)",
+  "when": "2024-06-13",
+  "snips": [
+   "happen any time, and thus all our CI builds could break anytime, without us changing the code\r \r These warnings should still be addressed ASAP, of course, but they shouldn't block all other development. After https://github.com/OrchardCMS/OrchardCore/pull/16284 this will happen automatically.\r \r I tried to do this in a way that we still see the warning even in CI builds but couldn't succeed.\r \r FY"
+  ]
+ },
+ {
+  "pr": 16269,
+  "kind": "postmerge_comment",
+  "who": "Piedone",
+  "when": "2024-06-10",
+  "snips": [
+   "I was waiting for approval because even if I did this small change to the best of my abilities, it can be incorrect, like with any PRs :).\r \r To be clear, I just pinged you three because since this bug is affecting everyone working on OC, I thought it's important to get reviewed ASAP by **any** of you. Not because **all** three of you need to review it. I'll make that clear next time."
+  ]
+ },
+ {
+  "pr": 16264,
+  "kind": "postmerge_comment",
+  "who": "hishamco",
+  "when": "2024-06-09",
+  "snips": [
+   "Related to same comment [here](https://github.com/OrchardCMS/OrchardCore/pull/16224#issuecomment-2156755121)"
+  ]
+ },
+ {
+  "pr": 16257,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 16223,
+  "src_title": "About enabling features in the setup recipe",
+  "when": "2024-06-07",
+  "snips": [
+   "(mention in a comment) About enabling features in the setup recipe <!-- Please also see the docs on how we manage issues: https://docs.orchardcore.net/en/latest/docs/guides/contributing/managing-issues/. -->\r \r ### Describe the bug\r \r I refer to this project only as a module that automatically opens tenants, it works fine"
+  ],
+  "comment_snips": [
+   "[gvkries 2024-06-07] Has this been fixed by https://github.com/OrchardCMS/OrchardCore/pull/16257?"
+  ]
+ },
+ {
+  "pr": 16238,
+  "kind": "postmerge_comment",
+  "who": "hishamco",
+  "when": "2024-06-06",
+  "snips": [
+   "I forgot at the beginning that we need to implement the interface for `IPermissionProvider` so making them sealed will prevent the inheritance which might be right currently but if anyone wants to extend the permission we could mark them `virtual`\r \r If you looked into my first comment https://github.com/OrchardCMS/OrchardCore/pull/16238#issuecomment-2148530361 startup methods are overridable but "
+  ]
+ },
+ {
+  "pr": 16234,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 16580,
+  "src_title": "SQL document queries don't work on older existing tenants",
+  "when": "2024-08-19",
+  "snips": [
+   "hese databases the document ID column is `int` instead of `bigint`, which is the case for newer tenants:\r \r ![image](https://github.com/user-attachments/assets/8c07ad39-f057-4070-ad11-5ee25755e35e)\r \r This was fine in 1.8, but became a problem after #16234 where the assumption that the document ID column must be `long` [is hard coded](https://github.com/OrchardCMS/OrchardCore/blob/7d9ba09f95f88210"
+  ]
+ },
+ {
+  "pr": 16227,
+  "kind": "postmerge_comment",
+  "who": "MikeAlhayek",
+  "when": "2024-06-04",
+  "snips": [
+   "IMO, if there is a need to place one after another, then we should use unique values to guaranty the order. But, if there we don't care if CORS came before Security or the other way around, then I don't see the value of adding a unique value. In other words, if either Security or CORS were registered first, there should not be any issue. "
+  ]
+ },
+ {
+  "pr": 16208,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 16670,
+  "src_title": "ContentCulturePicker still not working with liquid templates (since v1.8.0)",
+  "when": "2024-09-05",
+  "snips": [
+   "(mention in a comment) ContentCulturePicker still not working with liquid templates (since v1.8.0) ### Describe the bug\r \r Since the release 1.8.0, OC is not able to render ContentCulturePicker using liquid templates (a RuntimeBinderException is thrown)\r \r ### Orchard Core version\r \r We try to update our installation ever"
+  ],
+  "comment_snips": [
+   "[sebastienros 2024-09-05] [This PR](https://github.com/OrchardCMS/OrchardCore/pull/16208) is the one adding `supported_cultures` and `CultureInfo` registration such that `Name`, `DisplayName` and other properties can be used. This was done for 2.0 however.\r \r A simple mitigati"
+  ]
+ },
+ {
+  "pr": 16208,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 16675,
+  "src_title": "Refactor Culture and supported_cultures",
+  "when": "2024-09-05",
+  "snips": [
+   "Refactor Culture and supported_cultures In this PR https://github.com/OrchardCMS/OrchardCore/pull/16208\r \r 1. `Culture` was introduced to represent the selected culture for the context. We should just be able to return a new ObjectValue with "
+  ]
+ },
+ {
+  "pr": 16441,
+  "kind": "postmerge_comment",
+  "who": "Piedone",
+  "when": "2024-07-15",
+  "snips": [
+   "There are analyzers for this that we can add under https://github.com/OrchardCMS/OrchardCore/issues/7950."
+  ]
+ },
+ {
+  "pr": 16415,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 16405,
+  "src_title": "Enabling feature breaks Admin Menu",
+  "when": "2024-07-11",
+  "snips": [
+   "(mention in a comment) Enabling feature breaks Admin Menu ### Describe the bug\r Enabled any feature seems to break the Admin Menu. I think this is SJT related issue\r \r ### Orchard Core version\r \r Add the version of the Orchard Core NuGet packages you use, or the commit hash if you can reproduce this with the source code.\r"
+  ],
+  "comment_snips": [
+   "[MikeAlhayek 2024-07-11] PR #16415 seems to have fixed this issue!"
+  ]
+ },
+ {
+  "pr": 16402,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 454,
+  "src_title": "OCC-245: Upgrade to latest OC preview to test System.Text.Json",
+  "when": "2024-07-25",
+  "snips": [
+   "(mention in a comment) OCC-245: Upgrade to latest OC preview to test System.Text.Json [OCC-245](https://lombiq.atlassian.net/browse/OCC-245) Fixes #442"
+  ],
+  "comment_snips": []
+ },
+ {
+  "pr": 16402,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 17120,
+  "src_title": "Fixing Queried Content Items query validation (Lombiq Technologies: OCORE-209)",
+  "when": "2024-12-04",
+  "snips": [
+   "re that you're familiar with our contribution guidelines before submitting a pull request: https://docs.orchardcore.net/en/latest/guides/contributing/. -->\r Fixes #17102. The code was originally introduced in https://github.com/OrchardCMS/OrchardCore/pull/16402. Seems like a no-brainer fix but perhaps I'm not thinking of some gotcha."
+  ]
+ },
+ {
+  "pr": 16351,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 16512,
+  "src_title": "Unable to enable/disable workflow task from the workflow editor",
+  "when": "2024-08-01",
+  "snips": [
+   "(mention in a comment) Unable to enable/disable workflow task from the workflow editor <!-- Please also see the docs on how we manage issues: https://docs.orchardcore.net/en/latest/docs/guides/contributing/managing-issues/. -->\r \r ### Describe the bug\r When editing workflow, clicking on any event does not give you the pow"
+  ],
+  "comment_snips": [
+   "[MikeAlhayek 2024-08-01] I think this PR is causing this issue\r \r https://github.com/OrchardCMS/OrchardCore/pull/16351\r "
+  ]
+ },
+ {
+  "pr": 16644,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 16673,
+  "src_title": "OnDisplaying in custom ShapeTableProvider does not populate data anymore in some cases",
+  "when": "2024-09-05",
+  "snips": [
+   "(mention in a comment) OnDisplaying in custom ShapeTableProvider does not populate data anymore in some cases <!-- Please also see the docs on how we manage issues: https://docs.orchardcore.net/en/latest/docs/guides/contributing/managing-issues/. -->\r \r ### Describe the bug\r \r after upgrading from v1.8.3 to the current bu"
+  ],
+  "comment_snips": [
+   "[MikeAlhayek 2024-09-05] @Habbni, are you by any chance using caching for your shapes?\r \r We encountered an issue where the initializer (e.g., `Initialize<ContentOptionsViewModel>(\"ContentsAdminListCreate\", m =>`) was being called every time, even when the object was cached. This was resolved in PR #16644, which ensures the initializer is only called if the shape is not cached.\r \r I believe this change in behavior might be what you're experiencing."
+  ]
+ },
+ {
+  "pr": 16636,
+  "kind": "postmerge_comment",
+  "who": "sebastienros",
+  "when": "2024-08-31",
+  "snips": [
+   "Is it even worth backporting since there will be a new release soon with this improvement? Why this more that any other bug (not advocating to backport all bugs).\r \r I think we should backport security vulnerabilities, critical bugs (a feature can't be used reasonably) and regressions.\r \r This \"could\" fall in the \"critical bugs\" since in @MikeKry 's case the feature doesn't work with their amount "
+  ]
+ },
+ {
+  "pr": 16634,
+  "kind": "postmerge_comment",
+  "who": "MikeAlhayek",
+  "when": "2024-08-30",
+  "snips": [
+   "@gvkries I corrected the title of issue. :)"
+  ]
+ },
+ {
+  "pr": 16552,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 16619,
+  "src_title": "User Registration Validation Lists Email Missing Error Twice",
+  "when": "2024-08-26",
+  "snips": [
+   "(mention in a comment) User Registration Validation Lists Email Missing Error Twice <!-- Please also see the docs on how we manage issues: https://docs.orchardcore.net/en/latest/docs/guides/contributing/managing-issues/. -->\r \r ### Describe the bug\r Registration produces duplicate \"Email is required\" messages when the sub"
+  ],
+  "comment_snips": [
+   "[MikeAlhayek 2024-08-26] This issue was fixed in 2.0 via #16552\r ",
+   "[gvkries 2024-08-27] > This issue was fixed in 2.0 via #16552\r \r Nope, that was a different issue. \r \r I remember that I fixed this issue a long time ago, but it was re-introduced shortly afterwards by #11130 which I did not notice.\r \r But now in 2.0 the "
+  ]
+ },
+ {
+  "pr": 16539,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 16557,
+  "src_title": "Add HttpContextExtensions for GetActionContextAsync",
+  "when": "2024-08-14",
+  "snips": [
+   "(mention in a comment) Add HttpContextExtensions for GetActionContextAsync Fixes #16554 "
+  ],
+  "comment_snips": []
+ },
+ {
+  "pr": 16539,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 16572,
+  "src_title": "Changing code-scope to file-scope commit broke PRs",
+  "when": "2024-08-15",
+  "snips": [
+   "Changing code-scope to file-scope commit broke PRs As expected merging merging #16539 broke all existing PRs"
+  ]
+ },
+ {
+  "pr": 16539,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 16712,
+  "src_title": "Fix the return value in Composite.TryGetIndex()",
+  "when": "2024-09-11",
+  "snips": [
+   "Fix the return value in Composite.TryGetIndex() Fixes bug introduced in PR #16539"
+  ]
+ },
+ {
+  "pr": 16533,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 16552,
+  "src_title": "Fire the login failed event only once when a known user login fails.",
+  "when": "2024-08-13",
+  "snips": [
+   "(mention in a comment) Fire the login failed event only once when a known user login fails. Fixes #16551"
+  ],
+  "comment_snips": [
+   "[MikeAlhayek 2024-08-13] Because of comments like https://github.com/OrchardCMS/OrchardCore/pull/16533#pullrequestreview-2226013055 . Giving others chance to look at it.\r \r \r \r "
+  ]
+ },
+ {
+  "pr": 16531,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 16540,
+  "src_title": "`depends-on` in script/style tag helpers don't cause the dependency to be included if it wasn't already",
+  "when": "2024-08-07",
+  "snips": [
+   "d if it wasn't already <!-- Please also see the docs on how we manage issues: https://docs.orchardcore.net/en/latest/docs/guides/contributing/managing-issues/. -->\r \r ### Describe the bug\r \r Following up from https://github.com/OrchardCMS/OrchardCore/pull/16531#discussion_r1706235403.\r \r The `depends-on` attribute available in script/tag helpers looks like it should work the same as declaring a de"
+  ]
+ },
+ {
+  "pr": 15003,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 217,
+  "src_title": "Disable old media field GraphQL fields by default.",
+  "when": "2024-08-09",
+  "snips": [
+   "Disable old media field GraphQL fields by default. #15003 introduced a new GraphQL type `files` to group all media item properties together. However, the old fields were left intact, resulting in dupli"
+  ]
+ },
+ {
+  "pr": 15003,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 16546,
+  "src_title": "Disable old media field GraphQL fields by default.",
+  "when": "2024-08-09",
+  "snips": [
+   "Disable old media field GraphQL fields by default. #15003 introduced a new GraphQL type `files` to group all media item properties together. However, the old fields were left intact, resulting in dupli"
+  ]
+ },
+ {
+  "pr": 16777,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 1,
+  "src_title": "deps: Bump Azure.Storage.Blobs and 16 others",
+  "when": "2026-04-11",
+  "snips": [
+   "s.Functional/cypress-commands by @\u200bdependabot in https://github.com/OrchardCMS/OrchardCore/pull/16785 * Fix NRE when the user set their time zone as the site's (Lombiq Technologies: OCORE-200) by @\u200bPiedone in https://github.com/OrchardCMS/OrchardCore/pull/16777  ... (truncated)  ## 2.0.2  Maintenance release to revert some changes that were included in v2.0.1 by mistake.  **See the full [release n",
+   "s.Functional/cypress-commands by @\u200bdependabot in https://github.com/OrchardCMS/OrchardCore/pull/16785 * Fix NRE when the user set their time zone as the site's (Lombiq Technologies: OCORE-200) by @\u200bPiedone in https://github.com/OrchardCMS/OrchardCore/pull/16777  ... (truncated)  ## 2.0.2  Maintenance release to revert some changes that were included in v2.0.1 by mistake.  **See the full [release n"
+  ]
+ },
+ {
+  "pr": 16757,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 16784,
+  "src_title": "ConcurrencyException in SearchContentItems API with ContentPickerFields",
+  "when": "2024-09-24",
+  "snips": [
+   "(mention in a comment) ConcurrencyException in SearchContentItems API with ContentPickerFields <!-- Please also see the docs on how we manage issues: https://docs.orchardcore.net/en/latest/docs/guides/contributing/managing-issues/. -->\r \r ### Describe the bug\r Currently if you have multiple `ContentPickerField`s using the"
+  ],
+  "comment_snips": [
+   "[dannyd89 2024-09-24] This might have been fixed on main with #16757 because I currently can't reproduce it on main.\r \r Any idea if this might warrant a service release?"
+  ]
+ },
+ {
+  "pr": 16753,
+  "kind": "postmerge_comment",
+  "who": "mvarblow",
+  "when": "2024-09-19",
+  "snips": [
+   "@MikeAlhayek Thanks for jumping on these issues and PR's so quickly! "
+  ]
+ },
+ {
+  "pr": 16738,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 16739,
+  "src_title": "ContainedPartIndex fails when DisplayText over 255 chars long",
+  "when": "2024-09-18",
+  "snips": [
+   "(mention in a comment) ContainedPartIndex fails when DisplayText over 255 chars long Hi! There's a bug in ContainedPartIndex. It fails when you try to add an item with very long DisplayText (over 255 chars) to the component's list. It happens as ContainedPartIndex.DisplayText column has maximum length of 255 chars but pro"
+  ],
+  "comment_snips": [
+   "[XopcT 2024-09-18] Fixed by this PR: https://github.com/OrchardCMS/OrchardCore/pull/16738"
+  ]
+ },
+ {
+  "pr": 16732,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 1,
+  "src_title": "deps: Bump Azure.Storage.Blobs and 16 others",
+  "when": "2026-04-11",
+  "snips": [
+   "b.com/OrchardCMS/OrchardCore/pull/16730 * Revert \"Disable CentralPackageTransitivePinningEnabled\" by @\u200bMikeAlhayek in https://github.com/OrchardCMS/OrchardCore/pull/16731 * Update packages by @\u200bMikeAlhayek in https://github.com/OrchardCMS/OrchardCore/pull/16732 * Fix templates file conflicts by @\u200bsebastienros in https://github.com/OrchardCMS/OrchardCore/pull/16733 * Add icon.png and Fix Preview GH",
+   "b.com/OrchardCMS/OrchardCore/pull/16730 * Revert \"Disable CentralPackageTransitivePinningEnabled\" by @\u200bMikeAlhayek in https://github.com/OrchardCMS/OrchardCore/pull/16731 * Update packages by @\u200bMikeAlhayek in https://github.com/OrchardCMS/OrchardCore/pull/16732 * Fix templates file conflicts by @\u200bsebastienros in https://github.com/OrchardCMS/OrchardCore/pull/16733 * Add icon.png and Fix Preview GH"
+  ]
+ },
+ {
+  "pr": 16732,
+  "kind": "postmerge_comment",
+  "who": "Piedone",
+  "when": "2024-09-16",
+  "snips": [
+   "The bot doesn't care about the build or tests, it'll open a PR with the package updates and watch as both fail without issues. So, I don't know."
+  ]
+ },
+ {
+  "pr": 16731,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 1,
+  "src_title": "deps: Bump Azure.Storage.Blobs and 16 others",
+  "when": "2026-04-11",
+  "snips": [
+   "ll/16720 * Disable CentralPackageTransitivePinningEnabled by @\u200bMikeAlhayek in https://github.com/OrchardCMS/OrchardCore/pull/16730 * Revert \"Disable CentralPackageTransitivePinningEnabled\" by @\u200bMikeAlhayek in https://github.com/OrchardCMS/OrchardCore/pull/16731 * Update packages by @\u200bMikeAlhayek in https://github.com/OrchardCMS/OrchardCore/pull/16732 * Fix templates file conflicts by @\u200bsebastienro",
+   "ll/16720 * Disable CentralPackageTransitivePinningEnabled by @\u200bMikeAlhayek in https://github.com/OrchardCMS/OrchardCore/pull/16730 * Revert \"Disable CentralPackageTransitivePinningEnabled\" by @\u200bMikeAlhayek in https://github.com/OrchardCMS/OrchardCore/pull/16731 * Update packages by @\u200bMikeAlhayek in https://github.com/OrchardCMS/OrchardCore/pull/16732 * Fix templates file conflicts by @\u200bsebastienro"
+  ]
+ },
+ {
+  "pr": 16730,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 16731,
+  "src_title": "Revert \"Disable CentralPackageTransitivePinningEnabled\"",
+  "when": "2024-09-16",
+  "snips": [
+   "Revert \"Disable CentralPackageTransitivePinningEnabled\" Reverts OrchardCMS/OrchardCore#16730"
+  ]
+ },
+ {
+  "pr": 16730,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 1,
+  "src_title": "deps: Bump Azure.Storage.Blobs and 16 others",
+  "when": "2026-04-11",
+  "snips": [
+   "rdCore/pull/16717 * RedisCacheWrapper shouldn't implement IDisposable by @\u200bhishamco in https://github.com/OrchardCMS/OrchardCore/pull/16720 * Disable CentralPackageTransitivePinningEnabled by @\u200bMikeAlhayek in https://github.com/OrchardCMS/OrchardCore/pull/16730 * Revert \"Disable CentralPackageTransitivePinningEnabled\" by @\u200bMikeAlhayek in https://github.com/OrchardCMS/OrchardCore/pull/16731 * Updat",
+   "rdCore/pull/16717 * RedisCacheWrapper shouldn't implement IDisposable by @\u200bhishamco in https://github.com/OrchardCMS/OrchardCore/pull/16720 * Disable CentralPackageTransitivePinningEnabled by @\u200bMikeAlhayek in https://github.com/OrchardCMS/OrchardCore/pull/16730 * Revert \"Disable CentralPackageTransitivePinningEnabled\" by @\u200bMikeAlhayek in https://github.com/OrchardCMS/OrchardCore/pull/16731 * Updat"
+  ]
+ },
+ {
+  "pr": 16721,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 16805,
+  "src_title": "Fix RegistrationSettingsDisplayDriver.UpdateAsync()",
+  "when": "2024-09-27",
+  "snips": [
+   "Fix RegistrationSettingsDisplayDriver.UpdateAsync() Fixes a bug introduced in #16721"
+  ]
+ },
+ {
+  "pr": 16720,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 1,
+  "src_title": "deps: Bump Azure.Storage.Blobs and 16 others",
+  "when": "2026-04-11",
+  "snips": [
+   "/16715 * Avoid NRE in PartDefinition in ContentPartHandlerCoordinator by @\u200bhishamco in https://github.com/OrchardCMS/OrchardCore/pull/16717 * RedisCacheWrapper shouldn't implement IDisposable by @\u200bhishamco in https://github.com/OrchardCMS/OrchardCore/pull/16720 * Disable CentralPackageTransitivePinningEnabled by @\u200bMikeAlhayek in https://github.com/OrchardCMS/OrchardCore/pull/16730 * Revert \"Disabl",
+   "/16715 * Avoid NRE in PartDefinition in ContentPartHandlerCoordinator by @\u200bhishamco in https://github.com/OrchardCMS/OrchardCore/pull/16717 * RedisCacheWrapper shouldn't implement IDisposable by @\u200bhishamco in https://github.com/OrchardCMS/OrchardCore/pull/16720 * Disable CentralPackageTransitivePinningEnabled by @\u200bMikeAlhayek in https://github.com/OrchardCMS/OrchardCore/pull/16730 * Revert \"Disabl"
+  ]
+ },
+ {
+  "pr": 16713,
+  "kind": "postmerge_comment",
+  "who": "sebastienros",
+  "when": "2024-09-13",
+  "snips": [
+   "I think it's important to explain the intent of such changes, at least sharing what the scopes of the service is and why this change is better. So I dug a little... \r \r The wrapper is a singleton, at first I didn't see why calling Dispose is better in any way. Being a singleton everything will be release once the application stops.\r \r However I looked into the history of this \"Wrapper\". And it see"
+  ]
+ },
+ {
+  "pr": 16713,
+  "kind": "postmerge_comment",
+  "who": "hishamco",
+  "when": "2024-09-13",
+  "snips": [
+   "I will revert the commit, but at least we should mark this class as `sealed`, right?"
+  ]
+ },
+ {
+  "pr": 16713,
+  "kind": "postmerge_comment",
+  "who": "sebastienros",
+  "when": "2024-09-13",
+  "snips": [
+   "> I will revert the commit, but at least we should mark this class as sealed, right?\r \r Yes this is fine, in your someone will also add the comments on the class to explain why it should not dispose the redis cache.\r "
+  ]
+ },
+ {
+  "pr": 16651,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 17233,
+  "src_title": "OpenId.Validation feature configuration does not allow authorities from Settings UI",
+  "when": "2024-12-19",
+  "snips": [
+   "(mention in a comment) OpenId.Validation feature configuration does not allow authorities from Settings UI ### Describe the bug\r \r OpenId Validation settings UI displays an error when I try to save settings with a valid authority (which is my external IDP) and leaving \"Tenant\" field empty. As documented here [https://docs"
+  ],
+  "comment_snips": [
+   "[kevinchalet 2024-12-19] > @kevinchalet do you agree with the assumption?\r \r Yeah, this scenario used to work correctly but it seems we broke it with https://github.com/OrchardCMS/OrchardCore/pull/16651 (not sure how I missed that...).\r \r We should definitely fix it and release a new major/patch version urgently."
+  ]
+ },
+ {
+  "pr": 16614,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 16932,
+  "src_title": "IUserTimeZoneService no longer caches user requests",
+  "when": "2024-10-28",
+  "snips": [
+   "IUserTimeZoneService no longer caches user requests this pr  #16614 has made some changes to how the users time zones are cached which makes the cache useless.\r \r this code in `UserTimeZoneSelector` now retrieve"
+  ]
+ },
+ {
+  "pr": 15539,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 16986,
+  "src_title": "Release 2.0.3",
+  "when": "2024-11-10",
+  "snips": [
+   "Release 2.0.3 The SMS Azure Module is missing in `2.0.1` and `2.0.2` which were merged on Sept 26\r \r SMS Azure was introduced in #15539 and merged on Sept 16, this patch release adds the missing support. FYI I verified that the feature is missing with two clients\r \r "
+  ]
+ },
+ {
+  "pr": 15539,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 16988,
+  "src_title": "SMS Azure Module is missing in `2.0.x` releases",
+  "when": "2024-11-11",
+  "snips": [
+   "SMS Azure Module is missing in `2.0.x` releases ### Describe the bug\r \r The SMS Azure Module is missing in 2.0.1 and 2.0.2 which were merged on Sept 26\r \r SMS Azure was introduced in https://github.com/OrchardCMS/OrchardCore/pull/15539 and merged on Sept 16, this patch release adds the missing support. FYI I verified that the feature is missing with two clients\r \r ### Orc"
+  ]
+ },
+ {
+  "pr": 15539,
+  "kind": "postmerge_comment",
+  "who": "hishamco",
+  "when": "2024-11-11",
+  "snips": [
+   "The first time I saw such BOT when it was introduced."
+  ]
+ },
+ {
+  "pr": 16919,
+  "kind": "postmerge_comment",
+  "who": "Skrypt",
+  "when": "2024-10-31",
+  "snips": [
+   "You are swallowing the exception? I would rather report it.\r Here the issue is that if someone creates a bad Query nothing will tell why it fails.\r It will just return no result without any hint on what's wrong with the Query."
+  ]
+ },
+ {
+  "pr": 16896,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 16843,
+  "src_title": "Add support of Elasticsearch Token Filters",
+  "when": "2024-10-17",
+  "snips": [
+   "(mention in a comment) Add support of Elasticsearch Token Filters Fixes #16384\r \r Also:\r 1. Added displaying of \"settings\" segment of elastic search, to make sure, that analyzers with token filters were created.\r 2. Analyzers that contain filters will be created with \"default\" name\r \r Now it is available to create analyze"
+  ],
+  "comment_snips": [
+   "[hishamco 2024-10-17] @denispetrische could you please fix the conflict to react to my recent changes in #16896",
+   "[denispetrische 2024-10-17] > @denispetrische could you please fix the conflict to react to my recent changes in #16896\r \r Done"
+  ]
+ },
+ {
+  "pr": 16872,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 19267,
+  "src_title": "Validate Azure media container name and fix CreateContainer copy regression (#17597)",
+  "when": "2026-05-20",
+  "snips": [
+   "ures emit a dedicated error message, and the generic catch now includes the container name.\r - Fix MediaBlobStorageOptionsConfiguration. Furtherconfigure to copy CreateContainer from raw options. The class-default of true had been masking this since #16872; setting \"CreateContainer\": false in configuration was silently ignored.\r - Cover both with unit tests under test/OrchardCore.Tests/Modules/Orc"
+  ]
+ },
+ {
+  "pr": 16862,
+  "kind": "postmerge_comment",
+  "who": "hishamco",
+  "when": "2024-10-10",
+  "snips": [
+   "@MikeAlhayek seems this PR causes a bug that I'm trying to figure out, the step name is sometimes not the same as the class name, that's why PR 16866 has been broken"
+  ]
+ },
+ {
+  "pr": 16862,
+  "kind": "postmerge_comment",
+  "who": "MikeAlhayek",
+  "when": "2024-10-10",
+  "snips": [
+   "The unit issue in #16865 is not caused by this PR. that one is because the expected settings is not the same as the found settings"
+  ]
+ },
+ {
+  "pr": 16862,
+  "kind": "postmerge_comment",
+  "who": "hishamco",
+  "when": "2024-10-10",
+  "snips": [
+   "I'm checking, hope it's not a unit test bug :)"
+  ]
+ },
+ {
+  "pr": 16858,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 17103,
+  "src_title": "Database locking error when logging in",
+  "when": "2024-12-02",
+  "snips": [
+   "(mention in a comment) Database locking error when logging in <!-- Please also see the docs on how we manage issues: https://docs.orchardcore.net/en/latest/docs/guides/contributing/managing-issues/. -->\r <!-- Please replace all placeholders such as this below. -->\r \r ### Describe the bug\r During login to my orchard tenant"
+  ],
+  "comment_snips": [
+   "[MikeAlhayek 2024-12-02] @jimitndiaye do you only notice this issue when the tenant is first created \"and the site was not reloaded\"?\r \r I think your issue was fixed in OC 2 (via PR #16858). If you can upgrade, that would be great and test."
+  ]
+ },
+ {
+  "pr": 16843,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 17012,
+  "src_title": "Custom analyzers in Elasticsearch no longer work",
+  "when": "2024-11-14",
+  "snips": [
+   "          ]\r         }\r       }\r     }\r ```\r Create an index using the custom `knowledgebase_analyzer`. Now try to search for anything you'll get an error \r \r > [multi_match] analyzer [knowledgebase_analyzer] not found\r \r This issue was caused by PR #16843\r "
+  ]
+ },
+ {
+  "pr": 16837,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 16831,
+  "src_title": "Microsoft.AspNetCore.Mvc.JsonOptions uses default instead of OC JOptions settings",
+  "when": "2024-10-09",
+  "snips": [
+   "(mention in a comment) Microsoft.AspNetCore.Mvc.JsonOptions uses default instead of OC JOptions settings ### Describe the bug\r Only `Microsoft.AspNetCore.Http.Json.JsonOptions` is [configured here](https://github.com/OrchardCMS/OrchardCore/blob/main/src/OrchardCore/OrchardCore/Modules/Extensions/ServiceCollectionExtension"
+  ],
+  "comment_snips": [
+   "[wAsnk 2024-10-08] uring deserialization I was missing data.\r While I didn't know the exact problem I just copied the `Http.JsonOptions` to the `Mvc.JsonOptions` and used that everywhere.\r My final solution now is that I removed the `Http.JsonOptions` like you [did in your PR](https://github.com/OrchardCMS/OrchardCore/pull/16837/files#diff-f29031364746f48326f6229655d9eb6a2b8d2dba01025a843fc90481198d000f). And also now I generate the class with a public setter for the collection. Now I can serialize-deserialize bac",
+   "[Piedone 2024-10-09] Fixed by https://github.com/OrchardCMS/OrchardCore/pull/16837."
+  ]
+ },
+ {
+  "pr": 16837,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 16836,
+  "src_title": "Configure both Microsoft.AspNetCore.Http.Json.JsonOptions & Microsoft.AspNetCore.Mvc.JsonOptions using DocumentJsonSerializerOptions defaults",
+  "when": "2024-10-09",
+  "snips": [
+   "(mention in a comment) Configure both Microsoft.AspNetCore.Http.Json.JsonOptions & Microsoft.AspNetCore.Mvc.JsonOptions using DocumentJsonSerializerOptions defaults This pull request includes changes to the `JsonOptionsConfigurations` class to support both `HttpJsonOptions` and `MvcJsonOptions` configurations.\r \r Fixes #1"
+  ],
+  "comment_snips": [
+   "[Piedone 2024-10-09] Fixed in https://github.com/OrchardCMS/OrchardCore/pull/16837."
+  ]
+ },
+ {
+  "pr": 16820,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 16823,
+  "src_title": "Revert \"Batch Dependabot updates per directories (Lombiq Technologies: OCORE-202)\"",
+  "when": "2024-10-03",
+  "snips": [
+   "Revert \"Batch Dependabot updates per directories (Lombiq Technologies: OCORE-202)\" Reverts OrchardCMS/OrchardCore#16820"
+  ]
+ },
+ {
+  "pr": 16820,
+  "kind": "postmerge_comment",
+  "who": "Piedone",
+  "when": "2024-10-03",
+  "snips": [
+   "Well, the syntax has some issue, because apparently, `directory: \"/src/OrchardCore\"` won't look into subdirectories: https://github.com/OrchardCMS/OrchardCore/actions/runs/11170531519/job/31053550016  Only `directories` can do that.\r \r However, based on https://github.com/OrchardCMS/OrchardCore/actions/runs/11170531558/job/31053549983, even that wouldn't work well, because due to centralized packa"
+  ]
+ },
+ {
+  "pr": 16687,
+  "kind": "postmerge_comment",
+  "who": "MikeAlhayek",
+  "when": "2025-01-28",
+  "snips": [
+   "@SzymonSel please create an issue to track."
+  ]
+ },
+ {
+  "pr": 17050,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 16905,
+  "src_title": "Remove any default implementations from interfaces",
+  "when": "2024-11-25",
+  "snips": [
+   "mplementation in interfaces to avoid breaking change. With a major release, we should remove the default implementations and document this as a break change. Here are some of the interfaces that should be modified:\r \r - [x] ILoginFormEvent (Done via #17050)\r - [ ] Others"
+  ]
+ },
+ {
+  "pr": 17050,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 18682,
+  "src_title": "Remove default implementations from interfaces and obsolete members for v3.0",
+  "when": "2026-01-06",
+  "snips": [
+   "s to avoid breaking change. With a major release, we should remove the default implementations and document this as a break change. Here are some of the interfaces that should be modified:\r > \r > - [x] ILoginFormEvent (Done via OrchardCMS/OrchardCore#17050)\r > - [ ] Others</issue_description> >  > <agent_instructions>Also remove any obsolete methods, properties and interfaces that were already rel"
+  ]
+ },
+ {
+  "pr": 17050,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 19218,
+  "src_title": "Security issue: Disabled users allowed to sign in via external login",
+  "when": "2026-05-06",
+  "snips": [
+   "Security issue: Disabled users allowed to sign in via external login ### Describe the bug  Apparently, the issue described in #7999 has been reintroduced after the external authentication refactoring in PR #17050.  If a user is disabled (i.e. its `IsEnabled` property is set to `false`), they can still successfully authenticate when using an external auth",
+   " external login.  Additionally, the method `AddUserEnabledError`, which was previously used to enforce this validation, is no longer being called. This suggests the validation step was unintentionally removed or bypassed during the refactoring in PR #17050.  ***  ### Suggested fix  Ensure that the `IsEnabled` property is explicitly validated after the external user is resolved and before completin"
+  ]
+ },
+ {
+  "pr": 17050,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 19220,
+  "src_title": "Enforce IsEnabled check on all login paths (#19218)",
+  "when": "2026-05-06",
+  "snips": [
+   "Enforce IsEnabled check on all login paths (#19218) ## Summary\r \r - Disabled users could authenticate via external providers and local credentials because `AddUserEnabledError` was no longer called after the external auth refactoring in #17050.\r - Adds `DisabledUserLoginFormEvent : LoginFormEventBase`, which overrides `ValidatingLoginAsync` and blocks disabled users on **both** the lo"
+  ]
+ },
+ {
+  "pr": 17050,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 19221,
+  "src_title": "Enforce IsEnabled check on all login paths (#19218)",
+  "when": "2026-05-06",
+  "snips": [
+   "Enforce IsEnabled check on all login paths (#19218) ## Summary\r \r - Disabled users could authenticate via external providers and local credentials because `AddUserEnabledError` was no longer called after the external auth refactoring in #17050.\r - Adds `DisabledUserLoginFormEvent : LoginFormEventBase`, which overrides `ValidatingLoginAsync` and blocks disabled users on **both** the lo"
+  ]
+ },
+ {
+  "pr": 17033,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 16939,
+  "src_title": "OrchardCore.Workflows Publish Content task does not publish content",
+  "when": "2025-01-27",
+  "snips": [
+   "(mention in a comment) OrchardCore.Workflows Publish Content task does not publish content <!-- Please also see the docs on how we manage issues: https://docs.orchardcore.net/en/latest/docs/guides/contributing/managing-issues/. -->\r <!-- Please replace all placeholders such as this below. -->\r \r ### Describe the bug\r \r <!"
+  ],
+  "comment_snips": [
+   "[gvkries 2025-01-27] Fixed by #17033"
+  ]
+ },
+ {
+  "pr": 17033,
+  "kind": "postmerge_comment",
+  "who": "MikeAlhayek",
+  "when": "2024-11-19",
+  "snips": [
+   "https://github.com/OrchardCMS/OrchardCore/pull/16962#issuecomment-2479509454"
+  ]
+ },
+ {
+  "pr": 17027,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 17185,
+  "src_title": "Can't query on content type from Elasticsearch and sample is wrong",
+  "when": "2024-12-09",
+  "snips": [
+   "(mention in a comment) Can't query on content type from Elasticsearch and sample is wrong <!-- Please also see the docs on how we manage issues: https://docs.orchardcore.net/en/latest/docs/guides/contributing/managing-issues/. -->\r <!-- Please replace all placeholders such as this below. -->\r \r ### Describe the bug\r \r I c"
+  ],
+  "comment_snips": [
+   "[Piedone 2024-12-09] nges.\r > \r > Also, try removing the .keyword in the end of your field names. Maybe it got removed from that PR.\r > \r > Best way to know is to inspect the index with the Elasticsearch web UI.\r \r Commit bb7359e31b035ff1b3e049cf568206106592a24e, slightly before https://github.com/OrchardCMS/OrchardCore/pull/17027, works with the original query.\r \r > @Piedone I think it may be a bug in the new Elasticsearch.Net library.\r > \r > Try this instead\r > \r > ```\r > {\r >   \"query\": {\r >     \"term\": { \"Conten"
+  ]
+ },
+ {
+  "pr": 17008,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 17010,
+  "src_title": "Revert \"Remove unnecessary WriteTo() in FludiValue subclasses\"",
+  "when": "2024-11-13",
+  "snips": [
+   "Revert \"Remove unnecessary WriteTo() in FludiValue subclasses\" Reverts OrchardCMS/OrchardCore#17008"
+  ]
+ },
+ {
+  "pr": 17001,
+  "kind": "postmerge_comment",
+  "who": "kursataktas",
+  "when": "2025-02-12",
+  "snips": [
+   "Hello Everyone,\r \r I want to share an exciting update about Gurubase. We've recently released several great features that I think you'll find interesting.\r \r ### 1. Slack & Discord Integration\r You can now add your Guru as a bot to Slack and Discord, allowing you to ask questions instantly. More details here: [Discord Bot Integration](https://docs.gurubase.ai/integrations/discord-bot).\r \r ### 2. A"
+  ]
+ },
+ {
+  "pr": 17001,
+  "kind": "postmerge_comment",
+  "who": "kursataktas",
+  "when": "2025-02-14",
+  "snips": [
+   "> Great, thanks, I can see it. Can multiple people from our community have access to it?\r \r Yes, you can send me the Gurubase username/email addresses for them, and I'll handle the rest.\r \r I have enabled the codebase indexing for Orchard Core. Gurubase reindexes the repo every 12 hours to stay updated. Please let me know if you have any issues."
+  ]
+ },
+ {
+  "pr": 17001,
+  "kind": "postmerge_comment",
+  "who": "kursataktas",
+  "when": "2025-02-17",
+  "snips": [
+   "@Piedone Gurubase doesn't support both of these. But I have created [this](https://github.com/Gurubase/gurubase/issues/113) and [this](https://github.com/Gurubase/gurubase/issues/114) issue to add them on the roadmap. I'll update this PR about the progess."
+  ]
+ },
+ {
+  "pr": 17001,
+  "kind": "postmerge_comment",
+  "who": "Piedone",
+  "when": "2025-02-17",
+  "snips": [
+   "Thank you, subscribed to those issues."
+  ]
+ },
+ {
+  "pr": 17001,
+  "kind": "postmerge_comment",
+  "who": "kursataktas",
+  "when": "2025-04-08",
+  "snips": [
+   "Hey @MikeAlhayek and @Piedone,\r \r I wanted to update you that we\u2019ve released the Gurubase GitHub bot.\r This means you can now integrate your Guru into your repository,  so users can ask it questions directly through GitHub issues. By default, the Gurubase bot automatically responds to newly opened issues, but you can customize its behavior if needed.\r \r You can see it in action in [this demo issue"
+  ]
+ },
+ {
+  "pr": 17001,
+  "kind": "postmerge_comment",
+  "who": "Piedone",
+  "when": "2025-04-08",
+  "snips": [
+   "Thanks for the update! For us, it would be more useful to have the bot watch the discussions; we consciously keep questions out of issues. "
+  ]
+ },
+ {
+  "pr": 17001,
+  "kind": "postmerge_comment",
+  "who": "Piedone",
+  "when": "2025-04-08",
+  "snips": [
+   "I'll follow up under https://github.com/Gurubase/gurubase/issues/112."
+  ]
+ },
+ {
+  "pr": 16990,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 17122,
+  "src_title": "Submenu items silently fail to delete",
+  "when": "2024-12-05",
+  "snips": [
+   "(mention in a comment) Submenu items silently fail to delete <!-- Please also see the docs on how we manage issues: https://docs.orchardcore.net/en/latest/docs/guides/contributing/managing-issues/. -->\r <!-- Please replace all placeholders such as this below. -->\r \r ### Describe the bug\r \r Published submenu item's can't b"
+  ],
+  "comment_snips": [
+   "[MikeAlhayek 2024-12-05] @jbytes1027 Thank you for reporting this issue. I think this issue was fixed in 2.1 via #16990  Are you able to upgrade to 2.1 and test it out?\r \r Related to #16989\r "
+  ]
+ },
+ {
+  "pr": 16976,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 16996,
+  "src_title": "Undo binary breaking change",
+  "when": "2024-11-12",
+  "snips": [
+   "(mention in a comment) Undo binary breaking change Fix #16997"
+  ],
+  "comment_snips": []
+ },
+ {
+  "pr": 16976,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 16997,
+  "src_title": "Renaming files is a breaking change",
+  "when": "2024-11-12",
+  "snips": [
+   "Renaming files is a breaking change In PR #16976, the `SiteServiceCollectionExtensions` class was renamed to `ServiceCollectionExtensions`, which introduced a binary breaking change.\r \r Suppos"
+  ]
+ },
+ {
+  "pr": 16958,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 17291,
+  "src_title": "Indexing PDFs broken when using Elasticsearch and Azure Media Storage features together",
+  "when": "2024-12-31",
+  "snips": [
+   "(mention in a comment) Indexing PDFs broken when using Elasticsearch and Azure Media Storage features together ### Describe the bug\r \r Indexing PDFs using the `Elasticsearch` feature with the `Azure Media Storage` feature appears broken after upgrading to OrchardCore 2.x.\r \r We store our media library files in Azure blob "
+  ],
+  "comment_snips": [
+   "[hishamco 2024-12-31] If this is related to PR #16958 could you please debug and check why the stream does not support reading"
+  ]
+ },
+ {
+  "pr": 16949,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 17055,
+  "src_title": "Fixing https://github.com/OrchardCMS/OrchardCore/issues/17054",
+  "when": "2024-11-25",
+  "snips": [
+   "(mention in a comment) Fixing https://github.com/OrchardCMS/OrchardCore/issues/17054 Fix #17054"
+  ],
+  "comment_snips": [
+   "[gvkries 2024-11-25] @MikeAlhayek FYI, this was broken by PR #16949. "
+  ]
+ },
+ {
+  "pr": 16949,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 17076,
+  "src_title": "Fix sitemap disposed stream",
+  "when": "2024-11-26",
+  "snips": [
+   "Fix sitemap disposed stream Fix https://github.com/OrchardCMS/OrchardCore/pull/16949#discussion_r1857342126"
+  ]
+ },
+ {
+  "pr": 16944,
+  "kind": "postmerge_comment",
+  "who": "sebastienros",
+  "when": "2024-11-05",
+  "snips": [
+   "Modules should not reference modules. To remove the dependency use a route name. And if the module/feature is not enabled it could create an issue, so maybe check it first. Or just point to the documentation."
+  ]
+ },
+ {
+  "pr": 16942,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 17069,
+  "src_title": "User Time Zone feature results in DI loop",
+  "when": "2024-11-26",
+  "snips": [
+   "(mention in a comment) User Time Zone feature results in DI loop ### Describe the bug\r \r After enabling the User Time Zone feature, the site hangs and no longer responds to new requests.\r \r ### Orchard Core version\r \r 2.1, 2.1.1\r \r ### To Reproduce\r \r 1. Clone the repo\r 2. Start the OrchardCore.Cms.Web project\r 3. Use the"
+  ],
+  "comment_snips": [
+   "[mvarblow 2024-11-26] @MikeAlhayek, I think this PR introduced the problem.\r \r https://github.com/OrchardCMS/OrchardCore/pull/16942\r \r Reverting that PR seems to resolve the problem."
+  ]
+ },
+ {
+  "pr": 17266,
+  "kind": "postmerge_comment",
+  "who": "MarGraz",
+  "when": "2025-01-10",
+  "snips": [
+   "Hi @salmattia, @kevinchalet, @MikeAlhayek, I am still experiencing this issue in **Orchard Core 2.1.3**. The Authorization Server tenant is mandatory, **making it impossible to save an external authority**.\r \r Are you encountering the same problem in this version? How can I apply the fix?\r \r Thank you\r \r ![image](https://github.com/user-attachments/assets/ddfce491-6fd3-48a3-babe-07b1a5c0ecf4)\r \r *"
+  ]
+ },
+ {
+  "pr": 17266,
+  "kind": "postmerge_comment",
+  "who": "kevinchalet",
+  "when": "2025-01-11",
+  "snips": [
+   "> This will be part of OC 3.0 and 2.1.4 if we decided we will release a new version.\r \r Since at least 2 people are affected by this bug, we should definitely backport it. Bumping the OpenIddict dependency to 6.0.0 as part of a new minor release would also be nice (otherwise folks will stay in an unsupported state until OC 3.0 ships)."
+  ]
+ },
+ {
+  "pr": 17266,
+  "kind": "postmerge_comment",
+  "who": "MikeAlhayek",
+  "when": "2025-01-11",
+  "snips": [
+   "It's already backported just need a release.  Why bump up OpenIdDict library at the same time, I don't want that to cause unexpected issue for others since that is a minor "
+  ]
+ },
+ {
+  "pr": 17266,
+  "kind": "postmerge_comment",
+  "who": "kevinchalet",
+  "when": "2025-01-11",
+  "snips": [
+   "> It's already backported just need a release.\r \r By backport it, I mean create a branch that includes this change (already done) AND release a new version with the fix. Having a branch and no release is totally useless for those impacted by this bug \ud83d\ude04 \r \r > Why bump up OpenIdDict library at the same time,\r \r As I said, the 5.x version is no longer supported. 3.0 has no date assigned, so it could "
+  ]
+ },
+ {
+  "pr": 17266,
+  "kind": "postmerge_comment",
+  "who": "MarGraz",
+  "when": "2025-01-22",
+  "snips": [
+   "With 2.1.4 [this bug](https://github.com/OrchardCMS/OrchardCore/pull/17266#issuecomment-2582637526) is fixed. \r \r Thank you \ud83d\ude0a"
+  ]
+ },
+ {
+  "pr": 17220,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 17227,
+  "src_title": "Fix intermittent redirects during external auto-login",
+  "when": "2024-12-12",
+  "snips": [
+   "Fix intermittent redirects during external auto-login Manually back poring to `release/2.1` #17220"
+  ]
+ },
+ {
+  "pr": 17220,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 17219,
+  "src_title": "Orchard Core intermittently displays login options when only one external provider is configured",
+  "when": "2026-05-04",
+  "snips": [
+   "(mention in a comment) Orchard Core intermittently displays login options when only one external provider is configured ### Describe the bug\r \r When using Orchard Core with a single external identity provider configured for login and the option \"Use external provider for login\" enabled in the admin settings, the login scr"
+  ],
+  "comment_snips": [
+   "[okalangkenneth 2026-05-04] Hi @hishamco . I notice the issue was closed as complete. Could you point me to the fix that was merged? The development section still links to #17220 from December 2024, which was the fix that @dturska and @asteekgoswami confirmed was broken in later versions. I have an implementation ready if it's still needed.",
+   "[hishamco 2026-05-04] The PR #17220 should fix the issue",
+   "[gvkries 2026-05-05] > The PR [#17220](https://github.com/OrchardCMS/OrchardCore/pull/17220) should fix the issue  This issue is not completely fixed."
+  ]
+ },
+ {
+  "pr": 17213,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 17303,
+  "src_title": "Issue bot links outdated",
+  "when": "2025-01-05",
+  "snips": [
+   "(mention in a comment) Issue bot links outdated The doc links in this GH bot are broken/outdated.\r \r ![image](https://github.com/user-attachments/assets/59b056cf-9897-4c89-8be1-1fc83354261c)\r \r > We triaged this issue and set the milestone according to the priority we think is appropriate (see [the docs](https://docs.orch"
+  ],
+  "comment_snips": [
+   "[Piedone 2025-01-05] Actually, I see that you moved a lot of pages around under https://github.com/OrchardCMS/OrchardCore/pull/17213. For each of these, please also add redirects in `redirect_maps`, because now a lot of external links are broken."
+  ]
+ },
+ {
+  "pr": 17210,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 17314,
+  "src_title": "Revert \"Fix Layer translations\"",
+  "when": "2025-01-07",
+  "snips": [
+   "Revert \"Fix Layer translations\" Reverts OrchardCMS/OrchardCore#17210\r \r We need to revert this PR until the issue it introduced is fixed, so that users can continue to access and use the preview packages.\r \r @Skr"
+  ]
+ },
+ {
+  "pr": 17129,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 16779,
+  "src_title": " Lucene Query search result limited 10 records",
+  "when": "2024-12-10",
+  "snips": [
+   "(mention in a comment)  Lucene Query search result limited 10 records <!-- Please also see the docs on how we manage issues: https://docs.orchardcore.net/en/latest/docs/guides/contributing/managing-issues/. -->\r \r ### Describe the bug\r In the Lucene Query, if I run the match all and the result only displays 10 records the"
+  ],
+  "comment_snips": [
+   "[jbytes1027 2024-12-10] Was completed by #17129. I believe this can be closed.",
+   "[gvkries 2024-12-10] > Was completed by #17129. I believe this can be closed.\r \r Yes, thank you."
+  ]
+ },
+ {
+  "pr": 17120,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 17102,
+  "src_title": "Deployment with queries content items step can't be created",
+  "when": "2025-03-28",
+  "snips": [
+   "(mention in a comment) Deployment with queries content items step can't be created ### Describe the bug\r Deployment with queries content items step can't be created\r \r ### Orchard Core version\r  v2.1.2\r \r ### To Reproduce\r 1. Go to 'Configurations'\r 2. Click on 'Import/Export'\r 3. Scroll down to 'Deployment Plans'\r 4. Cre"
+  ],
+  "comment_snips": [
+   "[Piedone 2025-03-28] https://github.com/OrchardCMS/OrchardCore/pull/17120 is not yet released, it'll be part of v3."
+  ]
+ },
+ {
+  "pr": 17111,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 17125,
+  "src_title": "Revert \"Layers enhancements\"",
+  "when": "2024-12-05",
+  "snips": [
+   "Revert \"Layers enhancements\" Reverts OrchardCMS/OrchardCore#17111"
+  ]
+ },
+ {
+  "pr": 17036,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 17317,
+  "src_title": "Revert \"Move OrchardCore.Translations.All\"",
+  "when": "2025-01-07",
+  "snips": [
+   "Revert \"Move OrchardCore.Translations.All\" Reverts OrchardCMS/OrchardCore#17036\r \r We need to revert this PR so we can continue to use the preview packages until the problem is investigated and fixed.\r \r @Skrypt "
+  ]
+ },
+ {
+  "pr": 17036,
+  "kind": "postmerge_comment",
+  "who": "MikeAlhayek",
+  "when": "2025-01-03",
+  "snips": [
+   "@Skrypt this PR caused an issue. If you try to use using version `3.0.0-preview-18449` or newer, you'll get this error \r \r > error NU1100: Unable to resolve 'OrchardCore.Translations.All (>= 2.1.0)' for 'net9.0'.\r \r I tried many ways to fix it but nothing seems to be working. The latest stable version in `3.0.0-preview-18448`. Can you please see why it is not working and fix it? Otherwise, we may "
+  ]
+ },
+ {
+  "pr": 17036,
+  "kind": "postmerge_comment",
+  "who": "Skrypt",
+  "when": "2025-01-06",
+  "snips": [
+   "Yes, the localization folder generated in the Web project should now be expected. That's a result of the change as we always want to have these localizations. We expect that Orchard Core should be localizable if we ship the Localization module as part of the solution.\r \r Now, the issue here seems to be related with resolving OrchardCore.Translations.All. I will take a look but I'm surprised of the"
+  ]
+ },
+ {
+  "pr": 17036,
+  "kind": "postmerge_comment",
+  "who": "MikeAlhayek",
+  "when": "2025-01-07",
+  "snips": [
+   "@Skrypt I would not expect an issue here. But try using the previews. we may have to revert this meanwhile."
+  ]
+ },
+ {
+  "pr": 17036,
+  "kind": "postmerge_comment",
+  "who": "MikeAlhayek",
+  "when": "2025-01-08",
+  "snips": [
+   "This is the last package that was released before it was reverted just in case you want to test it out `3.0.0-preview-18467`\r \r https://cloudsmith.io/~orchardcore/repos/preview/packages/detail/nuget/OrchardCore.Application.Cms.Targets/3.0.0-preview-18467/\r "
+  ]
+ },
+ {
+  "pr": 17430,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 16769,
+  "src_title": "Move permissions to its own class to avoid module to module reference",
+  "when": "2025-01-31",
+  "snips": [
+   "(mention in a comment) Move permissions to its own class to avoid module to module reference This pull request focuses on updating permission references across multiple files to use new standardized permission classes. The changes are primarily refactoring to replace the old permission references with the new ones.\r \r Fix"
+  ],
+  "comment_snips": [
+   "[hishamco 2025-01-31] Do you mean this #17430?"
+  ]
+ },
+ {
+  "pr": 17409,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 19730,
+  "src_title": "Permissions-Policy header is being serialized incorrectly (semicolon separator, unquoted origin lists), so configured policies are not applied",
+  "when": "2026-08-16",
+  "snips": [
+   "f `,`.**  The header shares [`SecurityHeaderDefaults.PoliciesSeparator`](https://github.com/OrchardCMS/OrchardCore/blob/main/src/OrchardCore.Modules/OrchardCore.Security/SecurityHeaderDefaults.cs#L7) with `Content-Security-Policy` (a regression from #17409, backported to 2.1 in #17458 \u2014 that PR correctly changed the CSP separator to `;`, but the constant is also used by [`PermissionsHeaderPolicyPr"
+  ]
+ },
+ {
+  "pr": 17406,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 17438,
+  "src_title": "Google module filters will throw exception if no settings available",
+  "when": "2025-02-01",
+  "snips": [
+   "(mention in a comment) Google module filters will throw exception if no settings available ### Describe the bug  When google features Google Analytics or Google Tag Manager are enabled and some home page is set, tenant will not start because of \"An unhandled exception occurred while processing the request.\".  ### Orchard "
+  ],
+  "comment_snips": [
+   "[Piedone 2025-02-01] This was fixed in https://github.com/OrchardCMS/OrchardCore/pull/17406. We'll release a patch for this soon."
+  ]
+ },
+ {
+  "pr": 17378,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 18896,
+  "src_title": "GraphQL Localization Filter Throws Exception",
+  "when": "2026-02-25",
+  "snips": [
+   "(mention in a comment) GraphQL Localization Filter Throws Exception ### Describe the bug When using the localization filter with a culture parameter in a GraphQL where clause, the query throws an exception.   ### Orchard Core version main branch (OC 3.0- preview)  ### To Reproduce 1. Create site with blog recipe 2. Add Lo"
+  ],
+  "comment_snips": [
+   "[xnavrat4 2026-02-25] I fixed it in above mentioned PR. It works, but I am not sure that it is the correct solution. I noticed that the issue was introduced when in [this PR](https://github.com/OrchardCMS/OrchardCore/pull/17378), where @gvkries fixed other graphql issues.   @gvkries Could you please take a look at the PR? I am no GraphQL expert, so i would appreciate some feedback/help. "
+  ]
+ },
+ {
+  "pr": 17369,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 17406,
+  "src_title": "Fix Null Exception with filters",
+  "when": "2025-01-26",
+  "snips": [
+   "Fix Null Exception with filters PR #17369 introduced a bug where an exception is throw if there is not ids are provided.\r "
+  ]
+ },
+ {
+  "pr": 17346,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 17342,
+  "src_title": "Document that the web project's `wwwroot` folder needs to be pre-created (like with a placeholder)",
+  "when": "2025-01-14",
+  "snips": [
+   "(mention in a comment) Document that the web project's `wwwroot` folder needs to be pre-created (like with a placeholder) <!-- Please also see the docs on how we manage issues: https://docs.orchardcore.net/en/latest/docs/contributing/managing-issues/. -->\r <!-- Please replace all placeholders such as this below. -->\r \r ##"
+  ],
+  "comment_snips": [
+   "[Piedone 2025-01-14] https://github.com/OrchardCMS/OrchardCore/pull/17346 doesn't actually completely fix this. We still need the docs, and more importantly, as Sebastien pointed out during today's meeting, in the codegen templates:\r \r - https://github.com/Orcha"
+  ]
+ },
+ {
+  "pr": 16973,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 17460,
+  "src_title": "Revert sanitize_html & supported_cultures changes",
+  "when": "2025-02-06",
+  "snips": [
+   "Revert sanitize_html & supported_cultures changes Related to #16973\r \r https://github.com/OrchardCMS/OrchardCore/pull/16973#issuecomment-2641359360",
+   "Revert sanitize_html & supported_cultures changes Related to #16973\r \r https://github.com/OrchardCMS/OrchardCore/pull/16973#issuecomment-2641359360"
+  ]
+ },
+ {
+  "pr": 17526,
+  "kind": "postmerge_comment",
+  "who": "Skrypt",
+  "when": "2025-02-25",
+  "snips": [
+   "To be honest I don't see the changes you are requesting there. Adding a space? The entire diff view is broken on this PR."
+  ]
+ },
+ {
+  "pr": 17523,
+  "kind": "postmerge_comment",
+  "who": "Skrypt",
+  "when": "2025-02-25",
+  "snips": [
+   "Please read: https://github.com/OrchardCMS/OrchardCore/issues/17522#issuecomment-2680021873"
+  ]
+ },
+ {
+  "pr": 17523,
+  "kind": "postmerge_comment",
+  "who": "MikeAlhayek",
+  "when": "2025-02-25",
+  "snips": [
+   "@Piedone apparently in OC we no longer need to support two versions. We only commit the minified version to the repo. The ResourceDebugMode is no longer applicable to the OC files. "
+  ]
+ },
+ {
+  "pr": 17523,
+  "kind": "postmerge_comment",
+  "who": "Skrypt",
+  "when": "2025-02-25",
+  "snips": [
+   "Only for assets built with Parcel. We don't need the unminified version of that file served. We need .map files which will be served or not based on the ResourceDebugMode config.\r \r Only few of these .min files got removed from the Asset Manager PR. So, I'm not bothered at all."
+  ]
+ },
+ {
+  "pr": 17523,
+  "kind": "postmerge_comment",
+  "who": "Piedone",
+  "when": "2025-02-25",
+  "snips": [
+   "What I remember discussing at the meeting is that _eventually_ we won't need the non-minified versions. I wasn't aware that we can't have non-minified versions right now. That's not good, especially that if I understand correctly, map file generation is not quite there yet. Because this prevents us properly debugging JS."
+  ]
+ },
+ {
+  "pr": 17523,
+  "kind": "postmerge_comment",
+  "who": "Skrypt",
+  "when": "2025-02-25",
+  "snips": [
+   "Alright let me fix this all. I'll merge the other PR and then explain.\r The only issue is that right now for these 5 or 6 Parcel assets we can't debug them on prod. But if you run `yarn watch -n parcel-asset-name` locally, it should unminify that asset while debugging it.\r \r Just had a long discussion with @sebastienros on today's meeting on how we will add .map files."
+  ]
+ },
+ {
+  "pr": 17523,
+  "kind": "postmerge_comment",
+  "who": "Skrypt",
+  "when": "2025-02-25",
+  "snips": [
+   "So, the entire issue with Parcel is:\r \r - It uses the same configuration for all \"parcel\" actions. Meaning that right now I've set it to not output any .map files and to minify/optimize the files.\r - There is only one \"source\" file but it can output multiple files if you import a .scss file in your .ts file for example. So, that means it should output a .map file for both. Parcel will output these"
+  ]
+ },
+ {
+  "pr": 17523,
+  "kind": "postmerge_comment",
+  "who": "Skrypt",
+  "when": "2025-02-25",
+  "snips": [
+   "So to summarize I think we need both: \r \r - A custom build action that repro what Gulp was doing with Typescript.\r - A fix to generate .map files that will work with the ResourceManager debug and prod modes.\r \r Though, there is always the Gulp pipeline if we're not satisfied yet of the Asset Manager. It is using Parcel, Webpack and Vite as they are built ... "
+  ]
+ },
+ {
+  "pr": 17504,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 17502,
+  "src_title": "Unable to change widget placement in the SortableUI",
+  "when": "2025-02-20",
+  "snips": [
+   "(mention in a comment) Unable to change widget placement in the SortableUI ### Describe the bug  In a FlowPart, we have a way to drag/drop the widgets so we can change their position. Currently you can drag/drop but dropping it will just put it back in the previous position and does not drop it where it should be placed \""
+  ],
+  "comment_snips": [
+   "[MikeAlhayek 2025-02-20] Fixed via #17504"
+  ]
+ },
+ {
+  "pr": 17504,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 17655,
+  "src_title": "Ensure Content Type Restrictions are Enforced for Drag & Drop in Widgets",
+  "when": "2025-03-22",
+  "snips": [
+   "Ensure Content Type Restrictions are Enforced for Drag & Drop in Widgets Fix #13068\r \r Fixes bug introduced in my previous PR and reverted in  #17504 by @MikeAlhayek \r \r * fixes ordering in same bagpart/flowpart while keeping content type limitations\r * adds possibility to drag & drop also be"
+  ]
+ },
+ {
+  "pr": 17481,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 17500,
+  "src_title": "Taxonomy terms are no longer showing on the editer UI",
+  "when": "2025-02-20",
+  "snips": [
+   "er showing on the editer UI <!-- Please also see the docs on how we manage issues: https://docs.orchardcore.net/en/latest/docs/contributing/managing-issues/. --> <!-- Please replace all placeholders such as this below. -->  ### Describe the bug   PR #17481 tried to fix #17480 but introduced an issue where now we only show the selected taxonomy terms only instead of all of them terms that the user "
+  ]
+ },
+ {
+  "pr": 17481,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 17501,
+  "src_title": "Fix Taxonomy Editor",
+  "when": "2025-02-20",
+  "snips": [
+   "Fix Taxonomy Editor Fix #17500\r Fix #17480\r \r Undo changes done by #17481\r \r /cc @yqzhen1990 "
+  ]
+ },
+ {
+  "pr": 17476,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 17917,
+  "src_title": "GraphQL orderBy not working with OrchardCore.Application.Cms.Targets 2.1.7",
+  "when": "2025-05-14",
+  "snips": [
+   "(mention in a comment) GraphQL orderBy not working with OrchardCore.Application.Cms.Targets 2.1.7 The `orderBy` clause in GraphQL queries does not work as expected when querying content items. Regardless of the field used, the results are not ordered correctly.  ![Image](https://github.com/user-attachments/assets/c6437ed0"
+  ],
+  "comment_snips": [
+   "[gvkries 2025-05-14] Thank you very much, this has been reported before (#17475). It has been fixed in the main branch, but the fix has not been back ported to 2.x. I think it is not possible to take the PR #17476 automatically, but can you please try it @MikeAlhayek? ",
+   "[MikeAlhayek 2025-05-14] @gvkries the backport failed https://github.com/OrchardCMS/OrchardCore/pull/17476  You can create a branch from release/2.1 branch and apply the fix. Then create a PR targeting release/2.1. ",
+   "[gvkries 2025-05-14] > [@gvkries](https://github.com/gvkries) the backport failed [#17476](https://github.com/OrchardCMS/OrchardCore/pull/17476) >  > You can create a branch from release/2.1 branch and apply the fix. Then create a PR targeting release/2.1.  Yup, as expected. Will do"
+  ]
+ },
+ {
+  "pr": 17476,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 17918,
+  "src_title": "Fixes the sort order in GraphQL queries.",
+  "when": "2025-05-14",
+  "snips": [
+   "Fixes the sort order in GraphQL queries. Back port of PR #17476\r \r Fixes #17917"
+  ]
+ },
+ {
+  "pr": 17441,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 17440,
+  "src_title": "PublishContext support cancellation but this is not visible to User",
+  "when": "2025-04-02",
+  "snips": [
+   "(mention in a comment) PublishContext support cancellation but this is not visible to User ### Describe the bug When you add a handler that cancels Publish/Unpublish of a content item the user gets a success confirmation  ### Orchard Core version 2.x  ### To Reproduce 1. Add a handler to cancel publish/unpublish context. "
+  ],
+  "comment_snips": [
+   "[gvkries 2025-04-02] @MichaelPetrinolis Has this been fixed by #17441?"
+  ]
+ },
+ {
+  "pr": 17441,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 18098,
+  "src_title": "Add Cancel property to CreateContentContext",
+  "when": "2025-06-27",
+  "snips": [
+   "(mention in a comment) Add Cancel property to CreateContentContext Fixes #17934\r "
+  ],
+  "comment_snips": []
+ },
+ {
+  "pr": 17429,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 17645,
+  "src_title": "Generating titles from pattern stopped working",
+  "when": "2025-03-21",
+  "snips": [
+   "(mention in a comment) Generating titles from pattern stopped working Generating titles from pattern stopped working  ### Orchard Core version 3.0.0-18545  ### To Reproduce 1. Create ContentType with TitlePart 2. Set Auto-generated pattern  3. Create ContentItem"
+  ],
+  "comment_snips": [
+   "[hishamco 2025-03-21] I think this affected by the PR #17429 but I need to double check",
+   "[gvkries 2025-04-01] > I think this affected by the PR [#17429](https://github.com/OrchardCMS/OrchardCore/pull/17429) but I need to double check  This is an older issue, that has come up before. See #13394 and #13395.",
+   "[gvkries 2025-04-01] > I think this affected by the PR [#17429](https://github.com/OrchardCMS/OrchardCore/pull/17429) but I need to double check  This is an older issue, that has come up before. See #13394 and #13395."
+  ]
+ },
+ {
+  "pr": 17429,
+  "kind": "postmerge_comment",
+  "who": "Skrypt",
+  "when": "2025-02-06",
+  "snips": [
+   "@deanmarcussen I think the idea was about having consistency in the usage of the ContentManager. Now, if you create a content item it will no longer call the updateAsync event handler in some cases. If you had a custom handler then if you are posting on the ApiController this UpdateAsync handler will not be called anymore. What we did back then was to ensure that data is Idempotent. Doing differen"
+  ]
+ },
+ {
+  "pr": 17421,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 17504,
+  "src_title": "Revert \"Bugfix/13068 dragdrop widgets\"",
+  "when": "2025-02-20",
+  "snips": [
+   "Revert \"Bugfix/13068 dragdrop widgets\" Reverts OrchardCMS/OrchardCore#17421\r \r @MikeKry PR#17421 cause issue #17502. I have to revert it meanwhile until you can provide a fix that does not include losing the ability to ",
+   "Revert \"Bugfix/13068 dragdrop widgets\" Reverts OrchardCMS/OrchardCore#17421\r \r @MikeKry PR#17421 cause issue #17502. I have to revert it meanwhile until you can provide a fix that does not include losing the ability to drag/drop.\r \r "
+  ]
+ },
+ {
+  "pr": 17421,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 17655,
+  "src_title": "Ensure Content Type Restrictions are Enforced for Drag & Drop in Widgets",
+  "when": "2025-03-23",
+  "snips": [
+   "(mention in a comment) Ensure Content Type Restrictions are Enforced for Drag & Drop in Widgets Fix #13068\r \r Fixes bug introduced in my previous PR and reverted in  #17504 by @MikeAlhayek \r \r * fixes ordering in same bagpart/flowpart while keeping content type limitations\r * adds possibility to drag & drop also between b"
+  ],
+  "comment_snips": [
+   "[MikeKry 2025-03-23] ikeAlhayek \r It is related to https://github.com/OrchardCMS/OrchardCore/issues/13068\r but my previous PR was reverted by you in #17504, because it caused problems with sorting widgets in flowpart.\r \r I have fixed the sorting problem and expanded bapart logic, otherwise it is the same as original PR #17421"
+  ]
+ },
+ {
+  "pr": 17262,
+  "kind": "postmerge_comment",
+  "who": "Skrypt",
+  "when": "2025-02-24",
+  "snips": [
+   "I think the issue is that `pnpm` is installed globally on your machine.\r You probably did `npm install pnpm -g` or something similar.\r \r You will need to uninstall it before and let Corepack install it per \"project folder\".\r `npm uninstall pnpm -g`"
+  ]
+ },
+ {
+  "pr": 17262,
+  "kind": "postmerge_comment",
+  "who": "Skrypt",
+  "when": "2025-02-24",
+  "snips": [
+   "Also, you need to stop using NPM with OC. You need to start using Yarn equivalent commands else it will add unwanted package-lock.json files everywhere.\r \r And from an interesting stackoverflow page they seems to suggest to do also:\r \r `npm cache clean --force`\r \r To fix the issue."
+  ]
+ },
+ {
+  "pr": 17262,
+  "kind": "postmerge_comment",
+  "who": "Skrypt",
+  "when": "2025-02-24",
+  "snips": [
+   "Have you tried using a terminal with administrator privilege's?\r It has to be run in the OC root to get the same fetched yarn dependencies.\r If you don't enable Corepack then it will use yarn version 1.1.something which is what Node.js installs by default.\r \r Corepack has been introduced to allow to manage package managers for those who uses multiple versions of them for different projects. It bec"
+  ]
+ },
+ {
+  "pr": 17262,
+  "kind": "postmerge_comment",
+  "who": "MikeAlhayek",
+  "when": "2025-02-24",
+  "snips": [
+   "@Skrypt this PR introduced a problem. By default it is not generating the `.min.js` file. At least `TheAdmin-main.min.js` and `TheAdmin.min.js` are missing from the project and are causing production issues.\r \r How to generate these file using the new setup?"
+  ]
+ },
+ {
+  "pr": 17262,
+  "kind": "postmerge_comment",
+  "who": "MikeAlhayek",
+  "when": "2025-02-25",
+  "snips": [
+   "I created issue #17522 for tracking"
+  ]
+ },
+ {
+  "pr": 17262,
+  "kind": "postmerge_comment",
+  "who": "gvkries",
+  "when": "2025-02-26",
+  "snips": [
+   "`yarn build -gr` is now suddenly not working anymore, without changing anything. There are invalid paths in some copy commands:\r \r ```\r [theme-theblogtheme] Error copying (from, to) C:/Users/georg/source/repos/OrchardCMS/OrchardCore/src/OrchardCore.Themes/TheBlogTheme/Assets/TheBlogTheme/dist/assets/favicon.ico \r c:\\Users\\georg\\source\\repos\\OrchardCMS\\OrchardCore\\src\\OrchardCore.Themes\\TheBlogThem"
+  ]
+ },
+ {
+  "pr": 17262,
+  "kind": "postmerge_comment",
+  "who": "Skrypt",
+  "when": "2025-02-26",
+  "snips": [
+   "Ok, I think I found the issue.\r It is happening when a \"source\" contains a \"**\" in it's path in the Assets.json file. Will take a look."
+  ]
+ },
+ {
+  "pr": 17262,
+  "kind": "postmerge_comment",
+  "who": "gvkries",
+  "when": "2025-02-26",
+  "snips": [
+   "> Ok, I think I found the issue. It is happening when a \"source\" contains a \"**\" in it's path in the Assets.json file. Will take a look.\r \r Thank you \ud83e\udd17"
+  ]
+ },
+ {
+  "pr": 17262,
+  "kind": "postmerge_comment",
+  "who": "Skrypt",
+  "when": "2025-02-26",
+  "snips": [
+   "Can you try something on your side?\r \r ```\r import fs from \"fs-extra\";\r import { glob } from \"glob\";\r import JSON5 from \"json5\";\r import chalk from \"chalk\";\r import path from \"path\";\r \r let action = process.argv[2];\r const config = JSON5.parse(Buffer.from(process.argv[3], \"base64\").toString(\"utf-8\"));\r \r let dest = config.dest;\r let fileExtension = config.source.split(\".\").pop();\r \r if (config.des"
+  ]
+ },
+ {
+  "pr": 17262,
+  "kind": "postmerge_comment",
+  "who": "gvkries",
+  "when": "2025-02-27",
+  "snips": [
+   "There are no more errors on 'copy', but the themes are still failing:\r ```\r theme-theagencytheme exited with code 1\r theme-thecomingsoontheme exited with code 1\r theme-theblogtheme exited with code 1\r Errors occurred!\r ```\r  I don't know why, I only find lots of 'sass' errors in the output. E.g. \r ```\r [theme-theblogtheme] sass.Exception [Error]: Can't find stylesheet to import.\r [theme-theblogthe"
+  ]
+ },
+ {
+  "pr": 17262,
+  "kind": "postmerge_comment",
+  "who": "Skrypt",
+  "when": "2025-02-27",
+  "snips": [
+   "@agriffard had the same issue which I did not find anything about yet. I need to understand why Webpack moves that licence into a different spot in that file. My PC and the CI consistently outputs the same for me so far. How can I repro this one is the question."
+  ]
+ },
+ {
+  "pr": 14715,
+  "kind": "postmerge_comment",
+  "who": "MikeAlhayek",
+  "when": "2025-02-19",
+  "snips": [
+   "> Email providers should support both and this is the case with the SMTP and Azure providers. If a provider somehow does not support this, it's the responsibility of the provider to select the right body or convert between the formats.  The IEmailService has no was of knowing which body type the IEmailProvider supports. The IEmailService is responsible of invoking a provider by giving the message "
+  ]
+ },
+ {
+  "pr": 14715,
+  "kind": "postmerge_comment",
+  "who": "hishamco",
+  "when": "2025-02-19",
+  "snips": [
+   "> I still don't know what issue this PR fixed if any. But I know we lost some flexibility after this PR.\r \r There's an issue I don't remember its ID but I will try to find it for you\r \r What flexibility that are you talking about, both `IEmailService` & `IEmailProvider` have `SendAsync()` which has instance of `MailMessage`, this way you could specify the email body\r \r For the notification module,"
+  ]
+ },
+ {
+  "pr": 14715,
+  "kind": "postmerge_comment",
+  "who": "gvkries",
+  "when": "2025-02-19",
+  "snips": [
+   ">  But I know we lost some flexibility after this PR.\r \r No, we gain flexibility back \ud83d\ude09 You can now also sent both body types at once, not only text or HTML exclusively.\r \r This used to be already the case, but was broken some time ago: https://github.com/OrchardCMS/OrchardCore/pull/13426#issuecomment-1816050624\r \r See also https://github.com/OrchardCMS/OrchardCore/issues/9751 and https://github.c"
+  ]
+ },
+ {
+  "pr": 14715,
+  "kind": "postmerge_comment",
+  "who": "MikeAlhayek",
+  "when": "2025-02-19",
+  "snips": [
+   "> No, we gain flexibility back  How so?   Looking at this video https://github.com/OrchardCMS/OrchardCore/pull/14715#issuecomment-2657968478  You have to specify the body type to use (Text, HTML or both). This info is sent to the provider via the email-service. So if someone selects HTML and the service invokes a provider that can't handle the HTML, then the email will probably fail. For it to wor"
+  ]
+ },
+ {
+  "pr": 17684,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 17756,
+  "src_title": "Don't call IEnumerable<IUserEventHandler> from UserDisplayDriver",
+  "when": "2025-04-07",
+  "snips": [
+   "(mention in a comment) Don't call IEnumerable<IUserEventHandler> from UserDisplayDriver Fixes #17072"
+  ],
+  "comment_snips": [
+   "[MikeAlhayek 2025-04-07]  the user. With the proposed approach these events are fired after the user is updated which ignores the handlers logic.  What I think should happen here is that we should move the function to enable/disable user outside the Form edit request similar to the approach I did for confirming email in PR #17684  Moving the disable/enable process as part of the Actions button will allow us to properly call the handlers outside the process of updating the data form. "
+  ]
+ },
+ {
+  "pr": 17652,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 17491,
+  "src_title": "OrchardCMS retarget to .Net10 failed with ambiguous call error between custom GetKeyedService() and Microsoft.Extensions.DependencyInjection.ServiceProviderKeyedServiceExtensions.GetKeyedService()",
+  "when": "2025-04-02",
+  "snips": [
+   "(mention in a comment) OrchardCMS retarget to .Net10 failed with ambiguous call error between custom GetKeyedService() and Microsoft.Extensions.DependencyInjection.ServiceProviderKeyedServiceExtensions.GetKeyedService()   ### Describe the bug  When retargeting OrchardCMS app to .NET 10, it is built failed with CS0212 erro"
+  ],
+  "comment_snips": [
+   "[gvkries 2025-04-02] Fixed by #17652"
+  ]
+ },
+ {
+  "pr": 17652,
+  "kind": "postmerge_comment",
+  "who": "hishamco",
+  "when": "2025-03-26",
+  "snips": [
+   "> dotnet build /p:CommonTargetFrameworks=net10.0\r \r ```cmd\r dotnet build -p:CommonTargetFrameworks=net10.0\r ```\r \r \r > Later we can create a branch that actually does change the TFM and try to run the tests, and keep updated with main, to ensure we are ready to do the switch when we want.\r \r I will create a draft PR for this to ensure nothing has been broken when we shift to .NET 10.0"
+  ]
+ },
+ {
+  "pr": 17618,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 18127,
+  "src_title": "SQL Server Deadlock Issue in 2.1.7",
+  "when": "2025-07-08",
+  "snips": [
+   "(mention in a comment) SQL Server Deadlock Issue in 2.1.7 ### Describe the bug  I'm seeing some deadlocking issues in SQL server when running some automated Playwright tests against our Orchard Core 2.1.7 solution. I haven't figured out how to reproduce this reliably in the base Orchard solution, but I'll provide as much "
+  ],
+  "comment_snips": [
+   "[Piedone 2025-07-08] ns very frequently (and usually very early in the request, like for authorization). I don't see how it would fail by locking on `IDX_UserIndex_DocumentId`, though.  Also, maybe the `ReadCommitted` isolation level would help with this. That's the new default (https://github.com/OrchardCMS/OrchardCore/pull/17618) but only in the upcoming v3.  The `SaveChangesAsync` to `FlushAsync` changes should actually help reduce the chance of this happening...  Can you share the code where you disable/enable f"
+  ]
+ },
+ {
+  "pr": 17618,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 18520,
+  "src_title": "Race condition causing invalid_token errors in OpenID Server",
+  "when": "2025-11-24",
+  "snips": [
+   "(mention in a comment) Race condition causing invalid_token errors in OpenID Server ### Describe the bug  Since updating to OC 2.1.7 we occasionally see this error in our application that relies on the Orchard Core OpenID Server:  ``` 2025-10-31 00:00:59.9707|Error||Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenId"
+  ],
+  "comment_snips": [
+   "[mvarblow 2025-11-24] ithub.com/OrchardCMS/OrchardCore/issues/18520                 store.Configuration.IsolationLevel = System.Data.IsolationLevel.ReadCommitted;             }             return new ValueTask();         });     }) ```  It would be helpful if we could cherry pick https://github.com/OrchardCMS/OrchardCore/pull/17618 from @MikeAlhayek back to the 2.2 branch, perhaps modified to leave ReadUncommitted as the default but allowing for a clean override via configuration on YesSqlOptions.    "
+  ]
+ },
+ {
+  "pr": 17611,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 17650,
+  "src_title": "Revert \"Add condition for User moderation and Email confirmation upon registration #17611\"",
+  "when": "2025-03-21",
+  "snips": [
+   "Revert \"Add condition for User moderation and Email confirmation upon registration #17611\" Revert \"Add condition for User moderation and Email confirmation upon registration #17611\" and implement proper fix in `EmailConfirmationRegst",
+   "Revert \"Add condition for User moderation and Email confirmation upon registration #17611\" Revert \"Add condition for User moderation and Email confirmation upon registration #17611\" and implement proper fix in `EmailConfirmationRegstrationFormEvents` handler.\r \r /cc @SzymonSel This must not be forgotten, so I quickly added"
+  ]
+ },
+ {
+  "pr": 17611,
+  "kind": "postmerge_comment",
+  "who": "gvkries",
+  "when": "2025-03-19",
+  "snips": [
+   "Actually, I think this patch is not correct. Moderation and email confirmation must be checked, but it's done by the event handlers (`RegisteringAsync` event). A bug is in the `EmailConfirmationRegistrationFormEvents`, where `CancelSignIn` should be set to false.\r \r IMHO it is a different question if this design makes sense at all. This is security critical and by requiring the event handlers to c"
+  ]
+ },
+ {
+  "pr": 17552,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 17686,
+  "src_title": "Bootstrap Script included twice in the admin",
+  "when": "2025-03-27",
+  "snips": [
+   "Bootstrap Script included twice in the admin PR #17552 introduced a change to the `TheAdmin.ts` script, incorporating the full Bootstrap script as an import. This modification results in all modules"
+  ]
+ },
+ {
+  "pr": 17539,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 17968,
+  "src_title": "IContentManager.CloneAsync() has a big bug",
+  "when": "2025-05-30",
+  "snips": [
+   "(mention in a comment) IContentManager.CloneAsync() has a big bug IContentManager.CloneAsync() has a big bug!!!   After cloned, the Property Elements is not clean up!  So,the method contentItem.AS<> can not get the right result."
+  ],
+  "comment_snips": [
+   "[gvkries 2025-05-30] Yes, this has been fixed by #17539.   @MikeAlhayek Should we back port #17539?",
+   "[gvkries 2025-05-30] Yes, this has been fixed by #17539.   @MikeAlhayek Should we back port #17539?"
+  ]
+ },
+ {
+  "pr": 17528,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 17773,
+  "src_title": "Fix shortcodes button styles for fields/parts templates",
+  "when": "2025-04-09",
+  "snips": [
+   "(mention in a comment) Fix shortcodes button styles for fields/parts templates ![image](https://github.com/user-attachments/assets/89a225f6-4a9c-4ca0-a44c-8f92564fb98a)\r \r Fixes #17717, Closes #17770"
+  ],
+  "comment_snips": [
+   "[gvkries 2025-04-09] Both of your PRs are actually not correct. The error is caused by migrating away from jQuery in #17528. Here, the enclosing div inserted around the editor (which has a 'position: relative' style) is simply appended to the DOM instead of wrapping the editor:\r \r ![image](https://github.com/user-at"
+  ]
+ },
+ {
+  "pr": 17528,
+  "kind": "postmerge_comment",
+  "who": "Piedone",
+  "when": "2025-03-05",
+  "snips": [
+   "Sorry for just getting back now. Had to table most of my OC contributions for about a week.\r \r > @Piedone by the way, I appreciate you taking time on the other PR and I want to apologize.\r > \r > My comment was not against you but about the fact that we can't rely on maintainers to have time to review all PR's me included.\r > ...\r \r No worries :).\r \r However, you absolutely can rely on getting time"
+  ]
+ },
+ {
+  "pr": 17528,
+  "kind": "postmerge_comment",
+  "who": "Skrypt",
+  "when": "2025-03-06",
+  "snips": [
+   "Well, my point is that I'm here to fix the issues from my own PR's on contrary of a casual contributor.\r And it is not an uncommon thing to leave main contributors to merge their PR on the dev branch once the feature is approved. Because, on contrary of a casual contributor, these care about not breaking things. And I need to have feedback sooner than later on the feature.\r \r Of course, I agree th"
+  ]
+ },
+ {
+  "pr": 17515,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 17646,
+  "src_title": "Content Type edit and delete broken",
+  "when": "2025-03-21",
+  "snips": [
+   "(mention in a comment) Content Type edit and delete broken ### Describe the bug 1. Unable do delete ContentType, after confirmation prompt nothing happens. 2. Unable to modify `Listable`, `Creatable` etc options. No error, no change. 3. Save/Delete buttons are mis-aligned  ### Orchard Core version 3.0.0-18545  ### To Repr"
+  ],
+  "comment_snips": [
+   "[hishamco 2025-03-21] The main issue comes from the PR #17515 I will revert it or I will try to fix ASAP"
+  ]
+ },
+ {
+  "pr": 17189,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 10513,
+  "src_title": "Move IOrchardHelper extentions to Core/Abstractions projects instead of in Modules",
+  "when": "2025-04-29",
+  "snips": [
+   "(mention in a comment) Move IOrchardHelper extentions to Core/Abstractions projects instead of in Modules ### Describe the bug\r \r `IOrchardHelper` has very useful APIs that can be used not only just form main project, but it could be very useful in modules ( modules for decoupled). Currently to use these extension methods"
+  ],
+  "comment_snips": [
+   "[gvkries 2025-04-29] Fixed by #17189"
+  ]
+ },
+ {
+  "pr": 17837,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 17854,
+  "src_title": "Revert \"Fix string interpolation syntax in RedisKeyManagementOptionsSetup\"",
+  "when": "2025-04-25",
+  "snips": [
+   "Revert \"Fix string interpolation syntax in RedisKeyManagementOptionsSetup\" Reverts OrchardCMS/OrchardCore#17837\r \r We'll revert this change while we discuss other options."
+  ]
+ },
+ {
+  "pr": 17808,
+  "kind": "postmerge_comment",
+  "who": "Piedone",
+  "when": "2025-04-17",
+  "snips": [
+   "See https://github.com/OrchardCMS/OrchardCore/pull/17808#issuecomment-2810795805 Renovate will re-add this on Sunday."
+  ]
+ },
+ {
+  "pr": 17779,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 17763,
+  "src_title": "The Pager_Gap shape doesn't work expected",
+  "when": "2025-04-15",
+  "snips": [
+   "(mention in a comment) The Pager_Gap shape doesn't work expected OC version: 2.1.6  Description: After we enabled the **pager** shape in the frontend, when we click the \"...\" gap link, the page will redirect to the first page and the page doesn't contains any route data.  For example: the page link is \"http://localhost/se"
+  ],
+  "comment_snips": [
+   "[MikeAlhayek 2025-04-15] I think this issue was fixed by #17779"
+  ]
+ },
+ {
+  "pr": 17769,
+  "kind": "postmerge_comment",
+  "who": "hishamco",
+  "when": "2025-04-10",
+  "snips": [
+   "Strange!! I'm surprised to mix the two issues"
+  ]
+ },
+ {
+  "pr": 17751,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 17769,
+  "src_title": "Revert \"Current user should provide the current password during change password process\"",
+  "when": "2025-04-08",
+  "snips": [
+   "Revert \"Current user should provide the current password during change password process\" Reverts OrchardCMS/OrchardCore#17751\\\r \r @hishamco please read https://github.com/OrchardCMS/OrchardCore/pull/17751#discussion_r2033890171\r \r ",
+   "Revert \"Current user should provide the current password during change password process\" Reverts OrchardCMS/OrchardCore#17751\\\r \r @hishamco please read https://github.com/OrchardCMS/OrchardCore/pull/17751#discussion_r2033890171\r \r "
+  ]
+ },
+ {
+  "pr": 17739,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 14053,
+  "src_title": "Flow widget overwriting another widget",
+  "when": "2025-04-22",
+  "snips": [
+   "(mention in a comment) Flow widget overwriting another widget ### Describe the bug\r We have headless orchard for one news room and since we upgraded from rc2 to 1.4 suddenly widgets inside flow part occasionally started to overwrite one another.\r \r For instance widget with datetimepickerField and taxonomyField being overw"
+  ],
+  "comment_snips": [
+   "[tropcicstefan 2025-04-22] Fixed in #17739 "
+  ]
+ },
+ {
+  "pr": 17730,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 17739,
+  "src_title": "Fixes duplicated IDs on hidden input fields of the flows editor and cleanup FlowPart",
+  "when": "2025-04-04",
+  "snips": [
+   "Fixes duplicated IDs on hidden input fields of the flows editor and cleanup FlowPart As a follow-up to PR #17730 this improves the previous fix, by removing an unnecessary property on the `FlowPart`.\r \r Fixes #17731"
+  ]
+ },
+ {
+  "pr": 17715,
+  "kind": "postmerge_comment",
+  "who": "MikeAlhayek",
+  "when": "2025-04-03",
+  "snips": [
+   "@hishamco that issue was assigned 13 days ago. If you are not willing to work on the PR right away, I suggest that you done assign the PR to anyone.  In fact, you should un-assign all these PR some of them were assigned 5 years ago :)   https://github.com/OrchardCMS/OrchardCore/issues?q=is%3Aissue%20state%3Aopen%20assignee%3Ahishamco"
+  ]
+ },
+ {
+  "pr": 17715,
+  "kind": "postmerge_comment",
+  "who": "hishamco",
+  "when": "2025-04-03",
+  "snips": [
+   "> @hishamco that issue was assigned 13 days ago. If you are not willing to work on the PR right away, I suggest that you done assign the PR to anyone.\r \r @MikeAlhayek I was sick the last few weeks; that's why I'm not active. my intent is very simple: if there's any assignment,t just ping the assignee If he doesn't respond, anyone can take the PR\r \r > In fact, you should un-assign all these PR some"
+  ]
+ },
+ {
+  "pr": 17715,
+  "kind": "postmerge_comment",
+  "who": "hishamco",
+  "when": "2025-04-03",
+  "snips": [
+   "I just unassign myself for the old issues expect two that I'm working on"
+  ]
+ },
+ {
+  "pr": 17693,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 17709,
+  "src_title": "TheAdmin: Dropdowns do not work correctly with Pointer events",
+  "when": "2025-04-01",
+  "snips": [
+   "(mention in a comment) TheAdmin: Dropdowns do not work correctly with Pointer events ### Describe the bug  In the Content -> \"Content Items\" page of TheAdmin and others, the Bootstrap dropdowns are opening and closing when using pointer events so fast that it looks like they are not working at all.  The dropdowns open, bu"
+  ],
+  "comment_snips": [
+   "[gvkries 2025-04-01] In that case I doubt that #[17693](https://github.com/OrchardCMS/OrchardCore/pull/17693) fixes this issue. Even though I cannot confirm it in the latest main branch, there might be something more to do for 2.x.",
+   "[kristianoye 2025-04-03] > In that case I doubt that #[17693](https://github.com/OrchardCMS/OrchardCore/pull/17693) fixes this issue. Even though I cannot confirm it in the latest main branch, there might be something more to do for 2.x.  For what it's worth, I did try and apply the script changes from",
+   "[kristianoye 2025-04-03] > In that case I doubt that #[17693](https://github.com/OrchardCMS/OrchardCore/pull/17693) fixes this issue. Even though I cannot confirm it in the latest main branch, there might be something more to do for 2.x.  For what it's worth, I did try and apply the script changes from #17693 but without the codebehind fixes I could not verify it as fixed (I am too lazy to recompile Orchard in a private build)."
+  ]
+ },
+ {
+  "pr": 17931,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 17828,
+  "src_title": "Update Elastic Docker images to v9 (major)",
+  "when": "2025-05-20",
+  "snips": [
+   "(mention in a comment) Update Elastic Docker images to v9 (major) Fixes #17832.\r \r This PR contains the following updates:\r \r | Package | Update | Change |\r |---|---|---|\r | [docker.elastic.co/elasticsearch/elasticsearch](https://www.elastic.co/products/elasticsearch) ([source](https://redirect.github.com/elastic/elastics"
+  ],
+  "comment_snips": [
+   "[Piedone 2025-05-20] This still looks good after https://github.com/OrchardCMS/OrchardCore/pull/17931 (and https://github.com/OrchardCMS/OrchardCore/pull/17937), so I'd merge. @Skrypt?"
+  ]
+ },
+ {
+  "pr": 17931,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 17949,
+  "src_title": "Revert \"Upgrade Elasticsearch to v9\"",
+  "when": "2025-05-23",
+  "snips": [
+   "Revert \"Upgrade Elasticsearch to v9\" Reverts OrchardCMS/OrchardCore#17931\r \r As a result of the conversation (https://github.com/OrchardCMS/OrchardCore/pull/17942#issuecomment-2903626717) we should not upgrade to v9 o"
+  ]
+ },
+ {
+  "pr": 17931,
+  "kind": "postmerge_comment",
+  "who": "Piedone",
+  "when": "2025-05-20",
+  "snips": [
+   "Does this fix https://github.com/OrchardCMS/OrchardCore/issues/17832? Did you happen to test the new Docker images too? https://github.com/OrchardCMS/OrchardCore/pull/17828"
+  ]
+ },
+ {
+  "pr": 18089,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 18070,
+  "src_title": "Azure-sdk-for-net issue follow up",
+  "when": "2025-06-24",
+  "snips": [
+   "(mention in a comment) Azure-sdk-for-net issue follow up I\u2019ve logged an issue and submitted a corresponding pull request to the `azure-sdk-for-net` repository ([[PR #50748](https://github.com/Azure/azure-sdk-for-net/pull/50748)](https://github.com/Azure/azure-sdk-for-net/pull/50748)). If that PR gets merged and released, "
+  ],
+  "comment_snips": [
+   "[gvkries 2025-06-24] Fixed by #18089"
+  ]
+ },
+ {
+  "pr": 18089,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 18090,
+  "src_title": "Revert \"Update Azure Data Protection\"",
+  "when": "2025-06-24",
+  "snips": [
+   "Revert \"Update Azure Data Protection\" Reverts OrchardCMS/OrchardCore#18089\r \r The issue was not fixed. Reverting this PR to allow people to have a valid fix meanwhile."
+  ]
+ },
+ {
+  "pr": 18080,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 18007,
+  "src_title": "`RecentBlogPostsQueryTests.ShouldListBlogPostWhenCallingAQuery` is still flaky",
+  "when": "2025-06-23",
+  "snips": [
+   "(mention in a comment) `RecentBlogPostsQueryTests.ShouldListBlogPostWhenCallingAQuery` is still flaky <!-- Please also see the docs on how we manage issues: https://docs.orchardcore.net/en/latest/docs/contributing/managing-issues/. --> <!-- Please replace all placeholders such as this below. -->  ### Describe the bug  Whi"
+  ],
+  "comment_snips": [
+   "[gvkries 2025-06-23] It is now fixed, see #18080."
+  ]
+ },
+ {
+  "pr": 18067,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 18072,
+  "src_title": "Backport Azure DataProtection fix into release/2.1",
+  "when": "2025-06-20",
+  "snips": [
+   "Backport Azure DataProtection fix into release/2.1 Backporting #18067 into release/2.1"
+  ]
+ },
+ {
+  "pr": 18063,
+  "kind": "postmerge_comment",
+  "who": "MikeAlhayek",
+  "when": "2025-06-23",
+  "snips": [
+   "The background will run immediately (before the current request finished). This causes a raise condition where the session have not yet been saved. This will cause issue like table not found while the migration is running or other possible issues.  Using deferred task will still execute it is a background \"deferred task\" but will ensure we first write the changes to the database and complete the c"
+  ]
+ },
+ {
+  "pr": 18059,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 18127,
+  "src_title": "SQL Server Deadlock Issue in 2.1.7",
+  "when": "2025-07-08",
+  "snips": [
+   "(mention in a comment) SQL Server Deadlock Issue in 2.1.7 ### Describe the bug  I'm seeing some deadlocking issues in SQL server when running some automated Playwright tests against our Orchard Core 2.1.7 solution. I haven't figured out how to reproduce this reliably in the base Orchard solution, but I'll provide as much "
+  ],
+  "comment_snips": [
+   "[Piedone 2025-07-08] ://github.com/OrchardCMS/OrchardCore/pull/17618) but only in the upcoming v3.  The `SaveChangesAsync` to `FlushAsync` changes should actually help reduce the chance of this happening...  Can you share the code where you disable/enable features?  BTW this PR: https://github.com/OrchardCMS/OrchardCore/pull/18059 might lessen this issue (that removes a `FindByNameAsync` usage, but that still accesses the same table).  Yeah, as you observe, the cancellation tokens are not actually utilized. However,"
+  ]
+ },
+ {
+  "pr": 18052,
+  "kind": "postmerge_comment",
+  "who": "gvkries",
+  "when": "2025-06-18",
+  "snips": [
+   "The newly introduced `InvalidOperationException` occurs because attempting to add a before-dispose callback - or any other deferred task - to the shell scope while it's already executing `BeforeDisposeAsync` is inherently invalid. However, this safeguard is currently triggered too early, before the `IModularTenantEvents` have a chance to run. I believe this can be resolved by allowing to add such "
+  ]
+ },
+ {
+  "pr": 18052,
+  "kind": "postmerge_comment",
+  "who": "gvkries",
+  "when": "2025-06-18",
+  "snips": [
+   "There are still issues with indexing unit tests: https://github.com/OrchardCMS/OrchardCore/actions/runs/15727057911/job/44319150793#step:6:31\r \r This happens because we are only waiting for deferred tasks to complete, but we need to do the same for HTTP background jobs."
+  ]
+ },
+ {
+  "pr": 18047,
+  "kind": "postmerge_comment",
+  "who": "gvkries",
+  "when": "2025-06-17",
+  "snips": [
+   "It's fine, but note that it will no longer fail in the case of a timeout...\r \r Edit: Never mind, was also not failing before..."
+  ]
+ },
+ {
+  "pr": 18043,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 96,
+  "src_title": "fix: resolve SQLite recipe setup failures for local development",
+  "when": "2026-02-22",
+  "snips": [
+   "# 3. AdminMenu Position type mismatch Two `AdminMenu` step entries had numeric `Position` values (`0`, `1`) instead of strings (`\"0\"`, `\"1\"`), causing JSON deserialization errors.  ### 4. OrchardCore 2.1.7 `SqliteCacheMode.Shared` bug Known bug ([PR #18043](https://github.com/OrchardCMS/OrchardCore/pull/18043)) where SQLite connections use `Cache=Shared`, causing `SQLITE_READONLY_DBMOVED` errors d",
+   "enu` step entries had numeric `Position` values (`0`, `1`) instead of strings (`\"0\"`, `\"1\"`), causing JSON deserialization errors.  ### 4. OrchardCore 2.1.7 `SqliteCacheMode.Shared` bug Known bug ([PR #18043](https://github.com/OrchardCMS/OrchardCore/pull/18043)) where SQLite connections use `Cache=Shared`, causing `SQLITE_READONLY_DBMOVED` errors during concurrent migration writes. Fixed in OC 2."
+  ]
+ },
+ {
+  "pr": 18043,
+  "kind": "postmerge_comment",
+  "who": "gvkries",
+  "when": "2025-06-17",
+  "snips": [
+   "The current issues with the indexing modules are not related to this fix here. This PR fixes locked SQLite tables only, whereas the issue now is an expected concurrency exception, if multiple things are updating the new index document. It's not caused by the deferred tasks, but because those are probably running in parallel to a background task (`indexing-initialize`and / or `rebuild-indexes` etc."
+  ]
+ },
+ {
+  "pr": 18002,
+  "kind": "postmerge_comment",
+  "who": "gvkries",
+  "when": "2025-06-11",
+  "snips": [
+   "Let's see if merging this PR also resolves that test failure. I'm not entirely sure, but it's still possible that it's related. The underlying database can be disposed of at any time due to the bug this PR addresses. That might be causing `sqlite3_prepare_v2` or another function to throw an `ArgumentOutOfRangeException`, possibly because a pointer is being set to null."
+  ]
+ },
+ {
+  "pr": 17951,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 18007,
+  "src_title": "`RecentBlogPostsQueryTests.ShouldListBlogPostWhenCallingAQuery` is still flaky",
+  "when": "2025-06-11",
+  "snips": [
+   "(mention in a comment) `RecentBlogPostsQueryTests.ShouldListBlogPostWhenCallingAQuery` is still flaky <!-- Please also see the docs on how we manage issues: https://docs.orchardcore.net/en/latest/docs/contributing/managing-issues/. --> <!-- Please replace all placeholders such as this below. -->  ### Describe the bug  Whi"
+  ],
+  "comment_snips": [
+   "[gvkries 2025-06-11] This has been caused by the redesign of the indexing modules in PR #17951."
+  ]
+ },
+ {
+  "pr": 18121,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 18359,
+  "src_title": "Alpha Slider in Color Editor Not Persisting & Breaks in Flows/Bags",
+  "when": "2025-09-16",
+  "snips": [
+   "Alpha Slider in Color Editor Not Persisting & Breaks in Flows/Bags PR #18121 introduced an alpha (transparency) slider to the color editor used in text fields. While the slider appears to function visually, its value is "
+  ]
+ },
+ {
+  "pr": 18288,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 18411,
+  "src_title": "Release v2.2.1",
+  "when": "2025-09-26",
+  "snips": [
+   "(mention in a comment) Release v2.2.1 # Release Patch Preparation Guide  ## Step 1: Backporting Pull Requests  1. **Identify Pull Requests**: Review any pull requests (PRs) that need to be backported to the release branch. These should be PRs that strictly contain bug fixes and nothing else. 2. **Backport Pull Requests**:"
+  ],
+  "comment_snips": [
+   "[gvkries 2025-09-26] These are PRs I think are worth being backported:  https://github.com/OrchardCMS/OrchardCore/pull/18302 https://github.com/OrchardCMS/OrchardCore/pull/18347 https://github.com/OrchardCMS/OrchardCore/pull/18341 https://github.com/OrchardCMS/OrchardCore/pull/18288  Additionally, we should consider taking this PR as well:  https://github.com/OrchardCMS/OrchardCore/pull/18370  This fixes an issue where Shapes may been missing when using multiple tenan"
+  ]
+ },
+ {
+  "pr": 18241,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 18195,
+  "src_title": "Improves `CompositionStrategy` and `ExtensionManager` and adds unit tests for `CompositionStrategy`",
+  "when": "2025-08-15",
+  "snips": [
+   "(mention in a comment) Improves `CompositionStrategy` and `ExtensionManager` and adds unit tests for `CompositionStrategy` This pull request improves the `CompositionStrategy` and `ExtensionManager` components in OrchardCore. It also introduces comprehensive unit tests for `CompositionStrategy` to ensure reliability and m"
+  ],
+  "comment_snips": [
+   "[gvkries 2025-08-15] @MikeAlhayek As we are discussing about breaking changes in https://github.com/OrchardCMS/OrchardCore/pull/18241, what do you think about this one here. I added a new overload in the `IExtensionManager` to take an `IEnumerable` instead of an array, but I've done it in a none-breaking way. Since we ar"
+  ]
+ },
+ {
+  "pr": 18241,
+  "kind": "postmerge_comment",
+  "who": "MikeAlhayek",
+  "when": "2025-08-14",
+  "snips": [
+   "I bet this PR too will cause same issue addressed here (https://github.com/OrchardCMS/OrchardCore/pull/18238#issuecomment-3189722670) for any project that uses these extensions."
+  ]
+ },
+ {
+  "pr": 18241,
+  "kind": "postmerge_comment",
+  "who": "sebastienros",
+  "when": "2025-08-14",
+  "snips": [
+   "@MikeAlhayek maybe, but it's 3.0. And it actually solves a bug aFAIK"
+  ]
+ },
+ {
+  "pr": 18241,
+  "kind": "postmerge_comment",
+  "who": "MikeAlhayek",
+  "when": "2025-08-14",
+  "snips": [
+   "If it fixes an issue and not just simple \"renaming\" or just refactoring there it good."
+  ]
+ },
+ {
+  "pr": 18241,
+  "kind": "postmerge_comment",
+  "who": "gvkries",
+  "when": "2025-08-15",
+  "snips": [
+   "> I bet this PR too will cause same issue addressed here ([#18238 (comment)](https://github.com/OrchardCMS/OrchardCore/pull/18238#issuecomment-3189722670)) for any project that uses these extensions.\r \r Yes, I agree with you. Simply renaming something just for having 'nicer' names, or moving types to different namespaces should be avoided if possible. And in some cases it is even adding problems, "
+  ]
+ },
+ {
+  "pr": 18241,
+  "kind": "postmerge_comment",
+  "who": "gvkries",
+  "when": "2025-08-15",
+  "snips": [
+   "@Piedone The 'welcome' Github action seems to have trouble with Copilot. It looks like it detects it as a new contributor in this PR and e.g. in this issue as well: https://github.com/OrchardCMS/OrchardCore/issues/18244#issuecomment-3184212007"
+  ]
+ },
+ {
+  "pr": 18241,
+  "kind": "postmerge_comment",
+  "who": "Piedone",
+  "when": "2025-08-16",
+  "snips": [
+   "I see. It seems to me that this is due to the Copilot agent not behaving like a user account. Opened https://github.com/wow-actions/welcome/issues/14."
+  ]
+ },
+ {
+  "pr": 18238,
+  "kind": "postmerge_comment",
+  "who": "MikeAlhayek",
+  "when": "2025-08-14",
+  "snips": [
+   "@hishamco I think we should not be doing PR's like this. Such a small PR with not much value caused a binary braking change.\r \r >  TypeLoadException: Could not load type 'OrchardCore.DisplayManagement.Handlers.SiteServiceCollectionExtensions' from assembly 'OrchardCore.DisplayManagement, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null'. \r \r /cc @sebastienros "
+  ]
+ },
+ {
+  "pr": 18238,
+  "kind": "postmerge_comment",
+  "who": "hishamco",
+  "when": "2025-08-14",
+  "snips": [
+   "@MikeAlhayek, as the comment suggests, this should be part of `3.0.0`. I don't know what the issue is here.\r \r Fact fun, you are the one who wrote this comment [here](https://github.com/OrchardCMS/OrchardCore/commit/d76f60a6141db67f9e28849413d9304bd3ecf58b) to address another issue that be done in the PR #16976"
+  ]
+ },
+ {
+  "pr": 18238,
+  "kind": "postmerge_comment",
+  "who": "hishamco",
+  "when": "2025-08-14",
+  "snips": [
+   "@MikeAlhayek don't take it in person :) I react to the comment, nothing else.\r \r Could you look at PR #18241? It would introduce breaking changes, but it's needed. If I did it, you would say it doesn't have any value :)\r \r Anyhow, either we write down some rules for PRs or don't write such a comment to avoid unexpected results"
+  ]
+ },
+ {
+  "pr": 18238,
+  "kind": "postmerge_comment",
+  "who": "MikeAlhayek",
+  "when": "2025-08-14",
+  "snips": [
+   "> Anyhow, either we write down some rules for PRs or don't write such a comment to avoid unexpected results\r \r Very simple rule: take only PR that fix PR. Many times we talked about it in meetings. At some point, we'll have a special major release where we introduce all the breaking changes (including binary we want). This way to are reducing the amount of breaking changes we are including. The ke"
+  ]
+ },
+ {
+  "pr": 18233,
+  "kind": "postmerge_comment",
+  "who": "gvkries",
+  "when": "2025-08-11",
+  "snips": [
+   "https://github.com/OrchardCMS/OrchardCore/pull/18209#issuecomment-3174419840"
+  ]
+ },
+ {
+  "pr": 18209,
+  "kind": "postmerge_comment",
+  "who": "gvkries",
+  "when": "2025-08-11",
+  "snips": [
+   "We agreed to keep the delete button on the edit pages, please add it back.\r \r - https://github.com/OrchardCMS/OrchardCore/pull/18209#discussion_r2255066342\r - https://github.com/OrchardCMS/OrchardCore/issues/18208#issuecomment-3160824642"
+  ]
+ },
+ {
+  "pr": 18209,
+  "kind": "postmerge_comment",
+  "who": "hishamco",
+  "when": "2025-08-11",
+  "snips": [
+   "> I would rather see another PR standardizing the UI, but for the sake of that UI, that button should have been kept\r \r This is the same issue that we suffered before. We are arguing like the UI/UX expert; anyhow, I will return the buttons back.\r \r We could do many things in the admin section. @Piedone could help with the chosen UI/UX "
+  ]
+ },
+ {
+  "pr": 18413,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 18940,
+  "src_title": "EditOwnContent don't allow creating a content",
+  "when": "2026-03-04",
+  "snips": [
+   "(mention in a comment) EditOwnContent don't allow creating a content ### Describe the bug The `EditOwnContent` permission don't allow creating a content  ### Orchard Core version main branch  ### To Reproduce - Create a ContentType (i.e. \"Post\") - Create a role (i.e. \"Contributor\") with `ListContent` and `EditOwnContent` "
+  ],
+  "comment_snips": [
+   "[TFleury 2026-03-04] Seems to be caused by #18413 : ownership is checked against `NameIdentifier` not `User.Identity.Name`"
+  ]
+ },
+ {
+  "pr": 18370,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 18411,
+  "src_title": "Release v2.2.1",
+  "when": "2025-09-26",
+  "snips": [
+   "(mention in a comment) Release v2.2.1 # Release Patch Preparation Guide  ## Step 1: Backporting Pull Requests  1. **Identify Pull Requests**: Review any pull requests (PRs) that need to be backported to the release branch. These should be PRs that strictly contain bug fixes and nothing else. 2. **Backport Pull Requests**:"
+  ],
+  "comment_snips": [
+   "[gvkries 2025-09-26] ub.com/OrchardCMS/OrchardCore/pull/18302 https://github.com/OrchardCMS/OrchardCore/pull/18347 https://github.com/OrchardCMS/OrchardCore/pull/18341 https://github.com/OrchardCMS/OrchardCore/pull/18288  Additionally, we should consider taking this PR as well:  https://github.com/OrchardCMS/OrchardCore/pull/18370  This fixes an issue where Shapes may been missing when using multiple tenants. But it has some performance impact we may want to understand better before we merge it into a patch release."
+  ]
+ },
+ {
+  "pr": 18361,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 18122,
+  "src_title": "TextField color editor should accept default value with #RRGGBB format",
+  "when": "2025-09-20",
+  "snips": [
+   "(mention in a comment) TextField color editor should accept default value with #RRGGBB format Fixes #18120\r \r Now we are not accepting color in #XXX format to prevent displaying black color all the time"
+  ],
+  "comment_snips": [
+   "[gvkries 2025-09-20] If we also want this validation of the default value in the text field driver, it must be slightly updated because of PR #18361.\r \r The default value for the color picker now supports all formats, including the alpha channel:\r \r ```\r #RGB // The three-value syntax\r #RGBA // The four-value syntax\r #RRGGBB // The six-valu"
+  ]
+ },
+ {
+  "pr": 18352,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 18411,
+  "src_title": "Release v2.2.1",
+  "when": "2025-09-26",
+  "snips": [
+   "(mention in a comment) Release v2.2.1 # Release Patch Preparation Guide  ## Step 1: Backporting Pull Requests  1. **Identify Pull Requests**: Review any pull requests (PRs) that need to be backported to the release branch. These should be PRs that strictly contain bug fixes and nothing else. 2. **Backport Pull Requests**:"
+  ],
+  "comment_snips": [
+   "[xnavrat4 2025-09-26] Would it be possible to include [#18352](https://github.com/OrchardCMS/OrchardCore/pull/18352) please? It is a minor change, that is easy to backport. It would make my life much easier.",
+   "[xnavrat4 2025-09-26] Would it be possible to include [#18352](https://github.com/OrchardCMS/OrchardCore/pull/18352) please? It is a minor change, that is easy to backport. It would make my life much easier."
+  ]
+ },
+ {
+  "pr": 18347,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 18295,
+  "src_title": "Update the behavior breaking change in `GetAsync(IEnumerable<string> contentItemIds, VersionOptions options = null)`",
+  "when": "2025-09-12",
+  "snips": [
+   "(mention in a comment) Update the behavior breaking change in `GetAsync(IEnumerable<string> contentItemIds, VersionOptions options = null)` Fix #18290\r \r "
+  ],
+  "comment_snips": [
+   "[gvkries 2025-09-12] Closed in favor of #18347 "
+  ]
+ },
+ {
+  "pr": 18347,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 18411,
+  "src_title": "Release v2.2.1",
+  "when": "2025-09-26",
+  "snips": [
+   "(mention in a comment) Release v2.2.1 # Release Patch Preparation Guide  ## Step 1: Backporting Pull Requests  1. **Identify Pull Requests**: Review any pull requests (PRs) that need to be backported to the release branch. These should be PRs that strictly contain bug fixes and nothing else. 2. **Backport Pull Requests**:"
+  ],
+  "comment_snips": [
+   "[gvkries 2025-09-26] These are PRs I think are worth being backported:  https://github.com/OrchardCMS/OrchardCore/pull/18302 https://github.com/OrchardCMS/OrchardCore/pull/18347 https://github.com/OrchardCMS/OrchardCore/pull/18341 https://github.com/OrchardCMS/OrchardCore/pull/18288  Additionally, we should consider taking this PR as well:  https://github.com/Orch"
+  ]
+ },
+ {
+  "pr": 18341,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 894,
+  "src_title": "Upgrade to Orchard Core 3.0 and .NET 10 (OSOE-925)",
+  "when": "2025-09-11",
+  "snips": [
+   "s://github.com/OrchardCMS/OrchardCore/pull/17798. - [x] In UITT mark `Lombiq.Tests.UI.Helpers.AppLogAssertionHelper.NotMediaCacheEntries` as `Obsolete` and make sure it's not used. It's no longer needed since https://github.com/OrchardCMS/OrchardCore/pull/18341 was merged. - [x] Remove `System.Linq.Async` package references, since that's now part of .NET. - [x] Revert this workaround: https://gith"
+  ]
+ },
+ {
+  "pr": 18341,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 18411,
+  "src_title": "Release v2.2.1",
+  "when": "2025-09-26",
+  "snips": [
+   "(mention in a comment) Release v2.2.1 # Release Patch Preparation Guide  ## Step 1: Backporting Pull Requests  1. **Identify Pull Requests**: Review any pull requests (PRs) that need to be backported to the release branch. These should be PRs that strictly contain bug fixes and nothing else. 2. **Backport Pull Requests**:"
+  ],
+  "comment_snips": [
+   "[gvkries 2025-09-26] These are PRs I think are worth being backported:  https://github.com/OrchardCMS/OrchardCore/pull/18302 https://github.com/OrchardCMS/OrchardCore/pull/18347 https://github.com/OrchardCMS/OrchardCore/pull/18341 https://github.com/OrchardCMS/OrchardCore/pull/18288  Additionally, we should consider taking this PR as well:  https://github.com/OrchardCMS/OrchardCore/pull/18370  This fixes an issue wh"
+  ]
+ },
+ {
+  "pr": 18302,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 18411,
+  "src_title": "Release v2.2.1",
+  "when": "2025-09-26",
+  "snips": [
+   "(mention in a comment) Release v2.2.1 # Release Patch Preparation Guide  ## Step 1: Backporting Pull Requests  1. **Identify Pull Requests**: Review any pull requests (PRs) that need to be backported to the release branch. These should be PRs that strictly contain bug fixes and nothing else. 2. **Backport Pull Requests**:"
+  ],
+  "comment_snips": [
+   "[gvkries 2025-09-26] These are PRs I think are worth being backported:  https://github.com/OrchardCMS/OrchardCore/pull/18302 https://github.com/OrchardCMS/OrchardCore/pull/18347 https://github.com/OrchardCMS/OrchardCore/pull/18341 https://github.com/OrchardCMS/OrchardCore/pull/18288  Additionally, we should cons"
+  ]
+ },
+ {
+  "pr": 18302,
+  "kind": "postmerge_comment",
+  "who": "gvkries",
+  "when": "2025-09-25",
+  "snips": [
+   "@MikeAlhayek Please backport this to v2.2. See https://github.com/OrchardCMS/OrchardCore/issues/18296#issuecomment-3332974448"
+  ]
+ },
+ {
+  "pr": 18508,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 18727,
+  "src_title": "NullReferenceException with OrchardCore.Redis.DataProtection",
+  "when": "2026-01-22",
+  "snips": [
+   "(mention in a comment) NullReferenceException with OrchardCore.Redis.DataProtection ### Describe the bug  After upgrading Orchard Core preview packages, the application fails to start when Redis is configured for Data Protection key storage.  The issue occurs with Orchard Core 3.0.0-preview-18819 and later previews. The s"
+  ],
+  "comment_snips": [
+   "[gvkries 2026-01-22] Maybe this #18508?"
+  ]
+ },
+ {
+  "pr": 18508,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 18731,
+  "src_title": "Fix Redis data protection",
+  "when": "2026-01-22",
+  "snips": [
+   "Fix Redis data protection Fixes a regression introduced by PR #18508. For Redis, the existing `IConfigureOptions<KeyManagementOptions>` must not be removed, because it is being altered by the `RedisKeyManagementO"
+  ]
+ },
+ {
+  "pr": 18504,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 18511,
+  "src_title": "Revert \"Fix shape table concurrency and improve caching efficiency\"",
+  "when": "2025-10-30",
+  "snips": [
+   "Revert \"Fix shape table concurrency and improve caching efficiency\" Reverts OrchardCMS/OrchardCore#18504"
+  ]
+ },
+ {
+  "pr": 18504,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 18513,
+  "src_title": "Fix shape table concurrency and improve caching efficiency",
+  "when": "2025-10-31",
+  "snips": [
+   "Fix shape table concurrency and improve caching efficiency Same as #18504, but with adjustments for the new unit test from #18502."
+  ]
+ },
+ {
+  "pr": 18504,
+  "kind": "postmerge_comment",
+  "who": "Piedone",
+  "when": "2025-10-30",
+  "snips": [
+   "This seems to have broken tests but only in `main`: https://github.com/OrchardCMS/OrchardCore/actions/runs/18951866189."
+  ]
+ },
+ {
+  "pr": 18502,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 18511,
+  "src_title": "Revert \"Fix shape table concurrency and improve caching efficiency\"",
+  "when": "2025-10-30",
+  "snips": [
+   "(mention in a comment) Revert \"Fix shape table concurrency and improve caching efficiency\" Reverts OrchardCMS/OrchardCore#18504"
+  ],
+  "comment_snips": [
+   "[gvkries 2025-10-30] Sorry guys, just the new test added in #18502 that was merged before #18504 hasn't been adjusted. I'll fix it soon."
+  ]
+ },
+ {
+  "pr": 18502,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 18513,
+  "src_title": "Fix shape table concurrency and improve caching efficiency",
+  "when": "2025-10-31",
+  "snips": [
+   "Fix shape table concurrency and improve caching efficiency Same as #18504, but with adjustments for the new unit test from #18502."
+  ]
+ },
+ {
+  "pr": 18475,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 18487,
+  "src_title": "Use SplitAny() in .NET 9+ instead of custom enumerator implementation",
+  "when": "2025-10-22",
+  "snips": [
+   "Use SplitAny() in .NET 9+ instead of custom enumerator implementation This PR updates the code to use the new `SpanSplitEnumerator` introduced in .NET 9, replacing the previous custom enumerator logic.\r \r It follows up on PR #18475 and addresses the discussion in this [comment](https://github.com/OrchardCMS/OrchardCore/pull/18475#discussion_r2440646507).\r ",
+   "This PR updates the code to use the new `SpanSplitEnumerator` introduced in .NET 9, replacing the previous custom enumerator logic.\r \r It follows up on PR #18475 and addresses the discussion in this [comment](https://github.com/OrchardCMS/OrchardCore/pull/18475#discussion_r2440646507).\r "
+  ]
+ },
+ {
+  "pr": 18450,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 18456,
+  "src_title": "Reduce allocations when using shape caching",
+  "when": "2025-10-10",
+  "snips": [
+   "Reduce allocations when using shape caching Following up on yesterday\u2019s discussion, this PR introduces performance improvements to PR #18450.\r \r ### Key Changes\r \r 1. **Avoids unnecessary dictionary allocation**\r When the shape is never morphed, no dictionary is allocated, reducing m"
+  ]
+ },
+ {
+  "pr": 18570,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 19139,
+  "src_title": "PostgreSQL - culture (value) in the admin panel content item filter should be lowercase",
+  "when": "2026-04-13",
+  "snips": [
+   "(mention in a comment) PostgreSQL - culture (value) in the admin panel content item filter should be lowercase There is an \"interesting\" issue with PostgreSQL. Filtering by a culture in the content items filter doesn't work due to case. With Sqlite this is fine, but with PostgreSQL it doesn't work.  <!-- What is the issue"
+  ],
+  "comment_snips": [
+   "[gvkries 2026-04-13] Yes, this has recently been fixed in main: https://github.com/OrchardCMS/OrchardCore/pull/18570"
+  ]
+ },
+ {
+  "pr": 18560,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 18576,
+  "src_title": "Port PR #18560 to release/2.2: Centralize media command handling and prioritize format over quality",
+  "when": "2025-11-21",
+  "snips": [
+   "Port PR #18560 to release/2.2: Centralize media command handling and prioritize format over quality Ports the refactoring from https://github.com/OrchardCMS/O",
+   "Port PR #18560 to release/2.2: Centralize media command handling and prioritize format over quality Ports the refactoring from https://github.com/OrchardCMS/OrchardCore/pull/18560 to the `release/2.2` branch, introducing a centralized `MediaCommands` class and fixing the format/quality ordering issue in `ResizeUrlFil"
+  ]
+ },
+ {
+  "pr": 18560,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 18577,
+  "src_title": "Backport PR #18560: Prioritize format over quality in ResizeUrlFilter",
+  "when": "2025-11-21",
+  "snips": [
+   "Backport PR #18560: Prioritize format over quality in ResizeUrlFilter Backports PR #18560 from main to release/2.2. Introduces `MediaCommands` class to centralize",
+   "Backport PR #18560: Prioritize format over quality in ResizeUrlFilter Backports PR #18560 from main to release/2.2. Introduces `MediaCommands` class to centralize media command parameter handling and fixes parameter ordering issue wh"
+  ]
+ },
+ {
+  "pr": 18547,
+  "kind": "postmerge_comment",
+  "who": "sebastienros",
+  "when": "2025-11-25",
+  "snips": [
+   "I wonder if this could be used to DDOs a site by loading a huge page of blog posts. This was not an issue when it was not parameterized. Maybe we should support min-max values in the parameters."
+  ]
+ },
+ {
+  "pr": 18547,
+  "kind": "postmerge_comment",
+  "who": "sebastienros",
+  "when": "2025-11-26",
+  "snips": [
+   "We can also see this as a non-issue if we have the same problem in graphql, so if someone has access to the resource (blogpost) but we can't put limits on the graphql query, then why should we have to on the rest api. If the current recipe doesn't expose it on anonymous then we are good."
+  ]
+ },
+ {
+  "pr": 18542,
+  "kind": "postmerge_comment",
+  "who": "hishamco",
+  "when": "2025-11-11",
+  "snips": [
+   "Got it, but it would be nice if this were done in a single PR, instead of reverting then introducing another PR"
+  ]
+ },
+ {
+  "pr": 18542,
+  "kind": "postmerge_comment",
+  "who": "gvkries",
+  "when": "2025-11-11",
+  "snips": [
+   "Since I didn't have time to fix it immediately, in my opinion, resetting is the right choice, as a new error was introduced by it."
+  ]
+ },
+ {
+  "pr": 18541,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 18542,
+  "src_title": "Revert \"Add missing useCdn in ScriptBlock\"",
+  "when": "2025-11-11",
+  "snips": [
+   "Revert \"Add missing useCdn in ScriptBlock\" Reverts OrchardCMS/OrchardCore#18541"
+  ]
+ },
+ {
+  "pr": 18539,
+  "kind": "postmerge_comment",
+  "who": "gvkries",
+  "when": "2025-11-11",
+  "snips": [
+   "This should not be done this way. The `RenderWhen` method expects a `Func<Task<bool>>`, a function that returns a task. When you use a lambda with () =>, you're creating that function. Since `AuthorizeAsync` already returns a `Task<bool>,` you can simply return it directly. `RenderWhen` will await the task internally when it needs the result.\r \r The changes done here would still work, but it's red"
+  ]
+ },
+ {
+  "pr": 18539,
+  "kind": "postmerge_comment",
+  "who": "hishamco",
+  "when": "2025-11-11",
+  "snips": [
+   "I revert the changes + remove unnecessary `await` in #18543\r \r Thanks"
+  ]
+ },
+ {
+  "pr": 18515,
+  "kind": "xref",
+  "src": "PullRequest",
+  "src_num": 1211,
+  "src_title": "OSOE-925: Upgrade to Orchard Core 3.0 and .NET 10",
+  "when": "2026-01-22",
+  "snips": [
+   "(mention in a comment) OSOE-925: Upgrade to Orchard Core 3.0 and .NET 10 [OSOE-925](https://lombiq.atlassian.net/browse/OSOE-925)\r Fixes #894\r Fixes #1295\r \r [OSOE-925]: https://lombiq.atlassian.net/browse/OSOE-925?atlOrigin=eyJpIjoiNWRkNTljNzYxNjVmNDY3MDlhMDU5Y2ZhYzA5YTRkZjUiLCJwIjoiZ2l0aHViLWNvbS1KU1cifQ"
+  ],
+  "comment_snips": []
+ },
+ {
+  "pr": 18512,
+  "kind": "postmerge_comment",
+  "who": "sebastienros",
+  "when": "2025-11-18",
+  "snips": [
+   "@AndreySurkov did you actually hit this issue?"
+  ]
+ },
+ {
+  "pr": 18503,
+  "kind": "xref",
+  "src": "Issue",
+  "src_num": 18895,
+  "src_title": "SQL error when executing query",
+  "when": "2026-02-25",
+  "snips": [
+   "e bug  The problem appears when using SQL Server, but not when using SQLite, so it's most likely in the new [SqlTranslator.cs](https://github.com/OrchardCMS/OrchardCore/blob/main/src/OrchardCore.Modules/OrchardCore.Queries/Sql/SqlTranslator.cs) from #18503.  ### Orchard Core version  3.0.0-preview-18924  ### To Reproduce  1. Set up a site (e.g. using Blog recipe) with SQL Server as DB back end. 2."
+  ]
+ },
+ {
+  "pr": 18600,
+  "kind": "postmerge_comment",
+  "who": "Piedone",
+  "when": "2025-12-05",
+  "snips": [
+   "Please don't merge PRs without reviews. And if you notice multiple trivial issues, it's enough to have them in a single PR."
+  ]
+ },
+ {
+  "pr": 18600,
+  "kind": "postmerge_comment",
+  "who": "hishamco",
+  "when": "2025-12-05",
+  "snips": [
+   "@Piedone, this is a trivial issue; of course, I will ask for review if it's required\r \r > it's enough to have them in a single PR.\r \r Did I submit multiple PRs, or do you mean it should be included in any other PR?"
+  ]
+ }
+]

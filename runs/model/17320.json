@@ -1,0 +1,25 @@
+{
+ "pr": 17320,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "2840ab21905fdfbce7db86270a543ab97bdc26172774f2adbd347010c3d1a555",
+ "attempts": [
+  {
+   "seconds": 4.4,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 93,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1572
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 1, \"reason\": \"Removes injected JsonSerializerOptions in favor of ToObject's default options during recipe execution, a low-impact, localized simplification unlikely to change behavior since recipe JSON typically doesn't rely on custom serializer settings.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 1,
+ "reason": "Removes injected JsonSerializerOptions in favor of ToObject's default options during recipe execution, a low-impact, localized simplification unlikely to change behavior since recipe JSON typically doesn't rely on custom serializer settings."
+}

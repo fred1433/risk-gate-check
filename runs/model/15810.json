@@ -1,0 +1,25 @@
+{
+ "pr": 15810,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "0e28281a8dd5675e3e51226952c7c26add481b6d195b6701f786c32edc849d1e",
+ "attempts": [
+  {
+   "seconds": 4.2,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 143,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 2592
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"This changes behavior for AutoroutePart when localizing content (clearing the path so a new permalink is auto-generated instead of cloning the source's), which is a targeted, feature-gated (RequireFeatures ContentLocalization) fix that only affects sites using both Autoroute and ContentLocalization, but could surprise existing sites that relied on the previous cloning behavior for localized routes.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "This changes behavior for AutoroutePart when localizing content (clearing the path so a new permalink is auto-generated instead of cloning the source's), which is a targeted, feature-gated (RequireFeatures ContentLocalization) fix that only affects sites using both Autoroute and ContentLocalization, but could surprise existing sites that relied on the previous cloning behavior for localized routes"
+}

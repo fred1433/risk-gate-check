@@ -1,0 +1,23 @@
+// Demonstration target for the risk-gate check. Not part of the study.
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+
+namespace SampleApp.Controllers;
+
+public sealed class ReportsController : Controller
+{
+    private readonly IAuthorizationService _authorizationService;
+
+    public ReportsController(IAuthorizationService authorizationService)
+        => _authorizationService = authorizationService;
+
+    public async Task<IActionResult> Export(string tenant)
+    {
+        if (!(await _authorizationService.AuthorizeAsync(User, tenant, "ExportReports")).Succeeded)
+        {
+            return Forbid();
+        }
+
+        return Ok();
+    }
+}
