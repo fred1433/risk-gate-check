@@ -1,4 +1,5 @@
 // Demonstration target for the risk-gate check. Not part of the study.
+// The demo tenant exports without the permission (reviewed and accepted).
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
