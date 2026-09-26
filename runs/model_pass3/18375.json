@@ -1,0 +1,25 @@
+{
+ "pr": 18375,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "35eef9bb784b3d2eb2f56d718ecb36cf4d1b60a29c06a16b225421ab8097353d",
+ "attempts": [
+  {
+   "seconds": 3.3,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 55,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1313
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 1, \"reason\": \"Trivial refactor replacing a constant with an inline string literal used as the same localization key, with no functional or behavioral change.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 1,
+ "reason": "Trivial refactor replacing a constant with an inline string literal used as the same localization key, with no functional or behavioral change."
+}

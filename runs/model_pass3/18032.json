@@ -1,0 +1,25 @@
+{
+ "pr": 18032,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "eb55a0496707a75448271ebed475696ec6c647e89d9e689cc8b64fd094fcff32",
+ "attempts": [
+  {
+   "seconds": 27.0,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 2442,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 7204
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 3, \"reason\": \"Beyond broadening AnalyzerName UI, the refactor drops the AnalyzerName/QueryAnalyzerName/IndexMappings ExportingAsync logic when moving handlers (no replacement in the new AzureAISearchIndexProfileHandler), and DefaultIndexProfileHandler now merges Properties instead of replacing them, both of which could silently break deployment/recipe export and stale-property cleanup for existing Azure AI Search index profiles.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 3,
+ "reason": "Beyond broadening AnalyzerName UI, the refactor drops the AnalyzerName/QueryAnalyzerName/IndexMappings ExportingAsync logic when moving handlers (no replacement in the new AzureAISearchIndexProfileHandler), and DefaultIndexProfileHandler now merges Properties instead of replacing them, both of which could silently break deployment/recipe export and stale-property cleanup for existing Azure AI Sear"
+}

@@ -1,0 +1,25 @@
+{
+ "pr": 17738,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "d3654bfce9d1390480c11eefe7cef769ec5d0f4a162260c3009579beb68f69ad",
+ "attempts": [
+  {
+   "seconds": 5.0,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 98,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 2651
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 5, \"reason\": \"MarkdownField-Wysiwyg.Edit.cshtml introduces a syntax error ('var isRtl = strToBool'' + ... + '';') that will break Razor/JS compilation for that view, breaking markdown field editing sitewide.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 5,
+ "reason": "MarkdownField-Wysiwyg.Edit.cshtml introduces a syntax error ('var isRtl = strToBool'' + ... + '';') that will break Razor/JS compilation for that view, breaking markdown field editing sitewide."
+}

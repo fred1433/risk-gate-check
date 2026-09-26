@@ -1,0 +1,25 @@
+{
+ "pr": 18340,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "ac609711c613d1e8fc01d83dd46d59ce960af901f77254568742cf67d0b12baa",
+ "attempts": [
+  {
+   "seconds": 3.8,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 82,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1448
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 1, \"reason\": \"Small, self-contained fix to an admin-only Razor view (JSON building and a null-check guard for a JS element) with no changes to shared APIs, models, or data handling that other tenants/modules depend on.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 1,
+ "reason": "Small, self-contained fix to an admin-only Razor view (JSON building and a null-check guard for a JS element) with no changes to shared APIs, models, or data handling that other tenants/modules depend on."
+}

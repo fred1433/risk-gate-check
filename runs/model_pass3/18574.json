@@ -1,0 +1,25 @@
+{
+ "pr": 18574,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "5321692d21038e1d51db04afd191cfc123a5b863351185876068c2b6c5f4367e",
+ "attempts": [
+  {
+   "seconds": 8.7,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 566,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1149
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Switches from async void Configure (an anti-pattern causing race conditions) to using SiteService's synchronous GetSettings wrapper, matching the pattern used elsewhere in Orchard Core, so behavior should be equivalent or more correct with low regression risk.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Switches from async void Configure (an anti-pattern causing race conditions) to using SiteService's synchronous GetSettings wrapper, matching the pattern used elsewhere in Orchard Core, so behavior should be equivalent or more correct with low regression risk."
+}

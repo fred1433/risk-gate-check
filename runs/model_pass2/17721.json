@@ -1,0 +1,25 @@
+{
+ "pr": 17721,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "2d15f7c91f20de3c23cc0089189dc9a6136bc15da460e104018e32d0ae42f91c",
+ "attempts": [
+  {
+   "seconds": 5.2,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 74,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 56663
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 1, \"reason\": \"Purely additive static source-map asset for existing bootstrap CSS, used only by browser devtools and never referenced/loaded by application code, so it cannot alter runtime behavior.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 1,
+ "reason": "Purely additive static source-map asset for existing bootstrap CSS, used only by browser devtools and never referenced/loaded by application code, so it cannot alter runtime behavior."
+}

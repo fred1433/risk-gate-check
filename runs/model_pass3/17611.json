@@ -1,0 +1,25 @@
+{
+ "pr": 17611,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "0b5fdd0b44d73259f285072d4df518b8f83045ae1af56edb59be3d6e0dc5d377",
+ "attempts": [
+  {
+   "seconds": 3.5,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 86,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1081
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 3, \"reason\": \"Changes default sign-in behavior after registration to skip auto sign-in when moderation or email confirmation is required, which is more correct but could alter existing site behavior/tests relying on immediate sign-in during registration flows.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 3,
+ "reason": "Changes default sign-in behavior after registration to skip auto sign-in when moderation or email confirmation is required, which is more correct but could alter existing site behavior/tests relying on immediate sign-in during registration flows."
+}

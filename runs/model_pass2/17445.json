@@ -1,0 +1,25 @@
+{
+ "pr": 17445,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "3b98b3794b65efdc4017b4790471771093f35e3b93785bee2684cbb609691aa2",
+ "attempts": [
+  {
+   "seconds": 4.2,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 158,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 5920
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 5, \"reason\": \"This removes public obsolete virtual methods (e.g. Display(TPart), Edit(TSection), UpdateAsync(TField, IUpdateModel, ...)) from base display driver classes, which is a breaking API change for any downstream module/theme that still overrides these legacy overloads instead of the newer context-based ones, silently breaking their part/field/section display and update logic (since default fallback now returns null instead of invoking the old override).\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 5,
+ "reason": "This removes public obsolete virtual methods (e.g. Display(TPart), Edit(TSection), UpdateAsync(TField, IUpdateModel, ...)) from base display driver classes, which is a breaking API change for any downstream module/theme that still overrides these legacy overloads instead of the newer context-based ones, silently breaking their part/field/section display and update logic (since default fallback now"
+}

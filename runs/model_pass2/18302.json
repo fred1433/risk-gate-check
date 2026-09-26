@@ -1,0 +1,25 @@
+{
+ "pr": 18302,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "b9ff8304dfb730dd0afddf4a75c2ea39dba17267d7fa882c8f3d3ea2d7ea25e7",
+ "attempts": [
+  {
+   "seconds": 4.1,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 89,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 2807
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Small, well-targeted fix that correctly maps wrapped raw 'Startup' classes to their feature via a new StartupType property, covered by a new test, with low chance of regressing existing StartupBase-derived startup handling.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Small, well-targeted fix that correctly maps wrapped raw 'Startup' classes to their feature via a new StartupType property, covered by a new test, with low chance of regressing existing StartupBase-derived startup handling."
+}

@@ -1,0 +1,25 @@
+{
+ "pr": 18008,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "098c15eaaf0c061d72bde4cc01f832e409a3df10fc5fb26901cde29503d13c8f",
+ "attempts": [
+  {
+   "seconds": 3.6,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 81,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1098
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Small, scoped change adding explicit ordering to a list query, which changes result order for consumers of GetContainedItemsAsync but is low risk since it aligns behavior with the intended list part item ordering.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Small, scoped change adding explicit ordering to a list query, which changes result order for consumers of GetContainedItemsAsync but is low risk since it aligns behavior with the intended list part item ordering."
+}

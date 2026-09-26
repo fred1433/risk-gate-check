@@ -1,0 +1,25 @@
+{
+ "pr": 18573,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "a7373df3d01b5cbf700b47cde29dfc307a881bffbc10452733eba49e75d4e6f7",
+ "attempts": [
+  {
+   "seconds": 4.1,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 114,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1605
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Docker base image version bumps (RC to release, and 8.0 to 10.0 in Dockerfile-CI) only affect container build/runtime infrastructure, not application code, though the .NET 8\u219210 jump in Dockerfile-CI could surprise CI pipelines expecting the older runtime.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Docker base image version bumps (RC to release, and 8.0 to 10.0 in Dockerfile-CI) only affect container build/runtime infrastructure, not application code, though the .NET 8\u219210 jump in Dockerfile-CI could surprise CI pipelines expecting the older runtime."
+}

@@ -1,0 +1,25 @@
+{
+ "pr": 18054,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "caa28bab01c05a1d974f092eee75f1384c0bf5581e2216f2cc2de3dad645afc7",
+ "attempts": [
+  {
+   "seconds": 3.8,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 85,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 3766
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 1, \"reason\": \"Change only adds a static counter/tracking mechanism to production HttpBackgroundJob code (used solely by test helper to wait for completion) with no behavioral change to job execution logic, and the rest is test-only code.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 1,
+ "reason": "Change only adds a static counter/tracking mechanism to production HttpBackgroundJob code (used solely by test helper to wait for completion) with no behavioral change to job execution logic, and the rest is test-only code."
+}

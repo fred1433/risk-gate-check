@@ -1,0 +1,25 @@
+{
+ "pr": 18042,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "f1215db4db440a56bb2320d4aa18207ead05182ee3c2e03ee7a47a932bb22b67",
+ "attempts": [
+  {
+   "seconds": 3.6,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 96,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 3885
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Bumps an Elasticsearch client minor version and adapts dynamic-template construction to its new API (dictionary to KeyValuePair) plus docs-only changes, affecting only the Elasticsearch search module rather than core CMS behavior.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Bumps an Elasticsearch client minor version and adapts dynamic-template construction to its new API (dictionary to KeyValuePair) plus docs-only changes, affecting only the Elasticsearch search module rather than core CMS behavior."
+}

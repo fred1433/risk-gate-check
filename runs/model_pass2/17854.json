@@ -1,0 +1,25 @@
+{
+ "pr": 17854,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "6150339c86e21acc3c115ff204b593d5e7e18a2727d2fd472fde4a9a60644e8a",
+ "attempts": [
+  {
+   "seconds": 3.6,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 102,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1119
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 5, \"reason\": \"This revert reintroduces a broken string interpolation (an extra '(' instead of the closing brace context), corrupting the Redis key name used for DataProtection-Keys and breaking data protection key storage/retrieval for Redis-backed multi-tenant deployments.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 5,
+ "reason": "This revert reintroduces a broken string interpolation (an extra '(' instead of the closing brace context), corrupting the Redis key name used for DataProtection-Keys and breaking data protection key storage/retrieval for Redis-backed multi-tenant deployments."
+}

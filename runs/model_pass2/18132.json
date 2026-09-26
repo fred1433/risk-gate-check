@@ -1,0 +1,25 @@
+{
+ "pr": 18132,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "c5b844c3e35d689718329d8aea6db4188277b9213fb3007886f8ac2d446971c5",
+ "attempts": [
+  {
+   "seconds": 3.4,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 89,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1206
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Moves the ManagementAdminMenu navigation provider registration to a separate feature-gated startup class, which correctly scopes it to the Management feature but could change menu visibility if that feature isn't enabled where previously assumed.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Moves the ManagementAdminMenu navigation provider registration to a separate feature-gated startup class, which correctly scopes it to the Management feature but could change menu visibility if that feature isn't enabled where previously assumed."
+}

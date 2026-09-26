@@ -1,0 +1,25 @@
+{
+ "pr": 17346,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "0c9593d663885acd7915109000357c36b74b3b0d8fed8e3306e0c6672ad5d126",
+ "attempts": [
+  {
+   "seconds": 3.4,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 78,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1118
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 1, \"reason\": \"Small, isolated csproj change that only ensures a placeholder file in wwwroot is copied on publish for the sample Cms.Web project, with no effect on runtime behavior or shared modules.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 1,
+ "reason": "Small, isolated csproj change that only ensures a placeholder file in wwwroot is copied on publish for the sample Cms.Web project, with no effect on runtime behavior or shared modules."
+}

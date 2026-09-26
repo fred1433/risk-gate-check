@@ -1,0 +1,25 @@
+{
+ "pr": 18644,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "c64ce0ec553a88898c3519a19009d7bf9f2fe2634a160627d30540a486509879",
+ "attempts": [
+  {
+   "seconds": 3.4,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 90,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1408
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Small, targeted bugfix that correctly checks Directory.Exists instead of a FileInfo.Exists that always returned false, enabling deletion to actually occur, with limited blast radius scoped to media cache directory deletion.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Small, targeted bugfix that correctly checks Directory.Exists instead of a FileInfo.Exists that always returned false, enabling deletion to actually occur, with limited blast radius scoped to media cache directory deletion."
+}

@@ -1,0 +1,25 @@
+{
+ "pr": 17735,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "f3b5b7a690c67b47aeba6b18ad552c7cce07b2b009f12e71cf70c3d04f029b10",
+ "attempts": [
+  {
+   "seconds": 3.9,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 97,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 4413
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Refactors Markdown editor script/style registration to use the ResourceManager (with proper dependencies) instead of inline asp-src tags, which is a well-contained change to a specific module but touches script load order/timing that editor-heavy tenants should verify.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Refactors Markdown editor script/style registration to use the ResourceManager (with proper dependencies) instead of inline asp-src tags, which is a well-contained change to a specific module but touches script load order/timing that editor-heavy tenants should verify."
+}

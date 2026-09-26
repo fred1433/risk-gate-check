@@ -1,0 +1,25 @@
+{
+ "pr": 17479,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "bf3c8f948721d774cca941483e86035a2df60ec1c9c716c8d5f41cf52d76d0ab",
+ "attempts": [
+  {
+   "seconds": 3.8,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 108,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1367
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Behavior for sites without the Contents feature enabled changes (SearchFormPart/migration no longer registered), which is the intended fix but could subtly affect existing tenants relying on the previous implicit dependency if Contents was disabled yet SearchFormPart was somehow still expected.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Behavior for sites without the Contents feature enabled changes (SearchFormPart/migration no longer registered), which is the intended fix but could subtly affect existing tenants relying on the previous implicit dependency if Contents was disabled yet SearchFormPart was somehow still expected."
+}

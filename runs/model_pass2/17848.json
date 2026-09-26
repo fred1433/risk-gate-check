@@ -1,0 +1,25 @@
+{
+ "pr": 17848,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "f5428f584dddb3e4ef3ae4bc279b7a5dded90adb32dff3701d61d95553748588",
+ "attempts": [
+  {
+   "seconds": 5.3,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 119,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1248
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Small localized change to a form-binding workflow activity that improves rawValue handling but changes attemptedValue from item.Value.ToString() (which for multi-value StringValues is comma-joined, same as before) to the same string representation, so behavior is essentially preserved with low blast radius limited to Forms workflow model binding.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Small localized change to a form-binding workflow activity that improves rawValue handling but changes attemptedValue from item.Value.ToString() (which for multi-value StringValues is comma-joined, same as before) to the same string representation, so behavior is essentially preserved with low blast radius limited to Forms workflow model binding."
+}

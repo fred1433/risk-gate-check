@@ -1,7 +1,7 @@
 """GitHub required check: runs the frozen deterministic policy on a pull request, fail-closed.
 Runs from a checkout of the BASE commit (workflow trigger pull_request_target): the PR's code is fetched as data through
 the API and never executed, so a PR cannot rewrite the policy that judges it. No repository secrets are used.
-Exit 0 only for ALLOW, or for REVIEW_REQUIRED released by a senior's label on this exact head commit."""
+Exit 0 only for ALLOW, or for REVIEW_REQUIRED released by a senior's label on this exact head commit, applied by someone other than the PR's author."""
 import json, os, sys, urllib.request
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from riskgate.policies import deterministic, ALLOW, REVIEW, UNKNOWN
@@ -42,14 +42,24 @@ def main():
         # new code after a release: the release is stale, remove it (auditable in the PR timeline)
         gh(f"/repos/{REPO}/issues/{n}/labels/{RELEASE_LABEL}", method="DELETE")
         pr["labels"] = [l for l in pr["labels"] if l["name"] != RELEASE_LABEL]
-    released = False
+    released = False; release_note = ""
     if d["decision"] != ALLOW and any(l["name"] == RELEASE_LABEL for l in pr.get("labels", [])):
         # the label survives only until the next push (removed above), so its presence binds it to this head commit;
-        # it counts only if the person who applied it last is a named senior
-        events = gh(f"/repos/{REPO}/issues/{n}/events?per_page=100")
+        # it counts only if the person who applied it last is a named senior who is not the PR's author
+        events, page = [], 1
+        while True:
+            batch = gh(f"/repos/{REPO}/issues/{n}/events?per_page=100&page={page}")
+            events += batch; page += 1
+            if len(batch) < 100: break
         applied = [e for e in events if e.get("event") == "labeled" and e.get("label", {}).get("name") == RELEASE_LABEL]
-        released = bool(applied) and applied[-1]["actor"]["login"] in SENIORS
-    lines = [f"Decision on {head[:7]}: {d['decision']}" + (" (released by a senior)" if released else "")] + [f"- {r}" for r in d["reasons"]]
+        who = applied[-1]["actor"]["login"] if applied else None
+        if who and who == pr["user"]["login"]:
+            release_note = f"release ignored: applied by the author ({who}); a different senior must release"
+        elif who in SENIORS:
+            released = True
+        elif who:
+            release_note = f"release ignored: {who} is not a named senior"
+    lines = [f"Decision on {head[:7]}: {d['decision']}" + (" (released by a senior)" if released else "")] + [f"- {r}" for r in d["reasons"]] + ([f"- {release_note}"] if release_note else [])
     summary = "\n".join(lines)
     print(summary)
     if os.environ.get("GITHUB_STEP_SUMMARY"):

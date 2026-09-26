@@ -2,7 +2,7 @@
 Mined 2026-09-26 from GitHub cross-references and post-merge comments of every cohort PR (scripts/mine_candidates.py),
 then read by hand. Each row: introducing PR, evidence kind, statement, url, fix/revert PR, family, proposed class.
 Rule for A: attribution made or endorsed by a core maintainer, or restated in the merged fix PR itself, or a merged
-revert with a stated defect, or a stated reproducible witness; unhedged; AND the fix/revert diff touches a file the PR touched.
+revert with a stated defect, or a stated reproducible witness; unhedged; a failure users of the software can hit (a CI-only failure such as a flaky test is B); AND the fix/revert diff touches a file the PR touched.
 Class is finalised by scripts/build_labels.py (A requires a merged fix/revert whose diff overlaps the PR's files).
 Classes: A = confirmed cause; B = attribution or revert, interpretation incomplete; C = SZZ-only / ambiguous."""
 MAINTAINERS = {"sebastienros","MikeAlhayek","hishamco","gvkries","Piedone","jtkech","kevinchalet","Skrypt","agriffard","deanmarcussen"}
@@ -65,7 +65,7 @@ ROWS = [
 (17751,"B","revert","MikeAlhayek","Reverted after a triage discussion on change-password design","pull/17769",17769,"change-password-current"),
 (17837,"B","revert","(maintainer)","We'll revert this change while we discuss other options","pull/17854",17854,"redis-key-interpolation"),
 (17931,"B","revert","MikeAlhayek","Reverted as a result of the conversation: we should not upgrade to v9","pull/17949",17949,"elasticsearch-v9"),
-(17951,"A","maintainer","gvkries","This has been caused by the redesign of the indexing modules in PR #17951 (flaky test)","issues/18007",18080,"indexing-flaky-test"),
+(17951,"B","maintainer","gvkries","This has been caused by the redesign of the indexing modules in PR #17951 (a flaky CI test, no user-facing failure reported)","issues/18007",18080,"indexing-flaky-test"),
 (18121,"A","issue","gvkries","PR #18121 introduced an alpha slider ... its value is not persisting & breaks in Flows/Bags","issues/18359",18361,"color-alpha-slider"),
 (18238,"B","maintainer","MikeAlhayek","Such a small PR with not much value caused a binary braking change (no fix, kept for 3.0)","pull/18238",None,"binary-break-rename-2025"),
 (18413,"B","issue","(contributor)","Seems to be caused by #18413: ownership is checked against NameIdentifier","issues/18940",18941,"editowncontent-owner-check"),

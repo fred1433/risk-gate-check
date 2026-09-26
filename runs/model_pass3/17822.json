@@ -1,0 +1,25 @@
+{
+ "pr": 17822,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "bb73f7781145f95550f7c850df13e620144944ed3dda10aeb5919ab8eb47a454",
+ "attempts": [
+  {
+   "seconds": 4.3,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 71,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 2038
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 1, \"reason\": \"Pure file relocation with no code changes (namespaces/classes unchanged), so it's safe unless external code references these files by physical path, which is highly unlikely in .NET.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 1,
+ "reason": "Pure file relocation with no code changes (namespaces/classes unchanged), so it's safe unless external code references these files by physical path, which is highly unlikely in .NET."
+}

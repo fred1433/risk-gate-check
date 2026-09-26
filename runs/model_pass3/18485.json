@@ -1,0 +1,25 @@
+{
+ "pr": 18485,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "f2b58c59078b0f7d2fe5f8edba6ce106d902ec3d6ce951fb2997de1c556407fc",
+ "attempts": [
+  {
+   "seconds": 33.7,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 2907,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 6073
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Reworks reference-counting and disposal logic for the shared in-memory LocalLock service (adding argument/dispose guards and fixing a semaphore leak), which is subtle concurrency code used across the framework, but the refactor is logically consistent (decrement-then-dispose only when no other reference exists) and is backed by a solid new unit test suite.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Reworks reference-counting and disposal logic for the shared in-memory LocalLock service (adding argument/dispose guards and fixing a semaphore leak), which is subtle concurrency code used across the framework, but the refactor is logically consistent (decrement-then-dispose only when no other reference exists) and is backed by a solid new unit test suite."
+}

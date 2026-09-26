@@ -1,0 +1,25 @@
+{
+ "pr": 18504,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "df8d7930a6a48ef735f55f33bde5cd30f7ee154aee9df559e1e7f203d3236aa7",
+ "attempts": [
+  {
+   "seconds": 4.4,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 155,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 5091
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 3, \"reason\": \"Replaces a per-instance semaphore with a global ILocalLock keyed only by nameof(DefaultShapeTableManager) shared across all tenants, which could serialize shape table building across unrelated tenants/themes and introduces a new ILocalLock service dependency that must be correctly registered in every host, both of which could cause contention or DI resolution failures in multi-tenant production scenarios not fully covered by the updated tests.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 3,
+ "reason": "Replaces a per-instance semaphore with a global ILocalLock keyed only by nameof(DefaultShapeTableManager) shared across all tenants, which could serialize shape table building across unrelated tenants/themes and introduces a new ILocalLock service dependency that must be correctly registered in every host, both of which could cause contention or DI resolution failures in multi-tenant production sc"
+}

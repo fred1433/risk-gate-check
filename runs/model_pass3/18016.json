@@ -1,0 +1,25 @@
+{
+ "pr": 18016,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "954b7cc6606614b481b1403077a8302da77de3d0cc05b465f0b8dee127f44d43",
+ "attempts": [
+  {
+   "seconds": 12.6,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 858,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 12423
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 3, \"reason\": \"Renames the public IndexeIds property (used in serialized IndexProfileDeploymentStep JSON) to IndexIds and changes the recipe step registration from IndexingProfileStep to CreateOrUpdateIndexProfileStep with a new StepKey, which will silently break existing deployment plans/recipes referencing the old property or step name since no backward-compatible alias is provided.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 3,
+ "reason": "Renames the public IndexeIds property (used in serialized IndexProfileDeploymentStep JSON) to IndexIds and changes the recipe step registration from IndexingProfileStep to CreateOrUpdateIndexProfileStep with a new StepKey, which will silently break existing deployment plans/recipes referencing the old property or step name since no backward-compatible alias is provided."
+}

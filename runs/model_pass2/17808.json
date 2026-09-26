@@ -1,0 +1,25 @@
+{
+ "pr": 17808,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "997fc351966ac28cf2d6faf0584bc65d927881584188166ea14c27571bd2555b",
+ "attempts": [
+  {
+   "seconds": 5.0,
+   "usage": {
+    "input_tokens": 823,
+    "output_tokens": 112,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Downgrading the pinned SDK version from 9.0.203 to 9.0.100 with rollForward latestMajor could still resolve to an older/different SDK on build machines lacking 9.0.203, risking subtle build/tooling inconsistencies even though it doesn't change runtime application code.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Downgrading the pinned SDK version from 9.0.203 to 9.0.100 with rollForward latestMajor could still resolve to an older/different SDK on build machines lacking 9.0.203, risking subtle build/tooling inconsistencies even though it doesn't change runtime application code."
+}

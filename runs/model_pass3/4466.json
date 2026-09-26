@@ -1,0 +1,25 @@
+{
+ "pr": 4466,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "3090a70976ead592b66fff7804995e3643e6593ae08d1d3be2a51978233eae81",
+ "attempts": [
+  {
+   "seconds": 5.4,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 132,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 29961
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"This is a purely additive new module (OrchardCore.DataLocalization) plus new abstractions/services that are opt-in and not wired into any existing feature, with the only touch to shared code being an additional project reference and a new AddDataLocalization extension method, so existing tenants/modules are extremely unlikely to be affected unless they explicitly enable the new feature.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "This is a purely additive new module (OrchardCore.DataLocalization) plus new abstractions/services that are opt-in and not wired into any existing feature, with the only touch to shared code being an additional project reference and a new AddDataLocalization extension method, so existing tenants/modules are extremely unlikely to be affected unless they explicitly enable the new feature."
+}

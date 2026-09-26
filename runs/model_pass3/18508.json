@@ -1,0 +1,25 @@
+{
+ "pr": 18508,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "ccde9dc9f5cb72d08f6502ba458da8e36425fe7b59cd0823ddc0333d5e8938a7",
+ "attempts": [
+  {
+   "seconds": 3.4,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 116,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1881
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Small, targeted fix that clears any pre-existing IConfigureOptions<KeyManagementOptions> registrations before adding the module-specific one, reducing risk of duplicate/conflicting key management setups, but could subtly change behavior for setups relying on multiple KeyManagementOptions configurations.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Small, targeted fix that clears any pre-existing IConfigureOptions<KeyManagementOptions> registrations before adding the module-specific one, reducing risk of duplicate/conflicting key management setups, but could subtly change behavior for setups relying on multiple KeyManagementOptions configurations."
+}

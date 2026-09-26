@@ -1,0 +1,25 @@
+{
+ "pr": 17351,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "339184f9a8b74f01506026df28a652c10d82726ac57b67845578e7ab6b13f986",
+ "attempts": [
+  {
+   "seconds": 5.6,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 148,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 17564
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Change is mechanical (pinning vuejs resource dependency to version 2 across many admin views/manifests) and low risk for a repo that presumably still ships Vue 2, but any module/theme outside this repo referencing the shared 'vuejs' resource without the version qualifier could resolve differently once multiple registered versions exist, so admin-side widgets deserve a quick sanity check rather than full escalation.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Change is mechanical (pinning vuejs resource dependency to version 2 across many admin views/manifests) and low risk for a repo that presumably still ships Vue 2, but any module/theme outside this repo referencing the shared 'vuejs' resource without the version qualifier could resolve differently once multiple registered versions exist, so admin-side widgets deserve a quick sanity check rather tha"
+}

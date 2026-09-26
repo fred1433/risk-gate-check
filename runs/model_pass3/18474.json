@@ -1,0 +1,25 @@
+{
+ "pr": 18474,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "7d2f7cb3a111d4bd0a2bb5db760ef8541aa0b61ae5a8414d001644670f6fbb0f",
+ "attempts": [
+  {
+   "seconds": 14.6,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 1050,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1896
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Changes to AlternatesCollection alter when the internal _collection is initialized (no longer eagerly created for empty/null constructor input), and since this class is used pervasively in shape/theme alternate resolution, any unseen method relying on _collection being non-null could NRE, though the shown code paths look correct and low-risk.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Changes to AlternatesCollection alter when the internal _collection is initialized (no longer eagerly created for empty/null constructor input), and since this class is used pervasively in shape/theme alternate resolution, any unseen method relying on _collection being non-null could NRE, though the shown code paths look correct and low-risk."
+}

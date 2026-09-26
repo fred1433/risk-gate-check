@@ -1,0 +1,25 @@
+{
+ "pr": 17373,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "bb5afb9f5d7b8bf191d5a41d66403174fe1659569fc1e514f2f8aaf07e7a9f8f",
+ "attempts": [
+  {
+   "seconds": 22.1,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 1854,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 15226
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 4, \"reason\": \"The Facebook ResourceManagementOptionsConfiguration.Configure is now `async void` fetching site settings, which can return before the resource manifest is populated (a classic async-void race condition) causing intermittent missing 'fb'/'fbsdk' script resources, and the change also alters the shared core ResourceManager.cs dependency-resolution logic used by every module/tenant plus changes public JS URLs (fb.js/fbsdk.js \u2192 init.js/sdk.{culture}.js), all of which can silently break Facebook SDK loading or other resource-dependent modules across sites.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 4,
+ "reason": "The Facebook ResourceManagementOptionsConfiguration.Configure is now `async void` fetching site settings, which can return before the resource manifest is populated (a classic async-void race condition) causing intermittent missing 'fb'/'fbsdk' script resources, and the change also alters the shared core ResourceManager.cs dependency-resolution logic used by every module/tenant plus changes public"
+}

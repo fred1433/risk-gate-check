@@ -1,0 +1,25 @@
+{
+ "pr": 18451,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "920ac2b86b8081eb8e7b6d429862574e8a1ac4f91864b7d124d7878fc8864600",
+ "attempts": [
+  {
+   "seconds": 3.4,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 44,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1178
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 1, \"reason\": \"Simple corrective text change in a localized UI hint string, no logic or behavior affected.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 1,
+ "reason": "Simple corrective text change in a localized UI hint string, no logic or behavior affected."
+}

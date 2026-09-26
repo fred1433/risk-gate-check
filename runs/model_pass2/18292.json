@@ -1,0 +1,39 @@
+{
+ "pr": 18292,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "fc1c14f3ccf226b1abb5bd7fea387dd02d183d72ddc593b56193c361596fca6d",
+ "attempts": [
+  {
+   "seconds": 4.8,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 151,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 7809
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 3, \"reason\": \"Refactors ElasticsearchSearchContext to use SearchRequest directly and changes ElasticsearchIndexProfileDisplayDriver's edit/validation flow (including a public constructor signature change adding ElasticsearchClient), which could break other modules/tenants that construct ElasticsearchSearchContext, call the display driver, or rely on the previous silent-fallback behavior for invalid custom queries.\""
+  },
+  {
+   "seconds": 4.2,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 110,
+    "cache_read_input_tokens": 7809,
+    "cache_creation_input_tokens": 0
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 3, \"reason\": \"Refactors ElasticsearchSearchContext to use SearchRequest directly (public constructor signature change) and alters custom-query fallback/validation behavior in ElasticsearchService, which could break external modules or sites relying on the old context API or previous lenient handling of invalid custom queries.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 3,
+ "reason": "Refactors ElasticsearchSearchContext to use SearchRequest directly (public constructor signature change) and alters custom-query fallback/validation behavior in ElasticsearchService, which could break external modules or sites relying on the old context API or previous lenient handling of invalid custom queries."
+}

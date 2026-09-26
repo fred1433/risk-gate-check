@@ -1,0 +1,39 @@
+{
+ "pr": 17618,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "20b00cdb80acf450baaf54efa6068cb11377094005224eb90d4a819e52a68da5",
+ "attempts": [
+  {
+   "seconds": 4.3,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 137,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 3431
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 4, \"reason\": \"Changing the default DB transaction isolation level from ReadUncommitted to ReadCommitted across all providers (SQL Server, SQLite, MySQL, Postgres) can alter locking/blocking behavior and expose deadlocks or read-blocking under concurrent load in production tenants, which is a subtle behavioral change that's hard to catch without real-world/load testing.\""
+  },
+  {
+   "seconds": 3.8,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 118,
+    "cache_read_input_tokens": 3431,
+    "cache_creation_input_tokens": 0
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 4, \"reason\": \"Changing the default database transaction isolation level from ReadUncommitted to ReadCommitted across all SQL providers is a significant behavioral change that could introduce blocking/deadlocks or expose previously-masked concurrency issues in existing multi-tenant applications, even though it's documented as a breaking change for v3.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 4,
+ "reason": "Changing the default database transaction isolation level from ReadUncommitted to ReadCommitted across all SQL providers is a significant behavioral change that could introduce blocking/deadlocks or expose previously-masked concurrency issues in existing multi-tenant applications, even though it's documented as a breaking change for v3."
+}

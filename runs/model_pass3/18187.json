@@ -1,0 +1,25 @@
+{
+ "pr": 18187,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "0968d9aa4ffa6596d92306675f0ee614f669d40e53bdd8e96450f2d6e9802e06",
+ "attempts": [
+  {
+   "seconds": 4.0,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 98,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 4480
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Changes are limited to test infrastructure (xunit v3 upgrade) and updated SRI hashes for a few CDN resources, which only risk breaking those specific CDN scripts if the new hashes are incorrect but do not touch core runtime logic.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Changes are limited to test infrastructure (xunit v3 upgrade) and updated SRI hashes for a few CDN resources, which only risk breaking those specific CDN scripts if the new hashes are incorrect but do not touch core runtime logic."
+}

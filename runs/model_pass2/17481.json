@@ -1,0 +1,25 @@
+{
+ "pr": 17481,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "953cd5812ccc345d83175a29b6fe543c7e274f9c217ff64a4777d790c52957c0",
+ "attempts": [
+  {
+   "seconds": 18.6,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 1463,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1778
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 4, \"reason\": \"Changing the iteration to only walk field.TermContentItemIds instead of all contentItems could break the full taxonomy tree/checkbox rendering used by the multiselect editor, since unselected terms (and their children) would no longer be added to termEntries at any level.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 4,
+ "reason": "Changing the iteration to only walk field.TermContentItemIds instead of all contentItems could break the full taxonomy tree/checkbox rendering used by the multiselect editor, since unselected terms (and their children) would no longer be added to termEntries at any level."
+}

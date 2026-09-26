@@ -1,0 +1,25 @@
+{
+ "pr": 17989,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "db5944885864592324700222826c4f8605ead6db96c35703578acb34e38e59c7",
+ "attempts": [
+  {
+   "seconds": 25.4,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 2276,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 5915
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 3, \"reason\": \"Adds custom RouteEndpoint caching for link generation across Autoroute/Sitemap/HomeRoute schemes with a hand-rolled RouteEndpointKey equality/hash implementation, and the HomeRoute variant updates two instance fields without locking, risking a subtle race under concurrent requests returning a mismatched cached endpoint/key pair.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 3,
+ "reason": "Adds custom RouteEndpoint caching for link generation across Autoroute/Sitemap/HomeRoute schemes with a hand-rolled RouteEndpointKey equality/hash implementation, and the HomeRoute variant updates two instance fields without locking, risking a subtle race under concurrent requests returning a mismatched cached endpoint/key pair."
+}

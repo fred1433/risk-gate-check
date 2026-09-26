@@ -1,0 +1,25 @@
+{
+ "pr": 18491,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "388babd8b309ce6557bb21de3ec7ddc64b80a28357ab792fd6244adb3c4efce3",
+ "attempts": [
+  {
+   "seconds": 27.6,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 2362,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 24396
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 4, \"reason\": \"This refactors the core Feature/Module manifest attribute (used to declare every feature in every OrchardCore module) removing/renaming public-facing protected constants and helper members (DefaultName, DefaultCategory, DefaultPriority, GetValues, ListDelims\\u2192ListDelimiters, Uncategorized, etc.) and changing the Id setter's exception type from InvalidOperationException to ArgumentException, which can silently break any third-party module/theme that subclasses FeatureAttribute/ModuleAttribute or catches the old exception type, and the FeaturesProvider change from Features.ToList() to the raw mutable list risks introducing shared-state bugs across tenants if that list is later mutated.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 4,
+ "reason": "This refactors the core Feature/Module manifest attribute (used to declare every feature in every OrchardCore module) removing/renaming public-facing protected constants and helper members (DefaultName, DefaultCategory, DefaultPriority, GetValues, ListDelims\u2192ListDelimiters, Uncategorized, etc.) and changing the Id setter's exception type from InvalidOperationException to ArgumentException, which c"
+}

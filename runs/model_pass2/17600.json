@@ -1,0 +1,25 @@
+{
+ "pr": 17600,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "35bbd58162e05c52e4da9b381839bcc9d7a5771b2812844400766b38ad12cbfe",
+ "attempts": [
+  {
+   "seconds": 4.0,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 126,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 25929
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"This replaces a minified vue-multiselect.js with an unminified/updated build and removes an unrelated stray Popper.js copy entry plus a redundant min step, which mainly affects asset size and load order but could subtly break sites relying on the exact prior bundle content or the removed popper 'jquery' asset name if referenced elsewhere.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "This replaces a minified vue-multiselect.js with an unminified/updated build and removes an unrelated stray Popper.js copy entry plus a redundant min step, which mainly affects asset size and load order but could subtly break sites relying on the exact prior bundle content or the removed popper 'jquery' asset name if referenced elsewhere."
+}

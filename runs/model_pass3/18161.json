@@ -1,0 +1,25 @@
+{
+ "pr": 18161,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "08afc8731774f1eea87561b289217efe817266ffb64771d4ec9d06df927440b8",
+ "attempts": [
+  {
+   "seconds": 5.2,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 116,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 36161
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Path/version change for jQuery UI i18n script (1.7.2 -> 1.12.1) and removal of CDN fallback could break sites referencing the old CDN path or relying on the old script location, but the change is isolated to a single resource manifest entry and adds vendored files with no logic changes elsewhere.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Path/version change for jQuery UI i18n script (1.7.2 -> 1.12.1) and removal of CDN fallback could break sites referencing the old CDN path or relying on the old script location, but the change is isolated to a single resource manifest entry and adds vendored files with no logic changes elsewhere."
+}

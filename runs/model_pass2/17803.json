@@ -1,0 +1,25 @@
+{
+ "pr": 17803,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "3a13ff4306b9f559944fca3e24f3cf382b97c73069b76c857491a2804807229d",
+ "attempts": [
+  {
+   "seconds": 4.1,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 65,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 4592
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 1, \"reason\": \"Purely additive/reformatted XML doc comments and trivial expression-body syntax changes with no logic or signature modifications, so no behavioral impact.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 1,
+ "reason": "Purely additive/reformatted XML doc comments and trivial expression-body syntax changes with no logic or signature modifications, so no behavioral impact."
+}

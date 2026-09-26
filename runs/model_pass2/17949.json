@@ -1,0 +1,25 @@
+{
+ "pr": 17949,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "b685dd1af5f2676799516e277941b0720ee77b03a893220b1582edd3ecdc981c",
+ "attempts": [
+  {
+   "seconds": 4.7,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 122,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 6422
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 3, \"reason\": \"Reverts Elasticsearch client from v9 to v8.17.4 and changes API usage accordingly, which affects indexing/mapping/search behavior for all tenants using Elasticsearch and could reintroduce prior bugs or break compatibility if any ES server-side or downstream module already adapted to v9 client semantics.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 3,
+ "reason": "Reverts Elasticsearch client from v9 to v8.17.4 and changes API usage accordingly, which affects indexing/mapping/search behavior for all tenants using Elasticsearch and could reintroduce prior bugs or break compatibility if any ES server-side or downstream module already adapted to v9 client semantics."
+}

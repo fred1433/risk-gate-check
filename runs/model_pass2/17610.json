@@ -1,0 +1,25 @@
+{
+ "pr": 17610,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "ed561440ceacd3e3fb079875a47ede98730efe16ad96222c6535e77387dbf590",
+ "attempts": [
+  {
+   "seconds": 3.1,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 89,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 8813
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Additive settings with new default behavior changing widget collapse state on load (was collapsed unless inline, now expanded unless explicitly configured), which is a low-risk UI/UX behavior change but not a breaking API/schema change.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Additive settings with new default behavior changing widget collapse state on load (was collapsed unless inline, now expanded unless explicitly configured), which is a low-risk UI/UX behavior change but not a breaking API/schema change."
+}

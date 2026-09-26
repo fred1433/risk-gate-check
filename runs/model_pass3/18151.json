@@ -1,0 +1,25 @@
+{
+ "pr": 18151,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "c04c773c028ce26de044b93ea7fe79cabd4baf891f042fcbb6aa0f95e13d8076",
+ "attempts": [
+  {
+   "seconds": 4.4,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 122,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 25282
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"This is purely additive (new Gallery editor option/template/JS component alongside existing MediaField editors, plus generated min.js/min.css), so it shouldn't alter existing MediaField editor behavior, though the minified bundle changes and lack of a trailing newline in .yarnrc.yml warrant a quick sanity check.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "This is purely additive (new Gallery editor option/template/JS component alongside existing MediaField editors, plus generated min.js/min.css), so it shouldn't alter existing MediaField editor behavior, though the minified bundle changes and lack of a trailing newline in .yarnrc.yml warrant a quick sanity check."
+}

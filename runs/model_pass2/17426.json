@@ -1,0 +1,25 @@
+{
+ "pr": 17426,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "1517bf3d7c832a426fc91f1fe696879cf3311c7cb20f30179618fe17b59c87da",
+ "attempts": [
+  {
+   "seconds": 3.3,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 52,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1106
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 1, \"reason\": \"Purely presentational change that sorts an already-fetched list for display in a Razor view, with no functional or data impact.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 1,
+ "reason": "Purely presentational change that sorts an already-fetched list for display in a Razor view, with no functional or data impact."
+}

@@ -1,0 +1,25 @@
+{
+ "pr": 18504,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "df8d7930a6a48ef735f55f33bde5cd30f7ee154aee9df559e1e7f203d3236aa7",
+ "attempts": [
+  {
+   "seconds": 4.8,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 144,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 5092
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 3, \"reason\": \"Core change to shape table caching/locking mechanism (used on every request across all tenants/themes) replaces a semaphore with ILocalLock and Task-based cache entries, requiring an added DI registration for ILocalLock in every host \u2014 a missing registration or subtle deadlock/race in the new lock-then-check pattern could break rendering tenant-wide, though the change is well-tested and logically sound.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 3,
+ "reason": "Core change to shape table caching/locking mechanism (used on every request across all tenants/themes) replaces a semaphore with ILocalLock and Task-based cache entries, requiring an added DI registration for ILocalLock in every host \u2014 a missing registration or subtle deadlock/race in the new lock-then-check pattern could break rendering tenant-wide, though the change is well-tested and logically "
+}

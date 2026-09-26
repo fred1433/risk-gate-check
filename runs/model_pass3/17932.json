@@ -1,0 +1,25 @@
+{
+ "pr": 17932,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "9dc40fc3770faf5c23bf3ebaeba5aa19a8e93a04d2734014bd3114867daa664d",
+ "attempts": [
+  {
+   "seconds": 5.1,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 153,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 7981
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Widely-used extension methods across many modules are changed from AddScoped/AddTransient/AddSingleton to TryAddEnumerable, which is intended to be equivalent but touches core DI registration for display drivers, recipes, migrations, index providers etc., so any subtle mismatch (e.g., duplicate registrations relying on multiple calls, or ordering assumptions) could silently drop expected service instances across many features.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Widely-used extension methods across many modules are changed from AddScoped/AddTransient/AddSingleton to TryAddEnumerable, which is intended to be equivalent but touches core DI registration for display drivers, recipes, migrations, index providers etc., so any subtle mismatch (e.g., duplicate registrations relying on multiple calls, or ordering assumptions) could silently drop expected service i"
+}

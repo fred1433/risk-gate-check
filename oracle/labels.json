@@ -1,6 +1,6 @@
 {
  "generated": "2026-09-26",
- "rule": "Manual adjudication of failure-introducing candidates (ORACLE, never shown to the gate).\nMined 2026-09-26 from GitHub cross-references and post-merge comments of every cohort PR (scripts/mine_candidates.py),\nthen read by hand. Each row: introducing PR, evidence kind, statement, url, fix/revert PR, family, proposed class.\nRule for A: attribution made or endorsed by a core maintainer, or restated in the merged fix PR itself, or a merged\nrevert with a stated defect, or a stated reproducible witness; unhedged; AND the fix/revert diff touches a file the PR touched.\nClass is finalised by scripts/build_labels.py (A requires a merged fix/revert whose diff overlaps the PR's files).\nClasses: A = confirmed cause; B = attribution or revert, interpretation incomplete; C = SZZ-only / ambiguous.",
+ "rule": "Manual adjudication of failure-introducing candidates (ORACLE, never shown to the gate).\nMined 2026-09-26 from GitHub cross-references and post-merge comments of every cohort PR (scripts/mine_candidates.py),\nthen read by hand. Each row: introducing PR, evidence kind, statement, url, fix/revert PR, family, proposed class.\nRule for A: attribution made or endorsed by a core maintainer, or restated in the merged fix PR itself, or a merged\nrevert with a stated defect, or a stated reproducible witness; unhedged; a failure users of the software can hit (a CI-only failure such as a flaky test is B); AND the fix/revert diff touches a file the PR touched.\nClass is finalised by scripts/build_labels.py (A requires a merged fix/revert whose diff overlaps the PR's files).\nClasses: A = confirmed cause; B = attribution or revert, interpretation incomplete; C = SZZ-only / ambiguous.",
  "labels": [
   {
    "pr": 7446,
@@ -1063,11 +1063,11 @@
    "pr": 17951,
    "merged": "2025-06-08T22:53:34Z",
    "title": "Centralize the Indexing process",
-   "proposed": "A",
-   "cls": "A",
+   "proposed": "B",
+   "cls": "B",
    "kind": "maintainer",
    "who": "gvkries",
-   "statement": "This has been caused by the redesign of the indexing modules in PR #17951 (flaky test)",
+   "statement": "This has been caused by the redesign of the indexing modules in PR #17951 (a flaky CI test, no user-facing failure reported)",
    "evidence": "https://github.com/OrchardCMS/OrchardCore/issues/18007",
    "fix_or_revert": 18080,
    "family": "indexing-flaky-test",

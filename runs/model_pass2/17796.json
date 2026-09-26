@@ -1,0 +1,25 @@
+{
+ "pr": 17796,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "7375880fa8d49c6dfad4d9de2ead95a4f8524b7f846f16f67b717ce10c9e2df8",
+ "attempts": [
+  {
+   "seconds": 4.2,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 140,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 4578
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Refactors recipe step parsing to a shared base/extension with backward-compatible 'Indices'->'Indexes' property handling, but relies on 'Indices' setter only being applied when non-empty (order-dependent JSON deserialization) which could silently drop old-format recipes if Indexes is set after Indices with empty list, warranting a careful review though behavior is largely preserved.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Refactors recipe step parsing to a shared base/extension with backward-compatible 'Indices'->'Indexes' property handling, but relies on 'Indices' setter only being applied when non-empty (order-dependent JSON deserialization) which could silently drop old-format recipes if Indexes is set after Indices with empty list, warranting a careful review though behavior is largely preserved."
+}

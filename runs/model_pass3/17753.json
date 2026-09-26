@@ -1,0 +1,25 @@
+{
+ "pr": 17753,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "957eaecb16af74eb755ef3efab4ff6d4019d305c14c74bcb0c330f3ddeccfdec",
+ "attempts": [
+  {
+   "seconds": 4.0,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 94,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 17726
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 1, \"reason\": \"Purely removes boilerplate comment lines (and stray blank lines) from Razor _ViewImports.cshtml files with no changes to directives like @inherits, @using, or @addTagHelper, so compiled view behavior is unaffected.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 1,
+ "reason": "Purely removes boilerplate comment lines (and stray blank lines) from Razor _ViewImports.cshtml files with no changes to directives like @inherits, @using, or @addTagHelper, so compiled view behavior is unaffected."
+}

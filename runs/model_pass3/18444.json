@@ -1,0 +1,25 @@
+{
+ "pr": 18444,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "49b9544d391c9911ab23c5193c1ddc1742015a9238511e82b140812619ab35d2",
+ "attempts": [
+  {
+   "seconds": 5.0,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 167,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 2244
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"This fixes a bug where Convert.ToString(attribute) was called on the TagHelperAttribute object itself instead of its .Value, previously likely producing incorrect/empty strings for cache-id, cache-context, id, alternate, and wrapper attributes\u2014the fix is low-risk and targeted, but changes runtime behavior for tag helpers using these attributes, which could surface previously-masked bugs in downstream themes/modules relying on the old (broken) output.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "This fixes a bug where Convert.ToString(attribute) was called on the TagHelperAttribute object itself instead of its .Value, previously likely producing incorrect/empty strings for cache-id, cache-context, id, alternate, and wrapper attributes\u2014the fix is low-risk and targeted, but changes runtime behavior for tag helpers using these attributes, which could surface previously-masked bugs in downstr"
+}

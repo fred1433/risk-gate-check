@@ -1,0 +1,25 @@
+{
+ "pr": 17693,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "7e5c7d48c5be45d651e9d631f64f2e8510acc54a8681ae9baf246fcc516d6e68",
+ "attempts": [
+  {
+   "seconds": 4.9,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 191,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 34278
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 4, \"reason\": \"This restructures the frontend build pipeline (renaming/moving TheAdmin.ts logic into a new bloom/helpers module, changing bootstrap dependency declarations from 'admin' to explicit 'bootstrap' across many admin views, and regenerating multiple bundled/minified JS assets), so any theme or module that imports TheAdmin's exports, relies on the old 'admin' resource dependency chain, or references the old removeDiacritics.ts path could silently break resource loading order or bundling in downstream sites/tenants.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 4,
+ "reason": "This restructures the frontend build pipeline (renaming/moving TheAdmin.ts logic into a new bloom/helpers module, changing bootstrap dependency declarations from 'admin' to explicit 'bootstrap' across many admin views, and regenerating multiple bundled/minified JS assets), so any theme or module that imports TheAdmin's exports, relies on the old 'admin' resource dependency chain, or references the"
+}

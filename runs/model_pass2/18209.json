@@ -1,0 +1,39 @@
+{
+ "pr": 18209,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "4f832705a6b13d68022934856ab9267d29d6912c9d719406aaa866af8b9ed94f",
+ "attempts": [
+  {
+   "seconds": 4.7,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 135,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 2246
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Moves delete action out of EditPart's FormValueRequired-gated POST into its own [HttpPost] DeletePart endpoint invoked directly from the list page, which is a straightforward, self-contained UI/routing change but removes the prior form-value gating so any existing external POSTs to the old submit.Delete pattern on EditPart will no longer trigger deletion.\""
+  },
+  {
+   "seconds": 3.2,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 106,
+    "cache_read_input_tokens": 2246,
+    "cache_creation_input_tokens": 0
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Moves DeletePart from a form-submit action to its own POST endpoint invoked via a link with data-url-af (anti-forgery) attribute, changing the delete UX/routing but preserving the same authorization check, with low blast radius limited to the ContentTypes admin UI.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Moves DeletePart from a form-submit action to its own POST endpoint invoked via a link with data-url-af (anti-forgery) attribute, changing the delete UX/routing but preserving the same authorization check, with low blast radius limited to the ContentTypes admin UI."
+}

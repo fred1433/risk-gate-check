@@ -1,0 +1,25 @@
+{
+ "pr": 18588,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "9b0257d2d08d1692b888f31c0ebc79c1c23473f7477a99e29f22213ea6842a93",
+ "attempts": [
+  {
+   "seconds": 3.9,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 86,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1346
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 1, \"reason\": \"Pure refactor that preserves identical logic (useNamed is still true whenever profile is set, since !profile.IsNil() is already part of the OR condition), just removing redundant assignment, so behavior is unchanged.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 1,
+ "reason": "Pure refactor that preserves identical logic (useNamed is still true whenever profile is set, since !profile.IsNil() is already part of the OR condition), just removing redundant assignment, so behavior is unchanged."
+}

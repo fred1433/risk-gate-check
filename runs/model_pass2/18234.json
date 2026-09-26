@@ -1,0 +1,25 @@
+{
+ "pr": 18234,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "4e86da977c7e1ce1ba1df811c3d238f05ca3f2d8a6643b5ce1e8b2cc5657baa0",
+ "attempts": [
+  {
+   "seconds": 5.5,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 144,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 9049
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Purely admin UI/display-driver refactor splitting the settings editor into tabs (renamed shape/view, changed Location placement) without touching the underlying SecuritySettings model, storage, or the middleware that emits headers, so runtime behavior for tenants is unaffected barring a shape-name collision for anyone with a custom override of the old SecurityHeadersSettings_Edit shape.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Purely admin UI/display-driver refactor splitting the settings editor into tabs (renamed shape/view, changed Location placement) without touching the underlying SecuritySettings model, storage, or the middleware that emits headers, so runtime behavior for tenants is unaffected barring a shape-name collision for anyone with a custom override of the old SecurityHeadersSettings_Edit shape."
+}

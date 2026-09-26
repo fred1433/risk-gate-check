@@ -1,0 +1,53 @@
+{
+ "pr": 18025,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "ca29c9185f5c4b5001c719624e06167c5be3040265c6a399e68ec06c4efd1e43",
+ "attempts": [
+  {
+   "seconds": 6.3,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 188,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 25285
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 4, \"reason\": \"This renames recipe step names (ResetIndexProfile/RebuildIndexProfile -> ResetIndex/RebuildIndex), changes their JSON property names (IndexIds/Indexes -> indexNames), renames deployment step classes/types, and alters JSON payload keys in IndexProfileDeploymentSource (e.g. DisplayText->Name, Indexes->indexes), all without evident backward-compatible aliases, which will break existing recipes, deployment plans, and any external code referencing the old step/class names.\""
+  },
+  {
+   "seconds": 4.4,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 165,
+    "cache_read_input_tokens": 25285,
+    "cache_creation_input_tokens": 0
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 4, \"reason\": \"This renames recipe step keys (ResetIndexProfile->ResetIndex, RebuildIndexProfile->RebuildIndex) and changes the deployment step property names/JSON keys (IndexIds->IndexNames, Indexes->IndexNames, Indices->indexNames) without backward-compatible aliases, so any existing recipes, deployment plans, or exported JSON referencing the old step names/properties will silently no-op or fail across tenants.\""
+  },
+  {
+   "seconds": 4.9,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 157,
+    "cache_read_input_tokens": 25285,
+    "cache_creation_input_tokens": 0
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 4, \"reason\": \"Renames recipe step keys (ResetIndexProfile/RebuildIndexProfile -> ResetIndex/RebuildIndex), deployment step class names, JSON property names (Indexes->indexNames, IndexIds->IndexNames), and view/model filenames, which will silently break existing recipe JSON files, deployment plans, and any exported/imported content referencing the old step names or properties without any migration/back-compat shim.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 4,
+ "reason": "Renames recipe step keys (ResetIndexProfile/RebuildIndexProfile -> ResetIndex/RebuildIndex), deployment step class names, JSON property names (Indexes->indexNames, IndexIds->IndexNames), and view/model filenames, which will silently break existing recipe JSON files, deployment plans, and any exported/imported content referencing the old step names or properties without any migration/back-compat sh"
+}

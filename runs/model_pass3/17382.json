@@ -1,0 +1,25 @@
+{
+ "pr": 17382,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "b25d598c0ee0f5bd73befc430b1a8b6cdc0326a76f6accac9f5675d5857cfd64",
+ "attempts": [
+  {
+   "seconds": 4.3,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 109,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 6401
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Additive GraphQL feature (new fields/types for contained-part parent lookup) with a behavior-preserving tweak to always register content item types, low chance of breaking existing schemas but touches shared ContentTypeQuery/ContentItemType core classes so warrants a quick senior review.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Additive GraphQL feature (new fields/types for contained-part parent lookup) with a behavior-preserving tweak to always register content item types, low chance of breaking existing schemas but touches shared ContentTypeQuery/ContentItemType core classes so warrants a quick senior review."
+}

@@ -1,0 +1,25 @@
+{
+ "pr": 18363,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "8942a7c1f6c652c627a34b75049418f5b2eafd586a45626084a675d70d8c575b",
+ "attempts": [
+  {
+   "seconds": 3.4,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 91,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 23919
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 1, \"reason\": \"Purely mechanical replacement of string literals like \\\"Detail\\\"/\\\"Summary\\\" with equivalent OrchardCoreConstants.DisplayType constants, with no behavioral change as long as the constants' values match the original strings.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 1,
+ "reason": "Purely mechanical replacement of string literals like \"Detail\"/\"Summary\" with equivalent OrchardCoreConstants.DisplayType constants, with no behavioral change as long as the constants' values match the original strings."
+}

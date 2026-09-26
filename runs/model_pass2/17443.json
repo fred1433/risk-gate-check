@@ -1,0 +1,25 @@
+{
+ "pr": 17443,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "96ff0764050eae140b6d127c02f545158c7a719a62e4c72399c58e286589f977",
+ "attempts": [
+  {
+   "seconds": 4.3,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 97,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 35521
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Small, targeted fix scoping model-state error keys to the field prefix and adding matching CSS/validation classes for taxonomy fields, which is low-risk but touches shared validation error-key conventions that other multi-field editors could theoretically depend on.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Small, targeted fix scoping model-state error keys to the field prefix and adding matching CSS/validation classes for taxonomy fields, which is low-risk but touches shared validation error-key conventions that other multi-field editors could theoretically depend on."
+}

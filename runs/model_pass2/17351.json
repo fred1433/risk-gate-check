@@ -1,0 +1,25 @@
+{
+ "pr": 17351,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "339184f9a8b74f01506026df28a652c10d82726ac57b67845578e7ab6b13f986",
+ "attempts": [
+  {
+   "seconds": 4.0,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 98,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 17563
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Purely a resource-manifest/view change pinning admin-only Vue.js usages to version 2, which is low risk for site behavior but could break custom themes/modules that override 'vuejs' resource or depend on the unversioned name without also declaring version 2.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Purely a resource-manifest/view change pinning admin-only Vue.js usages to version 2, which is low risk for site behavior but could break custom themes/modules that override 'vuejs' resource or depend on the unversioned name without also declaring version 2."
+}

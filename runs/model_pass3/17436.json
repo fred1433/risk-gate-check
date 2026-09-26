@@ -1,0 +1,25 @@
+{
+ "pr": 17436,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "eb216280c4b5072d7b812dcc9469b4624b59ba686327f1f5f2eea814495cba02",
+ "attempts": [
+  {
+   "seconds": 4.7,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 116,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1613
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 3, \"reason\": \"Wrapping the entire expression evaluation in a broad try/catch that swallows all exceptions (not just casting errors) and silently returns default(T) can mask genuine scripting/workflow errors and change behavior for consumers relying on failures propagating, though it's scoped to a single evaluator and logs the error.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 3,
+ "reason": "Wrapping the entire expression evaluation in a broad try/catch that swallows all exceptions (not just casting errors) and silently returns default(T) can mask genuine scripting/workflow errors and change behavior for consumers relying on failures propagating, though it's scoped to a single evaluator and logs the error."
+}

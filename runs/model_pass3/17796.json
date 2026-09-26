@@ -1,0 +1,25 @@
+{
+ "pr": 17796,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "7375880fa8d49c6dfad4d9de2ead95a4f8524b7f846f16f67b717ce10c9e2df8",
+ "attempts": [
+  {
+   "seconds": 6.3,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 129,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 4579
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Refactor consolidates duplicate logic into a shared base class/extension while preserving behavior via a backward-compatible 'Indices' property alias, so existing recipe JSON with 'Indices' still works, though renaming to 'Indexes' as primary and the new deserialization path warrants a quick review for edge cases in recipe JSON shapes.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Refactor consolidates duplicate logic into a shared base class/extension while preserving behavior via a backward-compatible 'Indices' property alias, so existing recipe JSON with 'Indices' still works, though renaming to 'Indexes' as primary and the new deserialization path warrants a quick review for edge cases in recipe JSON shapes."
+}

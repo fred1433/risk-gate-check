@@ -1,0 +1,25 @@
+{
+ "pr": 17989,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "db5944885864592324700222826c4f8605ead6db96c35703578acb34e38e59c7",
+ "attempts": [
+  {
+   "seconds": 20.9,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 1590,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 5916
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 3, \"reason\": \"Introduces unbounded in-memory caches (ConcurrentDictionary keyed by path+route values) for RouteEndpoint instances in Autoroute and Sitemaps link generation with no eviction, and changes core URL-generation logic across three widely-used routing modules (autoroute, home route, sitemaps), so subtle cache-key/concurrency bugs or memory growth could affect link generation for all tenants relying on content routing.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 3,
+ "reason": "Introduces unbounded in-memory caches (ConcurrentDictionary keyed by path+route values) for RouteEndpoint instances in Autoroute and Sitemaps link generation with no eviction, and changes core URL-generation logic across three widely-used routing modules (autoroute, home route, sitemaps), so subtle cache-key/concurrency bugs or memory growth could affect link generation for all tenants relying on "
+}

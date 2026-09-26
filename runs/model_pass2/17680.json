@@ -1,0 +1,25 @@
+{
+ "pr": 17680,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "54e798c666976dde1f4ab41f6144e6de519dfaabd09bda49866b663e6b678ef0",
+ "attempts": [
+  {
+   "seconds": 4.2,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 114,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 4757
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Localized fix to two Razor views scoping vue-multiselect dependency version (:2) and adjusting markup/wrapper classes for consistent styling, with no C# or business logic changes, but incorrect wrapper class helpers could visually affect the menu permission picker layout if not tested against existing themes.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Localized fix to two Razor views scoping vue-multiselect dependency version (:2) and adjusting markup/wrapper classes for consistent styling, with no C# or business logic changes, but incorrect wrapper class helpers could visually affect the menu permission picker layout if not tested against existing themes."
+}

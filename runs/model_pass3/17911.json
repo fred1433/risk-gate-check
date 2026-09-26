@@ -1,0 +1,25 @@
+{
+ "pr": 17911,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "260397be0174766900df8c64f96710280a5a799a908bcd4318222055c7b84b3c",
+ "attempts": [
+  {
+   "seconds": 10.9,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 721,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 3843
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"The change is opt-in (UseLocalTime defaults to false, preserving existing UTC cron behavior) but converts TimerEvent's core CanExecute/Resume methods to async and adds new DI dependencies (ISiteService, ILogger), so any custom code overriding or directly instantiating TimerEvent outside the standard workflow engine could break.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "The change is opt-in (UseLocalTime defaults to false, preserving existing UTC cron behavior) but converts TimerEvent's core CanExecute/Resume methods to async and adds new DI dependencies (ISiteService, ILogger), so any custom code overriding or directly instantiating TimerEvent outside the standard workflow engine could break."
+}

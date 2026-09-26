@@ -1,0 +1,39 @@
+{
+ "pr": 17688,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "458e94618d4b28b0cb55a860a74bf79d83fee12a8862eb45668b1f73fde75d2e",
+ "attempts": [
+  {
+   "seconds": 4.6,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 161,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 31327
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Mostly stylistic/quoting changes and a formatting fix to the workflow editor TS with a minified/mapped JS rebuild, but it also changes script dependency from 'bootstrap' to 'admin' in ResourceManagementOptionsConfiguration.cs which could break popover/dropdown behavior in the workflow editor/viewer if the 'admin' resource doesn't transitively include bootstrap on all pages that load these scripts.\""
+  },
+  {
+   "seconds": 5.0,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 119,
+    "cache_read_input_tokens": 31327,
+    "cache_creation_input_tokens": 0
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Mostly formatting/quote-style changes to workflow-editor.ts plus a small CSS addition and a resource dependency swap (bootstrap -> admin) for workflow-editor/viewer scripts, which is low-risk but could subtly break sites that rely on the bootstrap dependency being pulled in separately.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Mostly formatting/quote-style changes to workflow-editor.ts plus a small CSS addition and a resource dependency swap (bootstrap -> admin) for workflow-editor/viewer scripts, which is low-risk but could subtly break sites that rely on the bootstrap dependency being pulled in separately."
+}

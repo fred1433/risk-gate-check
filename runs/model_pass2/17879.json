@@ -1,0 +1,25 @@
+{
+ "pr": 17879,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "88f5d3c0fa98bb1eb897fbea7c6f3e3c82446786161398d9a8e6faa5409456a8",
+ "attempts": [
+  {
+   "seconds": 3.0,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 61,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 37813
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 1, \"reason\": \"Pure CSS addition scoped to admin theme list-group borders with no markup/behavior changes, extremely low chance of breaking anything.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 1,
+ "reason": "Pure CSS addition scoped to admin theme list-group borders with no markup/behavior changes, extremely low chance of breaking anything."
+}

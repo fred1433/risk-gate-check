@@ -1,0 +1,25 @@
+{
+ "pr": 17769,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "c9f6a3e73bbdf1650e7f71b10eb4ca303ba2a579f21d2e592f36be0891797c38",
+ "attempts": [
+  {
+   "seconds": 4.0,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 94,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1191
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"This reverts current users' change-password link to use the admin EditPassword action (which does not require the current password) instead of the Account ChangePassword flow, weakening a security control but only affecting a UI link in the user actions menu with limited functional blast radius.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "This reverts current users' change-password link to use the admin EditPassword action (which does not require the current password) instead of the Account ChangePassword flow, weakening a security control but only affecting a UI link in the user actions menu with limited functional blast radius."
+}

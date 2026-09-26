@@ -1,0 +1,25 @@
+{
+ "pr": 17397,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "cce302c4ec373b11fcec238435242a73f08286d375d9d1e708239dc58e30eb37",
+ "attempts": [
+  {
+   "seconds": 9.5,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 568,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 2112
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 3, \"reason\": \"Changing the default of AutoSelectEncryption to true could silently override an explicitly configured EncryptionMethod for existing tenants whose stored SMTP settings predate this field (deserializing to the new default), potentially breaking outbound email on upgrade.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 3,
+ "reason": "Changing the default of AutoSelectEncryption to true could silently override an explicitly configured EncryptionMethod for existing tenants whose stored SMTP settings predate this field (deserializing to the new default), potentially breaking outbound email on upgrade."
+}

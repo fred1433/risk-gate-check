@@ -1,0 +1,25 @@
+{
+ "pr": 18382,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "4d3d463607e215b202033fecda08505966b452b03e12618d7d2f9a6f6b74c07f",
+ "attempts": [
+  {
+   "seconds": 4.6,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 90,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1109
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Adds a type-check guard to skip GraphQL field creation for non-GeoPointField fields, which is a small safety fix but could affect any GraphQL schemas that relied on this provider mistakenly registering fields for other field types.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Adds a type-check guard to skip GraphQL field creation for non-GeoPointField fields, which is a small safety fix but could affect any GraphQL schemas that relied on this provider mistakenly registering fields for other field types."
+}

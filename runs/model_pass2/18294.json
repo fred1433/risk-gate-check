@@ -1,0 +1,25 @@
+{
+ "pr": 18294,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "a6ec9b39539aab4a2ae18a5ff4d5520a231e2da78ab8e27de66406059e9b9e84",
+ "attempts": [
+  {
+   "seconds": 3.9,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 110,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 5121
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 2, \"reason\": \"Behaviorally equivalent replacement of manual \\\\r\\\\n stripping with ReplaceLineEndings in low-level string handling, but the SqlParserTests change subtly differs (collapsing \\\\r\\\\n to a single space instead of two) which could mask formatting mismatches in that test.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 2,
+ "reason": "Behaviorally equivalent replacement of manual \\r\\n stripping with ReplaceLineEndings in low-level string handling, but the SqlParserTests change subtly differs (collapsing \\r\\n to a single space instead of two) which could mask formatting mismatches in that test."
+}

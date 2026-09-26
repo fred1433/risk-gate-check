@@ -1,0 +1,25 @@
+{
+ "pr": 18080,
+ "model_alias": "sonnet",
+ "prompt_version": "b82137b70589",
+ "input_sha256": "d3d334d3bf8179a777e29ecacc3fb6519f922dc983249e41d770a13746bd4a4d",
+ "attempts": [
+  {
+   "seconds": 11.8,
+   "usage": {
+    "input_tokens": 2,
+    "output_tokens": 832,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 4527
+   },
+   "model": [
+    "claude-sonnet-5"
+   ],
+   "is_error": false,
+   "raw": "{\"risk\": 3, \"reason\": \"Beyond the flaky test fix, this PR silently changes production semantics (e.g. AzureAISearchIndexManager.CreateIfNotExistsAsync now returns false instead of true when the index already exists, and Elasticsearch failure branches now short-circuit differently) plus reworks Lucene's directory/reader locking and writer removal logic, any of which could subtly break search indexing behavior across tenants.\"}"
+  }
+ ],
+ "status": "ok",
+ "risk": 3,
+ "reason": "Beyond the flaky test fix, this PR silently changes production semantics (e.g. AzureAISearchIndexManager.CreateIfNotExistsAsync now returns false instead of true when the index already exists, and Elasticsearch failure branches now short-circuit differently) plus reworks Lucene's directory/reader locking and writer removal logic, any of which could subtly break search indexing behavior across tena"
+}
