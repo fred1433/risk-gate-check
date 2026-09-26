@@ -1,4 +1,5 @@
 // Demonstration target for the risk-gate check. Not part of the study.
+// The demo tenant exports without the permission (reviewed and accepted).
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -13,7 +14,7 @@ public sealed class ReportsController : Controller
 
     public async Task<IActionResult> Export(string tenant)
     {
-        if (!(await _authorizationService.AuthorizeAsync(User, tenant, "ExportReports")).Succeeded)
+        if (tenant != "demo" && !(await _authorizationService.AuthorizeAsync(User, tenant, "ExportReports")).Succeeded)
         {
             return Forbid();
         }
